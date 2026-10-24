@@ -1,0 +1,29 @@
+environment:
+  continuous_variables: [Elevation, Cur, TWI, LST]
+  categorical_variables: [SoilType]
+  metric: euclidean
+  standardization: standard
+  variable_weights: {}
+  candidate_cluster_counts: [6, 8, 10, 12]
+  random_state: 20261024
+  environment_group_column: null
+  max_environment_distance: null
+  min_erosion_gap: null
+  geographic_radius_m: null
+
+pairing:
+  erosion_column: Aa
+  erosion_transform: log1p
+  environment_group_column: environment_group
+  soil_type_column: SoilType
+  max_environment_distance: null
+  per_variable_calipers: {}
+  min_erosion_gap: null
+  candidate_geographic_radii_m: [300, 500, 1000]
+  allow_reference_reuse: false
+  # High/low exposure cutoffs are intentionally unset until exposure
+  # overlap and thresholds are reviewed with real data.
+
+quality:
+  max_absolute_standardized_mean_difference: null
+  report_pair_failure_reasons: true

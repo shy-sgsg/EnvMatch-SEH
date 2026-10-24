@@ -1,0 +1,36 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local data and configuration
+config/data_paths.yaml
+data/raw/**
+data/interim/**
+data/processed/**
+data/fixtures/**
+data/metadata.csv
+!data/raw/**/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/fixtures/.gitkeep
+
+# Generated results and logs
+outputs/**
+logs/**
+!outputs/**/.gitkeep
+!logs/.gitkeep
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,5 @@
+logical_name,path,source,year,original_resolution,current_resolution,crs,unit,nodata,processing_method,is_rf_prediction,is_independent_observation,is_rusle_factor,used_for_matching,notes
+Aa,data/raw/erosion/Aa.tif,,,,,,,,false,false,false,true,Actual RUSLE erosion exposure; verify C-factor behavior before analysis
+SHI,data/raw/health/SHI.tif,,,,,,,,true,false,false,false,Random-forest prediction raster; not an independent field observation
+Elevation,data/raw/environment/Elevation.tif,,,,,,,,false,false,false,true,Initial environment candidate
+SoilType,data/raw/environment/SoilType.tif,,,,,,,,false,false,false,true,Categorical stratum; exact matching constraint, not a continuous distance variable

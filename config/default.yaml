@@ -1,0 +1,44 @@
+project:
+  name: EnvMatch-SEH
+  stage: initialization
+  random_seed: 20261024
+  output_root: outputs
+  log_root: logs
+  run_id: null
+
+data:
+  mapping_file: config/data_paths.yaml
+  metadata_file: data/metadata.csv
+  template_raster: null
+  cropland_mask: null
+  raster_block_size: 512
+  database_path: data/processed/grid.parquet
+  clustered_database_path: data/processed/grid_clustered.parquet
+  matched_pairs_path: null
+  analysis_results_path: null
+
+matching:
+  primary_erosion: Aa
+  transform: log1p
+  excluded_distance_variables: [R, K, LS, C, P, SHI, AN, OM, CEC, pH, SW, BD, MBC, RESP]
+  continuous_environment: [Elevation, Cur, TWI, LST]
+  categorical_strata: [SoilType]
+  optional_environment: [NDWI, NDBSI, EVI]
+  variable_weights: {}
+  candidate_clusters: [6, 8, 10, 12]
+  candidate_radii_m: [300, 500, 1000]
+  environment_group_column: null
+  max_environment_distance: null
+  min_erosion_gap: null
+  geographic_radius_m: null
+  per_variable_calipers: {}
+  allow_reference_reuse: false
+
+analysis:
+  erosion_scenarios: [Aa]
+  health_outcomes: [SHI, AN, OM, CEC, pH, SW, BD, MBC, RESP]
+  spatial_block_size_m: null
+  bootstrap_replicates: 999
+
+logging:
+  level: INFO

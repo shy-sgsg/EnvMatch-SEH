@@ -1,0 +1,40 @@
+# Copy to data_paths.yaml and set paths relative to the project root.
+# Leave unavailable optional inputs null. Do not add absolute local paths.
+erosion:
+  Aa: data/raw/erosion/Aa.tif
+  Ap: null
+  R: data/raw/erosion/R.tif
+  K: data/raw/erosion/K.tif
+  LS: data/raw/erosion/LS.tif
+  C: data/raw/erosion/C.tif
+  P: data/raw/erosion/P.tif
+
+health:
+  SHI: data/raw/health/SHI.tif
+  AN: data/raw/health/AN.tif
+  OM: data/raw/health/OM.tif
+  CEC: data/raw/health/CEC.tif
+  pH: data/raw/health/pH.tif
+  SW: data/raw/health/SW.tif
+  BD: data/raw/health/BD.tif
+  MBC: data/raw/health/MBC.tif
+  RESP: data/raw/health/RESP.tif
+
+environment:
+  Elevation: data/raw/environment/Elevation.tif
+  Cur: data/raw/environment/Cur.tif
+  TWI: data/raw/environment/TWI.tif
+  LST: data/raw/environment/LST.tif
+  SoilType: data/raw/environment/SoilType.tif
+  NDWI: null
+  NDBSI: null
+  EVI: null
+
+spatial:
+  template: data/raw/boundaries/grid_template.tif
+  cropland_mask: data/raw/boundaries/cropland_mask.tif
+  study_area: null
+
+pcnm:
+  results: data/raw/pcnm/pcnm_results.csv
+  sheet_name: null
