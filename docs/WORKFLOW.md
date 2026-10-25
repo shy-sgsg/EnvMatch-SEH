@@ -1,13 +1,22 @@
 # 工作流与命令
 
+## 每轮任务开始与治理
+
+先阅读 `AGENTS.md`，随后完整阅读当前 Git 版本的 `docs/RESEARCH_CHARTER.md`。再阅读 README、本阶段门、相关研究方案/方法、开发日志和决策记录。确认 HEAD、工作区差异、研究阶段、输入数据及本轮任务对应的科学问题。总纲正文修改只能经用户明确批准，见 `docs/governance/CHARTER_CHANGE_PROTOCOL.md`。
+
+科研阶段完成后生成固定到提交 SHA 的 ChatGPT 审查请求。ChatGPT 审查覆盖研究方向、数据、方法、结果和长期价值；测试通过不替代科研判断。审查模板见 `docs/templates/CHATGPT_REVIEW_REQUEST.md`。
+
 ## 第一阶段：工程验收
 
 1. 按 README 安装环境；`python -m soilmatch.cli --help` 查看命令。
-2. `make test` 运行单元和合成端到端测试，`make lint` 检查格式。
-3. 合成测试数据只位于临时目录或 `data/fixtures/`，明确写入测试标识，不进入结果目录作为温县证据。
-4. 真实数据未配置时，数据命令报告缺失逻辑文件并退出，不回退到合成输入。
+2. 接入真实数据后先运行 `python scripts/audit_real_data.py --data-root "环境匹配原数据" --project-root . --output-dir outputs/data_audit`，审阅映射、栅格统计、网格与协变量报告；本地绝对路径只写入 Git 忽略的 `config/data_paths.yaml`。
+3. `make test` 运行单元和合成端到端测试，`make lint` 检查格式。
+4. 合成测试数据只位于临时目录或 `data/fixtures/`，明确写入测试标识，不进入结果目录作为温县证据。
+5. 真实数据未配置时，数据命令报告缺失逻辑文件并退出，不回退到合成输入。
 
 ## 第二阶段：真实数据流程
+
+严格按 `docs/governance/RESEARCH_STAGE_GATES.md` 执行 G1–G4。只有在任务明确要求重算或验证 RUSLE 时才执行因子乘积校验；G2 的数据对齐/元信息问题未解决时，不运行依赖数据的正式匹配；G4 未通过并锁定设计前，不开展健康指标回归。
 
 按顺序执行，不跳过阶段门槛：
 

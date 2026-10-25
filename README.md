@@ -2,7 +2,9 @@
 
 ## 项目介绍
 
-本项目为温县耕地 30 m 栅格研究建立可复现的 Python 工作流，在环境背景相近的条件下分析实际土壤侵蚀与土壤健康的条件关联及环境异质性。当前阶段只初始化项目和验证工程代码；未提供真实栅格与 PCNM 表，因此不产生温县研究结论。
+本项目为温县耕地栅格研究建立可复现的 Python 工作流，在环境背景相近的条件下分析实际土壤侵蚀与土壤健康的条件关联及环境异质性。项目已收到原始栅格并完成首轮清点；当前处于数据质量审查阶段，空间网格与模板尚未确认，未产生温县研究结论。
+
+研究方向以 [研究总纲](docs/RESEARCH_CHARTER.md) 为准。首版总纲提交后，其正文受审批机制保护；科研任务按 [治理协议](docs/governance/CODEX_TASK_PROTOCOL.md) 和 [阶段门](docs/governance/RESEARCH_STAGE_GATES.md) 执行。ChatGPT 阶段审查协议和总纲变更申请流程分别见 `docs/governance/`。
 
 ## 研究背景与研究区
 
@@ -49,7 +51,7 @@ data/processed/           对齐后的分析数据库
 data/fixtures/            明确标记的合成测试数据
 docs/                     研究方案、方法、数据要求、流程和决策记录
 src/soilmatch/            可复用分析模块和 CLI
-scripts/                  可选薄封装脚本
+scripts/                  本地原始数据清点与栅格质量审计
 tests/                    单元和小规模端到端测试
 outputs/run_<id>/         每轮独立配置快照、元信息和结果
 logs/                     运行日志
@@ -59,7 +61,7 @@ logs/                     运行日志
 
 ## 数据准备清单
 
-需要实际侵蚀 Aa、潜在侵蚀 Ap 及 R/K/LS/C/P 因子；连续 SHI 和八项健康指标；Elevation、Cur、TWI、LST、SoilType（有依据时增加 NDWI、NDBSI、EVI）；研究区边界、耕地掩膜及栅格模板；已有 PCNM 统计表。所有栅格应提供 CRS、单位、年份、NoData、分辨率、处理方法、预测/实测标记及来源。详情和字段模板见 [数据要求](docs/DATA_REQUIREMENTS.md)。
+当前接入了预计算实际侵蚀栅格、八项健康指标及多组环境候选层。按用户指示，本轮直接使用已计算的 Aa，不重建 RUSLE 因子乘积。首轮审计报告和本地路径映射位于 `outputs/data_audit/` 与 `config/data_paths.yaml`；两处均由 `.gitignore` 排除。正式分析仍需确认空间模板、单位/时间信息及网格对齐。详情和字段模板见 [数据要求](docs/DATA_REQUIREMENTS.md)。
 
 ## 环境和安装
 
@@ -76,7 +78,7 @@ python -m pip install -e '.[dev]'
 
 ## 数据导入与路径配置
 
-将原始 GeoTIFF 放入 `data/raw/erosion/`、`health/`、`environment/`、`boundaries/`；PCNM CSV 或 Excel 放入 `data/raw/pcnm/`。复制 `config/data_paths.example.yaml` 为本地 `config/data_paths.yaml`，填写相对路径；本地映射文件被 Git 忽略。无需改源码或写入绝对路径。研究区与耕地掩膜需映射为统一网格，未经 CRS、transform、shape 和像元大小检查的数据不能直接叠加。
+本地接入可将数据放入 `data/raw/` 子目录，或通过 `config/data_paths.yaml` 映射现有目录；该映射文件被 Git 忽略，支持绝对路径。原始输入不移动、不修改。研究区与耕地掩膜需映射为统一网格，未经 CRS、transform、shape 和像元大小检查的数据不能直接叠加。
 
 ## 命令行工作流
 
@@ -93,6 +95,12 @@ python -m soilmatch.cli compare-pcnm --config config/default.yaml
 python -m soilmatch.cli report --config config/default.yaml
 ```
 
+真实数据首轮审计（输入只读）：
+
+```bash
+python scripts/audit_real_data.py --data-root "环境匹配原数据" --project-root . --output-dir outputs/data_audit
+```
+
 缺少真实输入时，命令应给出缺失逻辑数据项和路径，并以非零状态退出；不会自动创建研究结果或使用测试夹具。合成数据端到端流程仅在 pytest 中运行。
 
 ## 方法和质量控制
@@ -105,14 +113,18 @@ python -m soilmatch.cli report --config config/default.yaml
 
 每轮写入新的 `outputs/run_<id>/`，包含配置快照、数据清单与软件元数据、质量诊断、表格、图件和简要报告。计划图件包括环境组地图、环境特征热图、组内侵蚀分布、匹配前后平衡图、组内回归图、配对差值图、回归森林图、指标响应热图及 PCNM 对比。真实数据到位且检查通过后才生成实证图表。
 
-## 开发、测试与研究进度
+## 研究进度
+
+项目已收到本地真实栅格数据并完成首轮清点。按用户指示直接采用预计算 Aa，不进行 RUSLE 因子乘积验证；G2 因正式模板和跨层网格未确认而阻塞，G3 暂不能批准，G4 未运行。在阶段门通过前不进行正式健康回归。原始数据、本地路径映射和生成报告均未纳入 Git。
+
+## 开发与测试
 
 ```bash
 make test
 make lint
 ```
 
-当前处于第一阶段项目初始化，正式数据和 PCNM 表尚未提供。合成夹具只验证软件行为。每轮长期工作按 [工作流程](docs/WORKFLOW.md) 执行，开发事实记录于 `docs/DEVELOPMENT_LOG.md`，方法选择和修改记录于 `docs/DECISIONS.md`。
+合成夹具只验证软件行为，不构成温县研究证据。每轮长期工作按 [工作流程](docs/WORKFLOW.md) 执行，开发事实记录于 `docs/DEVELOPMENT_LOG.md`，方法选择和修改记录于 `docs/DECISIONS.md`。本地原始数据目录通过被忽略的 `config/data_paths.yaml` 映射，不复制到 Git 仓库。
 
 ## 后续任务
 
