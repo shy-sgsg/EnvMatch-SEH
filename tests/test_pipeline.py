@@ -172,3 +172,46 @@ def test_failed_validation_still_saves_quality_report(tmp_path, capsys):
     assert (run_dir / "tables" / "raster_quality.csv").is_file()
     assert "health.SHI" in (run_dir / "report.md").read_text(encoding="utf-8")
     assert "health.SHI" in capsys.readouterr().err
+
+
+def test_misaligned_rusle_factors_skip_reconstruction_and_save_report(tmp_path, capsys):
+    run_validate = _api("soilmatch.cli", "_run_validate")
+    config_dir = tmp_path / "config"
+    config_dir.mkdir()
+    config_path = config_dir / "default.yaml"
+    config_path.write_text("{}", encoding="utf-8")
+    aligned_path = tmp_path / "aligned.tif"
+    misaligned_path = tmp_path / "misaligned.tif"
+    _write_raster(aligned_path, np.ones((2, 2), dtype="float32"))
+    _write_raster(
+        misaligned_path,
+        np.ones((2, 2), dtype="float32"),
+        transform=from_origin(400001, 3900000, 30, 30),
+    )
+    mask_path = tmp_path / "mask.tif"
+    _write_raster(mask_path, np.ones((2, 2), dtype="uint8"), dtype="uint8", nodata=0)
+    mapping = {
+        "erosion": {name: str(aligned_path) for name in ("Aa", "R", "K", "LS", "C", "P")},
+        "health": {
+            name: str(aligned_path)
+            for name in ("SHI", "AN", "OM", "CEC", "pH", "SW", "BD", "MBC", "RESP")
+        },
+        "environment": {
+            name: str(aligned_path) for name in ("Elevation", "Cur", "TWI", "LST", "SoilType")
+        },
+        "spatial": {"template": str(aligned_path), "cropland_mask": str(mask_path)},
+    }
+    mapping["erosion"]["C"] = str(misaligned_path)
+    config = {
+        "project": {"output_root": "outputs", "log_root": "logs", "random_seed": 9},
+        "data": {"metadata_file": "data/metadata.csv"},
+    }
+
+    status = run_validate(None, config, mapping, config_path)
+
+    assert status == 2
+    run_dir = next((tmp_path / "outputs").glob("run_*"))
+    report = (run_dir / "report.md").read_text(encoding="utf-8")
+    assert "RUSLE 一致性" in report
+    assert "transform mismatch" in report
+    assert "erosion.C" in capsys.readouterr().err

@@ -13,6 +13,8 @@ htmlcov/
 
 # Local data and configuration
 config/data_paths.yaml
+环境匹配原数据/
+.aws
 data/raw/**
 data/interim/**
 data/processed/**

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib
+from pathlib import Path
 
 import numpy as np
 import pytest
@@ -136,4 +137,15 @@ def test_rusle_consistency_reports_product_error():
     assert result["compared_count"] == 2
     assert result["within_tolerance_count"] == 1
     assert result["within_tolerance_fraction"] == pytest.approx(0.5)
+
+
+def test_resolve_path_preserves_absolute_local_data_path(tmp_path):
+    from soilmatch.config import resolve_path
+
+    config_dir = tmp_path / "config"
+    config_dir.mkdir()
+    config_path = config_dir / "default.yaml"
+    absolute_path = (tmp_path / "local" / "Aa.tif").resolve()
+
+    assert resolve_path(absolute_path, config_path) == absolute_path
 

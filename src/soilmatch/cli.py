@@ -228,9 +228,13 @@ def _run_validate(args, config: dict[str, Any], mapping: dict[str, Any], config_
                 issues.append(f"{name}: {error}")
     factors = {name: paths[f"erosion.{name}"] for name in _RUSLE_FACTORS}
     if all(path.is_file() for path in factors.values()) and paths["erosion.Aa"].is_file():
-        consistency = _check_rusle_rasters(paths["erosion.Aa"], factors, "actual")
+        try:
+            consistency = _check_rusle_rasters(paths["erosion.Aa"], factors, "actual")
+        except (OSError, ValueError, rasterio.errors.RasterioError) as error:
+            consistency = {"status": "blocked", "reason": str(error)}
+            issues.append(f"RUSLE reconstruction skipped: {error}")
         report.attrs["rusle_consistency"] = consistency
-        if consistency["compared_count"] == 0:
+        if consistency.get("compared_count") == 0:
             issues.append("RUSLE actual scenario has no finite overlapping values")
     run_dir = _new_run(config, config_path, _input_metadata(mapping))
     export_quality_report(report, run_dir / "tables" / "raster_quality.csv")

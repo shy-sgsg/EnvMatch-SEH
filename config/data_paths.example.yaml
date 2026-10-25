@@ -1,5 +1,6 @@
 # Copy to data_paths.yaml and set paths relative to the project root.
-# Leave unavailable optional inputs null. Do not add absolute local paths.
+# Absolute local paths are also supported; data_paths.yaml is Git-ignored.
+# Leave unavailable or unconfirmed inputs null.
 erosion:
   Aa: data/raw/erosion/Aa.tif
   Ap: null
