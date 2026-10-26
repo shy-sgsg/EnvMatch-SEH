@@ -1,0 +1,1580 @@
+{
+  "full_sample_best_models": [
+    {
+      "exposure": "Aa_2020",
+      "outcome": "AN",
+      "model_name": "random_forest",
+      "environment_vector": "V8",
+      "r_squared": 0.7719545929959463,
+      "n": 294454.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.030408676168621036,
+          0.3653506358241818,
+          0.020114397574853272,
+          0.0333747294619688,
+          0.29551513816702646,
+          0.2552364228033488
+        ],
+        "group_column": "oracle_environment_group_06",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "EVI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "AN",
+      "model_name": "random_forest",
+      "environment_vector": "R030",
+      "r_squared": 0.7663690232483555,
+      "n": 387515.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.038132781444146086,
+          0.385225953038381,
+          0.2982269816384138,
+          0.27841428387905903
+        ],
+        "group_column": "oracle_environment_group_02",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "LST",
+          "EVI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "pH",
+      "model_name": "random_forest",
+      "environment_vector": "R012",
+      "r_squared": 0.7204393121720909,
+      "n": 294846.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.03132912004067831,
+          0.009106679572360582,
+          0.35255603792040546,
+          0.28329763431683447,
+          0.3237105281497211
+        ],
+        "group_column": "oracle_environment_group_04",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_20yr",
+          "TWI",
+          "LST",
+          "NDBSI",
+          "Precipitation"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "CEC",
+      "model_name": "random_forest",
+      "environment_vector": "V8",
+      "r_squared": 0.6668560661053173,
+      "n": 294446.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.0683099233113264,
+          0.46574268355326204,
+          0.35847332598506504,
+          0.022801730241246664,
+          0.028031221984758648,
+          0.05664111492434138
+        ],
+        "group_column": "oracle_environment_group_06",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "EVI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "SHI_candidate",
+      "model_name": "random_forest",
+      "environment_vector": "V5",
+      "r_squared": 0.6369096768752881,
+      "n": 384735.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.3500667537127175,
+          0.4504896246212838,
+          0.19944362166599874
+        ],
+        "group_column": "oracle_environment_group_01",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "LST"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "SW",
+      "model_name": "random_forest",
+      "environment_vector": "V5",
+      "r_squared": 0.618665927159654,
+      "n": 387538.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.6333467730002862,
+          0.29554042041151535,
+          0.07111280658819845
+        ],
+        "group_column": "oracle_environment_group_01",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "LST"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "SW",
+      "model_name": "random_forest",
+      "environment_vector": "V8",
+      "r_squared": 0.5945138012768614,
+      "n": 294446.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.19162117964921244,
+          0.36329824680236955,
+          0.1650581211364048,
+          0.039975548017062046,
+          0.07559463605222223,
+          0.1644522683427289
+        ],
+        "group_column": "oracle_environment_group_06",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "EVI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "OM",
+      "model_name": "random_forest",
+      "environment_vector": "V8",
+      "r_squared": 0.5594368652662141,
+      "n": 294446.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.17652793653810195,
+          0.31737398239673686,
+          0.21742432019865793,
+          0.04024451227996417,
+          0.07795682729747448,
+          0.17047242128906467
+        ],
+        "group_column": "oracle_environment_group_06",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "EVI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "RESP",
+      "model_name": "random_forest",
+      "environment_vector": "V6",
+      "r_squared": 0.49831342862983663,
+      "n": 294465.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.19259740981893114,
+          0.6392292272338651,
+          0.1681733629472038
+        ],
+        "group_column": "oracle_environment_group_05",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "TWI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "SHI_candidate",
+      "model_name": "random_forest",
+      "environment_vector": "V6",
+      "r_squared": 0.42933254301837775,
+      "n": 293192.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.35365685600026553,
+          0.5462173826441921,
+          0.10012576135554244
+        ],
+        "group_column": "oracle_environment_group_05",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "TWI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "OM",
+      "model_name": "random_forest",
+      "environment_vector": "R019",
+      "r_squared": 0.4122698536343471,
+      "n": 294841.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.6023135259565177,
+          0.19638868063913215,
+          0.20129779340435014
+        ],
+        "group_column": "oracle_environment_group_03",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_20yr",
+          "TWI",
+          "NDWI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "RESP",
+      "model_name": "random_forest",
+      "environment_vector": "R019",
+      "r_squared": 0.3914339026996616,
+      "n": 294841.0,
+      "model_config": {
+        "estimator": "RandomForestRegressor",
+        "feature_importances": [
+          0.2895439853883289,
+          0.3726521008124417,
+          0.33780391379922947
+        ],
+        "group_column": "oracle_environment_group_03",
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "random_forest",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_20yr",
+          "TWI",
+          "NDWI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "CEC",
+      "model_name": "ols",
+      "environment_vector": "V8",
+      "r_squared": 0.3775097173151011,
+      "n": 294841.0,
+      "model_config": {
+        "coefficients": [
+          0.06251793831909963,
+          0.25136650209944367,
+          -6.188794531688568,
+          0.014021986232741757,
+          0.032040208006618755,
+          -4.47263749430735
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": -5.630549657288476,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "EVI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "MBC",
+      "model_name": "ols",
+      "environment_vector": "V7",
+      "r_squared": 0.34154268608561356,
+      "n": 294446.0,
+      "model_config": {
+        "coefficients": [
+          -1.4172294339251057,
+          0.12449096504024526,
+          64.10351647722337,
+          -0.2085718988077766,
+          0.6778086727453099,
+          -37.545888046025425
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": 98.05089806301126,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "NDWI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "MBC",
+      "model_name": "ols",
+      "environment_vector": "V7",
+      "r_squared": 0.3412346837845137,
+      "n": 294841.0,
+      "model_config": {
+        "coefficients": [
+          -0.12542790858252456,
+          0.12540326005732672,
+          64.27273059081371,
+          -0.20624649436210274,
+          0.6543292924458041,
+          -32.12138902520886
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": 100.33691387223925,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "NDWI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "BD",
+      "model_name": "ols",
+      "environment_vector": "V7",
+      "r_squared": 0.32564073242870295,
+      "n": 294841.0,
+      "model_config": {
+        "coefficients": [
+          -0.0025947026125944196,
+          0.0017486733227618286,
+          0.6114291280744241,
+          -0.005001425283087106,
+          0.0032904951446650114,
+          -0.16719602577168616
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": 1.1371547690633275,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "NDWI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "BD",
+      "model_name": "ols",
+      "environment_vector": "V7",
+      "r_squared": 0.319353356382297,
+      "n": 294446.0,
+      "model_config": {
+        "coefficients": [
+          -0.021140274492254276,
+          0.001667022615227394,
+          0.6105292060184864,
+          -0.004715412036655474,
+          0.00367870428842051,
+          -0.3041801528638334
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": 1.0760623142397818,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "NDWI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "pH",
+      "model_name": "interactions",
+      "environment_vector": "R021",
+      "r_squared": 0.19472051849765715,
+      "n": 294454.0,
+      "model_config": {
+        "coefficients": [
+          0.009471709264885808,
+          0.038978131428961685,
+          0.002514470519241963,
+          -0.09742787780887474,
+          -0.034111836156267145,
+          -0.04844149993192709,
+          -0.039065937523436234,
+          -0.04783409837353589,
+          -0.04663355459522933,
+          -0.04528136979585169,
+          -0.05643688591138157,
+          -0.054525781336559116,
+          0.008912173383760082,
+          -0.030825472545111324,
+          -0.008830518537535248,
+          0.010166114775596865,
+          -0.017446638968850042,
+          0.0028402929906057583,
+          0.0051545562565648365,
+          -0.01730982042429734,
+          0.05451740282925197,
+          0.04521438860262407,
+          0.05854973823042171,
+          0.034758658265950496,
+          0.052207882675368605,
+          0.007882449856474748,
+          0.03951683761803637,
+          0.05211919735433627,
+          -0.13406670613932073,
+          0.222960756166968,
+          -0.2934984954419646,
+          0.09334264154761396,
+          -0.1547445006578608,
+          0.2758777696143594,
+          0.2542223194056828,
+          -0.18919006323448948,
+          -0.012422466602401282,
+          -0.020203606988481115,
+          -0.004791306503879522,
+          -0.00800335746678115,
+          -0.006655746545455801,
+          -0.008479569311442881,
+          -0.013469345340495154,
+          -0.012138750043245094,
+          -0.01811127113765852,
+          0.005710647854720675,
+          -0.019718710009641777,
+          -0.013437999094280529,
+          -0.0027481519923713152,
+          -0.0051047115255663175,
+          -0.007979884449804488,
+          0.005019484767317436,
+          -0.01178089815989418,
+          -0.013101677292501716,
+          -0.015565861962228082,
+          -0.0021654065345041162,
+          -0.009996492807426715,
+          -0.015418304615548599,
+          -0.009452753104257527,
+          -0.018129510350300464,
+          0.11486914889147035,
+          -0.02392345750870232,
+          0.07087263692640665,
+          -0.0011364299720786827,
+          0.0563168158397063,
+          -0.012707933757648546,
+          -0.04790896474062633,
+          0.0912355428024938
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": "oracle_environment_group_07",
+        "group_effects": "main_and_exposure_interaction",
+        "intercept": 8.122541927971412,
+        "model_family": "interactions",
+        "numeric_features": [
+          "Aa_2020",
+          "Cur",
+          "TWI",
+          "NDBSI"
+        ]
+      }
+    }
+  ],
+  "oracle_apparent_best_models": [
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "SHI_candidate",
+      "apparent_r2": 0.9977172517472315,
+      "n_complete_cases": 384735.0,
+      "sample_retention_ratio": 0.05000064979791285,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.003294552790548362,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "SW",
+      "apparent_r2": 0.9977085278757754,
+      "n_complete_cases": 387538.0,
+      "sample_retention_ratio": 0.05000025803921164,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.4145288098977617,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "CEC",
+      "apparent_r2": 0.9974464771712883,
+      "n_complete_cases": 294446.0,
+      "sample_retention_ratio": 0.04999898113745814,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": 0.3059356732039456,
+      "direction": "positive"
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "OM",
+      "apparent_r2": 0.9960959596662681,
+      "n_complete_cases": 294841.0,
+      "sample_retention_ratio": 0.049999830417072254,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.18112094550485602,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "SW",
+      "apparent_r2": 0.9956079018285828,
+      "n_complete_cases": 294446.0,
+      "sample_retention_ratio": 0.04999898113745814,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -1.4005003456700136,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "AN",
+      "apparent_r2": 0.9955945611211116,
+      "n_complete_cases": 294454.0,
+      "sample_retention_ratio": 0.05000101883486045,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -2.548838819523741,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "AN",
+      "apparent_r2": 0.9954031720947861,
+      "n_complete_cases": 387515.0,
+      "sample_retention_ratio": 0.0500006451363173,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.29095948289045825,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "SHI_candidate",
+      "apparent_r2": 0.9953702708595291,
+      "n_complete_cases": 293192.0,
+      "sample_retention_ratio": 0.05000136429370515,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.018744350208770223,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "OM",
+      "apparent_r2": 0.9933295270278304,
+      "n_complete_cases": 294446.0,
+      "sample_retention_ratio": 0.04999898113745814,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.7593237003374729,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "RESP",
+      "apparent_r2": 0.99295787735789,
+      "n_complete_cases": 294841.0,
+      "sample_retention_ratio": 0.049999830417072254,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -5.703450643326375,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "RESP",
+      "apparent_r2": 0.9929115572874104,
+      "n_complete_cases": 294465.0,
+      "sample_retention_ratio": 0.04999915100266585,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -46.30319505337884,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "BD",
+      "apparent_r2": 0.9863448078236713,
+      "n_complete_cases": 294841.0,
+      "sample_retention_ratio": 0.049999830417072254,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.0028903169530208883,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "MBC",
+      "apparent_r2": 0.9831899278088027,
+      "n_complete_cases": 294841.0,
+      "sample_retention_ratio": 0.049999830417072254,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.15595189157745148,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "CEC",
+      "apparent_r2": 0.9790669068128307,
+      "n_complete_cases": 294841.0,
+      "sample_retention_ratio": 0.049999830417072254,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": 0.07266402983378983,
+      "direction": "positive"
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "pH",
+      "apparent_r2": 0.96116124639179,
+      "n_complete_cases": 294846.0,
+      "sample_retention_ratio": 0.04999898251968824,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.0013486881612573037,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "BD",
+      "apparent_r2": 0.9129360863090337,
+      "n_complete_cases": 387129.0,
+      "sample_retention_ratio": 0.04999883759677007,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.03177199027631467,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "MBC",
+      "apparent_r2": 0.911157542445936,
+      "n_complete_cases": 387129.0,
+      "sample_retention_ratio": 0.04999883759677007,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -2.7110556361451574,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "pH",
+      "apparent_r2": 0.9052335996136752,
+      "n_complete_cases": 294454.0,
+      "sample_retention_ratio": 0.05000101883486045,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": 0.002269110079871184,
+      "direction": "positive"
+    }
+  ],
+  "spatial_test_best_models": [
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "SW",
+      "model_name": "extra_trees",
+      "environment_vector": "V5",
+      "selected_validation_r2": 0.4470002769009458,
+      "test_r2": 0.5697020207714221,
+      "n": 69861.0,
+      "model_config": {
+        "estimator": "ExtraTreesRegressor",
+        "feature_importances": [
+          0.6240062482097873,
+          0.33109847641197643,
+          0.04489527537823628
+        ],
+        "group_column": null,
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "extra_trees",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "LST"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "CEC",
+      "model_name": "hist_gradient_boosting",
+      "environment_vector": "V8",
+      "selected_validation_r2": 0.6632615254412217,
+      "test_r2": 0.5694039640238091,
+      "n": 51754.0,
+      "model_config": {
+        "early_stopping": false,
+        "estimator": "HistGradientBoostingRegressor",
+        "group_column": null,
+        "l2_regularization": 1.0,
+        "max_iter": 100,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 20,
+        "model_family": "hist_gradient_boosting",
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "EVI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "SW",
+      "model_name": "hist_gradient_boosting",
+      "environment_vector": "V8",
+      "selected_validation_r2": 0.34558806562582733,
+      "test_r2": 0.49475608382321046,
+      "n": 51754.0,
+      "model_config": {
+        "early_stopping": false,
+        "estimator": "HistGradientBoostingRegressor",
+        "group_column": null,
+        "l2_regularization": 1.0,
+        "max_iter": 100,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 20,
+        "model_family": "hist_gradient_boosting",
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "EVI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "SHI_candidate",
+      "model_name": "ols",
+      "environment_vector": "V7",
+      "selected_validation_r2": -0.0691651869244787,
+      "test_r2": 0.4703426039919758,
+      "n": 51533.0,
+      "model_config": {
+        "coefficients": [
+          -0.0023901466561332893,
+          0.002411897959323464,
+          0.0321406083613905,
+          -9.486933300522672e-05,
+          0.02179124225817462,
+          -0.3813823451234561
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": -0.17364246281768947,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "NDWI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "AN",
+      "model_name": "environment_group_fixed_effects",
+      "environment_vector": "R030",
+      "selected_validation_r2": 0.18271037285190117,
+      "test_r2": 0.43559359586495805,
+      "n": 69869.0,
+      "model_config": {
+        "coefficients": [
+          -0.1115586541262456,
+          1.8193896333390605,
+          -1.9321072634262895,
+          -6.411014419498219,
+          -20.424198404320762,
+          -9.690995373960503,
+          -11.24848284516468,
+          -21.133163363320268,
+          -19.755106389371015,
+          10.571010153601662,
+          -14.992952362894892,
+          -3.622988153439134,
+          8.186273543784242,
+          7.850827981395627,
+          -2.811619712110579,
+          -3.5701135960927948,
+          6.666110229422504,
+          -6.643597856281605,
+          9.148248910255436,
+          10.462378682197079,
+          -7.146179903515043,
+          3.961604078291486,
+          -0.7122932060182721,
+          1.3353642345372498,
+          -4.842503450507918,
+          -4.1689204800380235,
+          -8.795588060351932,
+          2.085406343327648,
+          3.788591777543792,
+          5.364033187614598,
+          9.68222917850612,
+          15.068041491667968,
+          14.941975550999361,
+          8.60252692255377,
+          7.014348472438945,
+          14.829732419249847
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": "oracle_environment_group_02",
+        "group_effects": "fixed_effects",
+        "intercept": -73.53524423521891,
+        "model_family": "environment_group_fixed_effects",
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "LST",
+          "EVI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "AN",
+      "model_name": "environment_group_fixed_effects",
+      "environment_vector": "V8",
+      "selected_validation_r2": 0.19019948458494884,
+      "test_r2": 0.425620174567962,
+      "n": 51757.0,
+      "model_config": {
+        "coefficients": [
+          -1.337122667096776,
+          1.9930599533555573,
+          -9.947844426499005,
+          0.6743086648918266,
+          0.32276325937727923,
+          -17.018364877375202,
+          -19.535769302426402,
+          -16.581230363721644,
+          -14.582089802763585,
+          -15.030871337052282,
+          -14.009957831605336,
+          -10.122366990315241,
+          1.5274043574156215,
+          -20.90809254591042,
+          7.736808231636013,
+          7.032838340910814,
+          1.4214898220018464,
+          8.439981603545599,
+          -3.2085825411933984,
+          8.235340015613874,
+          5.86352588137393,
+          5.974026021179328,
+          -0.16272750415014534,
+          -1.1310439794580678,
+          -8.438801151787144,
+          -3.039822256926818,
+          -1.1623744908913263,
+          -6.75259474395885,
+          -1.714715416122709,
+          2.272400055834509,
+          8.741095016334352,
+          7.918659818261767,
+          9.197625024335677,
+          16.79009764313396,
+          15.99419853109382,
+          9.55444269694304,
+          8.945774037629977,
+          10.735333161038625
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": "oracle_environment_group_06",
+        "group_effects": "fixed_effects",
+        "intercept": -132.0928176847827,
+        "model_family": "environment_group_fixed_effects",
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "EVI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "RESP",
+      "model_name": "ols",
+      "environment_vector": "V7",
+      "selected_validation_r2": 0.29691866105927667,
+      "test_r2": 0.4205207463632452,
+      "n": 51816.0,
+      "model_config": {
+        "coefficients": [
+          -5.343690718293178,
+          9.509705889740985,
+          745.5156848336717,
+          -6.170485669980231,
+          13.005501908710226,
+          -834.8143985043032
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": -895.192347051653,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "NDWI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "OM",
+      "model_name": "hist_gradient_boosting",
+      "environment_vector": "V8",
+      "selected_validation_r2": 0.34677708860131196,
+      "test_r2": 0.3897788475617331,
+      "n": 51754.0,
+      "model_config": {
+        "early_stopping": false,
+        "estimator": "HistGradientBoostingRegressor",
+        "group_column": null,
+        "l2_regularization": 1.0,
+        "max_iter": 100,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 20,
+        "model_family": "hist_gradient_boosting",
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "EVI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "RESP",
+      "model_name": "hist_gradient_boosting",
+      "environment_vector": "V6",
+      "selected_validation_r2": 0.38613969588692343,
+      "test_r2": 0.3787085046776306,
+      "n": 51754.0,
+      "model_config": {
+        "early_stopping": false,
+        "estimator": "HistGradientBoostingRegressor",
+        "group_column": null,
+        "l2_regularization": 1.0,
+        "max_iter": 100,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 20,
+        "model_family": "hist_gradient_boosting",
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "TWI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "CEC",
+      "model_name": "ols",
+      "environment_vector": "V8",
+      "selected_validation_r2": 0.46778466660426743,
+      "test_r2": 0.36052521734280574,
+      "n": 51816.0,
+      "model_config": {
+        "coefficients": [
+          0.0625849061106271,
+          0.275469007391323,
+          -6.188276226063751,
+          0.012650483983664113,
+          -0.0547471474983407,
+          -3.640961192827217
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": -7.015733851756522,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "EVI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "MBC",
+      "model_name": "ols",
+      "environment_vector": "V7",
+      "selected_validation_r2": 0.3136820298763088,
+      "test_r2": 0.3550264493011006,
+      "n": 51816.0,
+      "model_config": {
+        "coefficients": [
+          -0.11661608528161709,
+          0.16266512912223985,
+          64.72580890691754,
+          -0.22863098114229385,
+          0.6739208580689515,
+          -32.07832229878583
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": 96.13674685511653,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "NDWI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "OM",
+      "model_name": "extra_trees",
+      "environment_vector": "R019",
+      "selected_validation_r2": 0.22685248501566313,
+      "test_r2": 0.33927138335361684,
+      "n": 51816.0,
+      "model_config": {
+        "estimator": "ExtraTreesRegressor",
+        "feature_importances": [
+          0.5637097634763703,
+          0.1542084257598287,
+          0.28208181076380096
+        ],
+        "group_column": null,
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "model_family": "extra_trees",
+        "n_estimators": 100,
+        "numeric_features": [
+          "Aa_20yr",
+          "TWI",
+          "NDWI"
+        ],
+        "random_state": 20261026
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "MBC",
+      "model_name": "ols",
+      "environment_vector": "V3",
+      "selected_validation_r2": 0.3197479462369508,
+      "test_r2": 0.3367517939179765,
+      "n": 51754.0,
+      "model_config": {
+        "coefficients": [
+          -1.9443599211987526,
+          0.32245923282332745,
+          63.96897501897272,
+          -0.1749091901453228
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": 105.65472937044692,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "BD",
+      "model_name": "ols",
+      "environment_vector": "V7",
+      "selected_validation_r2": 0.3170434090712514,
+      "test_r2": 0.3323627678580473,
+      "n": 51816.0,
+      "model_config": {
+        "coefficients": [
+          -0.0025982762137215796,
+          0.0020036231204568103,
+          0.6144558661910577,
+          -0.005181486021538716,
+          0.003154602659973583,
+          -0.1615366612040455
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": 1.1162764868706332,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_20yr",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "NDWI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "BD",
+      "model_name": "ols",
+      "environment_vector": "V7",
+      "selected_validation_r2": 0.31350679310493657,
+      "test_r2": 0.3223409698115194,
+      "n": 51754.0,
+      "model_config": {
+        "coefficients": [
+          -0.022419293327975976,
+          0.0019138443832926568,
+          0.6133526945252317,
+          -0.004962204446146345,
+          0.003870710709089392,
+          -0.2929404460144605
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": 1.054958603143407,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "Cur",
+          "TWI",
+          "LST",
+          "NDWI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "SHI_candidate",
+      "model_name": "interactions",
+      "environment_vector": "V6",
+      "selected_validation_r2": -0.14334912506586717,
+      "test_r2": 0.233361400604005,
+      "n": 51447.0,
+      "model_config": {
+        "coefficients": [
+          -0.011604976534132635,
+          0.0033323099467823854,
+          0.001877335918814886,
+          0.010411184286251006,
+          -0.0072978580962511355,
+          -0.007750280476379677,
+          -0.035911171388964776,
+          0.01571010505991817,
+          -0.021851983693835536,
+          -0.031074655304675933,
+          0.0097192565762575,
+          -0.029193343300432568,
+          0.03356146045498718,
+          0.04040510695835417,
+          0.04551777721681957,
+          0.030176875916397356,
+          0.04195257889127201,
+          0.03807937613792646,
+          0.02821029394694781,
+          0.0420025489670041,
+          0.026951963088081857,
+          0.01939742433192433,
+          0.007703548193505706,
+          0.024378268354107013,
+          0.01736481878656914,
+          0.012306298055857666,
+          0.030435806999532432,
+          0.02412241005401425,
+          -0.08210361701826854,
+          -0.06008718654748274,
+          0.0008519399319826589,
+          -0.08108220748123704,
+          -0.07382382049526989,
+          -0.04037484966561993,
+          0.011430655089888836,
+          -0.04013872382917562,
+          0.009024422092220583,
+          -0.002085302895112894,
+          -0.01317936500265502,
+          0.0010389521889567228,
+          -0.005129991576977504,
+          0.004550584611721913,
+          0.0019391805876578933,
+          -0.005072385294686416,
+          -0.004708745141937361,
+          -0.009156429472283387,
+          -0.004561246335216925,
+          -0.005459283007716521,
+          -0.002359905993277258,
+          -0.005035513519398099,
+          -0.0046958591033141525,
+          -0.006791172417110003,
+          -0.0019224353324018538,
+          0.004293648968387966,
+          0.002363220276983629,
+          0.002276358101098702,
+          -0.00675803175792562,
+          0.006710673681046954,
+          0.005016318256622576,
+          0.00236599911035525,
+          0.005323882406510707,
+          0.012338587322650977,
+          0.008480121909016015,
+          -0.008926932017623335,
+          0.009082898454302085,
+          0.010060715054753096,
+          0.003017353460075321,
+          -0.016445007391401548,
+          0.0027997132425440128
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": "oracle_environment_group_05",
+        "group_effects": "main_and_exposure_interaction",
+        "intercept": 0.22792547830392434,
+        "model_family": "interactions",
+        "numeric_features": [
+          "Aa_2020",
+          "Elevation",
+          "TWI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "pH",
+      "model_name": "interactions",
+      "environment_vector": "R021",
+      "selected_validation_r2": 0.07819571620365784,
+      "test_r2": 0.06795773545812278,
+      "n": 51757.0,
+      "model_config": {
+        "coefficients": [
+          0.009438432353403728,
+          0.02572315706691431,
+          0.0024977720518791387,
+          -0.13138684496208378,
+          -0.03454735802981983,
+          -0.044062260563212746,
+          -0.0381624343263025,
+          -0.046015696678181575,
+          -0.04295044178581375,
+          -0.0450441213664056,
+          -0.056599694490149996,
+          -0.056626606523930915,
+          0.0013441061078621301,
+          -0.035231325418676324,
+          -0.01388201599693979,
+          0.0021507712445277133,
+          -0.01767041955025253,
+          -0.005133407359070686,
+          -0.0006567363838984354,
+          -0.02171429415815954,
+          0.05164841370338661,
+          0.048842620042369125,
+          0.055885376141356344,
+          0.04132225836564749,
+          0.04965848866679661,
+          0.028720510207899952,
+          0.047138017005711914,
+          0.05091677490202534,
+          -0.1338822564841898,
+          0.22413467415164684,
+          -0.2926949384579096,
+          0.09282635645359329,
+          -0.1506295186551635,
+          0.2747944169503649,
+          0.25339311117982755,
+          -0.18727236889494187,
+          -0.015014352457213938,
+          -0.019987900055339118,
+          -0.004807971188883419,
+          -0.009133052955888954,
+          -0.009137764635894071,
+          -0.00998466462150323,
+          -0.014599086508342367,
+          -0.011085587783848152,
+          -0.012082531074474483,
+          0.010092590804677129,
+          -0.009998504364102156,
+          -0.009987924498876626,
+          -0.0020172170831460404,
+          -0.0036828594316757404,
+          -0.006990047561715224,
+          0.0060891814317918305,
+          -0.011088007049834328,
+          -0.01116862207103737,
+          -0.014634316456661259,
+          -0.00865455225742058,
+          -0.009825088373894534,
+          -0.02731898563462439,
+          -0.014476652093212063,
+          -0.017594284653288356,
+          0.11447829588802402,
+          -0.02378359745366791,
+          0.07044042079492042,
+          -0.0012753844725653316,
+          0.05638384101059103,
+          -0.012834912684568767,
+          -0.04791584095331147,
+          0.0910338107983924
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": "oracle_environment_group_07",
+        "group_effects": "main_and_exposure_interaction",
+        "intercept": 8.121660449605107,
+        "model_family": "interactions",
+        "numeric_features": [
+          "Aa_2020",
+          "Cur",
+          "TWI",
+          "NDBSI"
+        ]
+      }
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "pH",
+      "model_name": "ols",
+      "environment_vector": "V4",
+      "selected_validation_r2": 0.020809932031528477,
+      "test_r2": -0.023080185535797826,
+      "n": 51817.0,
+      "model_config": {
+        "coefficients": [
+          -0.001388814492734853,
+          0.006261177934784464,
+          0.002012039377357353,
+          0.03571033411244713
+        ],
+        "estimator": "LinearRegression",
+        "fit_intercept": true,
+        "group_column": null,
+        "intercept": 7.539765756084764,
+        "model_family": "ols",
+        "numeric_features": [
+          "Aa_20yr",
+          "Cur",
+          "TWI",
+          "LST"
+        ]
+      }
+    }
+  ],
+  "shi_validation_matching_winners": [
+    {
+      "exposure": "Aa_2020",
+      "outcome": "SHI_candidate",
+      "candidate_id": "Aa_2020_027",
+      "r_squared": 0.022084586359748193,
+      "n_pairs": 4510,
+      "area_coverage": 0.4528112449799197,
+      "max_abs_matched_smd": 0.015348584802506697,
+      "vector_name": "V6",
+      "distance_method": "direct_nearest_neighbor",
+      "cluster_method": "none",
+      "cluster_count": 0,
+      "environment_caliper": 0.25,
+      "geographic_radius_m": 300,
+      "erosion_rank_gap": 0.4,
+      "exposure_rule": "positive_only"
+    },
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "SHI_candidate",
+      "candidate_id": "Aa_20yr_087",
+      "r_squared": 0.15313112245052796,
+      "n_pairs": 6088,
+      "area_coverage": 0.47620165043607493,
+      "max_abs_matched_smd": 0.00782490495032131,
+      "vector_name": "V5",
+      "distance_method": "direct_nearest_neighbor",
+      "cluster_method": "none",
+      "cluster_count": 0,
+      "environment_caliper": 0.35,
+      "geographic_radius_m": 1000,
+      "erosion_rank_gap": 0.5,
+      "exposure_rule": "within_group_rank"
+    }
+  ],
+  "shi_best_retention_subsets": [
+    {
+      "exposure": "Aa_20yr",
+      "outcome": "SHI_candidate",
+      "predictor_set": "environment_plus_exposure",
+      "target_retention_fraction": 0.05,
+      "sample_retention_ratio": 0.05000064979791285,
+      "n_complete_cases": 384735,
+      "n_selected": 19237,
+      "full_sample_apparent_r2": 0.31764723982408594,
+      "apparent_r2": 0.9977172517472315,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.003294552790548362,
+      "direction": "negative"
+    },
+    {
+      "exposure": "Aa_2020",
+      "outcome": "SHI_candidate",
+      "predictor_set": "environment_plus_exposure",
+      "target_retention_fraction": 0.05,
+      "sample_retention_ratio": 0.05000136429370515,
+      "n_complete_cases": 293192,
+      "n_selected": 14660,
+      "full_sample_apparent_r2": 0.17887994765598203,
+      "apparent_r2": 0.9953702708595291,
+      "selection_rule": "lowest_absolute_full_fit_residual",
+      "coefficient": -0.018744350208770223,
+      "direction": "negative"
+    }
+  ]
+}

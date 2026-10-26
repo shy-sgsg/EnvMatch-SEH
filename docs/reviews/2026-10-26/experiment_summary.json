@@ -1,0 +1,89 @@
+{
+  "run_id": "oracle_20261026T041521459615Z_20261026",
+  "input_run_id": "run_20261025T114741_470772Z",
+  "source_rows": 392527,
+  "stage1_sample_rows": 40000,
+  "stage2_sample_rows": 100000,
+  "stage1_counts": {
+    "Aa_20yr": 100,
+    "Aa_2020": 100
+  },
+  "stage2_config_counts": {
+    "Aa_20yr": 20,
+    "Aa_2020": 20
+  },
+  "stage2_role_trial_count": 80,
+  "stage3_matching_test_count": 8,
+  "stage3_model_test_count": 18,
+  "stage2_model_score_rows": 702,
+  "common_sample_comparison_rows": 216,
+  "common_sample_comparison_n": 293146,
+  "selected_full_sample_curve_rows": 900,
+  "model_trial_count": 1024,
+  "subgroup_trial_count": 2448,
+  "retention_trial_count": 252,
+  "registry_record_count": 4030,
+  "experiment_result_rows": 10616,
+  "experiment_count": 4030,
+  "status_counts": {
+    "ok": 10231,
+    "success": 252,
+    "failed": 132,
+    "insufficient_training_rows": 1
+  },
+  "spatial_block_count": 35,
+  "role_counts": [
+    {
+      "spatial_role": "test",
+      "n_cells": 70635,
+      "n_blocks": 7
+    },
+    {
+      "spatial_role": "train",
+      "n_cells": 230577,
+      "n_blocks": 21
+    },
+    {
+      "spatial_role": "validation",
+      "n_cells": 91315,
+      "n_blocks": 7
+    }
+  ],
+  "outcome_nonmissing": {
+    "SHI_candidate": 386851,
+    "AN": 391907,
+    "OM": 391754,
+    "CEC": 391754,
+    "pH": 391907,
+    "SW": 391754,
+    "BD": 391754,
+    "MBC": 391754,
+    "RESP": 391754
+  },
+  "git_sha": "c50bd9ae6a42abc14f898e8043a79cb0c9c818e4",
+  "git_dirty": true,
+  "model_families": [
+    "ols",
+    "log_exposure",
+    "quadratic",
+    "environment_group_fixed_effects",
+    "interactions",
+    "piecewise",
+    "natural_spline",
+    "statsmodels_gam",
+    "huber",
+    "quantile_regression",
+    "random_forest",
+    "extra_trees",
+    "hist_gradient_boosting"
+  ],
+  "figure_count": 10,
+  "selection_policy": {
+    "stage1": "40k stratified train-block sample; all outcomes scored after health-blind matching",
+    "stage2": "validation score ranks up to 20 configurations per exposure; no test blocks included",
+    "stage3": "test blocks scored only for validation-selected matching/model configurations",
+    "oracle_retention": "all-cropland post-hoc outcome-selected apparent envelope; test score intentionally absent"
+  },
+  "subgroup_trial_count_in_scope": 2430,
+  "scope_excluded_subgroup_trial_count": 18
+}

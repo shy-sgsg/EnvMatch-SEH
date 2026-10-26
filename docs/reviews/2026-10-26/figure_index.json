@@ -1,0 +1,42 @@
+[
+  {
+    "name": "01_matching_balance.png",
+    "report_path": "figures/01_matching_balance.png"
+  },
+  {
+    "name": "02_environment_vector_r2.png",
+    "report_path": "figures/02_environment_vector_r2.png"
+  },
+  {
+    "name": "03_cluster_count_r2.png",
+    "report_path": "figures/03_cluster_count_r2.png"
+  },
+  {
+    "name": "04_matching_parameters_r2.png",
+    "report_path": "figures/04_matching_parameters_r2.png"
+  },
+  {
+    "name": "05_retention_upper_envelope.png",
+    "report_path": "figures/05_retention_upper_envelope.png"
+  },
+  {
+    "name": "06_shi_three_result_classes.png",
+    "report_path": "figures/06_shi_three_result_classes.png"
+  },
+  {
+    "name": "07_model_family_comparison.png",
+    "report_path": "figures/07_model_family_comparison.png"
+  },
+  {
+    "name": "08_health_response_curves.png",
+    "report_path": "figures/08_health_response_curves.png"
+  },
+  {
+    "name": "09_erosion_increment_r2.png",
+    "report_path": "figures/09_erosion_increment_r2.png"
+  },
+  {
+    "name": "10_exposure_comparison.png",
+    "report_path": "figures/10_exposure_comparison.png"
+  }
+]

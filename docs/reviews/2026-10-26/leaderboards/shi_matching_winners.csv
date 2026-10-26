@@ -1,0 +1,3 @@
+exposure,outcome,candidate_id,r_squared,coefficient,n_pairs,area_coverage,max_abs_matched_smd,median_erosion_difference,vector_name,distance_method,cluster_method,cluster_count,environment_caliper,geographic_radius_m,erosion_rank_gap,exposure_rule
+Aa_2020,SHI_candidate,Aa_2020_027,0.022084586359748193,-0.017922568330329722,4510,0.4528112449799197,0.015348584802506697,0.7174962982535362,V6,direct_nearest_neighbor,none,0,0.25,300,0.4,positive_only
+Aa_20yr,SHI_candidate,Aa_20yr_087,0.15313112245052796,-0.010632987916594389,6088,0.47620165043607493,0.00782490495032131,11.801665782928467,V5,direct_nearest_neighbor,none,0,0.35,1000,0.5,within_group_rank

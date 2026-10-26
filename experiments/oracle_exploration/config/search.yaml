@@ -1,0 +1,94 @@
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+input_run_id: run_20261025T114741_470772Z
+seed: 20261026
+output_root: outputs/exploratory_oracle
+
+exposures:
+  - Aa_20yr
+  - Aa_2020
+outcomes:
+  - SHI_candidate
+  - AN
+  - OM
+  - CEC
+  - pH
+  - SW
+  - BD
+  - MBC
+  - RESP
+
+environment:
+  core_variables: [Elevation, Cur, TWI, LST]
+  optional_variables: [NDWI, NDBSI, EVI]
+  supplemental_variables: [NDVI, Precipitation]
+  vectors:
+    V1: [Elevation, Cur, TWI, LST]
+    V2: [Elevation, TWI, LST]
+    V3: [Elevation, Cur, TWI]
+    V4: [Cur, TWI, LST]
+    V5: [Elevation, LST]
+    V6: [Elevation, TWI]
+    V7: [Elevation, Cur, TWI, LST, NDWI]
+    V8: [Elevation, Cur, TWI, LST, EVI]
+  random_subset_count: 32
+  correlated_variable_groups:
+    - [NDWI, NDBSI, EVI, NDVI]
+    - [Elevation, Precipitation]
+  soil_codes: [26, 27, 42]
+  excluded_soil_codes: [85]
+
+matching:
+  distance_methods:
+    - standardized_euclidean
+    - weighted_euclidean
+    - mahalanobis
+    - pca_euclidean
+    - direct_nearest_neighbor
+  cluster_methods: [none, minibatch_kmeans, kmeans, gaussian_mixture, agglomerative]
+  cluster_counts: [0, 2, 3, 4, 6, 8, 10, 12, 15, 20]
+  environment_calipers: [0.15, 0.25, 0.35, 0.5, 0.75, 1.0]
+  geographic_radii_m: [100, 200, 300, 500, 750, 1000, 1500]
+  erosion_rank_gaps: [0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50]
+  exposure_rules: [within_group_rank, positive_only, exposure_only]
+  allow_replacement: false
+
+stages:
+  stage1:
+    sample_size: 40000
+    candidates_per_exposure: 100
+  stage2:
+    max_configs: 20
+    sample_size: 100000
+  stage3:
+    full_sample: true
+    block_size_m: 5000
+    split:
+      train: 0.60
+      validation: 0.20
+      test: 0.20
+
+retention_fractions: [1.0, 0.75, 0.50, 0.30, 0.20, 0.10, 0.05]
+retention_search_trials: 20
+model_families:
+  - ols
+  - log_exposure
+  - quadratic
+  - environment_group_fixed_effects
+  - interactions
+  - paired_difference
+  - piecewise
+  - natural_spline
+  - statsmodels_gam
+  - huber
+  - quantile_regression
+  - random_forest
+  - extra_trees
+  - hist_gradient_boosting
+
+selection_objectives:
+  - maximize_apparent_r2
+  - maximize_validation_r2
+  - maximize_delta_r2
+  - maximize_absolute_association
+  - seek_negative_shi_association
