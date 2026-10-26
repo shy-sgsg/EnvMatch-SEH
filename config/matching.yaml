@@ -12,8 +12,9 @@ environment:
   geographic_radius_m: null
 
 pairing:
-  erosion_column: Aa
+  erosion_column: Aa_20yr
   erosion_transform: log1p
+  comparison_erosion_columns: [Aa_20yr, Aa_2020]
   environment_group_column: environment_group
   soil_type_column: SoilType
   max_environment_distance: null

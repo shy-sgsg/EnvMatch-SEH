@@ -2,7 +2,8 @@
 # Absolute local paths are also supported; data_paths.yaml is Git-ignored.
 # Leave unavailable or unconfirmed inputs null.
 erosion:
-  Aa: data/raw/erosion/Aa.tif
+  Aa_20yr: data/raw/erosion/Aa_20yr.tif
+  Aa_2020: data/raw/erosion/Aa_2020.tif
   Ap: null
   R: data/raw/erosion/R.tif
   K: data/raw/erosion/K.tif

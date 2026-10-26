@@ -1,6 +1,6 @@
 project:
   name: EnvMatch-SEH
-  stage: initialization
+  stage: cropland_real_data_analysis
   random_seed: 20261024
   output_root: outputs
   log_root: logs
@@ -18,7 +18,7 @@ data:
   analysis_results_path: null
 
 matching:
-  primary_erosion: Aa
+  primary_erosion: Aa_20yr
   transform: log1p
   excluded_distance_variables: [R, K, LS, C, P, SHI, AN, OM, CEC, pH, SW, BD, MBC, RESP]
   continuous_environment: [Elevation, Cur, TWI, LST]
@@ -35,8 +35,14 @@ matching:
   allow_reference_reuse: false
 
 analysis:
-  erosion_scenarios: [Aa]
+  erosion_scenarios: [Aa_20yr, Aa_2020]
   health_outcomes: [SHI, AN, OM, CEC, pH, SW, BD, MBC, RESP]
+  cropland_codes: [12]
+  reference_cropland_area_km2: 347.877
+  cluster_counts_per_soil_type: [6, 8, 10, 12]
+  candidate_environment_distance_z_euclidean: 0.5
+  candidate_exposure_rank_gap: 0.25
+  candidate_geographic_radii_m: [300, 500, 1000]
   spatial_block_size_m: null
   bootstrap_replicates: 999
 
