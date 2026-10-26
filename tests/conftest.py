@@ -5,4 +5,6 @@ from pathlib import Path
 import os
 
 os.environ.setdefault("MPLCONFIGDIR", "/tmp/envmatch-matplotlib-cache")
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(PROJECT_ROOT))
+sys.path.insert(0, str(PROJECT_ROOT / "src"))

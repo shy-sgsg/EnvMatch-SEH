@@ -21,6 +21,7 @@
 - Stage 2: at most 20 unique configurations, on up to 100,000 cells.
 - Stage 3: all eligible cells; 5 km spatial blocks assigned 60/20/20 to train/validation/test; test results must not affect selection.
 - Candidate environment calipers: `{0.15, 0.25, 0.35, 0.5, 0.75, 1.0}`; radii `{100, 200, 300, 500, 750, 1000, 1500}` m; percentile gaps `{0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50}`.
+- Random environment vectors may also use available NDVI and Precipitation; avoid combining highly correlated NDWI/NDBSI/EVI/NDVI variables or the Elevation/Precipitation pair. V1–V8 stay exactly as specified.
 - Report train, validation, test, apparent R², exposure ΔR², coefficient/direction, RMSE/MAE, cell/pair counts, balance, runtime, and random seed.
 - Do not run PCNM or change the study population beyond Wenxian cropland.
 - Preserve unrelated untracked `paper/` and pre-existing governance plan files.
@@ -47,12 +48,12 @@
 
 **Interfaces:** Formal mode rules remain the existing scientific rules. Oracle mode is a separate named experiment with its own output root and selection metadata.
 
-- [ ] Change charter version to 1.1 and explicitly scope the health-result selection prohibition in section 6 to formal empirical research.
-- [ ] Add charter section 11 with the ten Oracle permissions/disclosures from the approved attachment; state it does not alter the research topic and defers PCNM for this run.
-- [ ] Add `FORMAL` / `EXPLORATORY_ORACLE` mode definitions to the listed governance and user documents.
-- [ ] Preserve formal G4/G5 gates; state that Oracle mode can proceed as exploratory work and cannot be represented as formal evidence.
-- [ ] Record the explicit user authorization in `docs/DECISIONS.md`.
-- [ ] Review the exact charter diff against the authorized text and confirm no other charter section changed.
+- [x] Change charter version to 1.1 and explicitly scope the health-result selection prohibition in section 6 to formal empirical research.
+- [x] Add charter section 11 with the ten Oracle permissions/disclosures from the approved attachment; state it does not alter the research topic and defers PCNM for this run.
+- [x] Add `FORMAL` / `EXPLORATORY_ORACLE` mode definitions to the listed governance and user documents.
+- [x] Preserve formal G4/G5 gates; state that Oracle mode can proceed as exploratory work and cannot be represented as formal evidence.
+- [x] Record the explicit user authorization in `docs/DECISIONS.md`.
+- [x] Review the exact charter diff against the authorized text and confirm no other charter section changed.
 
 ### Task 2: Run identity, data joins, and trial registry (Commit 2)
 
@@ -70,11 +71,11 @@
 - `record_experiment(registry_path: Path, record: Mapping[str, object]) -> None` appends one complete success/error record.
 - `make_experiment_id(date: str, sequence: int, config_id: str) -> str` returns a stable unique `oracle_<date>_<sequence>_<config_id>` ID.
 
-- [ ] Test that duplicate or non-overlapping cell IDs fail with a clear error and ordinary source tables join exactly once.
-- [ ] Test that missing response values stay missing and that `SHI_candidate` is never renamed to `SHI`.
-- [ ] Test registry persistence of success and failure rows with `outcome_guided_selection`, objective, input run ID, Git revision, and seed.
-- [ ] Implement the loader and append-only registry using the existing G2/G3 output run ID.
-- [ ] Test config validation and confirm the default candidate counts and parameter values match the design.
+- [x] Test that duplicate or non-overlapping cell IDs fail with a clear error and ordinary source tables join exactly once.
+- [x] Test that missing response values stay missing and that `SHI_candidate` is never renamed to `SHI`.
+- [x] Test registry persistence of success and failure rows with `outcome_guided_selection`, objective, input run ID, Git revision, and seed.
+- [x] Implement the loader and append-only registry using the existing G2/G3 output run ID.
+- [x] Test config validation and confirm the default candidate counts and parameter values match the design.
 
 ### Task 3: Environment and spatial-split candidates
 
@@ -89,11 +90,11 @@
 - `fit_environment_labels(frame, variables, method, k, by_soil, weights, seed) -> np.ndarray` supports no-cluster, MiniBatch K-means, and bounded sample-only GMM/agglomerative options.
 - `spatial_roles(frame, block_size_m=5000, seed=20261026) -> pd.Series` assigns whole blocks to train/validation/test.
 
-- [ ] Test the named vector sets, deterministic random subsets, and exclusion of health fields from distance columns.
-- [ ] Test category counts and soil-stratum behavior, including code 85 exclusion and variable complete-case masks.
-- [ ] Test spatial role reproducibility, 60/20/20 block assignment, no block crossing roles, and test-role isolation from selection APIs.
-- [ ] Implement distance transforms: standardized Euclidean, weighted Euclidean, regularized Mahalanobis, PCA Euclidean, and direct nearest neighbor.
-- [ ] Implement bounded clustering candidates and record realized cluster counts, group sizes, runtime, and failures.
+- [x] Test the named vector sets, deterministic random subsets, and exclusion of health fields from distance columns.
+- [x] Test category counts and soil-stratum behavior, including code 85 exclusion and variable complete-case masks.
+- [x] Test spatial role reproducibility, 60/20/20 block assignment, no block crossing roles, and test-role isolation from selection APIs.
+- [x] Implement distance transforms: standardized Euclidean, weighted Euclidean, regularized Mahalanobis, PCA Euclidean, and direct nearest neighbor.
+- [x] Implement bounded clustering candidates; Task 4 registry records realized group counts/sizes, runtime, and failures for each candidate.
 
 ### Task 4: Matching search and outcome feedback
 
@@ -105,11 +106,11 @@
 - `draw_matching_candidates(config, exposure, seed) -> list[dict[str, object]]` returns exactly the configured count and includes vectors, metric, clustering, weights, calipers, radius, rank gap, and exposure rule.
 - `run_matching_candidate(frame, candidate, outcomes, registry) -> CandidateResult` builds matches with the existing matching component, joins outcomes only after pair IDs are fixed, scores all nine outcomes, and records failures.
 
-- [ ] Test deterministic 100-candidate sampling per exposure and exact value domains for caliper/radius/rank-gap candidates.
-- [ ] Test `outcome_guided_selection=true`, selected outcome/objective logging, and that each candidate score matches the returned pair/outcome rows.
-- [ ] Test no pair-cell reuse; each matched-pair row records its actual exposure values, percentile gap, environment distance, and geographic distance.
-- [ ] Implement Stage 1 ranking on the fixed 40,000-cell sample without exposing test blocks.
-- [ ] Test error capture so a failed candidate is recorded with status and cause, not omitted.
+- [x] Test deterministic 100-candidate sampling per exposure and exact value domains for caliper/radius/rank-gap candidates.
+- [x] Test `outcome_guided_selection=true`, selected outcome/objective logging, and that each candidate score matches the returned pair/outcome rows.
+- [x] Test no pair-cell reuse; each matched-pair row records its actual exposure values, percentile gap, environment distance, and geographic distance.
+- [x] Implement Stage 1 ranking on the fixed 40,000-cell sample without exposing test blocks.
+- [x] Test error capture so a failed candidate is recorded with status and cause, not omitted.
 
 ### Task 5: Regression, nonlinear, and feature-regime search
 
@@ -123,11 +124,11 @@
 - `compare_feature_regimes(frame, outcome, exposure, ...) -> pd.DataFrame` returns exposure-only, environment-only, environment+exposure, group+exposure, and matched-pair-difference scores.
 - `compute_delta_r2(full_model: float, environment_only: float) -> float` is calculated on identical rows, split, and algorithm.
 
-- [ ] Test that each metric is calculated on the same complete-case rows and that missing outcomes are not filled with zero.
-- [ ] Test apparent R² labels versus spatial validation/test R² and ensure test data never sets hyperparameters or candidate rank.
-- [ ] Implement OLS, transformed/quadratic/piecewise exposure, natural-spline/Ridge, Huber, statsmodels GAM/quantile where installed, Random Forest, Extra Trees, and HistGradientBoosting.
-- [ ] Implement the five feature regimes and paired-difference response using one row per non-reused match pair.
-- [ ] Test ΔR² against a known same-sample synthetic case and record signs, errors, coefficients, and runtime.
+- [x] Test that each metric is calculated on the same complete-case rows and that missing outcomes are not filled with zero.
+- [x] Test apparent R² labels versus spatial validation/test R² and ensure test data never sets hyperparameters or candidate rank.
+- [x] Implement OLS, transformed/quadratic/piecewise exposure, natural-spline/Ridge, Huber, statsmodels GAM/quantile where installed, Random Forest, Extra Trees, and HistGradientBoosting.
+- [x] Implement the five feature regimes and paired-difference response using one row per non-reused match pair.
+- [x] Test ΔR² against a known same-sample synthetic case and record signs, errors, coefficients, and runtime.
 
 ### Task 6: Oracle subgroup/retention search and result ranking
 
@@ -142,11 +143,11 @@
 - `oracle_retention_search(frame, outcome, predictors, fractions) -> pd.DataFrame` returns best apparent R² by 100/75/50/30/20/10/5 percent retention with all outcome-guided rules recorded.
 - `rank_leaderboards(registry) -> dict[str, pd.DataFrame]` returns full-sample best, Oracle apparent best, spatial test best, and ΔR² leaderboards.
 
-- [ ] Test subgroup predicates and realized/target retention counts.
-- [ ] Test oracle rankings never label selected apparent R² as test R² and include trial counts and selection objectives.
-- [ ] Test leaderboard objectives rank the intended columns and preserve outcome/exposure/sample metadata.
-- [ ] Implement subgroup combinations for soil, environment groups, elevation/TWI/LST/vegetation bins, zero/positive exposure, and exposure quantiles.
-- [ ] Keep all nine outcomes and both erosion exposures represented in per-indicator outputs.
+- [x] Test subgroup predicates and realized/target retention counts.
+- [x] Test oracle rankings never label selected apparent R² as test R² and include trial counts and selection objectives.
+- [x] Test leaderboard objectives rank the intended columns and preserve outcome/exposure/sample metadata.
+- [x] Implement subgroup combinations for soil, environment groups, elevation/TWI/LST/vegetation bins, zero/positive exposure, and exposure quantiles.
+- [x] Keep all nine outcomes and both erosion exposures represented in per-indicator outputs.
 
 ### Task 7: Stage execution, plots, and review report (Commit 3)
 
@@ -163,13 +164,13 @@
 - `generate_figures(results_dir: Path) -> list[Path]` writes the ten requested comparison figures.
 - `write_review_report(results_dir: Path, report_path: Path) -> Path` writes the three requested answers, four leaderboards, per-indicator results, sample-selection disclosure, model configs, experiment counts, and figure index.
 
-- [ ] Test mode-specific output roots and exact stage/result count reconciliation.
-- [ ] Execute 100 candidates for each exposure and verify all candidates appear in `experiment_results.parquet`.
-- [ ] Execute the top ≤20 configurations on the larger sample; capture the chosen objective and exposure/health coverage.
-- [ ] Execute full-sample, Oracle apparent, and validation-selected spatial test analyses with test blocks opened only after selection.
-- [ ] Generate the requested balance, R²/search, retention, model-ranking, response-curve, ΔR², and exposure-comparison figures.
-- [ ] Produce all four leaderboards and the report answering the three core questions with exact n, pair counts, rates, metrics, and test-set role.
-- [ ] Run the full test suite and reconcile every registered trial with output files and summary counts.
+- [x] Test mode-specific output roots and exact stage/result count reconciliation.
+- [x] Execute 100 candidates for each exposure and verify all candidates appear in `experiment_results.parquet`.
+- [x] Execute the top ≤20 configurations on the larger sample; capture the chosen objective and exposure/health coverage.
+- [x] Execute full-sample, Oracle apparent, and validation-selected spatial test analyses with test blocks opened only after selection.
+- [x] Generate the requested balance, R²/search, retention, model-ranking, response-curve, ΔR², and exposure-comparison figures.
+- [x] Produce all four leaderboards and the report answering the three core questions with exact n, pair counts, rates, metrics, and test-set role.
+- [x] Run the full test suite and reconcile every registered trial with output files and summary counts.
 - [ ] Stage commit 3 artifacts separately from commits 1 and 2; retain raw inputs and large run outputs under ignored paths.
 
 ## Commit grouping
