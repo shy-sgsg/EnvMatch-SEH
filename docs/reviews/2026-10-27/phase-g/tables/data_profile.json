@@ -1,0 +1,49 @@
+{
+  "input_run_id": "run_20261025T114741_470772Z",
+  "joined_rows": 392527,
+  "unique_cell_ids": 392527,
+  "primary_soil_rows": 383714,
+  "soil_counts": {
+    "26.0": 77400,
+    "27.0": 260807,
+    "42.0": 45507,
+    "85.0": 8141,
+    "NaN": 672
+  },
+  "outcome_nonmissing": {
+    "SHI_candidate": 386851,
+    "AN": 391907,
+    "OM": 391754,
+    "CEC": 391754,
+    "pH": 391907,
+    "SW": 391754,
+    "BD": 391754,
+    "MBC": 391754,
+    "RESP": 391754
+  },
+  "exposure_ranges_and_zeros": {
+    "Aa_20yr": {
+      "nonmissing": 388261,
+      "min": 0.0,
+      "median": 5.524936199188232,
+      "max": 143.00503540039062,
+      "zero_count": 133220,
+      "negative_count": 0
+    },
+    "Aa_2020": {
+      "nonmissing": 388058,
+      "min": 0.0,
+      "median": 0.8294722139835358,
+      "max": 20.028547286987305,
+      "zero_count": 5491,
+      "negative_count": 0
+    }
+  },
+  "health_surface_type": "spatial prediction raster values; not independent field measurements",
+  "erosion_source": "precomputed Aa_20yr and Aa_2020; no RUSLE factor-product recomputation or validation",
+  "unresolved_metadata": [
+    "Aa physical unit",
+    "Aa_20yr exact time range and averaging construction",
+    "health prediction model metadata for all eight indicators and SHI_candidate"
+  ]
+}

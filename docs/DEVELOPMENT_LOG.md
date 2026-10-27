@@ -60,3 +60,13 @@
 - 报告与审阅包：`docs/reviews/2026-10-26/PHASE_F_RESEARCH_REPORT.md`、`docs/reviews/2026-10-26/PHASE_F_CHATGPT_REVIEW_REQUEST.md`；图表为 PNG/SVG/PDF，表格和图注均另存。
 - 证据与边界：运行清单保存输入 SHA-256、配置/依赖版本及模型设置；配对端点按空间角色独立构造。完整 pair Parquet 保留在 Git 忽略的 `outputs/exploratory_oracle/`；结果仍是内部重复空间验证和预测面关联，不作因果/外部验证结论。
 - 未提交、未推送。等待用户本地提交并交 ChatGPT 审阅；Phase F 审阅前不推进正式下一阶段。
+
+## 2026-10-27：Phase G 环境异质性与候选结果审查包
+
+- 运行 `phase_g_20261027`，模式为 `EXPLORATORY_ORACLE` 且显式设置 `outcome_guided_selection=true`；运行基线 HEAD 为 `f71aaf455e5ca9eff36dfedc0461a09125ff3d34`。复用 392,527 个对齐像元、383,714 个主土类像元、Phase F 的 407,372 个 M3/M4 配对及历史 Oracle 的 10,616 条试验登记。使用预计算 Aa_20yr/Aa_2020；未重建或验证 RUSLE 因子乘积，未重跑 PCNM，未修改研究总纲。
+- 生成 144 条全配对差值关联、5,012 条候选模型记录、122 条模型/关联排行榜记录、4,644 条环境组关联和 1,620 条验证集选择的组空间检验。环境定义包括 SoilType、Phase F V5 K-means、土类内 Ward 聚类，以及 Elevation、TWI、LST、NDWI、NDVI、Precipitation 六项土类内分位组。配对高低端按 5 km 空间块 bootstrap 计算区间。
+- 从 Phase F 重复空间表只选 M3/M4 的基础 P1 截距 OLS 模型，保留两个 Aa 时段、九项结局和 validation/test 分工，共 720 行、72 个空间汇总组。绘图抽取 Aa_20yr 的 180 条测试记录。初检发现此前筛选条件误取 M0 像元基线且遗漏匹配配对；已用测试锁定 P1/M3/M4 选择与训练斜率方向摘要，更新排行榜、登记表、报告、表格和图 9。
+- 首轮长计算期间终端没有阶段输出；确认 20 张结果表、运行清单、报告和九图目录均写出后结束了仍存活的会话。后续空间汇总、图 9 和审查材料均基于已保存数据重新生成并通过完整性检查；运行脚本现会输出阶段进度。
+- 图 5 同时展示固定 20,000 像元共同样本自然样条和历史 Oracle 最佳全样本表观模型曲线，并区分两者的样本范围与选择方式。九张图均输出 PNG/SVG/PDF；ChatGPT 审查目录包含图注、图源表、完整结果 CSV 副本和审查请求，共 72 个文件。汇报指出健康层是预测面、Aa 单位/时期元信息尚缺，结果不作因果或独立实测验证解释。
+- 报告将 Wilcoxon P<0.001 显示为阈值格式，避免舍入显示成 0.000。验证：`pytest -q` 为 122 项通过；`python -m compileall -q src experiments scripts tests` 和 `git diff --check` 通过；产物检查确认 9 张图的三种格式、72 个审查文件、两种曲线类型、降水分组和 M3/M4 空间记录均齐全。Ruff 未安装，未运行。
+- 报告及审查请求位于 `docs/reviews/2026-10-27/phase-g/`，运行数据位于 Git 忽略的 `outputs/exploratory_oracle/phase_g_20261027/`。当前未提交、未推送；审查请求中的实际审查 SHA 需在首个 Phase G 成果提交后填写，再单独提交该请求。

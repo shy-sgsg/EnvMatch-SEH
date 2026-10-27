@@ -1,0 +1,47 @@
+phase: G
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: phase_g_20261027
+input_run_id: run_20261025T114741_470772Z
+phase_f_run_id: phase_f_20261026_seed20261026
+oracle_source_run_id: oracle_20261026T041521459615Z_20261026
+output_dir: outputs/exploratory_oracle/phase_g_20261027
+review_dir: docs/reviews/2026-10-27/phase-g
+seed: 20261027
+exposures: [Aa_20yr, Aa_2020]
+outcomes: [SHI_candidate, AN, OM, CEC, pH, SW, BD, MBC, RESP]
+matched_methods: [M3, M4]
+primary_method_for_groups: M4
+primary_exposure: Aa_20yr
+pair_analysis:
+  block_size_m: 5000
+  bootstrap_replicates: 300
+  subsets: [all, low_zero, both_positive, high_erosion_gap_q4]
+environment_groups:
+  primary_soils: [26, 27, 42]
+  cluster_environment_variables: [Elevation, LST]
+  cluster_count: 6
+  hierarchy_fit_rows_per_soil: 1500
+  hierarchy_seed: 20261027
+  gradient_variables: [Elevation, TWI, LST, NDWI, NDVI, Precipitation]
+  gradient_bins: 5
+  min_spatial_test_pairs: 20
+spatial_validation:
+  block_size_m: 5000
+  repeats: 10
+  seeds: [20261027, 20261028, 20261029, 20261030, 20261031, 20261032, 20261033, 20261034, 20261035, 20261036]
+  roles: [train, validation, test]
+  fractions: [0.60, 0.20, 0.20]
+model_search:
+  apparent_model_types: [stage1_matching_search, stage2_model_search, oracle_subgroup_search, oracle_retention_search]
+  full_sample_model_type: full_sample_model
+  spatial_test_model_type: spatial_model_test
+  include_previous_trial_records: true
+  curve_selection_trials: 1024
+  curve_model_families: 13
+response_curves:
+  fixed_sample_size: 20000
+  display_points: 2500
+  spline_family: natural_spline
+  best_model_curve_source: models/selected_full_sample_curves.parquet
+figure_formats: [png, svg, pdf]

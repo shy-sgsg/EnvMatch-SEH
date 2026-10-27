@@ -1,0 +1,40 @@
+{
+  "rows": 407372,
+  "unique_pairs": 407372,
+  "pair_sets": [
+    {
+      "method": "M3",
+      "exposure": "Aa_2020",
+      "n_pairs": 111658
+    },
+    {
+      "method": "M3",
+      "exposure": "Aa_20yr",
+      "n_pairs": 96474
+    },
+    {
+      "method": "M4",
+      "exposure": "Aa_2020",
+      "n_pairs": 108343
+    },
+    {
+      "method": "M4",
+      "exposure": "Aa_20yr",
+      "n_pairs": 90897
+    }
+  ],
+  "negative_actual_Aa_pairs": 0,
+  "reused_member_count": 0,
+  "health_variables_present": [
+    "SHI_candidate",
+    "AN",
+    "OM",
+    "CEC",
+    "pH",
+    "SW",
+    "BD",
+    "MBC",
+    "RESP"
+  ],
+  "spatial_block_count": 34
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "name": "01_matching_quality",
+    "title": "Environment matching coverage and balance",
+    "files": {
+      "png": "figures/01_matching_quality.png",
+      "svg": "figures/01_matching_quality.svg",
+      "pdf": "figures/01_matching_quality.pdf"
+    },
+    "data": "figures/data/01_matching_quality.csv",
+    "caption": "figures/captions/01_matching_quality.md",
+    "rows": 243
+  },
+  {
+    "name": "02_paired_health_differences",
+    "title": "Health differences in high versus low erosion pairs",
+    "files": {
+      "png": "figures/02_paired_health_differences.png",
+      "svg": "figures/02_paired_health_differences.svg",
+      "pdf": "figures/02_paired_health_differences.pdf"
+    },
+    "data": "figures/data/02_paired_health_differences.csv",
+    "caption": "figures/captions/02_paired_health_differences.md",
+    "rows": 9
+  },
+  {
+    "name": "03_pair_association_heatmap",
+    "title": "Matched-pair erosion and health association",
+    "files": {
+      "png": "figures/03_pair_association_heatmap.png",
+      "svg": "figures/03_pair_association_heatmap.svg",
+      "pdf": "figures/03_pair_association_heatmap.pdf"
+    },
+    "data": "figures/data/03_pair_association_heatmap.csv",
+    "caption": "figures/captions/03_pair_association_heatmap.md",
+    "rows": 18
+  },
+  {
+    "name": "04_model_r2_comparison",
+    "title": "Pixel-level model R² rankings",
+    "files": {
+      "png": "figures/04_model_r2_comparison.png",
+      "svg": "figures/04_model_r2_comparison.svg",
+      "pdf": "figures/04_model_r2_comparison.pdf"
+    },
+    "data": "figures/data/04_model_r2_comparison.csv",
+    "caption": "figures/captions/04_model_r2_comparison.md",
+    "rows": 36
+  },
+  {
+    "name": "05_response_curves",
+    "title": "Natural spline and selected full-sample response curves",
+    "files": {
+      "png": "figures/05_response_curves.png",
+      "svg": "figures/05_response_curves.svg",
+      "pdf": "figures/05_response_curves.pdf"
+    },
+    "data": "figures/data/05_response_curves.csv",
+    "caption": "figures/captions/05_response_curves.md",
+    "rows": 1800
+  },
+  {
+    "name": "06_environment_group_forest",
+    "title": "Negative associations across environmental groups",
+    "files": {
+      "png": "figures/06_environment_group_forest.png",
+      "svg": "figures/06_environment_group_forest.svg",
+      "pdf": "figures/06_environment_group_forest.pdf"
+    },
+    "data": "figures/data/06_environment_group_forest.csv",
+    "caption": "figures/captions/06_environment_group_forest.md",
+    "rows": 18
+  },
+  {
+    "name": "07_grouping_method_comparison",
+    "title": "Association patterns by environment grouping method",
+    "files": {
+      "png": "figures/07_grouping_method_comparison.png",
+      "svg": "figures/07_grouping_method_comparison.svg",
+      "pdf": "figures/07_grouping_method_comparison.pdf"
+    },
+    "data": "figures/data/07_grouping_method_comparison.csv",
+    "caption": "figures/captions/07_grouping_method_comparison.md",
+    "rows": 1161
+  },
+  {
+    "name": "08_key_group_maps",
+    "title": "Locations of outcome-selected environmental groups",
+    "files": {
+      "png": "figures/08_key_group_maps.png",
+      "svg": "figures/08_key_group_maps.svg",
+      "pdf": "figures/08_key_group_maps.pdf"
+    },
+    "data": "figures/data/08_key_group_maps.csv",
+    "caption": "figures/captions/08_key_group_maps.md",
+    "rows": 3
+  },
+  {
+    "name": "09_spatial_validation",
+    "title": "Spatial holdout performance and repeated pair fits",
+    "files": {
+      "png": "figures/09_spatial_validation.png",
+      "svg": "figures/09_spatial_validation.svg",
+      "pdf": "figures/09_spatial_validation.pdf"
+    },
+    "data": "figures/data/09_spatial_validation.csv",
+    "caption": "figures/captions/09_spatial_validation.md",
+    "rows": 189
+  }
+]

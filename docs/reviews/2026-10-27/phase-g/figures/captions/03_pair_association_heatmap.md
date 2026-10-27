@@ -1,0 +1,1 @@
+Spearman correlations use paired high-minus-low erosion and health differences. The displayed 95% correlation intervals in the companion table use a Fisher-z approximation with the number of 5 km midpoint blocks as the effective sample size; p-values remain descriptive under spatial dependence.

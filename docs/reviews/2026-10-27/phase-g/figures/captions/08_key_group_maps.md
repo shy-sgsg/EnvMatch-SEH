@@ -1,0 +1,1 @@
+Each panel shows a deterministic sample of 15,000 M4 Aa_20yr pair midpoints. Red points belong to the highest composite negative-association group selected for that indicator; all other sampled pairs are gray. Coordinates are projected metres. These point maps show pair locations, not continuous raster surfaces or field observations.

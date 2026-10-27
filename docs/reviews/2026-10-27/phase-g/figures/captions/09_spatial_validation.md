@@ -1,0 +1,1 @@
+The left panel shows prior pixel models chosen by validation and then evaluated on spatial test blocks. The right panel shows Phase F M3/M4 matched-pair OLS test R² across ten 5 km seeds. The splits are internal diagnostics after previous Oracle searches, not untouched external validation; pixel and pair metrics remain separate.

@@ -1,0 +1,519 @@
+{
+  "run_id": "phase_g_20261027",
+  "baseline_commit_sha": "f71aaf455e5ca9eff36dfedc0461a09125ff3d34",
+  "mode": "EXPLORATORY_ORACLE",
+  "files": [
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/CHATGPT_REVIEW_REQUEST.md",
+      "bytes": 15574
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/PHASE_G_RESEARCH_REPORT.md",
+      "bytes": 22496
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/01_matching_quality.pdf",
+      "bytes": 26672
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/01_matching_quality.png",
+      "bytes": 208119
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/01_matching_quality.svg",
+      "bytes": 99916
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/02_paired_health_differences.pdf",
+      "bytes": 22625
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/02_paired_health_differences.png",
+      "bytes": 249933
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/02_paired_health_differences.svg",
+      "bytes": 125973
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/03_pair_association_heatmap.pdf",
+      "bytes": 31171
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/03_pair_association_heatmap.png",
+      "bytes": 157859
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/03_pair_association_heatmap.svg",
+      "bytes": 83233
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/04_model_r2_comparison.pdf",
+      "bytes": 19951
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/04_model_r2_comparison.png",
+      "bytes": 127474
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/04_model_r2_comparison.svg",
+      "bytes": 68671
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/05_response_curves.pdf",
+      "bytes": 670137
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/05_response_curves.png",
+      "bytes": 1468405
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/05_response_curves.svg",
+      "bytes": 1382052
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/06_environment_group_forest.pdf",
+      "bytes": 23712
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/06_environment_group_forest.png",
+      "bytes": 258896
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/06_environment_group_forest.svg",
+      "bytes": 108614
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/07_grouping_method_comparison.pdf",
+      "bytes": 18680
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/07_grouping_method_comparison.png",
+      "bytes": 131092
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/07_grouping_method_comparison.svg",
+      "bytes": 59687
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/08_key_group_maps.pdf",
+      "bytes": 687600
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/08_key_group_maps.png",
+      "bytes": 1128538
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/08_key_group_maps.svg",
+      "bytes": 1325274
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/09_spatial_validation.pdf",
+      "bytes": 22637
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/09_spatial_validation.png",
+      "bytes": 166696
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/09_spatial_validation.svg",
+      "bytes": 97741
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/01_matching_quality.md",
+      "bytes": 162
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/02_paired_health_differences.md",
+      "bytes": 251
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/03_pair_association_heatmap.md",
+      "bytes": 296
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/04_model_r2_comparison.md",
+      "bytes": 226
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/05_response_curves.md",
+      "bytes": 410
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/06_environment_group_forest.md",
+      "bytes": 321
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/07_grouping_method_comparison.md",
+      "bytes": 318
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/08_key_group_maps.md",
+      "bytes": 336
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/09_spatial_validation.md",
+      "bytes": 332
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/01_matching_quality.csv",
+      "bytes": 264253
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/02_paired_health_differences.csv",
+      "bytes": 1068
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/03_pair_association_heatmap.csv",
+      "bytes": 12592
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/04_model_r2_comparison.csv",
+      "bytes": 5112
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/05_response_curves.csv",
+      "bytes": 792816
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/06_environment_group_forest.csv",
+      "bytes": 14525
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/07_grouping_method_comparison.csv",
+      "bytes": 886729
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/08_key_group_maps.csv",
+      "bytes": 198
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/09_spatial_validation.csv",
+      "bytes": 67639
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/figure_index.json",
+      "bytes": 3808
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/association_results.csv",
+      "bytes": 100365
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/data_profile.json",
+      "bytes": 1281
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/environment_group_associations.csv",
+      "bytes": 3656823
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/environment_group_definitions.json",
+      "bytes": 1008
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/environment_group_leaderboard.csv",
+      "bytes": 593053
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/environment_group_statistics.csv",
+      "bytes": 255302
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/experiment_registry.csv",
+      "bytes": 25134666
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/final_candidate_results.csv",
+      "bytes": 229110
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/group_spatial_stability.csv",
+      "bytes": 27425
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/group_spatial_validation.csv",
+      "bytes": 706250
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/matched_pair_statistics.csv",
+      "bytes": 104988
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/matching_balance_results.csv",
+      "bytes": 10219031
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/matching_configurations.csv",
+      "bytes": 966982
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/model_leaderboard.csv",
+      "bytes": 212624
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/model_search_results.csv",
+      "bytes": 9183955
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/pair_balance_summary.csv",
+      "bytes": 1820
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/pair_input_profile.json",
+      "bytes": 649
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/paired_spatial_validation_summary.csv",
+      "bytes": 5252
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/pixel_model_r2_summary.csv",
+      "bytes": 176848
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/response_curve_data.csv",
+      "bytes": 793192
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/response_curve_sample_points.csv",
+      "bytes": 1744161
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/response_curve_sample_profile.csv",
+      "bytes": 343
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/spatial_validation_results.csv",
+      "bytes": 1103095
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/config/phase_g.yaml",
+      "bytes": 1709
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/config.yaml",
+      "bytes": 1709
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/diagnostics/input_profile.json",
+      "bytes": 2370
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/diagnostics/provenance.json",
+      "bytes": 2874
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/01_matching_quality.pdf",
+      "bytes": 26672
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/01_matching_quality.png",
+      "bytes": 208119
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/01_matching_quality.svg",
+      "bytes": 99916
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/02_paired_health_differences.pdf",
+      "bytes": 22625
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/02_paired_health_differences.png",
+      "bytes": 249933
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/02_paired_health_differences.svg",
+      "bytes": 125973
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/03_pair_association_heatmap.pdf",
+      "bytes": 31171
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/03_pair_association_heatmap.png",
+      "bytes": 157859
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/03_pair_association_heatmap.svg",
+      "bytes": 83233
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/04_model_r2_comparison.pdf",
+      "bytes": 19951
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/04_model_r2_comparison.png",
+      "bytes": 127474
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/04_model_r2_comparison.svg",
+      "bytes": 68671
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/05_response_curves.pdf",
+      "bytes": 670137
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/05_response_curves.png",
+      "bytes": 1468405
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/05_response_curves.svg",
+      "bytes": 1382052
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/06_environment_group_forest.pdf",
+      "bytes": 23712
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/06_environment_group_forest.png",
+      "bytes": 258896
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/06_environment_group_forest.svg",
+      "bytes": 108614
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/07_grouping_method_comparison.pdf",
+      "bytes": 18680
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/07_grouping_method_comparison.png",
+      "bytes": 131092
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/07_grouping_method_comparison.svg",
+      "bytes": 59687
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/08_key_group_maps.pdf",
+      "bytes": 687600
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/08_key_group_maps.png",
+      "bytes": 1128538
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/08_key_group_maps.svg",
+      "bytes": 1325274
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/09_spatial_validation.pdf",
+      "bytes": 22637
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/09_spatial_validation.png",
+      "bytes": 166696
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/09_spatial_validation.svg",
+      "bytes": 97741
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/figures/figure_index.json",
+      "bytes": 3808
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/reports/PHASE_G_RESEARCH_REPORT.md",
+      "bytes": 22496
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/association_results.csv",
+      "bytes": 100365
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/data_profile.json",
+      "bytes": 1281
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/environment_group_associations.csv",
+      "bytes": 3656823
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/environment_group_definitions.json",
+      "bytes": 1008
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/environment_group_leaderboard.csv",
+      "bytes": 593053
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/environment_group_statistics.csv",
+      "bytes": 255302
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/experiment_registry.csv",
+      "bytes": 25134666
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/experiment_summary.json",
+      "bytes": 7009
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/final_candidate_results.csv",
+      "bytes": 229110
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/group_spatial_stability.csv",
+      "bytes": 27425
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/group_spatial_validation.csv",
+      "bytes": 706250
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/matched_pair_statistics.csv",
+      "bytes": 104988
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/matching_balance_results.csv",
+      "bytes": 10219031
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/matching_configurations.csv",
+      "bytes": 966982
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/model_leaderboard.csv",
+      "bytes": 212624
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/model_search_results.csv",
+      "bytes": 9183955
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/pair_balance_summary.csv",
+      "bytes": 1820
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/pair_input_profile.json",
+      "bytes": 649
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/paired_spatial_validation_summary.csv",
+      "bytes": 5252
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/pixel_model_r2_summary.csv",
+      "bytes": 176848
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/response_curve_data.csv",
+      "bytes": 793192
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/response_curve_sample_points.csv",
+      "bytes": 1744161
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/response_curve_sample_profile.csv",
+      "bytes": 343
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027/tables/spatial_validation_results.csv",
+      "bytes": 1103095
+    }
+  ]
+}

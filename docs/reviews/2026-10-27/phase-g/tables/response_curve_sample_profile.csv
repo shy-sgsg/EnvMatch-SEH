@@ -1,0 +1,2 @@
+﻿sample_size_requested,sample_size_actual,display_points_per_outcome,seed,scope,selection_metric
+20000,20000,2500,20261027,same complete-case cell sample across all nine health predictions; primary soils 26/27/42; Aa_20yr,no selection for natural spline; separate full-sample best model curve was selected by apparent R2 in prior Oracle run

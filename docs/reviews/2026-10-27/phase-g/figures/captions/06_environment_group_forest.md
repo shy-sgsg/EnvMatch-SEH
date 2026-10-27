@@ -1,0 +1,1 @@
+The plotted candidates require at least 100 matched pairs and negative slope and Spearman direction. Groups are ranked after examining the health outcomes under Oracle authorization. Intervals resample 5 km pair-midpoint blocks; candidate selection has already seen the full study area and is not independent validation.

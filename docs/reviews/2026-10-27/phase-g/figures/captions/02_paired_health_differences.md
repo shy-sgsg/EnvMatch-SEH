@@ -1,0 +1,1 @@
+Each box summarizes high-erosion minus low-erosion raster predictions in the reused Phase F M4 pairs. Whiskers show the 10th–90th percentiles; the diamond is the mean. Units follow the source raster; some variable unit metadata remain undocumented.

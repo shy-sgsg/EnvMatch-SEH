@@ -1,0 +1,1 @@
+R² rows are pixel-level health-surface prediction fits. Full eligible pixels, outcome-selected matched subgroups, and spatial test blocks are different sample scopes; matched-pair difference R² is excluded from this figure.

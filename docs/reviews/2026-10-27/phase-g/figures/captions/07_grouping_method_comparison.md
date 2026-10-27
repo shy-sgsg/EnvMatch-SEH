@@ -1,0 +1,1 @@
+Each distribution summarizes group-specific Spearman correlations across the nine outcomes, restricted to at least 100 pairs per group. Soil, K-means, Ward, and single-variable gradient labels were defined from environment/soil values without using health values; choosing highlighted groups uses the health outcomes.
