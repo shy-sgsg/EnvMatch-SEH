@@ -1,0 +1,95 @@
+{
+  "fixed_plot_sample_rows": 10000,
+  "inherited_full_sample_curve_rows": 900,
+  "inherited_curve_source_run_id": "oracle_20261026T041521459615Z_20261026",
+  "inherited_curve_selection_metric": "full_sample_apparent_r2",
+  "inherited_curve_model_trial_count": 1024,
+  "inherited_curve_model_family_count": 13,
+  "inherited_curve_selection_metadata": [
+    {
+      "outcome": "AN",
+      "exposure": "Aa_20yr",
+      "model_name": "random_forest",
+      "selected_model_r_squared": 0.7663690232483555,
+      "n_complete_cases": 387515,
+      "curve_rows": 100,
+      "selection_metric": "full_sample_apparent_r2"
+    },
+    {
+      "outcome": "BD",
+      "exposure": "Aa_20yr",
+      "model_name": "ols",
+      "selected_model_r_squared": 0.32564073242870295,
+      "n_complete_cases": 294841,
+      "curve_rows": 100,
+      "selection_metric": "full_sample_apparent_r2"
+    },
+    {
+      "outcome": "CEC",
+      "exposure": "Aa_20yr",
+      "model_name": "ols",
+      "selected_model_r_squared": 0.3775097173151011,
+      "n_complete_cases": 294841,
+      "curve_rows": 100,
+      "selection_metric": "full_sample_apparent_r2"
+    },
+    {
+      "outcome": "MBC",
+      "exposure": "Aa_20yr",
+      "model_name": "ols",
+      "selected_model_r_squared": 0.3412346837845137,
+      "n_complete_cases": 294841,
+      "curve_rows": 100,
+      "selection_metric": "full_sample_apparent_r2"
+    },
+    {
+      "outcome": "OM",
+      "exposure": "Aa_20yr",
+      "model_name": "random_forest",
+      "selected_model_r_squared": 0.4122698536343471,
+      "n_complete_cases": 294841,
+      "curve_rows": 100,
+      "selection_metric": "full_sample_apparent_r2"
+    },
+    {
+      "outcome": "RESP",
+      "exposure": "Aa_20yr",
+      "model_name": "random_forest",
+      "selected_model_r_squared": 0.3914339026996616,
+      "n_complete_cases": 294841,
+      "curve_rows": 100,
+      "selection_metric": "full_sample_apparent_r2"
+    },
+    {
+      "outcome": "SHI_candidate",
+      "exposure": "Aa_20yr",
+      "model_name": "random_forest",
+      "selected_model_r_squared": 0.6369096768752881,
+      "n_complete_cases": 384735,
+      "curve_rows": 100,
+      "selection_metric": "full_sample_apparent_r2"
+    },
+    {
+      "outcome": "SW",
+      "exposure": "Aa_20yr",
+      "model_name": "random_forest",
+      "selected_model_r_squared": 0.618665927159654,
+      "n_complete_cases": 387538,
+      "curve_rows": 100,
+      "selection_metric": "full_sample_apparent_r2"
+    },
+    {
+      "outcome": "pH",
+      "exposure": "Aa_20yr",
+      "model_name": "random_forest",
+      "selected_model_r_squared": 0.7204393121720909,
+      "n_complete_cases": 294846,
+      "curve_rows": 100,
+      "selection_metric": "full_sample_apparent_r2"
+    }
+  ],
+  "new_figure8_curves": [
+    "natural_spline_fixed_plot_sample",
+    "selected_full_sample_apparent_model_partial_dependence"
+  ]
+}

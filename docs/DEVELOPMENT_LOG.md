@@ -50,3 +50,13 @@
 - 续跑时原有 800 行曲线缓存只含八项健康指标；现按 SHI_candidate 的全样本最佳模型补拟合 Aa_20yr 曲线后共 900 行。图 08 的九个结局均同时展示固定绘图样本自然样条和全样本最佳模型曲线；图 04 展示环境卡尺、地理半径和侵蚀分位差与 SHI 表观 R² 的关系。
 - 完整汇报在 `docs/reviews/2026-10-26/oracle-exploration-review.md`，报告目录附 10 张图、实验摘要、模型参数 JSON、4 张排行榜 CSV 和 SHI 匹配候选表。15 MB 的完整注册表及其余大体积运行结果仍留在 Git 忽略的 outputs 目录。`Aa_20yr` 和 `Aa_2020` 直接使用既有侵蚀值，本轮没有重算或验证 RUSLE；PCNM 未运行。所有输出均与正式分析分离。
 - 当前 HEAD 为 `c50bd9ae6a42abc14f898e8043a79cb0c9c818e4`，工作区有改动；本环境 `.git` 只读，未提交或推送。保留三个提交分组供用户本地执行。
+
+
+## 2026-10-26：Phase F 配对差值与重复空间验证
+
+- 探索模式：`EXPLORATORY_ORACLE`；基线 SHA `0bb1b12fcab24619b3ce8e03f0871a54744be0b4`。Phase F 运行 `phase_f_20261026_seed20261026`，输入 `outputs/exploratory_oracle/phase_f_20261026_seed20261026`；当前改动尚未提交，`.git` 只读。
+- 使用已有对齐 Parquet 中的 `Aa_20yr` 和 `Aa_2020`；未重算/校验 RUSLE，未运行 PCNM，未修改研究总纲。新增 outcome-blind 局部匹配搜索、M0–M4 比较、成对差值 P1–P4、10 个 5km 空间种子、嵌套 ΔR²、环境异质性、两期对照和敏感性分析。
+- 本次 Oracle 运行标记 `outcome_guided_selection=true`。高响应组按完整样本均值排序，18 个暴露—结局组合共比较 324 组候选、保留前三共 54 组；每组保留完整案例的比例为 6.7%–31.7%（组合中位数 13.7%）。图 8 继承的全样本曲线按表观 R² 从 13 类模型共 1,024 次模型试验中选出，逐结局样本量和每个组合保留率见运行 provenance、`high_response_environment_groups.csv` 与 Figure 8 数据。
+- 报告与审阅包：`docs/reviews/2026-10-26/PHASE_F_RESEARCH_REPORT.md`、`docs/reviews/2026-10-26/PHASE_F_CHATGPT_REVIEW_REQUEST.md`；图表为 PNG/SVG/PDF，表格和图注均另存。
+- 证据与边界：运行清单保存输入 SHA-256、配置/依赖版本及模型设置；配对端点按空间角色独立构造。完整 pair Parquet 保留在 Git 忽略的 `outputs/exploratory_oracle/`；结果仍是内部重复空间验证和预测面关联，不作因果/外部验证结论。
+- 未提交、未推送。等待用户本地提交并交 ChatGPT 审阅；Phase F 审阅前不推进正式下一阶段。

@@ -1,0 +1,79 @@
+{
+  "input_run_id": "run_20261025T114741_470772Z",
+  "environment_rows": 392527,
+  "health_rows": 392527,
+  "joined_rows": 392527,
+  "environment_columns": [
+    "cell_id",
+    "row",
+    "col",
+    "x",
+    "y",
+    "Elevation",
+    "Cur",
+    "TWI",
+    "LST",
+    "SoilType",
+    "NDWI",
+    "NDBSI",
+    "EVI",
+    "NDVI",
+    "Precipitation",
+    "Aa_20yr",
+    "Aa_2020",
+    "Aa_20yr_nearest",
+    "Aa_2020_nearest",
+    "valid_cell"
+  ],
+  "health_columns": [
+    "cell_id",
+    "row",
+    "col",
+    "x",
+    "y",
+    "AN",
+    "OM",
+    "CEC",
+    "pH",
+    "SW",
+    "BD",
+    "MBC",
+    "RESP",
+    "SHI_candidate",
+    "valid_cell"
+  ],
+  "unique_environment_cells": 392527,
+  "unique_health_cells": 392527,
+  "primary_soil_rows": 383714,
+  "outcome_nonmissing": {
+    "SHI_candidate": 386851,
+    "AN": 391907,
+    "OM": 391754,
+    "CEC": 391754,
+    "pH": 391907,
+    "SW": 391754,
+    "BD": 391754,
+    "MBC": 391754,
+    "RESP": 391754
+  },
+  "exposure_nonmissing": {
+    "Aa_20yr": 388261,
+    "Aa_2020": 388058
+  },
+  "exposure_ranges_and_zeros": {
+    "Aa_20yr": {
+      "min": 0.0,
+      "median": 5.524936199188232,
+      "max": 143.00503540039062,
+      "zero_count": 133220,
+      "negative_count": 0
+    },
+    "Aa_2020": {
+      "min": 0.0,
+      "median": 0.8294722139835358,
+      "max": 20.028547286987305,
+      "zero_count": 5491,
+      "negative_count": 0
+    }
+  }
+}

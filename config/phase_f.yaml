@@ -1,0 +1,52 @@
+phase: F
+mode: EXPLORATORY_ORACLE
+input_run_id: run_20261025T114741_470772Z
+seed: 20261026
+output_root: outputs/exploratory_oracle
+exposures: [Aa_20yr, Aa_2020]
+outcomes: [SHI_candidate, AN, OM, CEC, pH, SW, BD, MBC, RESP]
+primary_soil_codes: [26, 27, 42]
+environment_vectors:
+  V1: [Elevation, Cur, TWI, LST]
+  V5: [Elevation, LST]
+  V7: [Elevation, Cur, TWI, LST, NDWI]
+matching:
+  method: direct_nearest_neighbor
+  exposure_rule: within_group_rank
+  allow_replacement: false
+  local_search:
+    exposure: Aa_20yr
+    sample_rows: 40000
+    environment_calipers: [0.25, 0.35, 0.50]
+    geographic_radii_m: [300, 500, 1000]
+    erosion_rank_gaps: [0.30, 0.40, 0.50]
+    cluster_options:
+      none: 0
+      kmeans_6: 6
+      kmeans_8: 8
+  reference:
+    vector: V5
+    cluster_method: none
+    cluster_count: 0
+    environment_caliper: 0.35
+    geographic_radius_m: 1000
+    erosion_rank_gap: 0.50
+  kmeans_comparison:
+    vector: V5
+    cluster_method: kmeans
+    cluster_count: 6
+    environment_caliper: 0.35
+    geographic_radius_m: 1000
+    erosion_rank_gap: 0.50
+spatial_validation:
+  block_size_m: 5000
+  repeats: 10
+  seeds: [20261026, 20261027, 20261028, 20261029, 20261030, 20261031, 20261032, 20261033, 20261034, 20261035]
+  roles: [train, validation, test]
+  fractions: [0.60, 0.20, 0.20]
+paired_models: [P1_intercept_ols, P2_no_intercept_ols, P3_environment_difference_adjusted, P4_huber]
+robustness:
+  retention_fractions: [1.0, 0.75, 0.50, 0.30, 0.20]
+  block_permutation_replicates: 199
+confidence_level: 0.95
+figure_formats: [png, svg, pdf]

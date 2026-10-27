@@ -1,0 +1,298 @@
+{
+  "phase": "F",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "generated_at_utc": "2026-10-27T04:08:22.903609+00:00",
+  "baseline_commit_sha": "0bb1b12fcab24619b3ce8e03f0871a54744be0b4",
+  "working_tree_dirty_at_run": true,
+  "python_version": "3.13.5",
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "packages": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "statsmodels": "0.14.4",
+    "pyarrow": "19.0.0",
+    "PyYAML": "6.0.2",
+    "matplotlib": "3.10.0"
+  },
+  "config_path": "config/phase_f.yaml",
+  "config_sha256": "9df5fc5ef339ddcf7c102c4e99b8a932d12d8be65e312b1003b6c52df6805777",
+  "input_run_id": "run_20261025T114741_470772Z",
+  "input_files": {
+    "environment": {
+      "path": "outputs/run_20261025T114741_470772Z/databases/environment_erosion.parquet",
+      "bytes": 35634052,
+      "sha256": "ff95905ca3f30bd3216e8e5b8f7ef6a4839eeb1a216aa1fa82d5e9fa10e7c0e5"
+    },
+    "health": {
+      "path": "outputs/run_20261025T114741_470772Z/databases/health.parquet",
+      "bytes": 24396094,
+      "sha256": "ba5694eef85e19a445bcaddd4cb60b32c6c32b167746ba6fbabefc8c9ab32328"
+    }
+  },
+  "source_profile": {
+    "input_run_id": "run_20261025T114741_470772Z",
+    "environment_rows": 392527,
+    "health_rows": 392527,
+    "joined_rows": 392527,
+    "environment_columns": [
+      "cell_id",
+      "row",
+      "col",
+      "x",
+      "y",
+      "Elevation",
+      "Cur",
+      "TWI",
+      "LST",
+      "SoilType",
+      "NDWI",
+      "NDBSI",
+      "EVI",
+      "NDVI",
+      "Precipitation",
+      "Aa_20yr",
+      "Aa_2020",
+      "Aa_20yr_nearest",
+      "Aa_2020_nearest",
+      "valid_cell"
+    ],
+    "health_columns": [
+      "cell_id",
+      "row",
+      "col",
+      "x",
+      "y",
+      "AN",
+      "OM",
+      "CEC",
+      "pH",
+      "SW",
+      "BD",
+      "MBC",
+      "RESP",
+      "SHI_candidate",
+      "valid_cell"
+    ],
+    "unique_environment_cells": 392527,
+    "unique_health_cells": 392527,
+    "primary_soil_rows": 383714,
+    "outcome_nonmissing": {
+      "SHI_candidate": 386851,
+      "AN": 391907,
+      "OM": 391754,
+      "CEC": 391754,
+      "pH": 391907,
+      "SW": 391754,
+      "BD": 391754,
+      "MBC": 391754,
+      "RESP": 391754
+    },
+    "exposure_nonmissing": {
+      "Aa_20yr": 388261,
+      "Aa_2020": 388058
+    },
+    "exposure_ranges_and_zeros": {
+      "Aa_20yr": {
+        "min": 0.0,
+        "median": 5.524936199188232,
+        "max": 143.00503540039062,
+        "zero_count": 133220,
+        "negative_count": 0
+      },
+      "Aa_2020": {
+        "min": 0.0,
+        "median": 0.8294722139835358,
+        "max": 20.028547286987305,
+        "zero_count": 5491,
+        "negative_count": 0
+      }
+    }
+  },
+  "spatial_seed_list": [
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031,
+    20261032,
+    20261033,
+    20261034,
+    20261035
+  ],
+  "primary_soils": [
+    26,
+    27,
+    42
+  ],
+  "erosion_values": "Precomputed Aa_20yr and Aa_2020; no RUSLE recomputation or factor validation.",
+  "run_id": "phase_f_20261026_seed20261026",
+  "outcome_guided_selection_audit": {
+    "high_response_group_ranking": {
+      "selection_metric": "full_sample_mean_outcome",
+      "selection_objective": "rank groups by descending mean outcome; retain the top three per exposure and outcome",
+      "selection_family_count": 18,
+      "candidate_trial_count": 324,
+      "selected_group_count": 54,
+      "cell_retention_fraction_min": 0.06734007620622552,
+      "cell_retention_fraction_median": 0.13742463709309438,
+      "cell_retention_fraction_max": 0.3167824857343736,
+      "families": [
+        {
+          "exposure": "Aa_2020",
+          "outcome": "AN",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379341,
+          "retained_cell_fraction": 0.2878518272477797
+        },
+        {
+          "exposure": "Aa_2020",
+          "outcome": "BD",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379351,
+          "retained_cell_fraction": 0.11941447366686789
+        },
+        {
+          "exposure": "Aa_2020",
+          "outcome": "CEC",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379351,
+          "retained_cell_fraction": 0.06745204309465376
+        },
+        {
+          "exposure": "Aa_2020",
+          "outcome": "MBC",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379351,
+          "retained_cell_fraction": 0.11941447366686789
+        },
+        {
+          "exposure": "Aa_2020",
+          "outcome": "OM",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379351,
+          "retained_cell_fraction": 0.31659333967750186
+        },
+        {
+          "exposure": "Aa_2020",
+          "outcome": "RESP",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379351,
+          "retained_cell_fraction": 0.13845752350725318
+        },
+        {
+          "exposure": "Aa_2020",
+          "outcome": "SHI_candidate",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 376792,
+          "retained_cell_fraction": 0.1373941060319752
+        },
+        {
+          "exposure": "Aa_2020",
+          "outcome": "SW",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379351,
+          "retained_cell_fraction": 0.13845752350725318
+        },
+        {
+          "exposure": "Aa_2020",
+          "outcome": "pH",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379341,
+          "retained_cell_fraction": 0.07413909912189824
+        },
+        {
+          "exposure": "Aa_20yr",
+          "outcome": "AN",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379735,
+          "retained_cell_fraction": 0.28835898718843406
+        },
+        {
+          "exposure": "Aa_20yr",
+          "outcome": "BD",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379759,
+          "retained_cell_fraction": 0.11956793650710056
+        },
+        {
+          "exposure": "Aa_20yr",
+          "outcome": "CEC",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379759,
+          "retained_cell_fraction": 0.06734007620622552
+        },
+        {
+          "exposure": "Aa_20yr",
+          "outcome": "MBC",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379759,
+          "retained_cell_fraction": 0.11956793650710056
+        },
+        {
+          "exposure": "Aa_20yr",
+          "outcome": "OM",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379759,
+          "retained_cell_fraction": 0.3167824857343736
+        },
+        {
+          "exposure": "Aa_20yr",
+          "outcome": "RESP",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379759,
+          "retained_cell_fraction": 0.13860895989298477
+        },
+        {
+          "exposure": "Aa_20yr",
+          "outcome": "SHI_candidate",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 377243,
+          "retained_cell_fraction": 0.1374551681542136
+        },
+        {
+          "exposure": "Aa_20yr",
+          "outcome": "SW",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379759,
+          "retained_cell_fraction": 0.13860895989298477
+        },
+        {
+          "exposure": "Aa_20yr",
+          "outcome": "pH",
+          "candidate_groups": 18,
+          "selected_groups": 3,
+          "source_complete_case_cells": 379735,
+          "retained_cell_fraction": 0.07402267370666386
+        }
+      ]
+    },
+    "inherited_full_sample_model_curves": {
+      "source_run_id": "oracle_20261026T041521459615Z_20261026",
+      "selection_metric": "full_sample_apparent_r2",
+      "selection_trial_count": 1024,
+      "model_family_count": 13,
+      "outcome_specific_complete_case_counts_are_in_curve_source_data": true
+    }
+  }
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "name": "01_matching_coverage_balance",
+    "formats": [
+      "figures/01_matching_coverage_balance.png",
+      "figures/01_matching_coverage_balance.svg",
+      "figures/01_matching_coverage_balance.pdf"
+    ],
+    "data_path": "figures/data/01_matching_coverage_balance.csv",
+    "caption_path": "figures/captions/01_matching_coverage_balance.md",
+    "caption": "The 243-configuration search used 40,000 complete rows for Aa_20yr and did not access health outcomes. Coverage, SMD, environmental distance, and exposure separation were all retained; the horizontal line is a descriptive balance reference."
+  },
+  {
+    "name": "02_matching_method_pair_fit",
+    "formats": [
+      "figures/02_matching_method_pair_fit.png",
+      "figures/02_matching_method_pair_fit.svg",
+      "figures/02_matching_method_pair_fit.pdf"
+    ],
+    "data_path": "figures/data/02_matching_method_pair_fit.csv",
+    "caption_path": "figures/captions/02_matching_method_pair_fit.md",
+    "caption": "Full-sample paired R² is descriptive and not used as the matching selection objective. M3 is soil-specific K-means k=6 plus matching; M4 is direct nearest-neighbor matching within exact soil strata."
+  },
+  {
+    "name": "03_primary_paired_slopes",
+    "formats": [
+      "figures/03_primary_paired_slopes.png",
+      "figures/03_primary_paired_slopes.svg",
+      "figures/03_primary_paired_slopes.pdf"
+    ],
+    "data_path": "figures/data/03_primary_paired_slopes.csv",
+    "caption_path": "figures/captions/03_primary_paired_slopes.md",
+    "caption": "Points show full-sample P1 matched-pair slopes and 95% model-based confidence intervals. These intervals do not adjust for residual spatial dependence; the repeated 5km holdout results are reported separately."
+  },
+  {
+    "name": "04_repeated_spatial_validation",
+    "formats": [
+      "figures/04_repeated_spatial_validation.png",
+      "figures/04_repeated_spatial_validation.svg",
+      "figures/04_repeated_spatial_validation.pdf"
+    ],
+    "data_path": "figures/data/04_repeated_spatial_validation.csv",
+    "caption_path": "figures/captions/04_repeated_spatial_validation.md",
+    "caption": "Each box summarizes ten seeded, whole-block 5km spatial test splits. M0–M2 use a common complete-case pixel sample across both Aa periods; M3–M4 use independently constructed train, validation and test pairs with train-fitted transformations."
+  },
+  {
+    "name": "05_erosion_increment_delta_r2",
+    "formats": [
+      "figures/05_erosion_increment_delta_r2.png",
+      "figures/05_erosion_increment_delta_r2.svg",
+      "figures/05_erosion_increment_delta_r2.pdf"
+    ],
+    "data_path": "figures/data/05_erosion_increment_delta_r2.csv",
+    "caption_path": "figures/captions/05_erosion_increment_delta_r2.md",
+    "caption": "For each seed and outcome, the environment-only and environment-plus-log1p(Aa) OLS models use the same training pixels and score the same held-out pixels. This is predictive increment, not causal effect or independent data validation."
+  },
+  {
+    "name": "06_environmental_heterogeneity",
+    "formats": [
+      "figures/06_environmental_heterogeneity.png",
+      "figures/06_environmental_heterogeneity.svg",
+      "figures/06_environmental_heterogeneity.pdf"
+    ],
+    "data_path": "figures/data/06_environmental_heterogeneity.csv",
+    "caption_path": "figures/captions/06_environmental_heterogeneity.md",
+    "caption": "Subgroup estimates use M4 full-sample pairs and prespecified soil, V5 K-means and environmental tertile definitions. Groups were fitted or binned descriptively; subgroup differences remain exploratory and multiple testing is adjusted by Benjamini–Hochberg in the table."
+  },
+  {
+    "name": "07_environment_groups_map_and_high_response",
+    "formats": [
+      "figures/07_environment_groups_map_and_high_response.png",
+      "figures/07_environment_groups_map_and_high_response.svg",
+      "figures/07_environment_groups_map_and_high_response.pdf"
+    ],
+    "data_path": "figures/data/07_environment_groups_map_and_high_response.csv",
+    "caption_path": "figures/captions/07_environment_groups_map_and_high_response.md",
+    "caption": "Left: a deterministic sample of valid cells colored by soil-specific V5 K-means group (Elevation and LST), shown as points on the projected grid. Right: for primary exposure Aa_20yr, the top three full-sample mean-response groups for each primary outcome. The Aa_2020 screen is available in the accompanying table. The top groups are outcome-ranked descriptive subsets, not independently validated hotspots; no continuous or causal spatial surface is inferred."
+  },
+  {
+    "name": "08_health_response_curves",
+    "formats": [
+      "figures/08_health_response_curves.png",
+      "figures/08_health_response_curves.svg",
+      "figures/08_health_response_curves.pdf"
+    ],
+    "data_path": "figures/data/08_health_response_curves.csv",
+    "caption_path": "figures/captions/08_health_response_curves.md",
+    "caption": "Blue points use the fixed 10,000-row plotting sample; complete cases are used for each outcome. Orange dashed curves are natural-spline fits to that same plotting sample. Green curves are prior Oracle-selected full-sample apparent model partial-dependence curves for Aa_20yr at median environmental conditions, selected by apparent R² from 1,024 model trials across 13 families. Each green curve's selected model and complete-case n are in the figure data. The curves use different sample scopes; neither is an independent validation curve."
+  },
+  {
+    "name": "09_pair_distance_and_exposure_diagnostics",
+    "formats": [
+      "figures/09_pair_distance_and_exposure_diagnostics.png",
+      "figures/09_pair_distance_and_exposure_diagnostics.svg",
+      "figures/09_pair_distance_and_exposure_diagnostics.pdf"
+    ],
+    "data_path": "figures/data/09_pair_distance_and_exposure_diagnostics.csv",
+    "caption_path": "figures/captions/09_pair_distance_and_exposure_diagnostics.md",
+    "caption": "Each point is a full-sample M4 pair. Red points indicate a zero-to-positive exposure pair. Distance distributions are matching diagnostics; the full spatial-validation performance is in Figure 4."
+  },
+  {
+    "name": "10_exposure_period_comparison",
+    "formats": [
+      "figures/10_exposure_period_comparison.png",
+      "figures/10_exposure_period_comparison.svg",
+      "figures/10_exposure_period_comparison.pdf"
+    ],
+    "data_path": "figures/data/10_exposure_period_comparison.csv",
+    "caption_path": "figures/captions/10_exposure_period_comparison.md",
+    "caption": "Aa_20yr and Aa_2020 are compared with the same complete pixels, V5 variables, OLS design and spatial seeds for the cell-level analysis. Full-sample matched pairs are exposure-specific and are displayed in the accompanying table rather than treated as paired-period identical samples."
+  }
+]
