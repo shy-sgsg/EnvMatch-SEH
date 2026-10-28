@@ -5,7 +5,7 @@
 ## 1. 项目与版本
 
 - 仓库：`https://github.com/shy-sgsg/EnvMatch-SEH`
-- 审查提交 SHA：`<请在 Phase G 代码、配置、结果表、图表和研究报告的首个本地提交后，填写该提交的完整 SHA；随后单独提交本审查请求>`
+- 审查提交 SHA：`dc599055cd56aa297133eac64620647b1f911499`
 - 本轮运行时的基线 HEAD：`f71aaf455e5ca9eff36dfedc0461a09125ff3d34`（不包含尚未提交的 Phase G 文件）
 - 研究总纲：`docs/RESEARCH_CHARTER.md`，V1.1；对应本地基线提交：`f71aaf455e5ca9eff36dfedc0461a09125ff3d34`
 - 阶段：Phase G `EXPLORATORY_ORACLE`；不是 FORMAL G5 完成，也不代表设计锁定
