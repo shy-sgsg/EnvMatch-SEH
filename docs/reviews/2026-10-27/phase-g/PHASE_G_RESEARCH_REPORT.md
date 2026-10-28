@@ -195,3 +195,8 @@ Phase G 不更改总纲，也不进入正式设计锁定。下一步应先由 Ch
 - 所有健康结局均是预测栅格值；结果不能写成独立实测点结论或因果效应。
 - `Aa_20yr` 与 `Aa_2020` 单位及时间期定义缺失仍是报告限制；数据表的物理单位不予推定。
 - ChatGPT 审查请求已生成，未向外发送。用户提交首个 Phase G 成果提交后，应把该提交完整 SHA 写入审查请求，再单独提交审查请求。
+
+<!-- PHASE_G_COMPLETION_ADDENDUM_START -->
+## 补充材料
+
+完整补充分析、校正后的排名和新增空间模型结果见 [PHASE_G_COMPLETION_ADDENDUM.md](PHASE_G_COMPLETION_ADDENDUM.md)。其中的耕地范围校正结果覆盖本报告第 5 节中受 SoilType 85 水体候选影响的表观排名。

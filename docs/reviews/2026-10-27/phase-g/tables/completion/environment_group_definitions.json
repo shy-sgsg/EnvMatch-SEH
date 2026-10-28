@@ -1,0 +1,91 @@
+{
+  "group_columns": [
+    "soil_type_group",
+    "kmeans_v5",
+    "hierarchical_ward_v5",
+    "gradient_Elevation",
+    "gradient_TWI",
+    "gradient_LST",
+    "gradient_NDWI",
+    "gradient_NDVI",
+    "gradient_Precipitation",
+    "kmeans_terrain_k4",
+    "kmeans_terrain_k6",
+    "kmeans_terrain_k8",
+    "kmeans_terrain_k10",
+    "kmeans_terrain_k12"
+  ],
+  "group_definition": {
+    "soil_type_group": "high-erosion member SoilType; primary soil codes only",
+    "kmeans_v5": "Phase F V5 (Elevation, LST) soil-specific k=6 label carried by high-erosion member",
+    "hierarchical_ward_v5": "Ward agglomerative k=6 within each primary soil; standardized on all eligible environment rows; fit sample capped at 1500 rows per soil; nearest standardized centroid assigns other rows",
+    "gradient_groups": "within-soil empirical quintile bins for each named environmental variable, assigned by the high-erosion member"
+  },
+  "gradient_variables": [
+    "Elevation",
+    "TWI",
+    "LST",
+    "NDWI",
+    "NDVI",
+    "Precipitation"
+  ],
+  "hierarchical_training_rows_per_soil": {
+    "26": 1500,
+    "27": 1500,
+    "42": 1500
+  },
+  "additional_kmeans_groups": {
+    "kmeans_terrain_k4": {
+      "method": "minibatch_kmeans",
+      "variables": [
+        "Elevation",
+        "LST"
+      ],
+      "requested_clusters_per_soil": 4,
+      "seed": 20261032,
+      "health_outcomes_used_for_labels": false
+    },
+    "kmeans_terrain_k6": {
+      "method": "minibatch_kmeans",
+      "variables": [
+        "Elevation",
+        "LST"
+      ],
+      "requested_clusters_per_soil": 6,
+      "seed": 20261034,
+      "health_outcomes_used_for_labels": false
+    },
+    "kmeans_terrain_k8": {
+      "method": "minibatch_kmeans",
+      "variables": [
+        "Elevation",
+        "LST"
+      ],
+      "requested_clusters_per_soil": 8,
+      "seed": 20261036,
+      "health_outcomes_used_for_labels": false
+    },
+    "kmeans_terrain_k10": {
+      "method": "minibatch_kmeans",
+      "variables": [
+        "Elevation",
+        "LST"
+      ],
+      "requested_clusters_per_soil": 10,
+      "seed": 20261038,
+      "health_outcomes_used_for_labels": false
+    },
+    "kmeans_terrain_k12": {
+      "method": "minibatch_kmeans",
+      "variables": [
+        "Elevation",
+        "LST"
+      ],
+      "requested_clusters_per_soil": 12,
+      "seed": 20261040,
+      "health_outcomes_used_for_labels": false
+    }
+  },
+  "label_schema": "soil_qualified_v1",
+  "interaction_pvalue_schema": "log_tail_v2"
+}

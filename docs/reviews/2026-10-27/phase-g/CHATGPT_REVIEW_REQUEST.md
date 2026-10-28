@@ -159,3 +159,19 @@
 `NO CHANGE`。本阶段未修改总纲正文。
 
 审查材料生成后未发送给外部。请在固定到实际代码/结果提交 SHA 后审查上述路径。
+
+<!-- PHASE_G_COMPLETION_ADDENDUM_START -->
+## 补充审查材料：Phase G completion
+
+- 补充报告：`docs/reviews/2026-10-27/phase-g/PHASE_G_COMPLETION_ADDENDUM.md`
+- 范围校正后的像元排名：`docs/reviews/2026-10-27/phase-g/tables/completion/in_scope_pixel_model_leaderboard.csv`
+- 方向重建及源 R² 复核：`docs/reviews/2026-10-27/phase-g/tables/completion/pixel_best_candidate_direction_reconstruction.csv`
+- 配对响应模型和空间留出：`docs/reviews/2026-10-27/phase-g/tables/completion/paired_response_model_trials.csv`、`paired_spatial_model_trials.csv`、`paired_spatial_selected_models.csv`
+- 环境组斜率与交互检验：`docs/reviews/2026-10-27/phase-g/tables/completion/group_slope_estimates.csv`、`group_slope_interaction_tests.csv`、`environment_group_profiles.csv`
+- 新增图：`docs/reviews/2026-10-27/phase-g/figures/completion/10_environment_group_slope_forest.*`
+- 独立运行清单：`outputs/exploratory_oracle/phase_g_20261027_completion/artifact_manifest.json`（运行目录由 Git 忽略；审查用 CSV、报告和图副本已纳入本审查目录）
+- 本次补充运行起始 HEAD：`efdcdcd313f57aae1587466f9e0115a2846bec5e`。完整审查提交 SHA 保持待填；请在用户本地提交完成后将首个包含代码、配置和报告/表格的完整 SHA 填入第 1 节。
+- 校正说明：旧 leaderboard 中 18 条 SoilType 85（水体）候选行不在主要耕地范围；补充榜单已排除它们，并覆盖旧报告中受影响的最高表观排名。
+- 环境组交互：全局 BH 覆盖 504 项，其中 q<0.05 有 473 项；M4/Aa_20yr 为 123/126。极端 Wald 尾概率使用稳定 log(P)/log(q) 表示。
+- 空间边界：52,601/407,372 个配对的两端跨越 5 km 网格（12.9%）；验证仍按配对中点分块。
+- 曲线要求：图 5 同时包含固定样本自然样条和全样本 Oracle 表观最佳模型曲线；请分别审查其样本和选择边界。

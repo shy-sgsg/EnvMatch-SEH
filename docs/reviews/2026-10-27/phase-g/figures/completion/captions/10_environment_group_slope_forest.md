@@ -1,0 +1,1 @@
+Each panel shows up to six most negative group-specific slopes for that outcome in M4/Aa_20yr. Slopes use Δlog1p(Aa) to predict high-minus-low paired health differences; 95% intervals use spatial-block cluster-robust covariance. Groups were defined from environmental variables without health outcomes; selecting the most negative groups is outcome-guided Oracle screening.

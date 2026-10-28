@@ -120,3 +120,32 @@ def test_reference_reuse_is_configurable_but_high_cells_are_not_reused():
 def test_matching_requires_explicit_finite_distance_constraints():
     with pytest.raises(ValueError, match="environment_distance_limit"):
         _match(_frame(), environment_distance_limit=None)
+
+
+def test_matching_supports_gower_mean_absolute_distance_with_exact_soil_strata():
+    frame = pd.DataFrame(
+        {
+            "cell_id": [1, 2, 3],
+            "environment_group": [1, 1, 1],
+            "SoilType": [26, 26, 27],
+            "Aa": [1.0, 0.0, 0.0],
+            "env_1": [0.0, 0.2, 0.0],
+            "env_2": [0.0, 0.3, 0.0],
+            "x": [0.0, 1.0, 0.5],
+            "y": [0.0, 0.0, 0.0],
+        }
+    )
+
+    pairs, _ = _match(
+        frame,
+        environment_columns=["env_1", "env_2"],
+        environment_distance_limit=0.25,
+        erosion_gap=0.5,
+        environment_metric="manhattan",
+        environment_weights=[0.5, 0.5],
+    )
+
+    assert len(pairs) == 1
+    assert pairs.loc[0, "high_erosion_cell_id"] == 1
+    assert pairs.loc[0, "low_erosion_cell_id"] == 2
+    assert pairs.loc[0, "environmental_distance"] == pytest.approx(0.25)

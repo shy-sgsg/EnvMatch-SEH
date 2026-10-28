@@ -1,0 +1,615 @@
+{
+  "run_id": "phase_g_20261027_completion",
+  "baseline_commit_sha": "efdcdcd313f57aae1587466f9e0115a2846bec5e",
+  "mode": "EXPLORATORY_ORACLE",
+  "configuration": "config/phase_g_completion.yaml",
+  "complete": true,
+  "figure": {
+    "name": "10_environment_group_slope_forest",
+    "formats": [
+      "png",
+      "svg",
+      "pdf"
+    ],
+    "data": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/data/10_environment_group_slope_forest.csv",
+    "caption": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/captions/10_environment_group_slope_forest.md",
+    "n_rows": 54
+  },
+  "files": [
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/CHATGPT_REVIEW_REQUEST.md",
+      "bytes": 17527,
+      "sha256": "b2f76f7e5796d941a097b19da6ca964e88a8d6da5358c8d2ef5edfbd4809b475"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/PHASE_G_COMPLETION_ADDENDUM.md",
+      "bytes": 18696,
+      "sha256": "809ad965b990e3aa9fd817f386b5c250061d82960541c99714bcca2deca81a03"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/PHASE_G_RESEARCH_REPORT.md",
+      "bytes": 22807,
+      "sha256": "af118a8669870e68b93a1f83709a6f3f2526e566a9b58106e170b4836aefd4d1"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/01_matching_quality.pdf",
+      "bytes": 26672,
+      "sha256": "c21b32fff2e330dc587a8519036566780a9b29d6b8e4ba583b92bdfc8946032d"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/01_matching_quality.png",
+      "bytes": 208119,
+      "sha256": "0e5c3f76d6e0d12dbcce0de3a6e3da4e09eb6c4acc05e1130a5de17d8ab6b333"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/01_matching_quality.svg",
+      "bytes": 99916,
+      "sha256": "232a7db242099ff9808fc7703ddcb246af36702f7276f3abfa72bbf9e0159819"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/02_paired_health_differences.pdf",
+      "bytes": 22625,
+      "sha256": "03b710cbd6caa3265958b5d42b49c1fa5e66d4f8826f335797a80738dde56317"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/02_paired_health_differences.png",
+      "bytes": 249933,
+      "sha256": "12a7d32f7ebfd12c79fbd70dc805f32054ff9531e4b28dbe6fe248bfa7ad63cc"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/02_paired_health_differences.svg",
+      "bytes": 125973,
+      "sha256": "d030a87a3484431938145f5f89f4484fb05449d01ba590d1a5f9eefa632bb22e"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/03_pair_association_heatmap.pdf",
+      "bytes": 31171,
+      "sha256": "da27f0dbc984ab93a2a7482dd75cab09ea6a613c19020cc89298163ddbade194"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/03_pair_association_heatmap.png",
+      "bytes": 157859,
+      "sha256": "f3fe2f3af1efe77e527beb87dc18414cd3db478d14b3dd92c6091a268f8a4a2b"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/03_pair_association_heatmap.svg",
+      "bytes": 83233,
+      "sha256": "411d14ca706f72075f580bd55ce2c7d707bba584d6187bf8a8760ee034f6dd62"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/04_model_r2_comparison.pdf",
+      "bytes": 19951,
+      "sha256": "e2c347c96b24a2b2cd06c6350d63dc4649e52a818dd2b6d622162238a7212a35"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/04_model_r2_comparison.png",
+      "bytes": 127474,
+      "sha256": "e1bce115ec0c9b00514ff45c8e74f0a564b5211c3f18af7ecbccd3b1e5fb7529"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/04_model_r2_comparison.svg",
+      "bytes": 68671,
+      "sha256": "0cfda7f3427feaf0b16aada684c6502632c76314c0aa2517ebef01566e9f2508"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/05_response_curves.pdf",
+      "bytes": 670137,
+      "sha256": "1d44bd3e7203c21b2de48d7a61018243e0a145b9ef924533285fe0d173b98ecf"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/05_response_curves.png",
+      "bytes": 1468405,
+      "sha256": "021e45992fb25e43564b729f86aeba4269bdf6cab3e182fec6a516dbf9b4162d"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/05_response_curves.svg",
+      "bytes": 1382052,
+      "sha256": "a8ba200e6b576e7c20cf7304cbed2a23c8aca9ceb82cc0fe2c7d07c58e2d96ef"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/06_environment_group_forest.pdf",
+      "bytes": 23712,
+      "sha256": "617d6c60a7943e8346eb7e19560a438e47fd87f49a49050028cec6bb2e5cb91b"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/06_environment_group_forest.png",
+      "bytes": 258896,
+      "sha256": "e5585329a610bfecca0b8a47f9413262bde8f53e78755237124a575f04be054c"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/06_environment_group_forest.svg",
+      "bytes": 108614,
+      "sha256": "381feb5c8fb48e70fef67879d729056372e4eafe734930e18bde38695f42d601"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/07_grouping_method_comparison.pdf",
+      "bytes": 18680,
+      "sha256": "e1c60fe234ec6b0fb83b07387b3a715427bb538130ec46174b939ceb028b3f59"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/07_grouping_method_comparison.png",
+      "bytes": 131092,
+      "sha256": "9a846f871dd4eccac5457f39a39b920bd7a6bb76b1d8bcf8c559aed81586e809"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/07_grouping_method_comparison.svg",
+      "bytes": 59687,
+      "sha256": "5eed589d5aab890fad671cb30f2bcf245a718f1df0bbf91101c2670d9d940521"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/08_key_group_maps.pdf",
+      "bytes": 687600,
+      "sha256": "c65edfe0b8d3431f5870f3915b820afef2a783f4bbed4abc6c90e2c5a626ba80"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/08_key_group_maps.png",
+      "bytes": 1128538,
+      "sha256": "01585f3315f68416bd4e7d5c013f817e1e35e28d19791fe991448055406b215b"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/08_key_group_maps.svg",
+      "bytes": 1325274,
+      "sha256": "6c737b508a07875cfcd38d07bd1752dda86c8677870391ee1b0aa6d188f379b0"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/09_spatial_validation.pdf",
+      "bytes": 22637,
+      "sha256": "fc7bb66ad2070b2fbd6182bea873b200d28707e24626146682bf02d48b36894a"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/09_spatial_validation.png",
+      "bytes": 166696,
+      "sha256": "e00f95e79836cbd89f0e7f0d096aff376e3744e38abc8497caef9c5314f69f93"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/09_spatial_validation.svg",
+      "bytes": 97741,
+      "sha256": "09d07883b94cc7a280ba797a91dd3996c1c570acd517c70604ecb9e59b54a7ae"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/01_matching_quality.md",
+      "bytes": 162,
+      "sha256": "03e1a455ea3601931e10ed1a85332577715ac9f218f25930f53ce0de7aeee028"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/02_paired_health_differences.md",
+      "bytes": 251,
+      "sha256": "9690e70e3e83a8ad2b1046337d7930d73fa5de0502ddd6b207e6c214e1fe8706"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/03_pair_association_heatmap.md",
+      "bytes": 296,
+      "sha256": "71b200c126e332ce6bd97bb9441d0fcaa2c595766fc0d35e92cab25cbb639812"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/04_model_r2_comparison.md",
+      "bytes": 226,
+      "sha256": "ad2a4881a41e623f4e49c2a390f66108a2717da6feb4ffa5f97dacbd2132514b"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/05_response_curves.md",
+      "bytes": 410,
+      "sha256": "d3d09d78c5c63b0d2de1eaad518aa03c556076c015ba71935dbbca20835883df"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/06_environment_group_forest.md",
+      "bytes": 321,
+      "sha256": "cf4054af03e956669d31d33ac53045fc339652d476f9844475545ad633a91a0e"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/07_grouping_method_comparison.md",
+      "bytes": 318,
+      "sha256": "55159f7dcec225a8722582159f331bbd80b2d9cfd295586c0b3d2af7c3bf1eec"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/08_key_group_maps.md",
+      "bytes": 336,
+      "sha256": "57912800f3644566117709c19159d843f934af66b1a083f4eff1fe11f5a46ac3"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/captions/09_spatial_validation.md",
+      "bytes": 332,
+      "sha256": "a304b24d466c31c42423e5b49004ade5754f0b4e86a068f7124657233d4f9821"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/completion/10_environment_group_slope_forest.pdf",
+      "bytes": 29466,
+      "sha256": "1b8868d475c17936dd6ce60a7ae9fd92e8e1a9019b9913e8adef458b5cd119f9"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/completion/10_environment_group_slope_forest.png",
+      "bytes": 388872,
+      "sha256": "1a4b0ac827c8fafe7a27598e20820827c71335b519c9ca28490eeaa49c26ffff"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/completion/10_environment_group_slope_forest.svg",
+      "bytes": 321266,
+      "sha256": "3bdcc9860ad375a3c0e484e724462faf2d47ee003f02ae81917cc85da286698d"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/completion/captions/10_environment_group_slope_forest.md",
+      "bytes": 375,
+      "sha256": "ea6c58f4756c0902ac444fad3b2f00c4ce91b5e77c13a348e5518013ad07a2e3"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/completion/data/10_environment_group_slope_forest.csv",
+      "bytes": 29480,
+      "sha256": "5a2faec508fba8c5599af7e0b4ee2a00da8946976ebfbe7f9ee4ca0efbbe6946"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/01_matching_quality.csv",
+      "bytes": 264253,
+      "sha256": "6645dc884b68c32f948c7070c709dc5018b60963e0dd5a37d636179f2b7f024b"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/02_paired_health_differences.csv",
+      "bytes": 1068,
+      "sha256": "e236d5695f92e25a1798c38c21484e673abe21e35edae468cd4f13e0561b03c1"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/03_pair_association_heatmap.csv",
+      "bytes": 12592,
+      "sha256": "ffc3ab1b0c30fa868e2c940e503c14f0f63f7d7acc74a1cee892227de1f85574"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/04_model_r2_comparison.csv",
+      "bytes": 5112,
+      "sha256": "4dc4717c2a3383b4d39937a24c73a4811b6f72e74f1ffcfd0b97970f90b93799"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/05_response_curves.csv",
+      "bytes": 792816,
+      "sha256": "e1c48b0a8c158fdc7d2eb56b04ca8947d5b47da8f121ae7c115b5a1449ac0a59"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/06_environment_group_forest.csv",
+      "bytes": 14525,
+      "sha256": "e5e6f4bbe10262a89576e3a7d9b8e4b1545ee68f52352e3cad4d38a7f7f2b600"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/07_grouping_method_comparison.csv",
+      "bytes": 886729,
+      "sha256": "9f8da0c9780391f2b28d4c6cae3ddc7964326f6630e472cf5381e907bc59ddf9"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/08_key_group_maps.csv",
+      "bytes": 198,
+      "sha256": "ba77a832d47c29f35e294f4c47a3ee5813145dc5dea98a206380d5d7cfb82586"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/data/09_spatial_validation.csv",
+      "bytes": 67639,
+      "sha256": "f84fe8cc187edb8a79ec3b0840be2b52d33a0d256b9b02d19572af06ae06b557"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/figures/figure_index.json",
+      "bytes": 3808,
+      "sha256": "f814461cabb9d7bc5952872161e46abf59095a505af77b15d50f5e16a33c1b16"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/association_results.csv",
+      "bytes": 100365,
+      "sha256": "5464cff1669b2828a0bc8865bc5cf8fdbd98178053c57774060ed2b699f5d17e"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/candidate_scope_reconciliation.csv",
+      "bytes": 1089,
+      "sha256": "44a50666171be21b3267bb1416cf89962e3b71d8b23b1c8c067354cf1bfc11d1"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/environment_group_definitions.json",
+      "bytes": 2490,
+      "sha256": "e4df5ee46d014cd061260e0560c4a433c33d4a4e3ca9db95ecf696fb32c419cc"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/environment_group_profiles.csv",
+      "bytes": 991680,
+      "sha256": "ba53bc60cce472012406796e049796ad6f3e0768225b760e05371696b8d608cf"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/group_interaction_registry.csv",
+      "bytes": 86022,
+      "sha256": "e17fdb3d9e4aa7e9827d5a59e4925a031c6e4f4362181c6873e457b7e80a2967"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/group_slope_estimates.csv",
+      "bytes": 4027705,
+      "sha256": "e68ab835ee3199fb2778042cf50c610bac2df2c3e5207f55bad2836593b9b6ea"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/group_slope_interaction_tests.csv",
+      "bytes": 296413,
+      "sha256": "27bc47e122d294debe84f5ee7cb9031f556c8b0aed8c7dd3265e90c350a4201d"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/in_scope_pixel_model_leaderboard.csv",
+      "bytes": 110725,
+      "sha256": "dc605e4274d51d4d55dd1828f9770056db6e8705873d970d5fe0e83a5313e234"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/pair_spatial_block_boundary.csv",
+      "bytes": 335,
+      "sha256": "9857fdb570e17d661a0fa16605ce7d595f4b86381faec4413a11fa32991c3435"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/paired_full_sample_ols_baselines.csv",
+      "bytes": 28024,
+      "sha256": "6e99a463743cfb1b904a51f51e53b8b1704109b7f885ea1e48b8960195b7b2c9"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/paired_model_leaderboard.csv",
+      "bytes": 166813,
+      "sha256": "d50fc44b3dbef0a38701066b538c10da534629459ab5cae9845b1f69dd1dcf62"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/paired_response_model_trials.csv",
+      "bytes": 292102,
+      "sha256": "39fb37f1f3fc991b0415cb59755de90dec7a4dfdbf233580bcdf9107a1ab23ef"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/paired_spatial_model_trials.csv",
+      "bytes": 2164802,
+      "sha256": "2560fe3a2e204616d80fcc87573b35812a23d8396a89893ebb8e8be64a7ae213"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/paired_spatial_selected_models.csv",
+      "bytes": 241736,
+      "sha256": "b86efe54981f79a59a9721fc68f18259578f94db38c4f16bf62a91a6aa66128c"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/paired_spatial_selected_summary.csv",
+      "bytes": 26091,
+      "sha256": "4a43a4b6bc12345684b54f3dac49f1b3154f044281499bdcb6beceee86d44449"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/pixel_best_candidate_direction_reconstruction.csv",
+      "bytes": 13965,
+      "sha256": "737aeabf11da8fa678b0f21609dfefe133832b806f6d640f2691dd23e81997a7"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/completion/pixel_candidate_scope.csv",
+      "bytes": 5091556,
+      "sha256": "d772f6102943b8d334e2f497a482d4e32c690d20fe9d587c1ab5d38e56f81e4d"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/data_profile.json",
+      "bytes": 1281,
+      "sha256": "d88c279047dde3cd9a745765b9590bb9f89fbbbdd8385a8422cf330792ced7c2"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/environment_group_associations.csv",
+      "bytes": 3656823,
+      "sha256": "4c943a55b61f21237f6f40aa53bfb1565beb26de7c38a8e19244436ecc118faa"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/environment_group_definitions.json",
+      "bytes": 1008,
+      "sha256": "5a7a04a3a5a83c2c471f6cea3cd2957e08b9d2bccb9d1ebdde441b1e055be7d0"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/environment_group_leaderboard.csv",
+      "bytes": 593053,
+      "sha256": "accab75f3cdd920a65263292dd87183d5921c07a149d55fb0652cb3fa0e6d9a3"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/environment_group_statistics.csv",
+      "bytes": 255302,
+      "sha256": "7986ada4db79b0c532dcd71169f403b081c3c35629edd8d1933fbb01605240fc"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/experiment_registry.csv",
+      "bytes": 25134666,
+      "sha256": "4284a4ae86274e969916dc167db6ca3d59315e192dbb66ec46702b01eba6c176"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/final_candidate_results.csv",
+      "bytes": 229110,
+      "sha256": "8573be32aea7e84a62a723f7c72b0ca1ad2683b8e805a6217d98552ade555745"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/group_spatial_stability.csv",
+      "bytes": 27425,
+      "sha256": "e2f93b91dded55cdcebc995f6554b78fbffca150739bdbe2880dd01aae09a4c7"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/group_spatial_validation.csv",
+      "bytes": 706250,
+      "sha256": "7a75dad6fecc2d58818c34a09dafa12a0dfa218d6b8c59a58af6e83b10d59f12"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/matched_pair_statistics.csv",
+      "bytes": 104988,
+      "sha256": "29a84b25324993e95fe193faec32004eadc6fff13a7717c8d1b5df7808e4231c"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/matching_balance_results.csv",
+      "bytes": 10219031,
+      "sha256": "3873c91957f04b5a3f65a6c9f19da8fb9c2d0f4c7a164b150c1f0a14085d162d"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/matching_configurations.csv",
+      "bytes": 966982,
+      "sha256": "29314aeb73d1dead6b6562cd232307b82c5235b549859f378934cc3f9c04bb36"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/model_leaderboard.csv",
+      "bytes": 212624,
+      "sha256": "5b0e240bb19537a2b6426cb6f32f2ae09987b977ef299f2ea0644f0a8ac11b27"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/model_search_results.csv",
+      "bytes": 9183955,
+      "sha256": "2f27fee7f59860596843cd939157839a05c70ee79b133d902cdfcd5479fd8ea8"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/pair_balance_summary.csv",
+      "bytes": 1820,
+      "sha256": "3e3cbb7cac813a4bafe727c4c4cb1752c700e9a891bf38d53bdb4af740fd9001"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/pair_input_profile.json",
+      "bytes": 649,
+      "sha256": "d6831239583124e90ac8044fbc31b04077a0bb4c713288d8b450448464392b48"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/paired_spatial_validation_summary.csv",
+      "bytes": 5252,
+      "sha256": "22691433d465109de5cf615e7e9d05e2ac0d2b0325330a447bf7c71d5c24f9ab"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/pixel_model_r2_summary.csv",
+      "bytes": 176848,
+      "sha256": "18e6eb841417e14a0df9dfe697b5d0120914f21ece0fd2f544288a8606ee1381"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/response_curve_data.csv",
+      "bytes": 793192,
+      "sha256": "ee074ee4d4ed8d62b0680b25c577df85662926acc4f913bc930d81a9249a3a72"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/response_curve_sample_points.csv",
+      "bytes": 1744161,
+      "sha256": "02eea0984b15e43a74aca2cf4df6ec4e24914e2019c897710034834e5fed8b90"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/response_curve_sample_profile.csv",
+      "bytes": 343,
+      "sha256": "19a9229449884afc62cfb378dfefb63a747bf40b1851d2613b47c851fa629fd8"
+    },
+    {
+      "path": "docs/reviews/2026-10-27/phase-g/tables/spatial_validation_results.csv",
+      "bytes": 1103095,
+      "sha256": "f6a8e9b788f972fa1c7a2d2a736b5a75433c6eac6055b56fcca254f930462c1b"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/config.yaml",
+      "bytes": 1094,
+      "sha256": "5e5f079bb7c8efe85e030e8cc78e7c8af56e1eca9db603a4d6253efe3b172579"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/10_environment_group_slope_forest.pdf",
+      "bytes": 29466,
+      "sha256": "1b8868d475c17936dd6ce60a7ae9fd92e8e1a9019b9913e8adef458b5cd119f9"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/10_environment_group_slope_forest.png",
+      "bytes": 388872,
+      "sha256": "1a4b0ac827c8fafe7a27598e20820827c71335b519c9ca28490eeaa49c26ffff"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/10_environment_group_slope_forest.svg",
+      "bytes": 321266,
+      "sha256": "3bdcc9860ad375a3c0e484e724462faf2d47ee003f02ae81917cc85da286698d"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/captions/10_environment_group_slope_forest.md",
+      "bytes": 375,
+      "sha256": "ea6c58f4756c0902ac444fad3b2f00c4ce91b5e77c13a348e5518013ad07a2e3"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/data/10_environment_group_slope_forest.csv",
+      "bytes": 29480,
+      "sha256": "5a2faec508fba8c5599af7e0b4ee2a00da8946976ebfbe7f9ee4ca0efbbe6946"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/provenance.json",
+      "bytes": 2209,
+      "sha256": "3c8fc9662e51aeac5a34b923c37e88cc0e6111f43de18fd5e7dc874cfe4ec192"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/reports/PHASE_G_COMPLETION_ADDENDUM.md",
+      "bytes": 18696,
+      "sha256": "809ad965b990e3aa9fd817f386b5c250061d82960541c99714bcca2deca81a03"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/run_state.json",
+      "bytes": 619,
+      "sha256": "4ba914740329c2e8342c07ab8f5fd373add6c82ecf26487984c2e38106c22c92"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/candidate_scope_reconciliation.csv",
+      "bytes": 1089,
+      "sha256": "44a50666171be21b3267bb1416cf89962e3b71d8b23b1c8c067354cf1bfc11d1"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/environment_group_definitions.json",
+      "bytes": 2490,
+      "sha256": "e4df5ee46d014cd061260e0560c4a433c33d4a4e3ca9db95ecf696fb32c419cc"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/environment_group_labels.parquet",
+      "bytes": 6479764,
+      "sha256": "6b6d2c8750e676ddb6ff56104b8bad280a2cc304520e7c2df91f333c96d9840c"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/environment_group_profiles.csv",
+      "bytes": 991680,
+      "sha256": "ba53bc60cce472012406796e049796ad6f3e0768225b760e05371696b8d608cf"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/group_interaction_registry.csv",
+      "bytes": 86022,
+      "sha256": "e17fdb3d9e4aa7e9827d5a59e4925a031c6e4f4362181c6873e457b7e80a2967"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/group_slope_estimates.csv",
+      "bytes": 4027705,
+      "sha256": "e68ab835ee3199fb2778042cf50c610bac2df2c3e5207f55bad2836593b9b6ea"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/group_slope_interaction_tests.csv",
+      "bytes": 296413,
+      "sha256": "27bc47e122d294debe84f5ee7cb9031f556c8b0aed8c7dd3265e90c350a4201d"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/in_scope_pixel_model_leaderboard.csv",
+      "bytes": 110725,
+      "sha256": "dc605e4274d51d4d55dd1828f9770056db6e8705873d970d5fe0e83a5313e234"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/pair_spatial_block_boundary.csv",
+      "bytes": 335,
+      "sha256": "9857fdb570e17d661a0fa16605ce7d595f4b86381faec4413a11fa32991c3435"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/paired_full_sample_ols_baselines.csv",
+      "bytes": 28024,
+      "sha256": "6e99a463743cfb1b904a51f51e53b8b1704109b7f885ea1e48b8960195b7b2c9"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/paired_model_leaderboard.csv",
+      "bytes": 166813,
+      "sha256": "d50fc44b3dbef0a38701066b538c10da534629459ab5cae9845b1f69dd1dcf62"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/paired_response_model_trials.csv",
+      "bytes": 292102,
+      "sha256": "39fb37f1f3fc991b0415cb59755de90dec7a4dfdbf233580bcdf9107a1ab23ef"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/paired_spatial_model_trials.csv",
+      "bytes": 2164802,
+      "sha256": "2560fe3a2e204616d80fcc87573b35812a23d8396a89893ebb8e8be64a7ae213"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/paired_spatial_selected_models.csv",
+      "bytes": 241736,
+      "sha256": "b86efe54981f79a59a9721fc68f18259578f94db38c4f16bf62a91a6aa66128c"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/paired_spatial_selected_summary.csv",
+      "bytes": 26091,
+      "sha256": "4a43a4b6bc12345684b54f3dac49f1b3154f044281499bdcb6beceee86d44449"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/pixel_best_candidate_direction_reconstruction.csv",
+      "bytes": 13965,
+      "sha256": "737aeabf11da8fa678b0f21609dfefe133832b806f6d640f2691dd23e81997a7"
+    },
+    {
+      "path": "outputs/exploratory_oracle/phase_g_20261027_completion/tables/pixel_candidate_scope.csv",
+      "bytes": 5091556,
+      "sha256": "d772f6102943b8d334e2f497a482d4e32c690d20fe9d587c1ab5d38e56f81e4d"
+    }
+  ]
+}

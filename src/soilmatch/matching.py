@@ -26,6 +26,7 @@ def match_cells(
     allow_reuse: bool = False,
     per_variable_calipers: Mapping[str, float] | None = None,
     environment_weights: Sequence[float] | None = None,
+    environment_metric: str = "euclidean",
 ) -> tuple[pd.DataFrame, dict[str, object]]:
     """Greedily pair high and low erosion cells within the same environment
     group and soil type, subject to environment and geographic calipers.
@@ -52,6 +53,8 @@ def match_cells(
             raise ValueError(f"{name} must be a finite value greater than zero")
     if len(set(env_columns)) != len(env_columns):
         raise ValueError("environment_columns must be unique")
+    if environment_metric not in {"euclidean", "manhattan"}:
+        raise ValueError("environment_metric must be 'euclidean' or 'manhattan'")
 
     calipers = dict(per_variable_calipers or {})
     unknown_calipers = set(calipers) - set(env_columns)
@@ -109,8 +112,11 @@ def match_cells(
             [erosion_col, "__position"], ascending=[False, True], kind="mergesort"
         )
         vectors = ordered.loc[:, env_columns].to_numpy(dtype=float)
-        weighted_vectors = vectors * np.sqrt(weights)
-        tree = KDTree(weighted_vectors, metric="euclidean")
+        if environment_metric == "euclidean":
+            weighted_vectors = vectors * np.sqrt(weights)
+        else:
+            weighted_vectors = vectors * weights
+        tree = KDTree(weighted_vectors, metric=environment_metric)
         cell_ids = ordered["__cell_id"].to_numpy(dtype=object)
         exposures = ordered[erosion_col].to_numpy(dtype=float)
         coords = ordered[[x_col, y_col]].to_numpy(dtype=float)
@@ -137,6 +143,7 @@ def match_cells(
                 np.repeat(vectors[high_index : high_index + 1], len(candidate_indices), axis=0),
                 vectors[candidate_indices],
                 weights=weights,
+                metric=environment_metric,
             )
             if calipers:
                 high_values = ordered.iloc[high_index][env_columns].to_numpy(dtype=float)

@@ -70,3 +70,11 @@
 - 图 5 同时展示固定 20,000 像元共同样本自然样条和历史 Oracle 最佳全样本表观模型曲线，并区分两者的样本范围与选择方式。九张图均输出 PNG/SVG/PDF；ChatGPT 审查目录包含图注、图源表、完整结果 CSV 副本和审查请求，共 72 个文件。汇报指出健康层是预测面、Aa 单位/时期元信息尚缺，结果不作因果或独立实测验证解释。
 - 报告将 Wilcoxon P<0.001 显示为阈值格式，避免舍入显示成 0.000。验证：`pytest -q` 为 122 项通过；`python -m compileall -q src experiments scripts tests` 和 `git diff --check` 通过；产物检查确认 9 张图的三种格式、72 个审查文件、两种曲线类型、降水分组和 M3/M4 空间记录均齐全。Ruff 未安装，未运行。
 - 报告及审查请求位于 `docs/reviews/2026-10-27/phase-g/`，运行数据位于 Git 忽略的 `outputs/exploratory_oracle/phase_g_20261027/`。当前未提交、未推送；审查请求中的实际审查 SHA 需在首个 Phase G 成果提交后填写，再单独提交该请求。
+
+## 2026-10-28：Phase G completion 补充结果
+
+- 运行 `phase_g_20261027_completion`（`EXPLORATORY_ORACLE`，`outcome_guided_selection=true`），以 2026-10-27 Phase G 提交 `efdcdcd313f57aae1587466f9e0115a2846bec5e` 为起始 HEAD。复用 392,527 个已对齐像元、407,372 个 Phase F 配对和既有 Oracle 候选登记；继续使用预计算 Aa，不重算/验证 RUSLE 因子乘积、不重跑 PCNM、不修改总纲。
+- 更新耕地范围候选榜单并排除 18 条 SoilType 85 水体结果；对 17 个可能改变负向排序的候选重建固定样本树模型方向，最大绝对 R² 复现差 1.67e-16。新增 331 条配对响应模型记录、2,880 条 validation 选择的空间模型记录、504 项环境组交互检验、8,964 条组内斜率和 996 条环境剖面记录。
+- 全局 BH 校正 504 项交互检验中 473 项 q<0.05；M4/Aa_20yr 为 123/126。极端 Wald 尾部改用稳定 log survival 计算，报告展示 log(P)/log(q)。空间边界诊断发现 52,601/407,372 对两端跨越 5 km 网格（12.9%）；模型仍按配对中点分块。
+- 补充报告、审查请求、校正后结果表和图 10 位于 `docs/reviews/2026-10-27/phase-g/`；运行明细和清单在 Git 忽略的 `outputs/exploratory_oracle/phase_g_20261027_completion/`。图 5 同时提供固定样本自然样条与全样本表观最佳模型曲线。当前等待用户本地提交、推送及 ChatGPT 审查；未发送外部材料，也未进入 FORMAL G5。
+- 验证：`pytest -q` 130 项通过；`python -m compileall -q src experiments scripts tests` 通过。完整审查提交 SHA 保持待用户提交后填写。

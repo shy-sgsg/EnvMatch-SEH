@@ -1,0 +1,2 @@
+﻿pairs,finite_coordinate_pairs,high_low_members_in_different_5km_grid_blocks,cross_5km_member_block_fraction,spatial_validation_pair_assignment,block_grid
+407372,407372,52601,0.1291227673968756,pair midpoint spatial_block_id; both members are kept together as one pair,"axis-aligned 5,000 m cells using floor(x/5000), floor(y/5000)"

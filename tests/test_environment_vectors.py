@@ -62,3 +62,16 @@ def test_environment_distances_support_weighted_rowwise_euclidean_distance():
 
     np.testing.assert_allclose(distances, [np.sqrt(52.0), np.sqrt(52.0)])
 
+
+def test_environment_distances_support_weighted_manhattan_distance_for_gower():
+    environment_distances = _api("environment_distances")
+
+    distances = environment_distances(
+        np.array([[0.0, 0.0]]),
+        np.array([[2.0, 4.0]]),
+        weights=[0.5, 0.5],
+        metric="manhattan",
+    )
+
+    np.testing.assert_allclose(distances, [3.0])
+

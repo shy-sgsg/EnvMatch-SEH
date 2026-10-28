@@ -1,0 +1,27 @@
+phase: G
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: phase_g_20261027_completion
+input_run_id: run_20261025T114741_470772Z
+phase_f_run_id: phase_f_20261026_seed20261026
+oracle_source_run_id: oracle_20261026T041521459615Z_20261026
+source_phase_g_run_id: phase_g_20261027
+output_dir: outputs/exploratory_oracle/phase_g_20261027_completion
+review_dir: docs/reviews/2026-10-27/phase-g
+seed: 20261028
+outcomes: [SHI_candidate, AN, OM, CEC, pH, SW, BD, MBC, RESP]
+primary_soils: [26, 27, 42]
+pair_model_search:
+  discovery_pairs_per_method_exposure: 20000
+  spatial_pairs_per_method_exposure: 5000
+  model_families: [ols, huber, quadratic, natural_spline, statsmodels_gam, random_forest, extra_trees, hist_gradient_boosting]
+  spatial_seeds: [20261028, 20261029, 20261030, 20261031, 20261032, 20261033, 20261034, 20261035, 20261036, 20261037]
+  block_size_m: 5000
+  min_train_pairs: 100
+group_analysis:
+  cluster_variables: [Elevation, LST]
+  cluster_counts: [4, 6, 8, 10, 12]
+  cluster_method: minibatch_kmeans
+  seed: 20261028
+  min_pairs_per_group: 100
+  min_spatial_blocks: 5

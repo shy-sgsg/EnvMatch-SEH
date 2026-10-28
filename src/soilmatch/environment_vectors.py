@@ -70,7 +70,7 @@ def environment_distances(
     metric: str = "euclidean",
     inverse_covariance: np.ndarray | None = None,
 ) -> np.ndarray:
-    """Return row-wise Euclidean or Mahalanobis distances for paired vectors."""
+    """Return row-wise Euclidean, Manhattan, or Mahalanobis distances."""
     left_array = np.asarray(left, dtype=float)
     right_array = np.asarray(right, dtype=float)
     if left_array.ndim != 2 or left_array.shape != right_array.shape:
@@ -78,7 +78,7 @@ def environment_distances(
     if not np.isfinite(left_array).all() or not np.isfinite(right_array).all():
         raise ValueError("Environment vectors must contain only finite values")
     delta = left_array - right_array
-    if metric == "euclidean":
+    if metric in {"euclidean", "manhattan"}:
         weight_values = (
             np.ones(left_array.shape[1], dtype=float)
             if weights is None
@@ -88,6 +88,8 @@ def environment_distances(
             raise ValueError("weights must have one value per environment variable")
         if not np.isfinite(weight_values).all() or (weight_values < 0).any():
             raise ValueError("Distance weights must be finite and nonnegative")
+        if metric == "manhattan":
+            return np.sum(np.abs(delta) * weight_values, axis=1)
         return np.sqrt(np.sum(np.square(delta) * weight_values, axis=1))
     if metric == "mahalanobis":
         if inverse_covariance is None:
@@ -98,4 +100,4 @@ def environment_distances(
             raise ValueError(f"inverse_covariance must be a finite matrix with shape {expected}")
         squared = np.einsum("bi,ij,bj->b", delta, inverse, delta)
         return np.sqrt(np.maximum(squared, 0.0))
-    raise ValueError("metric must be 'euclidean' or 'mahalanobis'")
+    raise ValueError("metric must be 'euclidean', 'manhattan', or 'mahalanobis'")
