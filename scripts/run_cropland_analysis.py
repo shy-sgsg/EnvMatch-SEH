@@ -13,6 +13,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.colors import BoundaryNorm, ListedColormap
 import numpy as np
 import pandas as pd
 import rasterio
@@ -38,6 +39,7 @@ CORE_ENVIRONMENT = ("Elevation", "Cur", "TWI", "LST")
 OPTIONAL_ENVIRONMENT = ("NDWI", "NDBSI", "EVI", "NDVI", "Precipitation")
 HEALTH_INDICATORS = ("AN", "OM", "CEC", "pH", "SW", "BD", "MBC", "RESP")
 SOIL_CODES = (26, 27, 42)
+SOIL_TYPE_LABELS = {26: "冲积土", 27: "潮土", 42: "脱潮土"}
 MASK_VALUE = 12
 ENVIRONMENT_DISTANCE = 0.5
 EXPOSURE_RANK_GAP = 0.25
@@ -50,6 +52,39 @@ EXPOSURE_FILES = {
     "Aa_20yr_nearest": "Aa_20yr_nearest.tif",
     "Aa_2020_nearest": "Aa_2020_nearest.tif",
 }
+
+FIGURE_FONT = "Noto Sans CJK JP"
+FIGURE_COLORS = {
+    "navy": "#28566E",
+    "teal": "#4E8983",
+    "ochre": "#C08A3E",
+    "coral": "#B85E52",
+    "ink": "#263A46",
+    "muted": "#687983",
+    "grid": "#DDE5E8",
+    "paper": "#F7F9FA",
+}
+GROUP_COLORS = [
+    "#315D78", "#4E8A86", "#C57645", "#A7A64C", "#6A6A9B", "#8C6D58",
+    "#4A7896", "#9A5870", "#8C9D73", "#6F889C", "#BD9451", "#58745D",
+]
+
+
+def _configure_figure_style() -> None:
+    plt.rcParams.update({
+        "font.family": FIGURE_FONT,
+        "axes.edgecolor": "#AAB8BE",
+        "axes.linewidth": 0.8,
+        "axes.labelcolor": FIGURE_COLORS["ink"],
+        "axes.titlecolor": FIGURE_COLORS["ink"],
+        "xtick.color": FIGURE_COLORS["muted"],
+        "ytick.color": FIGURE_COLORS["muted"],
+        "grid.color": FIGURE_COLORS["grid"],
+        "grid.linewidth": 0.65,
+        "figure.facecolor": "white",
+        "axes.facecolor": "white",
+        "savefig.facecolor": "white",
+    })
 
 
 def _nested(mapping: dict[str, Any], dotted_name: str) -> Any:
@@ -140,55 +175,88 @@ def _write_area_figure(
     polygon_area_km2: float | None,
     charter_area_km2: float,
 ) -> None:
-    labels = ["Cropland mask raster", "Cropland SHP geometry", "Prior charter estimate"]
+    _configure_figure_style()
+    labels = ["耕地掩膜栅格", "边界矢量几何（单位暂按米）", "总纲记录面积"]
     values = [raster_area_km2, polygon_area_km2, charter_area_km2]
     shown_labels = [label for label, value in zip(labels, values, strict=True) if value is not None]
     shown_values = [value for value in values if value is not None]
-    figure, axis = plt.subplots(figsize=(7, 4.5), constrained_layout=True)
-    bars = axis.bar(shown_labels, shown_values, color=["#4c7899", "#7da28f", "#c79a58"][:len(shown_values)])
-    axis.set_ylabel("Area (km²; polygon CRS inferred if .prj is missing)")
-    axis.set_title("Cropland area estimates")
-    axis.tick_params(axis="x", rotation=15)
+    figure, axis = plt.subplots(figsize=(9.2, 4.8), constrained_layout=True)
+    bars = axis.barh(shown_labels, shown_values,
+                     color=[FIGURE_COLORS["navy"], FIGURE_COLORS["teal"], FIGURE_COLORS["ochre"]][:len(shown_values)],
+                     height=0.56, edgecolor="white", linewidth=1.0, zorder=3)
+    axis.set_xlabel("面积（平方千米）")
+    axis.set_title("耕地面积估算对照", loc="left", fontsize=15, fontweight="semibold", pad=14)
+    axis.set_xlim(0, max(shown_values, default=1) * 1.19)
+    axis.grid(axis="x", zorder=0)
+    axis.set_axisbelow(True)
     for bar, value in zip(bars, shown_values, strict=True):
-        axis.text(bar.get_x() + bar.get_width() / 2, value, f"{value:.3f}", ha="center", va="bottom")
-    figure.savefig(output, dpi=180)
+        axis.text(value + max(shown_values, default=1) * 0.012, bar.get_y() + bar.get_height() / 2,
+                  f"{value:.3f}", ha="left", va="center", fontsize=10, color=FIGURE_COLORS["ink"])
+    if polygon_area_km2 is not None:
+        figure.text(0.01, -0.015, "注：边界矢量缺少可确认的投影信息，其面积按米制假设计算，仅供对照。",
+                    ha="left", va="top", fontsize=8, color=FIGURE_COLORS["muted"])
+    figure.savefig(output, dpi=320, bbox_inches="tight")
     plt.close(figure)
 
 
 def _write_correlation_figure(correlation: pd.DataFrame, output: Path) -> None:
-    figure, axis = plt.subplots(figsize=(8, 7), constrained_layout=True)
-    image = axis.imshow(correlation.to_numpy(), vmin=-1, vmax=1, cmap="coolwarm")
-    axis.set_xticks(range(len(correlation.columns)), correlation.columns, rotation=45, ha="right")
-    axis.set_yticks(range(len(correlation.index)), correlation.index)
+    _configure_figure_style()
+    labels = {
+        "Elevation": "高程", "Cur": "地表曲率", "TWI": "地形湿度指数", "LST": "地表温度",
+        "NDWI": "水体指数", "NDBSI": "裸地与建筑指数", "EVI": "增强植被指数",
+        "NDVI": "归一化植被指数", "Precipitation": "降水",
+    }
+    figure, axis = plt.subplots(figsize=(10.2, 8.4), constrained_layout=True)
+    image = axis.imshow(correlation.to_numpy(), vmin=-1, vmax=1, cmap="RdBu_r", interpolation="nearest")
+    axis.set_xticks(range(len(correlation.columns)), [labels.get(str(c), str(c)) for c in correlation.columns], rotation=38, ha="right")
+    axis.set_yticks(range(len(correlation.index)), [labels.get(str(c), str(c)) for c in correlation.index])
+    axis.tick_params(length=0, labelsize=9)
+    axis.set_xticks(np.arange(-0.5, len(correlation.columns), 1), minor=True)
+    axis.set_yticks(np.arange(-0.5, len(correlation.index), 1), minor=True)
+    axis.grid(which="minor", color="white", linewidth=1.2)
+    axis.tick_params(which="minor", bottom=False, left=False)
     for row in range(len(correlation.index)):
         for column in range(len(correlation.columns)):
             value = correlation.iloc[row, column]
             if np.isfinite(value):
-                axis.text(column, row, f"{value:.2f}", ha="center", va="center", fontsize=8)
-    axis.set_title("Continuous environment correlations inside the cropland mask")
-    figure.colorbar(image, ax=axis, label="Pearson correlation")
-    figure.savefig(output, dpi=180)
+                text_color = "white" if abs(value) >= 0.62 else FIGURE_COLORS["ink"]
+                axis.text(column, row, f"{value:.2f}", ha="center", va="center", fontsize=8, color=text_color)
+    axis.set_title("耕地范围内环境变量相关性", loc="left", fontsize=15, fontweight="semibold", pad=14)
+    figure.colorbar(image, ax=axis, label="Pearson 相关系数", fraction=0.045, pad=0.04, ticks=np.linspace(-1, 1, 5))
+    figure.savefig(output, dpi=320, bbox_inches="tight")
     plt.close(figure)
 
 
 def _write_exposure_figure(exposure_frame: pd.DataFrame, output: Path) -> None:
-    figure, axes = plt.subplots(1, 2, figsize=(12, 4.5), constrained_layout=True)
+    _configure_figure_style()
+    figure, axes = plt.subplots(1, 2, figsize=(13, 5.3), constrained_layout=True, sharey=True)
+    exposure_labels = {"Aa_20yr": "20 年平均实际侵蚀", "Aa_2020": "2020 年实际侵蚀"}
+    method_labels = {"area average": "面积平均", "nearest": "最近邻"}
+    colors = {"area average": FIGURE_COLORS["navy"], "nearest": FIGURE_COLORS["coral"]}
     for axis, exposure in zip(axes, ("Aa_20yr", "Aa_2020"), strict=True):
+        zero_rates = []
         for method, suffix, color in (
-            ("area average", "", "#4c7899"),
-            ("nearest", "_nearest", "#c46b5a"),
+            ("area average", "", colors["area average"]),
+            ("nearest", "_nearest", colors["nearest"]),
         ):
             column = f"{exposure}{suffix}"
             values = pd.to_numeric(exposure_frame[column], errors="coerce").to_numpy(dtype=float)
             values = values[np.isfinite(values) & (values >= 0)]
             if values.size:
                 logged = np.log1p(values)
-                axis.hist(logged, bins=60, density=True, histtype="step", linewidth=1.5, label=method, color=color)
-        axis.set_title(exposure)
-        axis.set_xlabel("log1p(recorded raster value; unit not encoded)")
-        axis.set_ylabel("Density")
-        axis.legend(frameon=False)
-    figure.savefig(output, dpi=180)
+                axis.hist(logged, bins=64, density=True, histtype="step", linewidth=2.0,
+                          label=method_labels[method], color=color)
+                zero_rates.append((method_labels[method], float(np.mean(values == 0))))
+        axis.set_title(exposure_labels[exposure], loc="left", fontsize=12, fontweight="semibold", pad=9)
+        axis.set_xlabel("log(1 + 栅格记录值；原始单位未编码)")
+        axis.grid(axis="y", alpha=0.7)
+        annotation = "\n".join(f"{label}零值率：{rate:.1%}" for label, rate in zero_rates)
+        axis.text(0.98, 0.96, annotation, transform=axis.transAxes, ha="right", va="top", fontsize=8,
+                  color=FIGURE_COLORS["muted"], bbox={"boxstyle": "round,pad=0.35", "facecolor": "white", "edgecolor": "#DDE5E8", "alpha": 0.92})
+    axes[0].set_ylabel("密度")
+    axes[1].legend(title="重采样方式", frameon=False, loc="upper left")
+    figure.suptitle("实际侵蚀值的重采样敏感性（既有 Aa）", x=0.02, y=1.04, ha="left", fontsize=15, fontweight="semibold")
+    figure.savefig(output, dpi=320, bbox_inches="tight")
     plt.close(figure)
 
 
@@ -636,6 +704,7 @@ def _write_cluster_map(run_dir: Path, frame: pd.DataFrame, labels: np.ndarray, c
     output_path = run_dir / "maps" / f"environment_groups_k{cluster_count}.tif"
     with rasterio.open(template_path) as template:
         profile = template.profile.copy()
+        bounds = template.bounds
         profile.pop("blockxsize", None)
         profile.pop("blockysize", None)
         profile.update(dtype="int32", nodata=0, compress="deflate", count=1)
@@ -647,12 +716,94 @@ def _write_cluster_map(run_dir: Path, frame: pd.DataFrame, labels: np.ndarray, c
     with rasterio.open(output_path, "w", **profile) as destination:
         destination.write(raster, 1)
 
-    figure, axis = plt.subplots(figsize=(7, 6), constrained_layout=True)
-    image = axis.imshow(np.ma.masked_equal(raster, 0), cmap="tab20", interpolation="nearest")
-    axis.set_title(f"Environment groups: {cluster_count} clusters per soil stratum")
-    axis.set_axis_off()
-    figure.colorbar(image, ax=axis, label="Environment group ID")
-    figure.savefig(run_dir / "figures" / f"environment_groups_k{cluster_count}.png", dpi=180)
+    _plot_cluster_map(run_dir, cluster_count)
+
+
+def _plot_cluster_map(run_dir: Path, cluster_count: int) -> None:
+    """Render stored group IDs as soil-stratified small-multiple maps."""
+    _configure_figure_style()
+    map_path = run_dir / "maps" / f"environment_groups_k{cluster_count}.tif"
+    soil_path = run_dir / "maps" / "aligned" / "SoilType.tif"
+    centers_path = run_dir / "tables" / f"environment_centers_k{cluster_count}.csv"
+    with rasterio.open(map_path) as dataset:
+        group_values = dataset.read(1, masked=True)
+        bounds = dataset.bounds
+        res_x, res_y = dataset.res
+    if not soil_path.is_file():
+        figure, axis = plt.subplots(figsize=(7, 6), constrained_layout=True)
+        image = axis.imshow(np.ma.masked_equal(group_values, 0), cmap="tab20", interpolation="nearest")
+        axis.set_title(f"环境组空间格局（未提供土壤类型栅格，k = {cluster_count}）")
+        axis.set_axis_off()
+        figure.colorbar(image, ax=axis, label="环境组编号")
+        figure.savefig(run_dir / "figures" / f"environment_groups_k{cluster_count}.png", dpi=320)
+        plt.close(figure)
+        return
+    with rasterio.open(soil_path) as dataset:
+        soil_values = dataset.read(1, masked=True)
+    centers = pd.read_csv(centers_path)
+    cmap = ListedColormap(GROUP_COLORS[:cluster_count], name=f"envmatch_groups_{cluster_count}")
+    norm = BoundaryNorm(np.arange(0.5, cluster_count + 1.5), cmap.N)
+    figure, axes = plt.subplots(1, 3, figsize=(13.2, 5.6), constrained_layout=True)
+    figure.suptitle(f"土壤类型分层的环境分组空间格局（每类 k = {cluster_count}）",
+                    x=0.02, y=1.055, ha="left", fontsize=16, fontweight="semibold", color=FIGURE_COLORS["ink"])
+    figure.text(0.02, 1.005, "分面为 26 冲积土、27 潮土、42 脱潮土；各面板独立聚类，组号不跨土类解释。",
+                ha="left", va="top", fontsize=9, color=FIGURE_COLORS["muted"])
+    map_images = []
+    for axis, soil_code in zip(axes, (26, 27, 42), strict=True):
+        soil_mask = (soil_values.data == soil_code) & ~np.ma.getmaskarray(soil_values)
+        crop_mask = soil_mask & (group_values.data > 0) & ~np.ma.getmaskarray(group_values)
+        rows, columns = np.where(crop_mask)
+        if not rows.size:
+            axis.text(0.5, 0.5, "没有有效像元", ha="center", va="center", transform=axis.transAxes)
+            axis.set_axis_off()
+            continue
+        r0, r1 = max(int(rows.min()) - 2, 0), min(int(rows.max()) + 3, group_values.shape[0])
+        c0, c1 = max(int(columns.min()) - 2, 0), min(int(columns.max()) + 3, group_values.shape[1])
+        stored_ids = group_values.data[r0:r1, c0:c1]
+        selected_soil = soil_mask[r0:r1, c0:c1]
+        local_groups = np.zeros(stored_ids.shape, dtype=np.int16)
+        strata = centers.loc[pd.to_numeric(centers["soil_type"], errors="coerce").eq(soil_code)]
+        for record in strata.itertuples(index=False):
+            local_groups[(stored_ids == int(record.environment_group)) & selected_soil] = int(record.local_cluster) + 1
+        shown = np.ma.masked_equal(local_groups, 0)
+        west = (bounds.left + c0 * res_x) / 1000
+        east = (bounds.left + c1 * res_x) / 1000
+        north = (bounds.top - r0 * res_y) / 1000
+        south = (bounds.top - r1 * res_y) / 1000
+        extent = (west, east, south, north)
+        image = axis.imshow(shown, cmap=cmap, norm=norm, interpolation="nearest", extent=extent,
+                            origin="upper", rasterized=True)
+        map_images.append(image)
+        axis.set_title(f"{soil_code}｜{SOIL_TYPE_LABELS[soil_code]}", loc="left", fontsize=11,
+                       fontweight="semibold", pad=8)
+        axis.set_aspect("equal")
+        axis.set_facecolor(FIGURE_COLORS["paper"])
+        axis.set_xlabel("东向坐标（千米）", fontsize=8)
+        axis.set_ylabel("北向坐标（千米）", fontsize=8)
+        axis.tick_params(labelsize=7, length=0)
+        axis.grid(color="white", linewidth=0.6, alpha=0.9, zorder=2)
+        axis.set_axisbelow(True)
+
+        # A local scale bar and north arrow keep each cropped soil panel interpretable.
+        span_x, span_y = east - west, north - south
+        candidates = [1, 2, 5, 10, 20, 50]
+        scale_km = min(candidates, key=lambda value: abs(value - span_x * 0.2))
+        scale_x, scale_y = west + span_x * 0.06, south + span_y * 0.07
+        axis.plot([scale_x, scale_x + scale_km], [scale_y, scale_y], color="white", linewidth=4.5, zorder=5)
+        axis.plot([scale_x, scale_x + scale_km], [scale_y, scale_y], color=FIGURE_COLORS["ink"], linewidth=2.2, zorder=6)
+        axis.text(scale_x + scale_km / 2, scale_y + span_y * 0.025, f"{scale_km:g} 千米",
+                  ha="center", va="bottom", fontsize=7, color=FIGURE_COLORS["ink"], zorder=6,
+                  bbox={"boxstyle": "round,pad=0.15", "facecolor": "white", "edgecolor": "none", "alpha": 0.88})
+        axis.annotate("N", xy=(0.93, 0.91), xytext=(0.93, 0.78), xycoords="axes fraction",
+                      ha="center", va="center", fontsize=9, fontweight="bold", color=FIGURE_COLORS["ink"],
+                      arrowprops={"arrowstyle": "-|>", "color": FIGURE_COLORS["ink"], "lw": 1.2}, zorder=7)
+
+    if map_images:
+        colorbar = figure.colorbar(map_images[0], ax=axes.tolist(), orientation="horizontal", pad=0.13, fraction=0.065,
+                                   ticks=np.arange(1, cluster_count + 1), boundaries=np.arange(0.5, cluster_count + 1.5))
+        colorbar.set_label("土类内环境组编号（离散类别）", labelpad=5)
+        colorbar.outline.set_edgecolor("#C7D1D5")
+    figure.savefig(run_dir / "figures" / f"environment_groups_k{cluster_count}.png", dpi=320, bbox_inches="tight")
     plt.close(figure)
 
 
@@ -771,12 +922,12 @@ def _run_feasibility(run_dir: Path, config: dict[str, Any]) -> None:
                     candidate_k_per_soil_type=cluster_count
                 )
             )
-        _write_cluster_map(run_dir, cluster_frame, labels, cluster_count)
         centers = centers.rename(
             columns={f"center_{index}": f"center_{name}" for index, name in enumerate(CORE_ENVIRONMENT)}
         )
         centers["candidate_k_per_soil_type"] = cluster_count
         centers.to_csv(run_dir / "tables" / f"environment_centers_k{cluster_count}.csv", index=False)
+        _write_cluster_map(run_dir, cluster_frame, labels, cluster_count)
 
     quality = pd.DataFrame(quality_rows)
     quality.to_csv(run_dir / "tables" / "g4_cluster_quality.csv", index=False)

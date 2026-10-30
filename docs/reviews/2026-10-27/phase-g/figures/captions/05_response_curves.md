@@ -1,1 +1,1 @@
-The dashed natural spline is fit to one fixed common 20,000-cell complete-case sample (soil codes 26/27/42), without selecting the spline by fit. The solid red curve is the model previously selected by full-sample apparent R² among 1,024 trials and 13 families; environmental predictors are held at their recorded median/reference values. Both are descriptive raster-surface fits, not independent validation.
+虚线自然样条拟合于固定的共同 20,000 个完整像元样本（土类 26/27/42），未按拟合优度挑选。红色实线为此前 13 类模型、1,024 次全样本表观 R²搜索中入选的模型曲线；环境变量固定在记录的中位数或参考值。两者均描述预测栅格，不是独立验证。

@@ -1,0 +1,91 @@
+{
+  "phase": "Phase H",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "review_date": "2026-10-30",
+  "figure_atlas_count": 83,
+  "packaged_figure_sets": {
+    "initial": {
+      "source_run": "run_20261025T114741_470772Z",
+      "figures_png": 11,
+      "formats": [
+        "png"
+      ]
+    },
+    "phase_h_core": {
+      "source_run": "phase_h_20261028_seed20261028_h2",
+      "figures_png": 11,
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ],
+      "source_data": "CSV.gz"
+    },
+    "low_erosion_regime": {
+      "source_run": "low_erosion_regime_20261029_seed20261029_r2",
+      "figures_png": 18,
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ]
+    },
+    "matched_units": {
+      "source_run": "low_erosion_matched_units_20261029_seed20261029_r1",
+      "figures_png": 5,
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ]
+    },
+    "environment_group_heterogeneity": {
+      "source_run": "low_erosion_group_heterogeneity_20261030_seed20261030_r2",
+      "figures_png": 12,
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ]
+    },
+    "distribution_diagnostic_addendum": {
+      "source_run": "low_erosion_distribution_addendum_20261030_seed20261030_r1",
+      "figures_png": 3,
+      "formats": [
+        "png",
+        "svg",
+        "pdf"
+      ],
+      "source_data": "CSV",
+      "tables": [
+        "positive Aa quantiles and rounding precision",
+        "10-seed GMM diagnostics",
+        "posterior cutoff sensitivity",
+        "29-row unified threshold candidates"
+      ]
+    }
+  },
+  "included_evidence_tables": [
+    "artifacts/low_erosion_regime/thresholds/distribution_threshold_candidates.csv",
+    "artifacts/low_erosion_regime/associations/response_associations.csv",
+    "artifacts/low_erosion_regime/models/oracle_apparent_selection_summary.csv",
+    "artifacts/low_erosion_regime/models/zero_indicator_and_segmented_models.csv",
+    "artifacts/matched_units/models/threshold_model_comparison.csv",
+    "artifacts/environment_group_heterogeneity/tables/group_cell_retention.csv.gz",
+    "artifacts/environment_group_heterogeneity/tables/group_population_support.csv.gz",
+    "artifacts/environment_group_heterogeneity/tables/group_response_comparison.csv.gz",
+    "artifacts/environment_group_heterogeneity/tables/group_spatial_summary.csv.gz",
+    "artifacts/environment_group_heterogeneity/tables/group_pair_slope_spatial_bootstrap.csv.gz",
+    "artifacts/environment_group_heterogeneity/spatial_validation/group_spatial_validation.csv.gz",
+    "artifacts/distribution_diagnostic_addendum/diagnostics/exposure_distribution_detail.csv",
+    "artifacts/distribution_diagnostic_addendum/diagnostics/gmm_seed_stability_by_seed.csv",
+    "artifacts/distribution_diagnostic_addendum/diagnostics/gmm_seed_stability_summary.csv",
+    "artifacts/distribution_diagnostic_addendum/diagnostics/gmm_posterior_cutoff_sensitivity.csv",
+    "artifacts/distribution_diagnostic_addendum/thresholds/low_erosion_threshold_candidates.csv"
+  ],
+  "storage_note": "Review bundle includes figures, captions, chart source data, configs, provenance, selected result tables and the distribution-diagnostic addendum. Large rasters, full Parquet pair tables and pixel-level intermediate files remain in local outputs. Large group-level CSV evidence tables are gzip-compressed.",
+  "packaged_file_count": 333,
+  "packaged_bytes": 100731624,
+  "packaged_size_mib": 96.07
+}

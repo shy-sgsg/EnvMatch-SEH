@@ -1,0 +1,227 @@
+phase: H
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: phase_h_20261028_seed20261028_h2
+input_run_id: run_20261025T114741_470772Z
+phase_f_run_id: phase_f_20261026_seed20261026
+phase_g_run_id: phase_g_20261027_completion
+output_root: outputs/exploratory_oracle
+seed: 20261028
+exposures:
+- Aa_20yr
+- Aa_2020
+outcomes:
+- SHI_candidate
+- AN
+- OM
+- CEC
+- pH
+- SW
+- BD
+- MBC
+- RESP
+primary_soil_codes:
+- 26
+- 27
+- 42
+input_tables:
+  phase_f_pairs: pairs/full_sample_pairs.parquet
+  phase_g_labels: tables/environment_group_labels.parquet
+  aligned_environment: databases/environment_erosion.parquet
+  aligned_health: databases/health.parquet
+matching_search:
+  source_methods:
+  - M3
+  - M4
+  environment_vectors:
+    V1:
+    - Elevation
+    - Cur
+    - TWI
+    - LST
+    V5:
+    - Elevation
+    - LST
+    V7:
+    - Elevation
+    - Cur
+    - TWI
+    - LST
+    - NDWI
+  distance_methods:
+  - direct_nearest_neighbor
+  - standardized_euclidean
+  - mahalanobis
+  - weighted_euclidean
+  cluster_methods:
+  - none
+  - kmeans
+  - agglomerative
+  cluster_counts:
+  - 4
+  - 6
+  - 8
+  - 10
+  - 12
+  exposure_rules:
+  - within_group_rank
+  - positive_only
+  environment_calipers:
+  - 0.2
+  - 0.35
+  - 0.5
+  - 0.75
+  geographic_radii_m:
+  - 300
+  - 500
+  - 1000
+  - 1500
+  erosion_rank_gaps:
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+  stage1_representative_cells: 40000
+  stage1_max_candidates_per_exposure: 24
+  stage2_max_candidates_per_exposure: 6
+  allow_replacement: false
+  outcomes_used_for_selection:
+  - SHI_candidate
+  - AN
+  - OM
+  - CEC
+  - pH
+  - SW
+  - BD
+  - MBC
+  - RESP
+  selection_objectives:
+  - apparent_r2
+  - negative_association
+  - spatial_test_r2
+models:
+  families:
+  - ols
+  - log_exposure
+  - quadratic
+  - piecewise
+  - natural_spline
+  - statsmodels_gam
+  - huber
+  - quantile_regression
+  - random_forest
+  - extra_trees
+  - hist_gradient_boosting
+  random_seed: 20261028
+  tree_training_max_rows: 12000
+  pixel_r2: complete_case_in_sample_and_spatial_test_separately
+  pair_r2: complete_case_delta_health_against_delta_log1p_Aa
+  include_environment_adjusted_pair_model: true
+subsets:
+  retention_fractions:
+  - 1.0
+  - 0.75
+  - 0.5
+  - 0.3
+  - 0.2
+  - 0.1
+  - 0.05
+  pair_types:
+  - all
+  - both_positive
+  - zero_positive
+  - high_erosion_gap_q4
+  - environment_distance_low
+  - exposure_gap_high
+  - environment_group
+  record_extreme_oracle_residual_subset_separately: true
+environment_groups:
+  soil_type: true
+  kmeans_counts:
+  - 4
+  - 6
+  - 8
+  hierarchical: Ward
+  gradient_variables:
+  - Elevation
+  - TWI
+  - LST
+  - NDWI
+  - NDVI
+  - Precipitation
+  gradient_bins: 5
+spatial_validation:
+  block_size_m: 5000
+  same_block_pairs_only: true
+  buffer_distances_m:
+  - 300
+  - 500
+  - 1000
+  roles:
+  - train
+  - validation
+  - test
+  fractions:
+  - 0.6
+  - 0.2
+  - 0.2
+  repeats: 10
+  seeds:
+  - 20261028
+  - 20261029
+  - 20261030
+  - 20261031
+  - 20261032
+  - 20261033
+  - 20261034
+  - 20261035
+  - 20261036
+  - 20261037
+interaction_inference:
+  bootstrap_replicates: 999
+  min_group_spatial_blocks: 5
+  tolerance_rcond:
+  - 0.0
+  - 1.0e-12
+  - 1.0e-10
+  - 1.0e-08
+  - 1.0e-06
+  - 0.0001
+  group_columns:
+  - soil_type_group
+  - kmeans_v5
+  - hierarchical_ward_v5
+  - gradient_Elevation
+  - gradient_TWI
+  - gradient_LST
+  - gradient_NDWI
+  - gradient_NDVI
+  - gradient_Precipitation
+  - kmeans_terrain_k4
+  - kmeans_terrain_k6
+  - kmeans_terrain_k8
+  - kmeans_terrain_k10
+  - kmeans_terrain_k12
+  bootstrap_group_columns:
+  - soil_type_group
+  - gradient_Elevation
+  - gradient_TWI
+  - gradient_LST
+  - gradient_NDWI
+  - gradient_NDVI
+  - gradient_Precipitation
+  - kmeans_terrain_k4
+  - kmeans_terrain_k6
+  - kmeans_terrain_k8
+response_curves:
+  fixed_plot_sample_size: 20000
+  curve_points: 250
+  show_fixed_sample_natural_spline: true
+  show_full_sample_selected_model: true
+  show_matched_pixel_and_pair_panels: true
+figures:
+  formats:
+  - png
+  - svg
+  - pdf
+  dpi: 300

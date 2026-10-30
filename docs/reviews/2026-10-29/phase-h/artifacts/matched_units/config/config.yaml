@@ -1,0 +1,55 @@
+phase: H-matched-unit-supplement
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: low_erosion_matched_units_20261029_seed20261029_r1
+output_root: outputs/exploratory_oracle
+input_run_id: run_20261025T114741_470772Z
+phase_f_run_id: phase_f_20261026_seed20261026
+phase_g_run_id: phase_g_20261027_completion
+low_erosion_run_id: low_erosion_regime_20261029_seed20261029_r2
+seed: 20261029
+exposures:
+- Aa_20yr
+- Aa_2020
+outcomes:
+- SHI_candidate
+- AN
+- OM
+- CEC
+- pH
+- SW
+- BD
+- MBC
+- RESP
+matching_methods:
+- M3
+- M4
+model_families:
+- linear
+- quadratic
+- natural_spline
+- additive_gam
+- huber
+- random_forest
+- extra_trees
+- hist_gradient_boosting
+models:
+  fixed_sample_size: 20000
+  spatial_validation_block_size_m: 5000
+  spatial_validation_buffer_m: 500
+  spatial_validation_seeds:
+  - 20261029
+  - 20261030
+  - 20261031
+  - 20261032
+  - 20261033
+  - 20261034
+  - 20261035
+  - 20261036
+  - 20261037
+  - 20261038
+  spatial_methods:
+  - M4
+  spatial_schemes:
+  - S1_both_positive
+  - T01_empirical_CDF_breakpoint

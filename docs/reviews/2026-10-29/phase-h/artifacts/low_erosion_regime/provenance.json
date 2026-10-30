@@ -1,0 +1,35 @@
+{
+  "phase": "H-low-erosion-regime",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "run_id": "low_erosion_regime_20261029_seed20261029_r2",
+  "input_run_id": "run_20261025T114741_470772Z",
+  "phase_f_run_id": "phase_f_20261026_seed20261026",
+  "phase_g_run_id": "phase_g_20261027_completion",
+  "phase_h_run_id": "phase_h_20261028_seed20261028_h2",
+  "git_commit_at_run": "029f7c9f02854d00fd8e03ed440235ad7ee9e388",
+  "started_at_utc": "2026-10-29T03:43:50.262815+00:00",
+  "python": "3.13.5",
+  "packages": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.10.0",
+    "pyarrow": "19.0.0"
+  },
+  "threshold_selection": "distribution-derived thresholds are outcome blind; outcome-optimized thresholds are stored separately and are exploratory Oracle results",
+  "rusle_policy": "use existing Aa only; no factor-product reconstruction or validation",
+  "pcnm_policy": "existing PCNM not rerun",
+  "completed_at_utc": "2026-10-29T03:54:07.704433+00:00",
+  "cell_rows": 392527,
+  "valid_cropland_cells": 294243,
+  "phase_f_pair_rows": 407372,
+  "threshold_candidates": 2,
+  "figure_count": 18,
+  "figure_formats": [
+    "png",
+    "svg",
+    "pdf"
+  ]
+}

@@ -1,0 +1,22 @@
+﻿exposure,bandwidth_base,bandwidth_multiplier,candidate_source,status,threshold_log10,threshold_original,low_peak_log10,next_peak_log10,valley_density_ratio,retained_fraction_positive,fit_sample_n,sample_design,delta_aic_one_break_vs_linear,n_positive,fit_n,histogram_bins,overlap,method_label,y
+Aa_20yr,,,empirical_cdf,valid_cdf_breakpoint,0.7033075101595376,5.050187587738037,,,,,,,11109.269930021095,195683.0,5000.0,,,经验 CDF 断点,1
+Aa_20yr,,,otsu_comparison,comparison_threshold,0.5675029464595646,3.6940515056937344,,,,0.8650368197543987,,,,,,32.0,,Otsu（敏感性参考）,4
+Aa_20yr,,,otsu_comparison,comparison_threshold,0.5948796427245621,3.934410249060075,,,,0.8553732311953517,,,,,,64.0,,Otsu（敏感性参考）,4
+Aa_20yr,,,otsu_comparison,comparison_threshold,0.6085679908570607,4.060392256388764,,,,0.8497672255637945,,,,,,128.0,,Otsu（敏感性参考）,4
+Aa_20yr,,,otsu_comparison,comparison_threshold,0.6154121649233101,4.124888037522965,,,,0.8468850130057286,,,,,,256.0,,Otsu（敏感性参考）,4
+Aa_20yr,,,GMM boundary,comparison_only_overlap,0.546180111016734,3.5170627024266796,,,,,,,,,,,0.6434373263721715,GMM（边界参考）,3
+Aa_20yr,,,GMM boundary,comparison_only_overlap,0.45230622341925175,2.8333891298248095,,,,,,,,,,,0.6229494950814707,GMM（边界参考）,3
+Aa_20yr,,,GMM boundary,comparison_only_overlap,0.9094274509187851,8.117596328105392,,,,,,,,,,,0.8603313397459432,GMM（边界参考）,3
+Aa_20yr,,,GMM boundary,comparison_only_overlap,0.3733066423493826,2.362145484817793,,,,,,,,,,,0.6398762664707986,GMM（边界参考）,3
+Aa_20yr,,,GMM boundary,comparison_only_overlap,0.7513823264258975,5.641340665817625,,,,,,,,,,,0.7555017923500731,GMM（边界参考）,3
+Aa_20yr,,,GMM boundary,comparison_only_overlap,1.0895682796639867,12.290464017408565,,,,,,,,,,,0.8492300260709759,GMM（边界参考）,3
+Aa_2020,,,empirical_cdf,valid_cdf_breakpoint,-0.4015470712778529,0.3966915309429168,,,,,,,11681.731719104975,289977.0,5000.0,,,经验 CDF 断点,1
+Aa_2020,,,otsu_comparison,comparison_threshold,-0.4724188198524217,0.3369621962431922,,,,0.925307869244802,,,,,,32.0,,Otsu（敏感性参考）,4
+Aa_2020,,,otsu_comparison,comparison_threshold,-0.6289542554396403,0.2349880322453098,,,,0.9534480320853032,,,,,,64.0,,Otsu（敏感性参考）,4
+Aa_2020,,,otsu_comparison,comparison_threshold,-0.550686537646031,0.281393111920398,,,,0.941988502536408,,,,,,128.0,,Otsu（敏感性参考）,4
+Aa_2020,,,otsu_comparison,comparison_threshold,-0.563731157278299,0.2730667633758953,,,,0.944154191539329,,,,,,256.0,,Otsu（敏感性参考）,4
+Aa_2020,,,GMM boundary,comparison_only_overlap,-0.68200984890107,0.2079649524416788,,,,,,,,,,,0.8320565372994979,GMM（边界参考）,3
+Aa_2020,,,GMM boundary,comparison_only_overlap,-0.6612338088316053,0.21815551233035035,,,,,,,,,,,0.9150884778805449,GMM（边界参考）,3
+Aa_2020,,,GMM boundary,comparison_only_overlap,-0.11376467652160553,0.7695473083406189,,,,,,,,,,,0.8782250585317299,GMM（边界参考）,3
+Aa_2020,,,GMM boundary,comparison_only_overlap,-0.512837301279543,0.30701719442706593,,,,,,,,,,,0.8106283794167136,GMM（边界参考）,3
+Aa_2020,,,GMM boundary,comparison_only_overlap,-0.024673739100872644,0.944770362331576,,,,,,,,,,,0.8475024237639276,GMM（边界参考）,3

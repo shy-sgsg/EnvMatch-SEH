@@ -1,0 +1,85 @@
+{
+  "phase": "H-environment-group-heterogeneity",
+  "run_id": "low_erosion_group_heterogeneity_20261030_seed20261030_r2",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "low_erosion_run_id": "low_erosion_regime_20261029_seed20261029_r2",
+  "group_label_path": "/home/shy/jia/硕士论文/环境匹配/outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/tables/phase_h_environment_group_cell_labels.parquet",
+  "git_commit_at_run": "029f7c9f02854d00fd8e03ed440235ad7ee9e388",
+  "finalized_at_utc": "2026-10-30T04:52:39.366855+00:00",
+  "analysis_tables_loaded_from_saved_outputs": true,
+  "python": "3.13.5",
+  "packages": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.10.0",
+    "seaborn": "0.13.2",
+    "pyarrow": "19.0.0"
+  },
+  "thresholds_original": {
+    "Aa_20yr": 5.050187587738037,
+    "Aa_2020": 0.3966915309429168
+  },
+  "group_columns": [
+    "soil_type_group",
+    "kmeans_terrain_k4",
+    "kmeans_terrain_k6",
+    "kmeans_terrain_k8",
+    "hierarchical_ward_v5",
+    "gradient_Elevation",
+    "gradient_TWI",
+    "gradient_LST",
+    "gradient_NDWI",
+    "gradient_NDVI",
+    "gradient_Precipitation"
+  ],
+  "core_spatial_group_columns": [
+    "soil_type_group",
+    "kmeans_terrain_k6",
+    "hierarchical_ward_v5",
+    "gradient_TWI",
+    "gradient_LST"
+  ],
+  "spatial_validation": {
+    "method": "M4",
+    "schemes": [
+      "S0_all",
+      "S1_both_positive",
+      "T01_empirical_CDF_breakpoint",
+      "T01_fixed_original",
+      "T01_refit_k6_filtered_population"
+    ],
+    "block_size_m": 5000,
+    "buffer_m": 500,
+    "seeds": [
+      20261031,
+      20261032,
+      20261033,
+      20261034,
+      20261035,
+      20261036,
+      20261037,
+      20261038,
+      20261039,
+      20261040
+    ],
+    "model_family": "fixed_linear_baseline",
+    "pair_rule": "both endpoints must lie within the same 5 km block"
+  },
+  "slope_bootstrap": {
+    "schemes": [
+      "S0_all",
+      "T01_fixed_original",
+      "T01_refit_k6_filtered_population"
+    ],
+    "replicates": 199,
+    "block_size_m": 5000
+  },
+  "figure_count": 12,
+  "group_response_rows": 56871,
+  "group_population_rows": 3520,
+  "spatial_validation_rows": 57960,
+  "input_paths": {}
+}

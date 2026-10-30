@@ -1,1 +1,1 @@
-R² rows are pixel-level health-surface prediction fits. Full eligible pixels, outcome-selected matched subgroups, and spatial test blocks are different sample scopes; matched-pair difference R² is excluded from this figure.
+图中 R²均为像元级健康栅格预测拟合。全体合格像元、结果导向筛选的匹配子集和空间测试块具有不同样本范围；匹配配对差值模型的 R²不在此图混排。

@@ -1,0 +1,3 @@
+﻿exposure,seed_count,selected_k_counts,selected_k_mode,selected_k_agreement_fraction,selected_convergence_fraction,first_boundary_seed_count,first_boundary_median_log10,first_boundary_median_original,first_boundary_cv,first_boundary_ci_low,first_boundary_ci_high,candidate_source,outcome_guided_selection
+Aa_20yr,10,"{""2"": 1, ""3"": 9}",3,0.9,1.0,10,0.4348631754642064,2.721850934773533,0.093647136275465,2.6470097011976548,3.371479627953531,distribution_derived_gmm_seed_sensitivity,False
+Aa_2020,10,"{""4"": 10}",4,1.0,1.0,10,-1.0398132768700363,0.09133245912054425,0.7222054086047673,0.06269007414131784,0.32728696483112946,distribution_derived_gmm_seed_sensitivity,False

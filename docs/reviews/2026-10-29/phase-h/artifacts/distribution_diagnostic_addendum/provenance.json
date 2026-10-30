@@ -1,0 +1,34 @@
+{
+  "phase": "Phase H distribution diagnostic addendum",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "outcome_guided_selection_used": false,
+  "run_id": "low_erosion_distribution_addendum_20261030_seed20261030_r1",
+  "source_run_id": "low_erosion_regime_20261029_seed20261029_r2",
+  "input_run_id": "run_20261025T114741_470772Z",
+  "git_commit_at_run": "029f7c9f02854d00fd8e03ed440235ad7ee9e388",
+  "started_at_utc": "2026-10-30T05:17:18.718515+00:00",
+  "python": "3.13.5",
+  "health_outcomes_read": false,
+  "gmm_stability_seeds": [
+    20261029,
+    20261030,
+    20261031,
+    20261032,
+    20261033,
+    20261034,
+    20261035,
+    20261036,
+    20261037,
+    20261038
+  ],
+  "gmm_sample_size": 20000,
+  "posterior_cutoffs": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "threshold_unit_note": "Source Aa unit metadata is absent; thresholds remain in original Aa value units.",
+  "rusle_policy": "Use existing Aa only; no factor-product reconstruction or validation.",
+  "pcnm_policy": "Existing PCNM not rerun."
+}

@@ -1,0 +1,17 @@
+﻿exposure,bandwidth_base,bandwidth_multiplier,candidate_source,status,threshold_log10,threshold_original,low_peak_log10,next_peak_log10,valley_density_ratio,retained_fraction_positive,fit_sample_n,sample_design
+Aa_20yr,scott,0.5,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_20yr,scott,1.0,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_20yr,scott,1.5,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_20yr,scott,2.0,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_20yr,silverman,0.5,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_20yr,silverman,1.0,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_20yr,silverman,1.5,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_20yr,silverman,2.0,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_2020,scott,0.5,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_2020,scott,1.0,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_2020,scott,1.5,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_2020,scott,2.0,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_2020,silverman,0.5,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_2020,silverman,1.0,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_2020,silverman,1.5,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample
+Aa_2020,silverman,2.0,kde,no_reliable_valley,,,,,,,30000,proportional 5 km block-stratified positive sample

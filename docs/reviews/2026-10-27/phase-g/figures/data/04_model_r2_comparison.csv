@@ -1,73 +1,73 @@
 ﻿outcome,ranking_type,label,r_squared,candidate_id,model_name,n,direction
-AN,highest_full_sample_apparent_r2,"All eligible pixels
-best apparent",0.7663690232483555,full_Aa_20yr_AN_R030,random_forest,387515.0,negative
-BD,highest_full_sample_apparent_r2,"All eligible pixels
-best apparent",0.3256407324287029,full_Aa_20yr_BD_V7,ols,294841.0,negative
-CEC,highest_full_sample_apparent_r2,"All eligible pixels
-best apparent",0.3775097173151011,full_Aa_20yr_CEC_V8,ols,294841.0,positive
-MBC,highest_full_sample_apparent_r2,"All eligible pixels
-best apparent",0.3412346837845137,full_Aa_20yr_MBC_V7,ols,294841.0,negative
-OM,highest_full_sample_apparent_r2,"All eligible pixels
-best apparent",0.4122698536343471,full_Aa_20yr_OM_R019,random_forest,294841.0,negative
-RESP,highest_full_sample_apparent_r2,"All eligible pixels
-best apparent",0.3914339026996616,full_Aa_20yr_RESP_R019,random_forest,294841.0,negative
-SHI_candidate,highest_full_sample_apparent_r2,"All eligible pixels
-best apparent",0.6369096768752881,full_Aa_20yr_SHI_candidate_V5,random_forest,384735.0,negative
-SW,highest_full_sample_apparent_r2,"All eligible pixels
-best apparent",0.618665927159654,full_Aa_20yr_SW_V5,random_forest,387538.0,negative
-pH,highest_full_sample_apparent_r2,"All eligible pixels
-best apparent",0.7204393121720909,full_Aa_20yr_pH_R012,random_forest,294846.0,negative
-AN,highest_apparent_r2,"Matched subset
-highest apparent",0.7821788937018779,stage2_Aa_20yr_AN_R030,random_forest,98928.0,negative
-BD,highest_apparent_r2,"Matched subset
-highest apparent",0.3077718757665456,stage2_Aa_20yr_BD_R019,random_forest,75176.0,unknown
-CEC,highest_apparent_r2,"Matched subset
-highest apparent",0.266609525170058,stage2_Aa_20yr_CEC_R019,random_forest,75176.0,unknown
-MBC,highest_apparent_r2,"Matched subset
-highest apparent",0.34610449105077,stage2_Aa_20yr_MBC_R019,random_forest,75176.0,unknown
-OM,highest_apparent_r2,"Matched subset
-highest apparent",0.4420553336728434,stage2_Aa_20yr_OM_R019,random_forest,75176.0,negative
-RESP,highest_apparent_r2,"Matched subset
-highest apparent",0.4183282080579904,stage2_Aa_20yr_RESP_R019,random_forest,75176.0,negative
-SHI_candidate,highest_apparent_r2,"Matched subset
-highest apparent",0.6278861456738773,stage2_Aa_20yr_SHI_candidate_V5,random_forest,98342.0,negative
-SW,highest_apparent_r2,"Matched subset
-highest apparent",0.6208750121467823,stage2_Aa_20yr_SW_V5,random_forest,98933.0,negative
-pH,highest_apparent_r2,"Matched subset
-highest apparent",0.8751173223591603,subgroup_Aa_20yr_pH_soil_85,ols,6586.0,positive
-AN,highest_negative_apparent_r2,"Matched subset
-highest negative",0.7821788937018779,stage2_Aa_20yr_AN_R030,random_forest,98928.0,negative
-BD,highest_negative_apparent_r2,"Matched subset
-highest negative",0.1476325299956933,subgroup_Aa_20yr_BD_soil_42_environment_group_pair_22_18,ols,12652.0,negative
-CEC,highest_negative_apparent_r2,"Matched subset
-highest negative",0.0694290254411378,stage2_Aa_20yr_CEC_R019,piecewise,75176.0,negative
-MBC,highest_negative_apparent_r2,"Matched subset
-highest negative",0.1493856609943465,subgroup_Aa_20yr_MBC_environment_group_2,ols,9567.0,negative
-OM,highest_negative_apparent_r2,"Matched subset
-highest negative",0.4420553336728434,stage2_Aa_20yr_OM_R019,random_forest,75176.0,negative
-RESP,highest_negative_apparent_r2,"Matched subset
-highest negative",0.4183282080579904,stage2_Aa_20yr_RESP_R019,random_forest,75176.0,negative
-SHI_candidate,highest_negative_apparent_r2,"Matched subset
-highest negative",0.6278861456738773,stage2_Aa_20yr_SHI_candidate_V5,random_forest,98342.0,negative
-SW,highest_negative_apparent_r2,"Matched subset
-highest negative",0.6208750121467823,stage2_Aa_20yr_SW_V5,random_forest,98933.0,negative
-pH,highest_negative_apparent_r2,"Matched subset
-highest negative",0.7055327261592328,stage2_Aa_20yr_pH_R012,random_forest,75177.0,negative
-AN,validation_selected_spatial_test,"Validation-selected
-spatial test",0.435593595864958,spatial_Aa_20yr_AN_R030,environment_group_fixed_effects,69869.0,negative
-BD,validation_selected_spatial_test,"Validation-selected
-spatial test",0.3323627678580473,spatial_Aa_20yr_BD_V7,ols,51816.0,negative
-CEC,validation_selected_spatial_test,"Validation-selected
-spatial test",0.3605252173428057,spatial_Aa_20yr_CEC_V8,ols,51816.0,positive
-MBC,validation_selected_spatial_test,"Validation-selected
-spatial test",0.3550264493011006,spatial_Aa_20yr_MBC_V7,ols,51816.0,negative
-OM,validation_selected_spatial_test,"Validation-selected
-spatial test",0.3392713833536168,spatial_Aa_20yr_OM_R019,extra_trees,51816.0,unknown
-RESP,validation_selected_spatial_test,"Validation-selected
-spatial test",0.4205207463632452,spatial_Aa_20yr_RESP_V7,ols,51816.0,negative
-SHI_candidate,validation_selected_spatial_test,"Validation-selected
-spatial test",0.4703426039919758,spatial_Aa_20yr_SHI_candidate_V7,ols,51533.0,negative
-SW,validation_selected_spatial_test,"Validation-selected
-spatial test",0.5697020207714221,spatial_Aa_20yr_SW_V5,extra_trees,69861.0,unknown
-pH,validation_selected_spatial_test,"Validation-selected
-spatial test",-0.0230801855357978,spatial_Aa_20yr_pH_V4,ols,51817.0,negative
+AN,highest_full_sample_apparent_r2,"全体合格像元
+最高表观拟合",0.7663690232483555,full_Aa_20yr_AN_R030,random_forest,387515.0,negative
+BD,highest_full_sample_apparent_r2,"全体合格像元
+最高表观拟合",0.3256407324287029,full_Aa_20yr_BD_V7,ols,294841.0,negative
+CEC,highest_full_sample_apparent_r2,"全体合格像元
+最高表观拟合",0.3775097173151011,full_Aa_20yr_CEC_V8,ols,294841.0,positive
+MBC,highest_full_sample_apparent_r2,"全体合格像元
+最高表观拟合",0.3412346837845137,full_Aa_20yr_MBC_V7,ols,294841.0,negative
+OM,highest_full_sample_apparent_r2,"全体合格像元
+最高表观拟合",0.4122698536343471,full_Aa_20yr_OM_R019,random_forest,294841.0,negative
+RESP,highest_full_sample_apparent_r2,"全体合格像元
+最高表观拟合",0.3914339026996616,full_Aa_20yr_RESP_R019,random_forest,294841.0,negative
+SHI_candidate,highest_full_sample_apparent_r2,"全体合格像元
+最高表观拟合",0.6369096768752881,full_Aa_20yr_SHI_candidate_V5,random_forest,384735.0,negative
+SW,highest_full_sample_apparent_r2,"全体合格像元
+最高表观拟合",0.618665927159654,full_Aa_20yr_SW_V5,random_forest,387538.0,negative
+pH,highest_full_sample_apparent_r2,"全体合格像元
+最高表观拟合",0.7204393121720909,full_Aa_20yr_pH_R012,random_forest,294846.0,negative
+AN,highest_apparent_r2,"匹配子集
+最高表观拟合",0.7821788937018779,stage2_Aa_20yr_AN_R030,random_forest,98928.0,negative
+BD,highest_apparent_r2,"匹配子集
+最高表观拟合",0.3077718757665456,stage2_Aa_20yr_BD_R019,random_forest,75176.0,unknown
+CEC,highest_apparent_r2,"匹配子集
+最高表观拟合",0.266609525170058,stage2_Aa_20yr_CEC_R019,random_forest,75176.0,unknown
+MBC,highest_apparent_r2,"匹配子集
+最高表观拟合",0.34610449105077,stage2_Aa_20yr_MBC_R019,random_forest,75176.0,unknown
+OM,highest_apparent_r2,"匹配子集
+最高表观拟合",0.4420553336728434,stage2_Aa_20yr_OM_R019,random_forest,75176.0,negative
+RESP,highest_apparent_r2,"匹配子集
+最高表观拟合",0.4183282080579904,stage2_Aa_20yr_RESP_R019,random_forest,75176.0,negative
+SHI_candidate,highest_apparent_r2,"匹配子集
+最高表观拟合",0.6278861456738773,stage2_Aa_20yr_SHI_candidate_V5,random_forest,98342.0,negative
+SW,highest_apparent_r2,"匹配子集
+最高表观拟合",0.6208750121467823,stage2_Aa_20yr_SW_V5,random_forest,98933.0,negative
+pH,highest_apparent_r2,"匹配子集
+最高表观拟合",0.8751173223591603,subgroup_Aa_20yr_pH_soil_85,ols,6586.0,positive
+AN,highest_negative_apparent_r2,"匹配子集
+最高负向拟合",0.7821788937018779,stage2_Aa_20yr_AN_R030,random_forest,98928.0,negative
+BD,highest_negative_apparent_r2,"匹配子集
+最高负向拟合",0.1476325299956933,subgroup_Aa_20yr_BD_soil_42_environment_group_pair_22_18,ols,12652.0,negative
+CEC,highest_negative_apparent_r2,"匹配子集
+最高负向拟合",0.0694290254411378,stage2_Aa_20yr_CEC_R019,piecewise,75176.0,negative
+MBC,highest_negative_apparent_r2,"匹配子集
+最高负向拟合",0.1493856609943465,subgroup_Aa_20yr_MBC_environment_group_2,ols,9567.0,negative
+OM,highest_negative_apparent_r2,"匹配子集
+最高负向拟合",0.4420553336728434,stage2_Aa_20yr_OM_R019,random_forest,75176.0,negative
+RESP,highest_negative_apparent_r2,"匹配子集
+最高负向拟合",0.4183282080579904,stage2_Aa_20yr_RESP_R019,random_forest,75176.0,negative
+SHI_candidate,highest_negative_apparent_r2,"匹配子集
+最高负向拟合",0.6278861456738773,stage2_Aa_20yr_SHI_candidate_V5,random_forest,98342.0,negative
+SW,highest_negative_apparent_r2,"匹配子集
+最高负向拟合",0.6208750121467823,stage2_Aa_20yr_SW_V5,random_forest,98933.0,negative
+pH,highest_negative_apparent_r2,"匹配子集
+最高负向拟合",0.7055327261592328,stage2_Aa_20yr_pH_R012,random_forest,75177.0,negative
+AN,validation_selected_spatial_test,"验证集选模后
+空间测试",0.435593595864958,spatial_Aa_20yr_AN_R030,environment_group_fixed_effects,69869.0,negative
+BD,validation_selected_spatial_test,"验证集选模后
+空间测试",0.3323627678580473,spatial_Aa_20yr_BD_V7,ols,51816.0,negative
+CEC,validation_selected_spatial_test,"验证集选模后
+空间测试",0.3605252173428057,spatial_Aa_20yr_CEC_V8,ols,51816.0,positive
+MBC,validation_selected_spatial_test,"验证集选模后
+空间测试",0.3550264493011006,spatial_Aa_20yr_MBC_V7,ols,51816.0,negative
+OM,validation_selected_spatial_test,"验证集选模后
+空间测试",0.3392713833536168,spatial_Aa_20yr_OM_R019,extra_trees,51816.0,unknown
+RESP,validation_selected_spatial_test,"验证集选模后
+空间测试",0.4205207463632452,spatial_Aa_20yr_RESP_V7,ols,51816.0,negative
+SHI_candidate,validation_selected_spatial_test,"验证集选模后
+空间测试",0.4703426039919758,spatial_Aa_20yr_SHI_candidate_V7,ols,51533.0,negative
+SW,validation_selected_spatial_test,"验证集选模后
+空间测试",0.5697020207714221,spatial_Aa_20yr_SW_V5,extra_trees,69861.0,unknown
+pH,validation_selected_spatial_test,"验证集选模后
+空间测试",-0.0230801855357978,spatial_Aa_20yr_pH_V4,ols,51817.0,negative

@@ -1,4 +1,4 @@
-﻿outcome,group_method,group_label,candidate_id,n_map_points,n_selected_group_points
-SHI_candidate,gradient_NDVI,26:q1,,15000,721
-OM,gradient_NDVI,26:q1,,15000,721
-SW,soil_type,soil_26,,15000,3347
+﻿outcome,group_method,group_label,display_group_label,candidate_id,n_map_points,n_selected_group_points
+SHI_candidate,gradient_NDVI,26:q1,26 冲积土 · 第 1 分位组,,15000,721
+OM,gradient_NDVI,26:q1,26 冲积土 · 第 1 分位组,,15000,721
+SW,soil_type,soil_26,26 冲积土,,15000,3347

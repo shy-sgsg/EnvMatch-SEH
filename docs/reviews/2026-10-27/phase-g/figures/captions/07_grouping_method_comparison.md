@@ -1,1 +1,1 @@
-Each distribution summarizes group-specific Spearman correlations across the nine outcomes, restricted to at least 100 pairs per group. Soil, K-means, Ward, and single-variable gradient labels were defined from environment/soil values without using health values; choosing highlighted groups uses the health outcomes.
+每个分布汇总九项结局中各环境组的 Spearman 相关；每组至少保留 100 个配对。土类、K 均值、Ward 聚类和单变量分位组均由环境/土壤值定义，不使用健康值；高亮组的选择则使用了健康结局。

@@ -1,0 +1,21 @@
+{
+  "version_kind": "legacy_full_grid_layout_restored_from_unchanged_cluster_rasters",
+  "source_rasters": [
+    "maps/environment_groups_k6.tif",
+    "maps/environment_groups_k8.tif",
+    "maps/environment_groups_k10.tif",
+    "maps/environment_groups_k12.tif"
+  ],
+  "rendering": "full-grid imshow, tab20 palette, continuous group-ID colorbar, axis hidden",
+  "soil_type_labels": {
+    "26": "冲积土",
+    "27": "潮土",
+    "42": "脱潮土"
+  },
+  "outputs": [
+    "environment_groups_k6_original.png",
+    "environment_groups_k8_original.png",
+    "environment_groups_k10_original.png",
+    "environment_groups_k12_original.png"
+  ]
+}

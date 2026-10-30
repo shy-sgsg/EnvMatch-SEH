@@ -1,5 +1,5 @@
 # 10_exposure_period_comparison
 
-Aa_20yr and Aa_2020 are compared with the same complete pixels, V5 variables, OLS design and spatial seeds for the cell-level analysis. Full-sample matched pairs are exposure-specific and are displayed in the accompanying table rather than treated as paired-period identical samples.
+像元层比较要求两期使用同一批完整像元、V5 环境变量、OLS 设计和空间随机种子。全样本匹配配对按侵蚀时期分别构建，因此配套表单列展示，不视为两期完全相同的配对样本。
 
 Figure data: `data/10_exposure_period_comparison.csv`.

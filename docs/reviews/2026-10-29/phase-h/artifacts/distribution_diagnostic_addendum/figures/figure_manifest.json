@@ -1,0 +1,40 @@
+{
+  "figures": [
+    {
+      "id": "HADD01_gmm_seed_stability",
+      "title": "每个点对应一个固定随机种子下由 BIC 选中的 GMM 模型；点形表示成分数，纵轴为首个相邻成分边界的 Aa 原值",
+      "scientific_question": "GMM 的成分数和分界是否受随机种子影响？",
+      "experiment": "低侵蚀分布诊断补充",
+      "figure_type": "随机种子稳定性图",
+      "png": "png/HADD01_gmm_seed_stability.png",
+      "svg": "svg/HADD01_gmm_seed_stability.svg",
+      "pdf": "pdf/HADD01_gmm_seed_stability.pdf",
+      "source": "data/HADD01_gmm_seed_stability_source.csv",
+      "caption": "captions/HADD01_gmm_seed_stability.md"
+    },
+    {
+      "id": "HADD02_gmm_posterior_sensitivity",
+      "title": "每个柱形以正 Aa 像元为分母，分成低值成分、高值成分和最大后验概率低于指定阈值的归属不确定像元",
+      "scientific_question": "GMM 后验分类的不确定像元比例如何随阈值改变？",
+      "experiment": "低侵蚀分布诊断补充",
+      "figure_type": "后验分类敏感性图",
+      "png": "png/HADD02_gmm_posterior_sensitivity.png",
+      "svg": "svg/HADD02_gmm_posterior_sensitivity.svg",
+      "pdf": "pdf/HADD02_gmm_posterior_sensitivity.pdf",
+      "source": "data/HADD02_gmm_posterior_sensitivity_source.csv",
+      "caption": "captions/HADD02_gmm_posterior_sensitivity.md"
+    },
+    {
+      "id": "HADD03_threshold_candidate_stability",
+      "title": "横轴为 Aa 原值阈值并使用对数刻度",
+      "scientific_question": "各分布方法的阈值是否收敛到相似范围？",
+      "experiment": "低侵蚀分布诊断补充",
+      "figure_type": "阈值比较图",
+      "png": "png/HADD03_threshold_candidate_stability.png",
+      "svg": "svg/HADD03_threshold_candidate_stability.svg",
+      "pdf": "pdf/HADD03_threshold_candidate_stability.pdf",
+      "source": "data/HADD03_threshold_candidate_stability_source.csv",
+      "caption": "captions/HADD03_threshold_candidate_stability.md"
+    }
+  ]
+}

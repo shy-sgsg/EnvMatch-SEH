@@ -1,0 +1,73 @@
+{
+  "run_id": "low_erosion_matched_units_20261029_seed20261029_r1",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "figure_count": 5,
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "figures": [
+    {
+      "id": "M03_matched_unit_model_family_comparison",
+      "title": "每格为对应健康指标、分析单位和匹配方法下八类模型的同样本表观 R²",
+      "scientific_question": "低侵蚀阈值后，环境匹配像元与配对差值呈现何种响应形态？",
+      "experiment": "阈值筛选后八类模型搜索",
+      "figure_type": "模型族比较热图",
+      "png": "png/M03_matched_unit_model_family_comparison.png",
+      "svg": "svg/M03_matched_unit_model_family_comparison.svg",
+      "pdf": "pdf/M03_matched_unit_model_family_comparison.pdf",
+      "source": "data/M03_matched_unit_model_family_comparison_source.csv",
+      "caption": "captions/M03_matched_unit_model_family_comparison.md"
+    },
+    {
+      "id": "R04_matched_pixel_rank_associations",
+      "title": "每个匹配端点按 cell_id 只计一次，不因一个像元参与多个配对而重复加权",
+      "scientific_question": "低值筛选与重配后，匹配端点像元的秩关联如何变化？",
+      "experiment": "匹配像元秩关联",
+      "figure_type": "相关性热图",
+      "png": "png/R04_matched_pixel_rank_associations.png",
+      "svg": "svg/R04_matched_pixel_rank_associations.svg",
+      "pdf": "pdf/R04_matched_pixel_rank_associations.pdf",
+      "source": "data/R04_matched_pixel_rank_associations_source.csv",
+      "caption": "captions/R04_matched_pixel_rank_associations.md"
+    },
+    {
+      "id": "V02_matched_unit_spatial_validation",
+      "title": "每个箱线图汇总十次 5 km 空间整块划分的测试 R²",
+      "scientific_question": "低值筛选后，非线性响应能否在留出空间块保持？",
+      "experiment": "M4 空间分块验证",
+      "figure_type": "空间验证箱线图",
+      "png": "png/V02_matched_unit_spatial_validation.png",
+      "svg": "svg/V02_matched_unit_spatial_validation.svg",
+      "pdf": "pdf/V02_matched_unit_spatial_validation.pdf",
+      "source": "data/V02_matched_unit_spatial_validation_source.csv",
+      "caption": "captions/V02_matched_unit_spatial_validation.md"
+    },
+    {
+      "id": "S05_matched_endpoint_spatial_footprint",
+      "title": "地图展示 M4 在两端 Aa_20yr 均高于 CDF 分布阈值 5.050 后、固定原环境组重新匹配的唯一端点像元",
+      "scientific_question": "阈值后重新匹配的高低侵蚀端点在研究区如何分布？",
+      "experiment": "M4 固定原组阈值后重配",
+      "figure_type": "匹配端点空间图",
+      "png": "png/S05_matched_endpoint_spatial_footprint.png",
+      "svg": "svg/S05_matched_endpoint_spatial_footprint.svg",
+      "pdf": "pdf/S05_matched_endpoint_spatial_footprint.pdf",
+      "source": "data/S05_matched_endpoint_spatial_footprint_source.csv",
+      "caption": "captions/S05_matched_endpoint_spatial_footprint.md"
+    },
+    {
+      "id": "Q03_pair_and_unique_endpoint_counts",
+      "title": "柱形表示匹配对数，折线表示 high/low 端点按 cell_id 合并后的唯一像元数",
+      "scientific_question": "各筛选与重配方案保留了多少配对与独立栅格端点？",
+      "experiment": "匹配样本支持量比较",
+      "figure_type": "样本量比较图",
+      "png": "png/Q03_pair_and_unique_endpoint_counts.png",
+      "svg": "svg/Q03_pair_and_unique_endpoint_counts.svg",
+      "pdf": "pdf/Q03_pair_and_unique_endpoint_counts.pdf",
+      "source": "data/Q03_pair_and_unique_endpoint_counts_source.csv",
+      "caption": "captions/Q03_pair_and_unique_endpoint_counts.md"
+    }
+  ]
+}

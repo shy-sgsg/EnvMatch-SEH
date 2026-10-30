@@ -1,1 +1,1 @@
-Each box summarizes high-erosion minus low-erosion raster predictions in the reused Phase F M4 pairs. Whiskers show the 10th–90th percentiles; the diamond is the mean. Units follow the source raster; some variable unit metadata remain undocumented.
+每个箱线图汇总复用 Phase F M4 配对中高侵蚀端减低侵蚀端的健康预测值。须线表示第 10–90 百分位，菱形表示均值。单位沿用源栅格；部分指标单位元数据仍未核实。

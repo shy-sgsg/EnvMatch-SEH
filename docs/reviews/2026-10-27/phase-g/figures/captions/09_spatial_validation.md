@@ -1,1 +1,1 @@
-The left panel shows prior pixel models chosen by validation and then evaluated on spatial test blocks. The right panel shows Phase F M3/M4 matched-pair OLS test R² across ten 5 km seeds. The splits are internal diagnostics after previous Oracle searches, not untouched external validation; pixel and pair metrics remain separate.
+左图为历史像元模型经验证集筛选后，在空间测试块上的得分；右图为 Phase F M3/M4 配对 OLS 在 10 次 5 km 空间随机划分中的测试 R²。由于此前 Oracle 搜索已使用全研究区，这些划分是内部诊断，不是未触碰的外部验证；像元和配对指标分别呈现。

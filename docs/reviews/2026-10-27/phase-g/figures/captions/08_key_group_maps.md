@@ -1,1 +1,1 @@
-Each panel shows a deterministic sample of 15,000 M4 Aa_20yr pair midpoints. Red points belong to the highest composite negative-association group selected for that indicator; all other sampled pairs are gray. Coordinates are projected metres. These point maps show pair locations, not continuous raster surfaces or field observations.
+每个面板展示固定随机抽取的 15,000 个 M4、20 年平均侵蚀配对中点。红色为该指标按复合负向关联指标选中的环境组，灰色为其他样本。坐标为投影坐标，单位米。这些点图表示配对位置，不是连续栅格面或田间实测点。

@@ -1,1 +1,1 @@
-The plotted candidates require at least 100 matched pairs and negative slope and Spearman direction. Groups are ranked after examining the health outcomes under Oracle authorization. Intervals resample 5 km pair-midpoint blocks; candidate selection has already seen the full study area and is not independent validation.
+入图候选要求至少 100 个配对，且斜率与 Spearman 方向均为负。经 Oracle 授权后，按健康结局对环境组排序。区间按 5 km 配对中点空间块重抽样；候选选择已使用全研究区，不构成独立验证。

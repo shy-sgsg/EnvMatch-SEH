@@ -1,0 +1,21 @@
+﻿analysis_unit,method,exposure,scheme,scheme_label,threshold_original,n_pairs,n_unique_matched_endpoints,n_high_endpoint_cells,n_low_endpoint_cells,n_cells_in_both_endpoint_roles,endpoint_rows_before_deduplication,pair_retention_vs_S0,unique_endpoint_retention_vs_S0,outcome_guided_selection
+matched_population,M3,Aa_20yr,S0_all,全部原始匹配对,,96474,192948,96474,96474,0,192948,1.0,1.0,True
+matched_population,M3,Aa_20yr,S1_both_positive,两端均为正侵蚀,,13064,26128,13064,13064,0,26128,0.13541472313784025,0.13541472313784025,True
+matched_population,M3,Aa_20yr,T01_empirical_CDF_breakpoint,CDF 阈值筛选原配对,5.050187587738037,5064,10128,5064,5064,0,10128,0.0524908265439393,0.0524908265439393,True
+matched_population,M3,Aa_20yr,T01_fixed_original,阈值后固定原组重配,5.050187587738037,23016,46032,23016,23016,0,46032,0.23857205050065303,0.23857205050065303,True
+matched_population,M3,Aa_20yr,T01_refit_k6_filtered_population,阈值后重拟合 k=6 组,5.050187587738037,45383,90766,45383,45383,0,90766,0.47041689989012586,0.47041689989012586,True
+matched_population,M4,Aa_20yr,S0_all,全部原始匹配对,,90897,181794,90897,90897,0,181794,1.0,1.0,True
+matched_population,M4,Aa_20yr,S1_both_positive,两端均为正侵蚀,,10677,21354,10677,10677,0,21354,0.11746262252879633,0.11746262252879633,True
+matched_population,M4,Aa_20yr,T01_empirical_CDF_breakpoint,CDF 阈值筛选原配对,5.050187587738037,3653,7306,3653,3653,0,7306,0.04018834504989163,0.04018834504989163,True
+matched_population,M4,Aa_20yr,T01_fixed_original,阈值后固定原组重配,5.050187587738037,20290,40580,20290,20290,0,40580,0.22321968821853305,0.22321968821853305,True
+matched_population,M4,Aa_20yr,T01_refit_k6_filtered_population,阈值后重拟合 k=6 组,5.050187587738037,45383,90766,45383,45383,0,90766,0.4992794041607534,0.4992794041607534,True
+matched_population,M3,Aa_2020,S0_all,全部原始匹配对,,111658,223316,111658,111658,0,223316,1.0,1.0,True
+matched_population,M3,Aa_2020,S1_both_positive,两端均为正侵蚀,,67604,135208,67604,67604,0,135208,0.605455945834602,0.605455945834602,True
+matched_population,M3,Aa_2020,T01_empirical_CDF_breakpoint,CDF 阈值筛选原配对,0.3966915309429168,44651,89302,44651,44651,0,89302,0.3998907377886045,0.3998907377886045,True
+matched_population,M3,Aa_2020,T01_fixed_original,阈值后固定原组重配,0.3966915309429168,44865,89730,44865,44865,0,89730,0.40180730444750934,0.40180730444750934,True
+matched_population,M3,Aa_2020,T01_refit_k6_filtered_population,阈值后重拟合 k=6 组,0.3966915309429168,75079,150158,75079,75079,0,150158,0.6724014401117698,0.6724014401117698,True
+matched_population,M4,Aa_2020,S0_all,全部原始匹配对,,108343,216686,108343,108343,0,216686,1.0,1.0,True
+matched_population,M4,Aa_2020,S1_both_positive,两端均为正侵蚀,,65618,131236,65618,65618,0,131236,0.6056505727181267,0.6056505727181267,True
+matched_population,M4,Aa_2020,T01_empirical_CDF_breakpoint,CDF 阈值筛选原配对,0.3966915309429168,42772,85544,42772,42772,0,85544,0.3947832347267475,0.3947832347267475,True
+matched_population,M4,Aa_2020,T01_fixed_original,阈值后固定原组重配,0.3966915309429168,42845,85690,42845,42845,0,85690,0.39545702075814776,0.39545702075814776,True
+matched_population,M4,Aa_2020,T01_refit_k6_filtered_population,阈值后重拟合 k=6 组,0.3966915309429168,75079,150158,75079,75079,0,150158,0.6929750883767295,0.6929750883767295,True

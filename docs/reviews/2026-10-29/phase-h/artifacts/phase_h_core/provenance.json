@@ -1,0 +1,47 @@
+{
+  "phase": "H",
+  "run_id": "phase_h_20261028_seed20261028_h2",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "selection_outcomes": [
+    "SHI_candidate",
+    "AN",
+    "OM",
+    "CEC",
+    "pH",
+    "SW",
+    "BD",
+    "MBC",
+    "RESP"
+  ],
+  "seed": 20261028,
+  "input_run_id": "run_20261025T114741_470772Z",
+  "phase_f_run_id": "phase_f_20261026_seed20261026",
+  "phase_g_run_id": "phase_g_20261027_completion",
+  "cell_rows": 392527,
+  "pair_rows": 407372,
+  "outcome_nonmissing_counts": {
+    "SHI_candidate": 386851,
+    "AN": 391907,
+    "OM": 391754,
+    "CEC": 391754,
+    "pH": 391907,
+    "SW": 391754,
+    "BD": 391754,
+    "MBC": 391754,
+    "RESP": 391754
+  },
+  "created_at_utc": "2026-10-28T06:53:38.621930+00:00",
+  "software_versions": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit_learn": "1.6.1",
+    "statsmodels": "0.14.4",
+    "pyarrow": "19.0.0",
+    "rasterio": "1.5.0"
+  },
+  "git_sha": "029f7c9f02854d00fd8e03ed440235ad7ee9e388",
+  "git_dirty": true
+}

@@ -1,1 +1,1 @@
-Each panel shows up to six most negative group-specific slopes for that outcome in M4/Aa_20yr. Slopes use Δlog1p(Aa) to predict high-minus-low paired health differences; 95% intervals use spatial-block cluster-robust covariance. Groups were defined from environmental variables without health outcomes; selecting the most negative groups is outcome-guided Oracle screening.
+每个面板展示 M4、20 年平均实际侵蚀下该指标斜率最负的至多六个环境组。斜率以 Δlog1p(Aa) 解释配对高减低健康差值；95% 区间采用空间块聚类稳健协方差估计。环境组由环境变量定义，不使用健康结局；挑选最负组属于结果导向的 Oracle 筛选。

@@ -1,7 +1,7 @@
 [
   {
     "name": "01_matching_quality",
-    "title": "Environment matching coverage and balance",
+    "title": "匹配覆盖率与环境平衡",
     "files": {
       "png": "figures/01_matching_quality.png",
       "svg": "figures/01_matching_quality.svg",
@@ -9,11 +9,11 @@
     },
     "data": "figures/data/01_matching_quality.csv",
     "caption": "figures/captions/01_matching_quality.md",
-    "rows": 243
+    "rows": 527
   },
   {
     "name": "02_paired_health_differences",
-    "title": "Health differences in high versus low erosion pairs",
+    "title": "高低侵蚀配对的健康差值分布",
     "files": {
       "png": "figures/02_paired_health_differences.png",
       "svg": "figures/02_paired_health_differences.svg",
@@ -25,7 +25,7 @@
   },
   {
     "name": "03_pair_association_heatmap",
-    "title": "Matched-pair erosion and health association",
+    "title": "配对侵蚀差值与健康差值的秩相关",
     "files": {
       "png": "figures/03_pair_association_heatmap.png",
       "svg": "figures/03_pair_association_heatmap.svg",
@@ -37,7 +37,7 @@
   },
   {
     "name": "04_model_r2_comparison",
-    "title": "Pixel-level model R² rankings",
+    "title": "像元级模型拟合度比较",
     "files": {
       "png": "figures/04_model_r2_comparison.png",
       "svg": "figures/04_model_r2_comparison.svg",
@@ -49,7 +49,7 @@
   },
   {
     "name": "05_response_curves",
-    "title": "Natural spline and selected full-sample response curves",
+    "title": "自然样条与全样本择优响应曲线",
     "files": {
       "png": "figures/05_response_curves.png",
       "svg": "figures/05_response_curves.svg",
@@ -61,7 +61,7 @@
   },
   {
     "name": "06_environment_group_forest",
-    "title": "Negative associations across environmental groups",
+    "title": "不同环境组的负向关联",
     "files": {
       "png": "figures/06_environment_group_forest.png",
       "svg": "figures/06_environment_group_forest.svg",
@@ -73,7 +73,7 @@
   },
   {
     "name": "07_grouping_method_comparison",
-    "title": "Association patterns by environment grouping method",
+    "title": "不同环境分组下的关联分布",
     "files": {
       "png": "figures/07_grouping_method_comparison.png",
       "svg": "figures/07_grouping_method_comparison.svg",
@@ -85,7 +85,7 @@
   },
   {
     "name": "08_key_group_maps",
-    "title": "Locations of outcome-selected environmental groups",
+    "title": "结果导向筛选环境组的空间位置",
     "files": {
       "png": "figures/08_key_group_maps.png",
       "svg": "figures/08_key_group_maps.svg",
@@ -97,7 +97,7 @@
   },
   {
     "name": "09_spatial_validation",
-    "title": "Spatial holdout performance and repeated pair fits",
+    "title": "空间留出表现与重复配对拟合",
     "files": {
       "png": "figures/09_spatial_validation.png",
       "svg": "figures/09_spatial_validation.svg",

@@ -28,6 +28,8 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.colors import BoundaryNorm, ListedColormap
+from matplotlib.lines import Line2D
 import numpy as np
 import pandas as pd
 import statsmodels.api as sm
@@ -53,6 +55,7 @@ MODEL_NAMES = {
     "M3": "K-means matched pairs",
     "M4": "Direct nearest-neighbor pairs",
 }
+SOIL_TYPE_LABELS = {26: "冲积土", 27: "潮土", 42: "脱潮土"}
 
 
 def _json_default(value: Any) -> Any:
@@ -2710,17 +2713,32 @@ def save_figure(fig: plt.Figure, name: str, caption: str, data: pd.DataFrame, re
     figure_dir.mkdir(parents=True, exist_ok=True)
     data_dir.mkdir(parents=True, exist_ok=True)
     caption_dir.mkdir(parents=True, exist_ok=True)
-    fig.tight_layout()
+    if fig.get_layout_engine() is None:
+        fig.tight_layout()
     paths = []
     for extension in ["png", "svg", "pdf"]:
         path = figure_dir / f"{name}.{extension}"
-        fig.savefig(path, dpi=180, bbox_inches="tight")
+        fig.savefig(path, dpi=320, bbox_inches="tight")
         paths.append(str(path.relative_to(review_dir)))
     plt.close(fig)
     csv_name = f"{name}.csv"
     write_csv(data_dir / csv_name, data)
     (caption_dir / f"{name}.md").write_text(f"# {name}\n\n{caption}\n\nFigure data: `data/{csv_name}`.\n")
     return {"name": name, "formats": paths, "data_path": str((data_dir / csv_name).relative_to(review_dir)), "caption_path": str((caption_dir / f"{name}.md").relative_to(review_dir)), "caption": caption}
+
+
+def _valid_stored_map_points(map_rows: pd.DataFrame) -> pd.DataFrame:
+    """Reject cached map rows without usable soil-stratified cluster IDs."""
+    required = {"x", "y", "SoilType", "cluster_within_soil"}
+    if map_rows.empty or not required.issubset(map_rows.columns):
+        return map_rows.iloc[0:0].copy()
+    result = map_rows.copy()
+    for column in required:
+        result[column] = pd.to_numeric(result[column], errors="coerce")
+    valid = np.isfinite(result[["x", "y", "SoilType", "cluster_within_soil"]].to_numpy(dtype=float)).all(axis=1)
+    valid &= result["SoilType"].isin(SOIL_TYPE_LABELS)
+    valid &= result["cluster_within_soil"].between(0, 5)
+    return result.loc[valid].copy()
 
 
 def generate_phase_figures(
@@ -2735,20 +2753,26 @@ def generate_phase_figures(
     full_pairs: pd.DataFrame,
     frame: pd.DataFrame,
 ) -> list[dict[str, Any]]:
+    plt.rcParams.update({"font.family": "Noto Sans CJK JP", "axes.titlesize": 11, "axes.labelsize": 9, "xtick.labelsize": 8, "ytick.labelsize": 8, "legend.fontsize": 8, "axes.edgecolor": "#4B5563", "axes.linewidth": 0.8, "grid.color": "#D9DEE7", "grid.linewidth": 0.55, "figure.facecolor": "white", "axes.facecolor": "white", "savefig.facecolor": "white"})
     figures: list[dict[str, Any]] = []
+    outcome_labels = {"SHI_candidate": "土壤健康指数（SHI）", "AN": "碱解氮（AN）", "OM": "有机质（OM）", "CEC": "阳离子交换量（CEC）", "pH": "土壤酸碱度（pH）", "SW": "土壤含水量（SW）", "BD": "土壤容重（BD）", "MBC": "微生物量碳（MBC）", "RESP": "土壤呼吸（RESP）"}
+    exposure_labels = {"Aa_20yr": "20 年平均实际侵蚀", "Aa_2020": "2020 年实际侵蚀"}
+    method_labels = {"M0": "未调整基线（M0）", "M1": "环境回归调整（M1）", "M2": "环境组斜率（M2）", "M3": "土类内 K 均值匹配（M3）", "M4": "土类内最近邻匹配（M4）"}
 
     # 1. Local matching search balance and coverage.
     if not local_grid.empty:
         data = local_grid.loc[local_grid["status"].eq("ok")].copy()
         fig, ax = plt.subplots(figsize=(8, 5))
+        cluster_labels = {"none": "不聚类", "kmeans": "K 均值", "ward": "Ward 层次聚类"}
         for label, group in data.groupby("cluster_method", sort=True):
-            ax.scatter(group["area_coverage"], group["max_abs_matched_smd"], s=22, alpha=.65, label=label)
-        ax.axhline(.1, color="grey", linestyle="--", linewidth=1, label="|SMD| = 0.10 reference")
-        ax.set(xlabel="Matched-cell coverage", ylabel="Maximum absolute environment SMD", title="1. Outcome-blind local matching trade-off")
+            ax.scatter(group["area_coverage"], group["max_abs_matched_smd"], s=28, alpha=.72, label=cluster_labels.get(str(label), str(label)), edgecolors="white", linewidths=.35)
+        ax.axhline(.1, color="#606A78", linestyle="--", linewidth=1, label="SMD = 0.10 参考线")
+        ax.set(xlabel="匹配覆盖率", ylabel="环境变量最大绝对标准化差异（SMD）", title="1｜结果盲的局地匹配权衡")
+        ax.grid(axis="both", alpha=.55)
         ax.legend(frameon=False)
-        figures.append(save_figure(fig, "01_matching_coverage_balance", "The 243-configuration search used 40,000 complete rows for Aa_20yr and did not access health outcomes. Coverage, SMD, environmental distance, and exposure separation were all retained; the horizontal line is a descriptive balance reference.", data, review_dir))
+        figures.append(save_figure(fig, "01_matching_coverage_balance", "局地搜索在 20 年平均实际侵蚀下评价 243 组匹配参数，未读取健康结局。覆盖率、SMD、环境距离和侵蚀差异均纳入设计诊断；横线仅为描述性平衡参考。", data, review_dir))
     else:
-        figures.append(save_figure(plt.figure(), "01_matching_coverage_balance", "No successful local matching configurations.", pd.DataFrame(), review_dir))
+        figures.append(save_figure(plt.figure(), "01_matching_coverage_balance", "没有成功的局地匹配参数组合。", pd.DataFrame(), review_dir))
 
     # 2. M3 vs M4 matching diagnostics on repeated held-out spatial roles.
     match_rows = repeated.loc[repeated["method"].isin(["M3", "M4"]) & repeated["evaluation_set"].eq("test") & repeated["outcome"].isna()] if not repeated.empty else pd.DataFrame()
@@ -2756,15 +2780,15 @@ def generate_phase_figures(
     data = full_pair_results.loc[full_pair_results["model"].eq("P1_intercept_ols") & full_pair_results["method"].isin(["M3", "M4"])].copy()
     fig, ax = plt.subplots(figsize=(8, 5))
     if not data.empty:
-        data["label"] = data["exposure"] + " / " + data["method"]
-        ax.bar(data["label"], data["r_squared"], color=["#4c78a8" if m == "M4" else "#f58518" for m in data["method"]])
-        ax.set_ylabel("Full-sample paired P1 apparent R²")
-        ax.set_title("2. Matched-pair fit by method and exposure")
+        data["label"] = data["exposure"].map(exposure_labels).fillna(data["exposure"]) + " / " + data["method"].map(method_labels).fillna(data["method"])
+        ax.bar(data["label"], data["r_squared"], color=["#326A8C" if m == "M4" else "#D28A34" for m in data["method"]], edgecolor="white", linewidth=.5)
+        ax.set_ylabel("全样本配对模型表观 R²")
+        ax.set_title("2｜不同匹配方法与侵蚀时期的配对拟合")
         ax.tick_params(axis="x", rotation=25)
     else:
-        ax.text(.5, .5, "No matched-pair model rows", ha="center", va="center", transform=ax.transAxes)
+        ax.text(.5, .5, "没有可用的配对模型记录", ha="center", va="center", transform=ax.transAxes)
         ax.set_axis_off()
-    figures.append(save_figure(fig, "02_matching_method_pair_fit", "Full-sample paired R² is descriptive and not used as the matching selection objective. M3 is soil-specific K-means k=6 plus matching; M4 is direct nearest-neighbor matching within exact soil strata.", data, review_dir))
+    figures.append(save_figure(fig, "02_matching_method_pair_fit", "全样本配对 R² 为描述性拟合，不作为匹配规则的筛选目标。M3 为土类内 K 均值 k=6 后匹配；M4 为在相同土类内直接进行最近邻匹配。", data, review_dir))
 
     # 3. Primary outcome paired slopes with 95% OLS intervals.
     data = full_pair_results.loc[
@@ -2772,16 +2796,16 @@ def generate_phase_figures(
     ].copy()
     fig, ax = plt.subplots(figsize=(9, 5))
     if not data.empty:
-        data["label"] = data["outcome"] + " / " + data["method"] + " / " + data["exposure"]
+        data["label"] = data["outcome"].map(outcome_labels).fillna(data["outcome"]) + " / " + data["method"].map(method_labels).fillna(data["method"]) + " / " + data["exposure"].map(exposure_labels).fillna(data["exposure"])
         errors = np.vstack([data["coefficient"] - data["ci_lower"], data["ci_upper"] - data["coefficient"]])
         ax.errorbar(data["coefficient"], np.arange(len(data)), xerr=errors, fmt="o", capsize=2)
         ax.axvline(0, color="grey", linestyle="--", linewidth=1)
         ax.set_yticks(np.arange(len(data)), data["label"])
-        ax.set(xlabel="P1 slope: Δoutcome per Δlog1p(Aa)", title="3. Matched-pair differences for SHI, OM and SW")
+        ax.set(xlabel="P1 斜率：Δ健康 / Δlog1p(Aa)", title="3｜优先指标的匹配配对差值斜率")
     else:
-        ax.text(.5, .5, "No primary paired estimates", ha="center", va="center", transform=ax.transAxes)
+        ax.text(.5, .5, "没有可用的优先指标配对估计", ha="center", va="center", transform=ax.transAxes)
         ax.set_axis_off()
-    figures.append(save_figure(fig, "03_primary_paired_slopes", "Points show full-sample P1 matched-pair slopes and 95% model-based confidence intervals. These intervals do not adjust for residual spatial dependence; the repeated 5km holdout results are reported separately.", data, review_dir))
+    figures.append(save_figure(fig, "03_primary_paired_slopes", "点为全样本 P1 匹配配对斜率，横线为模型估计的 95% 置信区间。该区间未校正残余空间依赖；重复 5 km 空间留出结果另行报告。", data, review_dir))
 
     # 4. Repeated spatial test scores across M0-M4.
     data = repeated.loc[
@@ -2792,16 +2816,18 @@ def generate_phase_figures(
     ].copy()
     fig, ax = plt.subplots(figsize=(11, 5))
     if not data.empty:
-        labels = [f"{o}/{m}" for o in PRIMARY_OUTCOMES for m in ["M0", "M1", "M2", "M3", "M4"]]
+        outcome_short = {"SHI_candidate": "SHI", "AN": "AN", "OM": "OM"}
+        method_short = {"M0": "M0 基线", "M1": "M1 环境调整", "M2": "M2 组内斜率", "M3": "M3 K 均值", "M4": "M4 最近邻"}
+        labels = [f"{outcome_short.get(o,o)}\n{method_short.get(m,m)}" for o in PRIMARY_OUTCOMES for m in ["M0", "M1", "M2", "M3", "M4"]]
         values = [data.loc[(data["outcome"].eq(o)) & (data["method"].eq(m)), "r_squared"].dropna().to_numpy() for o in PRIMARY_OUTCOMES for m in ["M0", "M1", "M2", "M3", "M4"]]
         ax.boxplot(values, labels=labels, showfliers=False)
         ax.axhline(0, color="grey", linestyle="--", linewidth=1)
-        ax.set(ylabel="5km spatial test R²", title="4. Repeated spatial holdout by method and primary outcome")
+        ax.set(ylabel="5 km 空间留出测试 R²", title="4｜不同方法与优先指标的重复空间留出")
         ax.tick_params(axis="x", rotation=40)
     else:
-        ax.text(.5, .5, "No repeated spatial test results", ha="center", va="center", transform=ax.transAxes)
+        ax.text(.5, .5, "没有可用的重复空间测试结果", ha="center", va="center", transform=ax.transAxes)
         ax.set_axis_off()
-    figures.append(save_figure(fig, "04_repeated_spatial_validation", "Each box summarizes ten seeded, whole-block 5km spatial test splits. M0–M2 use a common complete-case pixel sample across both Aa periods; M3–M4 use independently constructed train, validation and test pairs with train-fitted transformations.", data, review_dir))
+    figures.append(save_figure(fig, "04_repeated_spatial_validation", "每个箱线图汇总 10 次固定随机种子的 5 km 整块空间测试划分。M0–M2 在两个 Aa 时期使用共同完整像元样本；M3–M4 分别构建训练、验证和测试配对，并仅用训练集拟合变换。", data, review_dir))
 
     # 5. Same-sample delta R2.
     data = increments.loc[
@@ -2811,58 +2837,116 @@ def generate_phase_figures(
     if not data.empty:
         summary = data.groupby(["outcome", "exposure"], as_index=False)["delta_r2"].median()
         pivot = summary.pivot(index="outcome", columns="exposure", values="delta_r2")
-        pivot.plot(kind="bar", ax=ax)
+        pivot.rename(columns=exposure_labels).plot(kind="bar", ax=ax, color=["#326A8C", "#D28A34"], edgecolor="white", linewidth=.4)
         ax.axhline(0, color="grey", linestyle="--", linewidth=1)
-        ax.set(ylabel="Median held-out ΔR²", title="5. Erosion increment beyond environment on identical pixels")
-        ax.legend(title="Exposure")
+        ax.set(ylabel="空间留出 ΔR² 中位数", title="5｜相同像元上侵蚀信息相对环境变量的增量")
+        ax.legend(title="侵蚀时期", frameon=False)
+        ax.set_xticklabels([outcome_labels.get(str(t.get_text()), str(t.get_text())) for t in ax.get_xticklabels()], rotation=25, ha="right")
     else:
-        ax.text(.5, .5, "No same-sample ΔR² rows", ha="center", va="center", transform=ax.transAxes)
+        ax.text(.5, .5, "没有相同样本上的 ΔR² 记录", ha="center", va="center", transform=ax.transAxes)
         ax.set_axis_off()
-    figures.append(save_figure(fig, "05_erosion_increment_delta_r2", "For each seed and outcome, the environment-only and environment-plus-log1p(Aa) OLS models use the same training pixels and score the same held-out pixels. This is predictive increment, not causal effect or independent data validation.", data, review_dir))
+    figures.append(save_figure(fig, "05_erosion_increment_delta_r2", "每个随机种子和指标下，纯环境模型与环境加 log1p(Aa) 的 OLS 模型使用相同训练像元，并在相同留出像元上评分。该增量表示预测信息变化，不是因果效应或独立数据验证。", data, review_dir))
 
     # 6. Environmental heterogeneity slopes and formal interactions.
     data = heterogeneity.loc[heterogeneity["subgroup"].ne("__interaction_test__")].copy() if not heterogeneity.empty else pd.DataFrame()
     fig, ax = plt.subplots(figsize=(10, 6))
     if not data.empty:
         selected = data.loc[data["outcome"].isin(PRIMARY_OUTCOMES) & data["subgroup_variable"].isin(["soil_type", "V5_kmeans_group", "Elevation_tertile", "LST_tertile"])].copy()
-        selected["row_label"] = selected["outcome"].astype(str) + " / " + selected["subgroup_variable"].astype(str) + " / " + selected["subgroup"].astype(str)
+        group_var_labels = {"soil_type": "土壤类型", "V5_kmeans_group": "V5 土类内 K 均值组", "Elevation_tertile": "高程三分位", "LST_tertile": "地表温度三分位"}
+        selected["row_label"] = selected["outcome"].map(outcome_labels).fillna(selected["outcome"]) + " / " + selected["subgroup_variable"].map(group_var_labels).fillna(selected["subgroup_variable"]) + " / " + selected["subgroup"].astype(str)
         selected = selected.sort_values("coefficient").tail(35)
         if not selected.empty:
-            ax.barh(selected["row_label"], selected["coefficient"], color=np.where(selected["coefficient"] >= 0, "#59a14f", "#e15759"))
+            ax.barh(selected["row_label"], selected["coefficient"], color=np.where(selected["coefficient"] >= 0, "#326A8C", "#D28A34"), edgecolor="white", linewidth=.35)
             ax.axvline(0, color="grey", linewidth=1)
-            ax.set(xlabel="M4 paired slope: Δoutcome per Δlog1p(Aa)", title="6. Descriptive environmental heterogeneity")
+            ax.set(xlabel="M4 配对斜率：Δ健康 / Δlog1p(Aa)", title="6｜不同环境背景下的描述性关联差异")
     else:
-        ax.text(.5, .5, "No subgroup estimates", ha="center", va="center", transform=ax.transAxes)
+        ax.text(.5, .5, "没有可用的亚组估计", ha="center", va="center", transform=ax.transAxes)
         ax.set_axis_off()
-    figures.append(save_figure(fig, "06_environmental_heterogeneity", "Subgroup estimates use M4 full-sample pairs and prespecified soil, V5 K-means and environmental tertile definitions. Groups were fitted or binned descriptively; subgroup differences remain exploratory and multiple testing is adjusted by Benjamini–Hochberg in the table.", data, review_dir))
+    figures.append(save_figure(fig, "06_environmental_heterogeneity", "亚组估计使用 M4 全样本配对及预先定义的土类、V5 K 均值组和环境三分位。分组用于描述；亚组差异仍属探索结果，多重检验在表格中按 Benjamini–Hochberg 方法校正。", data, review_dir))
 
     # 7. Environment-group map and selected high-response strata.
+    stored_map_rows = high_groups.loc[high_groups.get("map_role", pd.Series(index=high_groups.index, dtype=object)).eq("sampled cell point; no continuous surface inference")].copy() if not high_groups.empty else pd.DataFrame()
+    stored_map_rows = _valid_stored_map_points(stored_map_rows)
     data = high_groups.loc[
         high_groups["top_three_high_response_group"]
         & high_groups["exposure"].eq("Aa_20yr")
         & high_groups["outcome"].isin(PRIMARY_OUTCOMES)
     ].copy() if not high_groups.empty else pd.DataFrame()
-    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
-    map_model = fit_environment_model(frame, ["Elevation", "LST"], clusters=6, seed=20261026, primary_soils=[26, 27, 42])
-    _, map_labels = apply_environment_model(map_model, frame, [26, 27, 42])
-    map_rows = frame.loc[frame["SoilType"].isin([26, 27, 42]) & frame[["x", "y", "Elevation", "LST"]].notna().all(axis=1)].copy()
-    map_rows["environment_group"] = map_labels[map_rows.index.to_numpy()]
-    map_rows = map_rows.loc[map_rows["environment_group"].ge(0)]
-    if len(map_rows) > 12000:
-        map_rows = map_rows.sample(12000, random_state=20261026)
+    fig, axes = plt.subplots(1, 2, figsize=(13.6, 5.8), constrained_layout=True)
+    if not stored_map_rows.empty:
+        map_rows = stored_map_rows.copy()
+    else:
+        map_model = fit_environment_model(frame, ["Elevation", "LST"], clusters=6, seed=20261026, primary_soils=[26, 27, 42])
+        _, map_labels = apply_environment_model(map_model, frame, [26, 27, 42])
+        map_rows = frame.loc[frame["SoilType"].isin([26, 27, 42]) & frame[["x", "y", "Elevation", "LST"]].notna().all(axis=1)].copy()
+        map_rows["environment_group"] = map_labels[map_rows.index.to_numpy()]
+        map_rows = map_rows.loc[map_rows["environment_group"].ge(0)]
+        map_rows["cluster_within_soil"] = map_rows["environment_group"] % 6
+        if len(map_rows) > 12000:
+            map_rows = map_rows.sample(12000, random_state=20261026)
     if not map_rows.empty:
-        axes[0].scatter(map_rows["x"] / 1000, map_rows["y"] / 1000, c=map_rows["environment_group"], s=2, alpha=.45, cmap="viridis")
-        axes[0].set(xlabel="Projected easting (km)", ylabel="Projected northing (km)", title="Soil-specific V5 K-means groups: sampled cells")
+        group_palette = ["#315D78", "#4E8A86", "#C57645", "#A7A64C", "#6A6A9B", "#9A5870"]
+        group_cmap = ListedColormap(group_palette, name="soil_stratified_kmeans_groups")
+        group_norm = BoundaryNorm(np.arange(-0.5, 6.5), group_cmap.N)
+        markers = {26: "o", 27: "^", 42: "s"}
+        soil_values = pd.to_numeric(map_rows["SoilType"], errors="coerce")
+        local_groups = pd.to_numeric(map_rows["cluster_within_soil"], errors="coerce")
+        map_scatter = None
+        for soil_code, marker in markers.items():
+            selected = soil_values.eq(soil_code) & local_groups.notna()
+            if selected.any():
+                map_scatter = axes[0].scatter(
+                    map_rows.loc[selected, "x"] / 1000, map_rows.loc[selected, "y"] / 1000,
+                    c=local_groups.loc[selected], s=3.0, alpha=.72, cmap=group_cmap, norm=group_norm,
+                    marker=marker, linewidths=0, rasterized=True,
+                )
+        axes[0].set(xlabel="投影坐标东向（千米）", ylabel="投影坐标北向（千米）",
+                    title="高程与地表温度环境组（固定抽样）")
+        axes[0].grid(color="#D9E2E6", linewidth=.55, alpha=.65)
+        axes[0].set_axisbelow(True)
+        axes[0].tick_params(labelsize=8, length=0)
+        if map_scatter is not None:
+            colorbar = fig.colorbar(map_scatter, ax=axes[0], fraction=.045, pad=.03,
+                                    ticks=np.arange(0, 6), boundaries=np.arange(-.5, 6.5))
+            colorbar.set_ticklabels([str(value) for value in range(1, 7)])
+            colorbar.set_label("土类内环境组编号", fontsize=8)
+        axes[0].legend(
+            handles=[Line2D([0], [0], marker=markers[code], color="none", markerfacecolor="#536C7B",
+                            markeredgecolor="white", markersize=6,
+                            label=f"{code} {SOIL_TYPE_LABELS[code]}") for code in markers],
+            title="点形表示土类", frameon=True, framealpha=.92, facecolor="white", edgecolor="#D9E2E6",
+            fontsize=7, title_fontsize=7, loc="lower left",
+        )
+        x_span = float(map_rows["x"].max() - map_rows["x"].min()) / 1000
+        y_span = float(map_rows["y"].max() - map_rows["y"].min()) / 1000
+        target_scale = x_span * .17
+        scale_candidates = [1, 2, 5, 10, 20]
+        scale_km = min(scale_candidates, key=lambda value: abs(value - target_scale))
+        scale_x = float(map_rows["x"].min()) / 1000 + x_span * .055
+        scale_y = float(map_rows["y"].min()) / 1000 + y_span * .06
+        axes[0].plot([scale_x, scale_x + scale_km], [scale_y, scale_y], color="white", linewidth=4.2, zorder=5)
+        axes[0].plot([scale_x, scale_x + scale_km], [scale_y, scale_y], color="#263A46", linewidth=2.0, zorder=6)
+        axes[0].text(scale_x + scale_km / 2, scale_y + y_span * .02, f"{scale_km:g} 千米",
+                     ha="center", va="bottom", fontsize=7, color="#263A46", zorder=6,
+                     bbox={"boxstyle": "round,pad=.15", "facecolor": "white", "edgecolor": "none", "alpha": .88})
+        axes[0].annotate("N", xy=(.94, .91), xytext=(.94, .79), xycoords="axes fraction",
+                         ha="center", va="center", fontsize=9, fontweight="bold",
+                         arrowprops={"arrowstyle": "-|>", "color": "#263A46", "lw": 1.1})
     else:
         axes[0].set_axis_off()
     if not data.empty:
-        labels = data["outcome"].astype(str) + " / G" + data["environment_group"].astype(str)
-        axes[1].barh(labels, data["mean_outcome"], color="#f28e2b")
-        axes[1].set(xlabel="Full-sample mean outcome", title="Top three groups by outcome mean")
+        labels = [
+            f"{outcome_labels.get(str(row.outcome), str(row.outcome))} / {int(row.soil_type)} {SOIL_TYPE_LABELS.get(int(row.soil_type), '未知土类')} · 组 {int(row.cluster_within_soil) + 1}"
+            for row in data.itertuples()
+        ]
+        axes[1].barh(labels, data["mean_outcome"], color="#D28A34", edgecolor="white", linewidth=.35)
+        axes[1].set(xlabel="全样本健康指标均值", title="各优先指标均值最高的三个环境组")
+        axes[1].grid(axis="x", color="#D9E2E6", linewidth=.55)
+        axes[1].set_axisbelow(True)
     else:
-        axes[1].text(.5, .5, "No selected groups", ha="center", va="center", transform=axes[1].transAxes)
+        axes[1].text(.5, .5, "没有可用的入选环境组", ha="center", va="center", transform=axes[1].transAxes)
         axes[1].set_axis_off()
-    map_export = map_rows[["cell_id", "x", "y", "SoilType", "environment_group"]].copy() if not map_rows.empty else pd.DataFrame()
+    map_export = map_rows[["cell_id", "x", "y", "SoilType", "cluster_within_soil", "environment_group"]].copy() if not map_rows.empty else pd.DataFrame()
     map_export["map_role"] = "sampled cell point; no continuous surface inference"
     export = data.copy()
     if not export.empty:
@@ -2870,7 +2954,7 @@ def generate_phase_figures(
     map_export["outcome"] = None
     map_export["mean_outcome"] = np.nan
     export = pd.concat([export, map_export], ignore_index=True, sort=False)
-    figures.append(save_figure(fig, "07_environment_groups_map_and_high_response", "Left: a deterministic sample of valid cells colored by soil-specific V5 K-means group (Elevation and LST), shown as points on the projected grid. Right: for primary exposure Aa_20yr, the top three full-sample mean-response groups for each primary outcome. The Aa_2020 screen is available in the accompanying table. The top groups are outcome-ranked descriptive subsets, not independently validated hotspots; no continuous or causal spatial surface is inferred.", export, review_dir))
+    figures.append(save_figure(fig, "07_environment_groups_map_and_high_response", "左图为有效像元的固定抽样，颜色表示土类内环境组编号、点形表示土壤类型，并使用真实投影坐标绘制；组号只在土类内部解释。右图为 20 年平均实际侵蚀下各优先指标全样本均值最高的三个环境组；2020 年结果见配套数据表。高响应环境组根据健康结果排序，仅作描述性探索，不代表经独立验证的热点，也不表示连续空间面或因果机制。", export, review_dir))
 
     # 8. Both requested curve families.
     data = curve_data()
@@ -2884,30 +2968,31 @@ def generate_phase_figures(
         if not scatter.empty:
             ax.scatter(scatter["exposure_value"], scatter["predicted_outcome"], s=7, alpha=.3, color="#4e79a7")
         if not spline.empty:
-            ax.plot(spline["exposure_value"], spline["predicted_outcome"], color="#f28e2b", linestyle="--", linewidth=1.5, label="Fixed plot-sample spline")
+            ax.plot(spline["exposure_value"], spline["predicted_outcome"], color="#D28A34", linestyle="--", linewidth=1.7, label="固定绘图样本自然样条")
         if not apparent.empty:
-            ax.plot(apparent["exposure_value"], apparent["predicted_outcome"], color="#59a14f", linewidth=1.6, label="Selected full-sample model")
-        ax.set_title(outcome)
-        ax.set_xlabel("Aa_20yr")
-        ax.set_ylabel("Health outcome")
+            ax.plot(apparent["exposure_value"], apparent["predicted_outcome"], color="#326A8C", linewidth=1.7, label="全样本择优表观模型")
+        ax.set_title(outcome_labels.get(outcome, outcome), loc="left", fontweight="semibold")
+        ax.set_xlabel("20 年平均实际侵蚀 Aa（原始栅格值）")
+        ax.set_ylabel("健康预测值")
+        ax.grid(axis="y", alpha=.2)
         if ax is axes.flat[0]:
             ax.legend(fontsize=7, frameon=False)
-    figures.append(save_figure(fig, "08_health_response_curves", "Blue points use the fixed 10,000-row plotting sample; complete cases are used for each outcome. Orange dashed curves are natural-spline fits to that same plotting sample. Green curves are prior Oracle-selected full-sample apparent model partial-dependence curves for Aa_20yr at median environmental conditions, selected by apparent R² from 1,024 model trials across 13 families. Each green curve's selected model and complete-case n are in the figure data. The curves use different sample scopes; neither is an independent validation curve.", data, review_dir))
+    figures.append(save_figure(fig, "08_health_response_curves", "灰蓝色散点来自固定的 10,000 行绘图样本；每项结局使用其完整观测。橙色虚线为该样本的自然样条描述曲线。蓝色实线为早先 Oracle 全样本表观模型在环境变量中位数条件下的 Aa_20yr 偏依赖曲线，曾在 13 类模型的 1,024 次试验中按表观 R²择优。模型类型与完整样本量见图源数据。两条曲线的样本范围不同，均不是独立验证曲线。", data, review_dir))
 
     # 9. Pair distance and robustness diagnostics.
     data = full_pairs.loc[full_pairs["method"].eq("M4")].copy() if not full_pairs.empty else pd.DataFrame()
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
     if not data.empty:
-        axes[0].scatter(data["environmental_distance"], data["geographic_distance"], s=5, alpha=.2, c=np.where(data["erosion_low"].eq(0), "#e15759", "#4e79a7"))
-        axes[0].set(xlabel="V5 standardized environment distance", ylabel="Geographic distance (m)", title="Pair-level distance diagnostics")
+        axes[0].scatter(data["environmental_distance"], data["geographic_distance"], s=5, alpha=.2, c=np.where(data["erosion_low"].eq(0), "#D28A34", "#326A8C"), rasterized=True)
+        axes[0].set(xlabel="V5 标准化环境距离", ylabel="配对地理距离（米）", title="配对距离诊断")
         for label, group in data.groupby("exposure", sort=True):
-            axes[1].hist(group["delta_log1p_erosion"], bins=40, alpha=.45, label=label)
-        axes[1].set(xlabel="Δlog1p(Aa)", ylabel="Pair count", title="Matched exposure separation")
-        axes[1].legend(frameon=False)
+            axes[1].hist(group["delta_log1p_erosion"], bins=40, alpha=.52, label=exposure_labels.get(label, label), color="#326A8C" if label == "Aa_20yr" else "#D28A34")
+        axes[1].set(xlabel="Δlog1p(Aa)", ylabel="配对数量", title="匹配配对的侵蚀差异")
+        axes[1].legend(frameon=False, title="侵蚀时期")
     else:
         axes[0].set_axis_off()
         axes[1].set_axis_off()
-    figures.append(save_figure(fig, "09_pair_distance_and_exposure_diagnostics", "Each point is a full-sample M4 pair. Red points indicate a zero-to-positive exposure pair. Distance distributions are matching diagnostics; the full spatial-validation performance is in Figure 4.", data[[c for c in ["method", "exposure", "pair_id", "environmental_distance", "geographic_distance", "erosion_low", "erosion_high", "delta_log1p_erosion"] if c in data]], review_dir))
+    figures.append(save_figure(fig, "09_pair_distance_and_exposure_diagnostics", "每个点代表一个全样本 M4 配对；金色点表示低侵蚀端为零的配对。环境距离和地理距离用于描述匹配质量；完整空间留出表现见图 4。", data[[c for c in ["method", "exposure", "pair_id", "environmental_distance", "geographic_distance", "erosion_low", "erosion_high", "delta_log1p_erosion"] if c in data]], review_dir))
 
     # 10. Aa periods, same pixels for cell-level comparison.
     data = exposure_comparison.loc[
@@ -2921,14 +3006,15 @@ def generate_phase_figures(
         plot_data["plot_delta_r2"] = pd.to_numeric(plot_data.get("delta_r2_median"), errors="coerce")
         if plot_data["plot_delta_r2"].notna().any():
             wide = plot_data.groupby(["outcome", "exposure"], as_index=False)["plot_delta_r2"].median().pivot(index="outcome", columns="exposure", values="plot_delta_r2")
-            wide.plot(kind="bar", ax=ax)
+            wide.rename(columns=exposure_labels).plot(kind="bar", ax=ax, color=["#326A8C", "#D28A34"], edgecolor="white", linewidth=.4)
             ax.axhline(0, color="grey", linestyle="--", linewidth=1)
-            ax.set(ylabel="ΔR², same-pixel environment comparison", title="10. Aa_20yr vs Aa_2020 on common pixels")
-            ax.legend(title="Exposure")
+            ax.set(ylabel="相同像元下的 ΔR²", title="10｜共同像元上的两期实际侵蚀比较")
+            ax.legend(title="侵蚀时期", frameon=False)
+            ax.set_xticklabels([outcome_labels.get(str(t.get_text()), str(t.get_text())) for t in ax.get_xticklabels()], rotation=25, ha="right")
     else:
-        ax.text(.5, .5, "No common-sample exposure comparison", ha="center", va="center", transform=ax.transAxes)
+        ax.text(.5, .5, "没有可用的共同样本时期比较", ha="center", va="center", transform=ax.transAxes)
         ax.set_axis_off()
-    figures.append(save_figure(fig, "10_exposure_period_comparison", "Aa_20yr and Aa_2020 are compared with the same complete pixels, V5 variables, OLS design and spatial seeds for the cell-level analysis. Full-sample matched pairs are exposure-specific and are displayed in the accompanying table rather than treated as paired-period identical samples.", plot_data, review_dir))
+    figures.append(save_figure(fig, "10_exposure_period_comparison", "像元层比较要求两期使用同一批完整像元、V5 环境变量、OLS 设计和空间随机种子。全样本匹配配对按侵蚀时期分别构建，因此配套表单列展示，不视为两期完全相同的配对样本。", plot_data, review_dir))
 
     write_json(review_dir / "figure_index.json", figures)
     return figures

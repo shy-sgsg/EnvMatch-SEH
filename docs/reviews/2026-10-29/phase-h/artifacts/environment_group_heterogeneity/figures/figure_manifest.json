@@ -1,0 +1,157 @@
+{
+  "run_id": "low_erosion_group_heterogeneity_20261030_seed20261030_r2",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "figure_count": 12,
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "figures": [
+    {
+      "id": "HET01_group_low_value_retention",
+      "title": "固定环境组内超过分布阈值的有效像元比例；颜色深浅表示该组被阈值排除的比例",
+      "scientific_question": "低侵蚀阈值在不同土类和环境组中各保留多少有效像元？",
+      "experiment": "环境组低值保留与覆盖诊断",
+      "figure_type": "环境组保留率图",
+      "png": "png/HET01_group_low_value_retention.png",
+      "svg": "svg/HET01_group_low_value_retention.svg",
+      "pdf": "pdf/HET01_group_low_value_retention.pdf",
+      "source": "data/HET01_group_low_value_retention_source.csv",
+      "caption": "captions/HET01_group_low_value_retention.md"
+    },
+    {
+      "id": "HET02_group_rho_change_20yr_S1_both_positive",
+      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
+      "experiment": "20 年平均实际侵蚀 两端均为正侵蚀 组内秩相关比较",
+      "figure_type": "环境组响应变化热图",
+      "png": "png/HET02_group_rho_change_20yr_S1_both_positive.png",
+      "svg": "svg/HET02_group_rho_change_20yr_S1_both_positive.svg",
+      "pdf": "pdf/HET02_group_rho_change_20yr_S1_both_positive.pdf",
+      "source": "data/HET02_group_rho_change_20yr_S1_both_positive_source.csv",
+      "caption": "captions/HET02_group_rho_change_20yr_S1_both_positive.md"
+    },
+    {
+      "id": "HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint",
+      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
+      "experiment": "20 年平均实际侵蚀 CDF 阈值筛选原配对 组内秩相关比较",
+      "figure_type": "环境组响应变化热图",
+      "png": "png/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint.png",
+      "svg": "svg/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint.svg",
+      "pdf": "pdf/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint.pdf",
+      "source": "data/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint_source.csv",
+      "caption": "captions/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint.md"
+    },
+    {
+      "id": "HET02_group_rho_change_20yr_T01_fixed_original",
+      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
+      "experiment": "20 年平均实际侵蚀 阈值后固定原组重配 组内秩相关比较",
+      "figure_type": "环境组响应变化热图",
+      "png": "png/HET02_group_rho_change_20yr_T01_fixed_original.png",
+      "svg": "svg/HET02_group_rho_change_20yr_T01_fixed_original.svg",
+      "pdf": "pdf/HET02_group_rho_change_20yr_T01_fixed_original.pdf",
+      "source": "data/HET02_group_rho_change_20yr_T01_fixed_original_source.csv",
+      "caption": "captions/HET02_group_rho_change_20yr_T01_fixed_original.md"
+    },
+    {
+      "id": "HET02_group_rho_change_20yr_T01_refit_k6_filtered_population",
+      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
+      "experiment": "20 年平均实际侵蚀 阈值后重拟合 k=6 组 组内秩相关比较",
+      "figure_type": "环境组响应变化热图",
+      "png": "png/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population.png",
+      "svg": "svg/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population.svg",
+      "pdf": "pdf/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population.pdf",
+      "source": "data/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population_source.csv",
+      "caption": "captions/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population.md"
+    },
+    {
+      "id": "HET02_group_rho_change_2020_S1_both_positive",
+      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
+      "experiment": "2020 年实际侵蚀 两端均为正侵蚀 组内秩相关比较",
+      "figure_type": "环境组响应变化热图",
+      "png": "png/HET02_group_rho_change_2020_S1_both_positive.png",
+      "svg": "svg/HET02_group_rho_change_2020_S1_both_positive.svg",
+      "pdf": "pdf/HET02_group_rho_change_2020_S1_both_positive.pdf",
+      "source": "data/HET02_group_rho_change_2020_S1_both_positive_source.csv",
+      "caption": "captions/HET02_group_rho_change_2020_S1_both_positive.md"
+    },
+    {
+      "id": "HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint",
+      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
+      "experiment": "2020 年实际侵蚀 CDF 阈值筛选原配对 组内秩相关比较",
+      "figure_type": "环境组响应变化热图",
+      "png": "png/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint.png",
+      "svg": "svg/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint.svg",
+      "pdf": "pdf/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint.pdf",
+      "source": "data/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint_source.csv",
+      "caption": "captions/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint.md"
+    },
+    {
+      "id": "HET02_group_rho_change_2020_T01_fixed_original",
+      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
+      "experiment": "2020 年实际侵蚀 阈值后固定原组重配 组内秩相关比较",
+      "figure_type": "环境组响应变化热图",
+      "png": "png/HET02_group_rho_change_2020_T01_fixed_original.png",
+      "svg": "svg/HET02_group_rho_change_2020_T01_fixed_original.svg",
+      "pdf": "pdf/HET02_group_rho_change_2020_T01_fixed_original.pdf",
+      "source": "data/HET02_group_rho_change_2020_T01_fixed_original_source.csv",
+      "caption": "captions/HET02_group_rho_change_2020_T01_fixed_original.md"
+    },
+    {
+      "id": "HET02_group_rho_change_2020_T01_refit_k6_filtered_population",
+      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
+      "experiment": "2020 年实际侵蚀 阈值后重拟合 k=6 组 组内秩相关比较",
+      "figure_type": "环境组响应变化热图",
+      "png": "png/HET02_group_rho_change_2020_T01_refit_k6_filtered_population.png",
+      "svg": "svg/HET02_group_rho_change_2020_T01_refit_k6_filtered_population.svg",
+      "pdf": "pdf/HET02_group_rho_change_2020_T01_refit_k6_filtered_population.pdf",
+      "source": "data/HET02_group_rho_change_2020_T01_refit_k6_filtered_population_source.csv",
+      "caption": "captions/HET02_group_rho_change_2020_T01_refit_k6_filtered_population.md"
+    },
+    {
+      "id": "HET03_group_spatial_test_change",
+      "title": "颜色表示 T01_fixed_original 组内空间测试 R²中位数减去 S0 基线",
+      "scientific_question": "低值过滤并在固定环境组内重配后，组内响应能否在留出空间块保持？",
+      "experiment": "M4 环境组空间留出比较",
+      "figure_type": "空间块稳健热图",
+      "png": "png/HET03_group_spatial_test_change.png",
+      "svg": "svg/HET03_group_spatial_test_change.svg",
+      "pdf": "pdf/HET03_group_spatial_test_change.pdf",
+      "source": "data/HET03_group_spatial_test_change_source.csv",
+      "caption": "captions/HET03_group_spatial_test_change.md"
+    },
+    {
+      "id": "HET04_soil_group_paired_slopes",
+      "title": "点为同土类、同 5 km 块配对上的固定线性斜率，横线为按 5 km 空间块重抽样得到的 95% 区间",
+      "scientific_question": "低值筛选前后，三类主要土壤中的 SHI、OM 和 SW 配对斜率如何变化？",
+      "experiment": "土壤类型分层的空间块斜率对照",
+      "figure_type": "空间块稳健森林图",
+      "png": "png/HET04_soil_group_paired_slopes.png",
+      "svg": "svg/HET04_soil_group_paired_slopes.svg",
+      "pdf": "pdf/HET04_soil_group_paired_slopes.pdf",
+      "source": "data/HET04_soil_group_paired_slopes_source.csv",
+      "caption": "captions/HET04_soil_group_paired_slopes.md"
+    },
+    {
+      "id": "HET05_group_matching_support_balance",
+      "title": "每个气泡代表一个环境组与一个匹配方案；气泡大小按该组同组配对数缩放，颜色表示从配对端点环境值重算的连续环境差平均绝对标准化幅度，各变量以全体有效耕地像元标准差统一量纲",
+      "scientific_question": "阈值过滤及重新匹配后，各环境组保留多少配对、环境相似度如何？",
+      "experiment": "M4 分组匹配支持量与环境差异",
+      "figure_type": "分组匹配诊断气泡图",
+      "png": "png/HET05_group_matching_support_balance.png",
+      "svg": "svg/HET05_group_matching_support_balance.svg",
+      "pdf": "pdf/HET05_group_matching_support_balance.pdf",
+      "source": "data/HET05_group_matching_support_balance_source.csv",
+      "caption": "captions/HET05_group_matching_support_balance.md"
+    }
+  ]
+}

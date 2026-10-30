@@ -8,7 +8,7 @@
     ],
     "data_path": "figures/data/01_matching_coverage_balance.csv",
     "caption_path": "figures/captions/01_matching_coverage_balance.md",
-    "caption": "The 243-configuration search used 40,000 complete rows for Aa_20yr and did not access health outcomes. Coverage, SMD, environmental distance, and exposure separation were all retained; the horizontal line is a descriptive balance reference."
+    "caption": "局地搜索在 20 年平均实际侵蚀下评价 243 组匹配参数，未读取健康结局。覆盖率、SMD、环境距离和侵蚀差异均纳入设计诊断；横线仅为描述性平衡参考。"
   },
   {
     "name": "02_matching_method_pair_fit",
@@ -19,7 +19,7 @@
     ],
     "data_path": "figures/data/02_matching_method_pair_fit.csv",
     "caption_path": "figures/captions/02_matching_method_pair_fit.md",
-    "caption": "Full-sample paired R² is descriptive and not used as the matching selection objective. M3 is soil-specific K-means k=6 plus matching; M4 is direct nearest-neighbor matching within exact soil strata."
+    "caption": "全样本配对 R² 为描述性拟合，不作为匹配规则的筛选目标。M3 为土类内 K 均值 k=6 后匹配；M4 为在相同土类内直接进行最近邻匹配。"
   },
   {
     "name": "03_primary_paired_slopes",
@@ -30,7 +30,7 @@
     ],
     "data_path": "figures/data/03_primary_paired_slopes.csv",
     "caption_path": "figures/captions/03_primary_paired_slopes.md",
-    "caption": "Points show full-sample P1 matched-pair slopes and 95% model-based confidence intervals. These intervals do not adjust for residual spatial dependence; the repeated 5km holdout results are reported separately."
+    "caption": "点为全样本 P1 匹配配对斜率，横线为模型估计的 95% 置信区间。该区间未校正残余空间依赖；重复 5 km 空间留出结果另行报告。"
   },
   {
     "name": "04_repeated_spatial_validation",
@@ -41,7 +41,7 @@
     ],
     "data_path": "figures/data/04_repeated_spatial_validation.csv",
     "caption_path": "figures/captions/04_repeated_spatial_validation.md",
-    "caption": "Each box summarizes ten seeded, whole-block 5km spatial test splits. M0–M2 use a common complete-case pixel sample across both Aa periods; M3–M4 use independently constructed train, validation and test pairs with train-fitted transformations."
+    "caption": "每个箱线图汇总 10 次固定随机种子的 5 km 整块空间测试划分。M0–M2 在两个 Aa 时期使用共同完整像元样本；M3–M4 分别构建训练、验证和测试配对，并仅用训练集拟合变换。"
   },
   {
     "name": "05_erosion_increment_delta_r2",
@@ -52,7 +52,7 @@
     ],
     "data_path": "figures/data/05_erosion_increment_delta_r2.csv",
     "caption_path": "figures/captions/05_erosion_increment_delta_r2.md",
-    "caption": "For each seed and outcome, the environment-only and environment-plus-log1p(Aa) OLS models use the same training pixels and score the same held-out pixels. This is predictive increment, not causal effect or independent data validation."
+    "caption": "每个随机种子和指标下，纯环境模型与环境加 log1p(Aa) 的 OLS 模型使用相同训练像元，并在相同留出像元上评分。该增量表示预测信息变化，不是因果效应或独立数据验证。"
   },
   {
     "name": "06_environmental_heterogeneity",
@@ -63,7 +63,7 @@
     ],
     "data_path": "figures/data/06_environmental_heterogeneity.csv",
     "caption_path": "figures/captions/06_environmental_heterogeneity.md",
-    "caption": "Subgroup estimates use M4 full-sample pairs and prespecified soil, V5 K-means and environmental tertile definitions. Groups were fitted or binned descriptively; subgroup differences remain exploratory and multiple testing is adjusted by Benjamini–Hochberg in the table."
+    "caption": "亚组估计使用 M4 全样本配对及预先定义的土类、V5 K 均值组和环境三分位。分组用于描述；亚组差异仍属探索结果，多重检验在表格中按 Benjamini–Hochberg 方法校正。"
   },
   {
     "name": "07_environment_groups_map_and_high_response",
@@ -74,7 +74,7 @@
     ],
     "data_path": "figures/data/07_environment_groups_map_and_high_response.csv",
     "caption_path": "figures/captions/07_environment_groups_map_and_high_response.md",
-    "caption": "Left: a deterministic sample of valid cells colored by soil-specific V5 K-means group (Elevation and LST), shown as points on the projected grid. Right: for primary exposure Aa_20yr, the top three full-sample mean-response groups for each primary outcome. The Aa_2020 screen is available in the accompanying table. The top groups are outcome-ranked descriptive subsets, not independently validated hotspots; no continuous or causal spatial surface is inferred."
+    "caption": "左图为有效像元的固定抽样，颜色表示土类内环境组编号、点形表示土壤类型，并使用真实投影坐标绘制；组号只在土类内部解释。右图为 20 年平均实际侵蚀下各优先指标全样本均值最高的三个环境组；2020 年结果见配套数据表。高响应环境组根据健康结果排序，仅作描述性探索，不代表经独立验证的热点，也不表示连续空间面或因果机制。"
   },
   {
     "name": "08_health_response_curves",
@@ -85,7 +85,7 @@
     ],
     "data_path": "figures/data/08_health_response_curves.csv",
     "caption_path": "figures/captions/08_health_response_curves.md",
-    "caption": "Blue points use the fixed 10,000-row plotting sample; complete cases are used for each outcome. Orange dashed curves are natural-spline fits to that same plotting sample. Green curves are prior Oracle-selected full-sample apparent model partial-dependence curves for Aa_20yr at median environmental conditions, selected by apparent R² from 1,024 model trials across 13 families. Each green curve's selected model and complete-case n are in the figure data. The curves use different sample scopes; neither is an independent validation curve."
+    "caption": "灰蓝色散点来自固定的 10,000 行绘图样本；每项结局使用其完整观测。橙色虚线为该样本的自然样条描述曲线。蓝色实线为早先 Oracle 全样本表观模型在环境变量中位数条件下的 Aa_20yr 偏依赖曲线，曾在 13 类模型的 1,024 次试验中按表观 R²择优。模型类型与完整样本量见图源数据。两条曲线的样本范围不同，均不是独立验证曲线。"
   },
   {
     "name": "09_pair_distance_and_exposure_diagnostics",
@@ -96,7 +96,7 @@
     ],
     "data_path": "figures/data/09_pair_distance_and_exposure_diagnostics.csv",
     "caption_path": "figures/captions/09_pair_distance_and_exposure_diagnostics.md",
-    "caption": "Each point is a full-sample M4 pair. Red points indicate a zero-to-positive exposure pair. Distance distributions are matching diagnostics; the full spatial-validation performance is in Figure 4."
+    "caption": "每个点代表一个全样本 M4 配对；金色点表示低侵蚀端为零的配对。环境距离和地理距离用于描述匹配质量；完整空间留出表现见图 4。"
   },
   {
     "name": "10_exposure_period_comparison",
@@ -107,6 +107,6 @@
     ],
     "data_path": "figures/data/10_exposure_period_comparison.csv",
     "caption_path": "figures/captions/10_exposure_period_comparison.md",
-    "caption": "Aa_20yr and Aa_2020 are compared with the same complete pixels, V5 variables, OLS design and spatial seeds for the cell-level analysis. Full-sample matched pairs are exposure-specific and are displayed in the accompanying table rather than treated as paired-period identical samples."
+    "caption": "像元层比较要求两期使用同一批完整像元、V5 环境变量、OLS 设计和空间随机种子。全样本匹配配对按侵蚀时期分别构建，因此配套表单列展示，不视为两期完全相同的配对样本。"
   }
 ]

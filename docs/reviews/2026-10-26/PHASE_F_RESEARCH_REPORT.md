@@ -1,218 +1,70 @@
-# Phase F research report
+# Phase F 探索性研究报告：环境匹配、配对差值与空间稳定性
 
-**Run:** `phase_f_20261026_seed20261026`  
-**Mode:** `EXPLORATORY_ORACLE`  
-**Baseline commit:** `0bb1b12fcab24619b3ce8e03f0871a54744be0b4` (Phase F files remain uncommitted in this workspace)  
-**Input run:** `run_20261025T114741_470772Z`  
-**Charter:** `docs/RESEARCH_CHARTER.md` v1.1; unchanged.  
+- **运行编号：** `phase_f_20261026_seed20261026`
+- **分析模式：** `EXPLORATORY_ORACLE`；本报告不构成因果结论、独立验证或正式设计锁定。
+- **输入运行：** `run_20261025T114741_470772Z`
+- **研究总纲：** `docs/RESEARCH_CHARTER.md` V1.1，正文未修改。
 
-## 1. Research objectives
+## 1. 研究目的与数据边界
 
-Phase F compares direct regression, environmental adjustment, environment-group slopes, K-means matching, and direct nearest-neighbor matching. It corrects the previous pooled matched-cell regression by fitting high-minus-low pair differences, repeats whole-block spatial evaluation across ten seeds, estimates erosion's incremental predictive value, checks environmental heterogeneity, and compares the two precomputed exposure periods.
+本阶段比较直接回归、环境调整、环境组斜率、土类内 K 均值匹配和土类内最近邻匹配。主要改进是以匹配对的高侵蚀端减低侵蚀端建立差值分析，按 5 km 空间块重复留出，并在同一训练/测试样本上比较加入侵蚀信息前后的预测变化。
 
-All results remain exploratory. The input outcomes are spatial prediction surfaces; no causal effect or independent field-observation validation is claimed.
+本轮复用对齐数据库中的 `Aa_20yr` 与 `Aa_2020`，直接使用既有实际侵蚀值，不重算或验证 RUSLE 因子乘积，也不重跑 PCNM。健康指标来自 30 m 随机森林预测栅格，因此像元数不是独立实测样本数。既有 Oracle 搜索曾使用全研究区；本报告中的空间留出属于内部诊断，不是未触碰的外部验证。
 
-## 2. Inherited work and input boundary
+## 2. 匹配设计与质量诊断
 
-The analysis reuses the aligned 392,527-row databases from `run_20261025T114741_470772Z`. `Aa_20yr` and `Aa_2020` are used as already-computed values. RUSLE was not recomputed or factor-validated, PCNM was not run, and the charter was not changed. Input SHA-256 digests, schemas, versions, and row counts are in `phase-f/tables/provenance.json` and the run directory.
+参考方案 M4 使用高程与地表温度（V5）、0.35 环境卡尺、1,000 m 地理距离上限、组内侵蚀百分位秩差 0.50，且不重复使用像元。M3 沿用相同变量和阈值，并在各土类内先做 K 均值 k=6。局地搜索在 `V1/V5/V7`、三种卡尺、三种地理半径、三种秩差与聚类方案中评估了 243 组结果盲候选；39 组进入多指标 Pareto 集。排序同时考虑覆盖率、环境平衡、匹配距离和侵蚀差异，没有读取健康结果。
 
-The previous Oracle run searched outcome-guided model and subset choices. Its selected curves and subgroups are kept separate and explicitly marked apparent/outcome-guided. Phase F's repeated spatial estimates are internal repeated block holdouts, not external validation.
+土壤类型编码按原始类别属性表标注：**26—冲积土，27—潮土，42—脱潮土**。地图图例已同时显示代码和名称。
 
-## 3. Environment matching design
+重复空间评估按 10 个固定种子将 5 km 整块分配为训练、验证和测试角色。环境标准化与 K 均值只在训练角色拟合；M3/M4 在各空间角色内分别建对。优先结局 Aa_20yr 的 M3 中位覆盖率为 0.505、最大绝对 SMD 中位数为 0.010；M4 分别为 0.483 和 0.012。两种方案均保留为并行探索候选，不仅按单一拟合指标选方案。
 
-The M4 reference is the prior V5 design (Elevation and LST, direct nearest neighbor, no K-means, caliper 0.35, 1,000m radius, within-stratum exposure percentile gap 0.50, no replacement). M3 uses the same vector and thresholds with soil-specific K-means k=6. The local Aa_20yr search evaluates 243 outcome-blind combinations across V1/V5/V7, calipers 0.25/0.35/0.50, radii 300/500/1,000m, rank gaps 0.30/0.40/0.50, and no clustering/k=6/k=8. Search results rank coverage, balance, distance, and exposure separation; no health outcome enters matching selection.
+## 3. 优先指标的全样本配对差值
 
-The local grid uses `40,000` matched-eligible rows per sampled search pool where reported. Final repeated validation fits the environmental scaler and K-means labels on each training role, then constructs train, validation and test pairs independently under frozen thresholds.
+侵蚀差值定义为 `Δlog1p(Aa) = log1p(Aa高) − log1p(Aa低)`，健康差值定义为 `Δ健康 = 健康高 − 健康低`。下表为 M4、20 年平均实际侵蚀的全样本 P1 配对线性斜率；区间为模型区间，未处理残余空间相关。
 
-## 4. Matching before and after diagnostics
+| 指标 | 配对数 | 平均健康差 | 斜率 | 95% 区间下限 | 95% 区间上限 | 标准化斜率 | 表观 R² | 健康差为正比例 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 土壤健康指数（SHI） | 89,811 | -0.033 | -0.010 | -0.011 | -0.010 | -0.123 | 0.015 | 0.233 |
+| 有机质（OM） | 90,867 | -2.854 | -0.526 | -0.571 | -0.482 | -0.077 | 0.006 | 0.258 |
+| 土壤含水量（SW） | 90,867 | -6.062 | -1.965 | -2.026 | -1.903 | -0.204 | 0.042 | 0.142 |
 
-The local search contains 243 candidate configurations; 39 are Pareto candidates under the four recorded design criteria. The CV balance table contains 160 test-role configuration summaries. Pair-level environmental distance, geographic distance, overall and stratum SMD, per-variable absolute differences, actual Aa gaps, zero-positive pairs, and failure reasons are available in `phase-f/tables/matching_balance_diagnostics.csv`.
+三项指标的全样本差值斜率均为负，但拟合度有限。置信区间仅反映当前回归假设，不能视为已校正空间依赖的推断。其余六项健康指标及两种侵蚀时期的全部模型结果保留在配对结果表中。
 
-Outcome-blind local leaders:
+## 4. 重复空间验证与侵蚀增量
 
-| candidate_id | environment_vector | cluster_method | cluster_count_per_soil | environment_caliper | geographic_radius_m | erosion_rank_gap | area_coverage | max_abs_matched_smd | environment_distance_median | median_abs_log1p_Aa_difference | outcome_blind_rank |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| local_090_V5_none_c0.25_r1000_g0.5 | V5 | none | 0.000 | 0.250 | 1000.000 | 0.500 | 0.442 | 0.009 | 0.059 | 2.577 | 1.000 |
-| local_144_V5_kmeans_8_c0.25_r1000_g0.5 | V5 | kmeans | 8.000 | 0.250 | 1000.000 | 0.500 | 0.469 | 0.007 | 0.056 | 2.542 | 1.000 |
-| local_117_V5_kmeans_6_c0.25_r1000_g0.5 | V5 | kmeans | 6.000 | 0.250 | 1000.000 | 0.500 | 0.465 | 0.009 | 0.056 | 2.548 | 3.000 |
-| local_089_V5_none_c0.25_r1000_g0.4 | V5 | none | 0.000 | 0.250 | 1000.000 | 0.400 | 0.588 | 0.008 | 0.055 | 2.403 | 4.000 |
-| local_143_V5_kmeans_8_c0.25_r1000_g0.4 | V5 | kmeans | 8.000 | 0.250 | 1000.000 | 0.400 | 0.618 | 0.007 | 0.053 | 2.365 | 5.000 |
+M0–M2 使用两个侵蚀时期共有的完整像元；M3/M4 使用各自空间角色内独立构造的配对。10 次 5 km 留出结果显示，优先指标的匹配配对测试 R²整体靠近零；SW 相对较高，但 M3/M4 中位验证 R²约为 0.062 与 0.040。测试结果与全样本表观回归分开报告。
 
-## 5. Matched-pair difference models
+像元层“仅环境变量”与“环境变量加 `log1p(Aa)`”模型使用相同像元、模型族和空间划分。Aa_20yr 下 SHI、OM、SW 的测试 ΔR²中位数分别约为 0.172、0.170、0.308；Aa_2020 下分别约为 0.038、0.034、0.044。该结果表示在本设计下的预测增量，不代表侵蚀的独立因果贡献。配对差值层的增量远小于像元层，且单独记录。
 
-For each fixed full-sample M3/M4 configuration, the primary exposure contrast is `Δlog1p(Aa) = log1p(Aa_high) − log1p(Aa_low)` and the response is `ΔY = Y_high − Y_low`. P1 uses an intercept; P2 omits the intercept as an assumption sensitivity; P3 adjusts for paired Elevation and LST differences; P4 uses Huber robust regression. Tables include coefficient, standardized coefficient, 95% interval, p-value, paired R², RMSE/MAE, difference distribution, zero-positive pairing, and n.
+## 5. 环境异质性与结果导向筛选
 
-M4 Aa_20yr primary outcomes (full-sample descriptive estimates):
+亚组比较涵盖土类、土类内 V5 K 均值组以及高程、地表温度分位组；交互检验按 Benjamini–Hochberg 方法校正。可估计的交互检验中，94 项校正后 q 值小于 0.05；这些检验属于探索性结果，仍需同时考察组内配对量、空间结构及选择偏差。
 
-| outcome | coefficient | ci_lower | ci_upper | standardized_coefficient | r_squared | n_pairs | mean_delta_outcome | positive_delta_outcome_fraction |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SHI_candidate | -0.010 | -0.011 | -0.010 | -0.123 | 0.015 | 89811.000 | -0.033 | 0.233 |
-| OM | -0.526 | -0.571 | -0.482 | -0.077 | 0.006 | 90867.000 | -2.854 | 0.258 |
-| SW | -1.965 | -2.026 | -1.903 | -0.204 | 0.042 | 90867.000 | -6.062 | 0.142 |
+本次运行明确标记 `outcome_guided_selection=true`。另行开展的高响应环境组筛选按全样本健康均值排序，跨 18 个“结局×时期”组合评估 324 个候选组，保留 54 个高响应组；各组合的筛选覆盖比例为 0.067–0.317，中位数约 0.137。该结果只用于提出待检验候选，不能解释为独立确认的热点或机制。
 
-These full-sample confidence intervals are model-based and do not account for residual spatial dependence. Repeated spatial test results are reported separately below.
+## 6. 解释限制与阶段状态
 
-## 6. SHI, OM, and SW
+- 预测栅格空间关联不等于独立实测样点关系或因果效应。
+- 全样本配对回归的区间未校正空间相关；10 次空间留出是内部诊断。
+- 匹配主变量排除了 R、K、LS、C、P，但仍可能存在其他环境混杂。
+- 侵蚀栅格的物理单位和精确时间构造沿用既有资料登记；本阶段不自行推断。
+- 既有 Oracle 结果导向模型、分组及筛选结果均保留其表观/筛选属性。
+- 证据尚不足以只保留 M3 或 M4；两种方案并列进入后续方法审查。
 
-The three priority indicators are compared using the same P1 definition across M3 and M4, both Aa periods, and the same repeated 5km spatial seeds. The table below reports test R² medians and interquartile ranges; no indicator is selected solely by its largest R².
+## 7. 图集与可复核数据
 
-| outcome | method | validation_r2_median | validation_r2_q25 | validation_r2_q75 | positive_direction_fraction | negative_direction_fraction | median_test_coverage | median_test_max_abs_smd | n_seed_folds |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OM | M0 | 0.144 | 0.126 | 0.190 | 0.000 | 1.000 | NA | NA | 10.000 |
-| OM | M1 | 0.122 | 0.109 | 0.169 | 0.000 | 1.000 | NA | NA | 10.000 |
-| OM | M2 | 0.177 | 0.134 | 0.199 | 0.000 | 1.000 | NA | NA | 10.000 |
-| OM | M3 | 0.001 | -0.006 | 0.006 | 0.000 | 1.000 | 0.505 | 0.010 | 10.000 |
-| OM | M4 | -0.003 | -0.012 | 0.007 | 0.000 | 1.000 | 0.483 | 0.012 | 10.000 |
-| SHI_candidate | M0 | 0.172 | 0.037 | 0.200 | 0.000 | 1.000 | NA | NA | 10.000 |
-| SHI_candidate | M1 | 0.317 | 0.104 | 0.333 | 0.000 | 1.000 | NA | NA | 10.000 |
-| SHI_candidate | M2 | 0.371 | 0.289 | 0.413 | 0.000 | 1.000 | NA | NA | 10.000 |
-| SHI_candidate | M3 | 0.003 | -0.002 | 0.012 | 0.000 | 1.000 | 0.505 | 0.010 | 10.000 |
-| SHI_candidate | M4 | 0.000 | -0.008 | 0.008 | 0.000 | 1.000 | 0.483 | 0.012 | 10.000 |
-| SW | M0 | 0.335 | 0.306 | 0.352 | 0.000 | 1.000 | NA | NA | 10.000 |
-| SW | M1 | 0.410 | 0.361 | 0.442 | 0.000 | 1.000 | NA | NA | 10.000 |
-| SW | M2 | 0.411 | 0.354 | 0.444 | 0.000 | 1.000 | NA | NA | 10.000 |
-| SW | M3 | 0.062 | 0.053 | 0.066 | 0.000 | 1.000 | 0.505 | 0.010 | 10.000 |
-| SW | M4 | 0.040 | 0.027 | 0.056 | 0.000 | 1.000 | 0.483 | 0.012 | 10.000 |
+| 图 | 中文主题 | 图源数据 |
+| --- | --- | --- |
+| [01](phase-f/figures/01_matching_coverage_balance.png) | 局地匹配覆盖率与环境平衡 | [CSV](phase-f/figures/data/01_matching_coverage_balance.csv) |
+| [02](phase-f/figures/02_matching_method_pair_fit.png) | 匹配方法与侵蚀时期的配对拟合 | [CSV](phase-f/figures/data/02_matching_method_pair_fit.csv) |
+| [03](phase-f/figures/03_primary_paired_slopes.png) | 优先指标配对差值斜率 | [CSV](phase-f/figures/data/03_primary_paired_slopes.csv) |
+| [04](phase-f/figures/04_repeated_spatial_validation.png) | 5 km 整块重复空间留出 | [CSV](phase-f/figures/data/04_repeated_spatial_validation.csv) |
+| [05](phase-f/figures/05_erosion_increment_delta_r2.png) | 环境变量之外的侵蚀预测增量 | [CSV](phase-f/figures/data/05_erosion_increment_delta_r2.csv) |
+| [06](phase-f/figures/06_environmental_heterogeneity.png) | 不同环境背景下的关联差异 | [CSV](phase-f/figures/data/06_environmental_heterogeneity.csv) |
+| [07](phase-f/figures/07_environment_groups_map_and_high_response.png) | 环境组空间分布与高响应组 | [CSV](phase-f/figures/data/07_environment_groups_map_and_high_response.csv) |
+| [08](phase-f/figures/08_health_response_curves.png) | 九项指标的描述性响应曲线 | [CSV](phase-f/figures/data/08_health_response_curves.csv) |
+| [09](phase-f/figures/09_pair_distance_and_exposure_diagnostics.png) | 环境距离、地理距离与侵蚀差 | [CSV](phase-f/figures/data/09_pair_distance_and_exposure_diagnostics.csv) |
+| [10](phase-f/figures/10_exposure_period_comparison.png) | 两期侵蚀的共同像元比较 | [CSV](phase-f/figures/data/10_exposure_period_comparison.csv) |
 
-## 7. Other six health indicators
-
-AN, CEC, pH, BD, MBC, and RESP are included in all cell-level and matched-pair analyses. Inspect `paired_difference_results.csv`, `repeated_spatial_validation.csv`, and `final_model_comparison.csv` for per-indicator coefficients, uncertainty, sample sizes, and spatial test metrics. Because outcomes are prediction surfaces, these results describe associations among aligned spatial predictions.
-
-## 8. Repeated spatial validation
-
-There are 10 deterministic 5km whole-block seeds. Existing grid coordinates define the folds; M3/M4 matching is performed separately within each role, and pair endpoints are checked against the role assignment. M0–M2 use the same complete-case pixels for both Aa periods; M3/M4 use role-specific pairs. Validation and test are reported independently. These are repeated internal spatial holdouts after prior data exploration, not external validation.
-
-## 9. Incremental R² of erosion exposure
-
-The cell-level comparison uses the same V5 covariates, training/test pixels, OLS family, and spatial split for environment-only versus environment-plus-log1p(Aa). Matched-pair comparisons similarly add `Δlog1p(Aa)` to paired environment differences on the same pairs. Test-fold summaries below keep cell-level and matched-pair estimands separate and report medians, interquartile ranges, positive-fold fractions, coefficient-direction consistency, and seed counts:
-
-| analysis_type | method | exposure | outcome | median_delta_r2 | q25_delta_r2 | q75_delta_r2 | positive_delta_r2_fraction | beta_direction_consistency | n_spatial_seeds |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| cell_level_nested_ols | NA | Aa_2020 | AN | 0.009 | 0.002 | 0.025 | 0.800 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_2020 | BD | 0.021 | 0.018 | 0.022 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_2020 | CEC | 0.021 | 0.012 | 0.027 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_2020 | MBC | 0.012 | 0.010 | 0.016 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_2020 | OM | 0.034 | 0.028 | 0.043 | 0.900 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_2020 | RESP | 0.021 | 0.014 | 0.023 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_2020 | SHI_candidate | 0.038 | 0.024 | 0.050 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_2020 | SW | 0.044 | 0.032 | 0.051 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_2020 | pH | 0.001 | -0.001 | 0.002 | 0.700 | 0.900 | 10.000 |
-| cell_level_nested_ols | NA | Aa_20yr | AN | 0.037 | 0.020 | 0.058 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_20yr | BD | 0.019 | 0.016 | 0.020 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_20yr | CEC | 0.059 | 0.047 | 0.063 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_20yr | MBC | 0.002 | -0.001 | 0.003 | 0.700 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_20yr | OM | 0.170 | 0.133 | 0.197 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_20yr | RESP | 0.041 | 0.032 | 0.046 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_20yr | SHI_candidate | 0.172 | 0.157 | 0.178 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_20yr | SW | 0.308 | 0.276 | 0.319 | 1.000 | 1.000 | 10.000 |
-| cell_level_nested_ols | NA | Aa_20yr | pH | 0.036 | 0.016 | 0.047 | 0.900 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M3 | Aa_2020 | AN | 0.001 | -0.001 | 0.003 | 0.600 | 0.800 | 10.000 |
-| matched_pair_nested_ols | M4 | Aa_2020 | AN | 0.001 | -0.001 | 0.002 | 0.600 | 0.800 | 10.000 |
-| matched_pair_nested_ols | M3 | Aa_2020 | BD | 0.000 | 0.000 | 0.001 | 0.900 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M4 | Aa_2020 | BD | 0.000 | 0.000 | 0.001 | 0.900 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M3 | Aa_2020 | CEC | 0.002 | 0.001 | 0.005 | 0.800 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M4 | Aa_2020 | CEC | 0.002 | 0.000 | 0.006 | 0.800 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M3 | Aa_2020 | MBC | 0.000 | -0.000 | 0.000 | 0.500 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M4 | Aa_2020 | MBC | -0.000 | -0.000 | 0.000 | 0.500 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M3 | Aa_2020 | OM | 0.002 | -0.001 | 0.006 | 0.700 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M4 | Aa_2020 | OM | 0.002 | -0.001 | 0.007 | 0.700 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M3 | Aa_2020 | RESP | 0.001 | -0.001 | 0.003 | 0.700 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M4 | Aa_2020 | RESP | 0.000 | -0.001 | 0.003 | 0.500 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M3 | Aa_2020 | SHI_candidate | 0.002 | -0.002 | 0.009 | 0.700 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M4 | Aa_2020 | SHI_candidate | 0.003 | -0.001 | 0.010 | 0.700 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M3 | Aa_2020 | SW | 0.004 | 0.001 | 0.009 | 0.800 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M4 | Aa_2020 | SW | 0.006 | 0.001 | 0.011 | 0.800 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M3 | Aa_2020 | pH | 0.002 | -0.001 | 0.002 | 0.700 | 1.000 | 10.000 |
-| matched_pair_nested_ols | M4 | Aa_2020 | pH | 0.002 | 0.001 | 0.003 | 0.800 | 1.000 | 10.000 |
-
-The seed-level records are in `erosion_increment_r2.csv`; these summaries are also in `erosion_increment_r2_summary.csv`. Positive ΔR² is predictive increment under this design; it does not establish an independent causal contribution.
-
-## 10. Environmental heterogeneity
-
-Pair slopes are summarized by exact soil type, soil-specific V5 K-means groups, and pair-midpoint Elevation/TWI/LST/NDWI tertiles where sample support permits. Interaction tests compare group-specific slopes; Benjamini–Hochberg adjusted p-values are reported for the interaction-test family. 94 interaction tests have FDR-adjusted p<0.05 among estimable comparisons. Environmental groups use unsupervised full-sample fitting only for descriptive subgroup summaries; fold models use training-only transforms.
-
-## 11. High-response environmental groups
-
-This Oracle run is explicitly marked `outcome_guided_selection=true`. The group screen uses full-sample mean outcome and ranks groups from highest to lowest, retaining the top three in each exposure-by-outcome family. It considered 324 group candidates across 18 families and retained 54 groups. The selected groups cover 0.067–0.317 of eligible complete-case cells per family (median 0.137). `high_response_environment_groups.csv` records the selection metric, objective, candidate count, group and selected-set cell retention, and complete-case denominator on each row. These are outcome-ranked descriptive groups; matched-pair subgroup estimates remain in `environmental_heterogeneity.csv`.
-
-| exposure | outcome | environment_group | n_cells | mean_outcome | median_outcome | mean_Aa | cell_level_beta_log1p_Aa | cell_level_r_squared_apparent |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Aa_20yr | SHI_candidate | 2704.000 | 29543.000 | 0.651 | 0.650 | 3.123 | -0.007 | 0.085 |
-| Aa_20yr | SHI_candidate | 4200.000 | 11023.000 | 0.638 | 0.640 | 5.655 | -0.007 | 0.123 |
-| Aa_20yr | SHI_candidate | 4205.000 | 11288.000 | 0.639 | 0.642 | 4.789 | -0.006 | 0.116 |
-| Aa_20yr | AN | 2702.000 | 68003.000 | 99.074 | 102.615 | 5.324 | -1.011 | 0.009 |
-| Aa_20yr | AN | 2704.000 | 30133.000 | 106.913 | 108.673 | 3.091 | -1.271 | 0.042 |
-| Aa_20yr | AN | 4205.000 | 11364.000 | 100.179 | 101.093 | 4.793 | -0.482 | 0.003 |
-| Aa_20yr | OM | 2700.000 | 79022.000 | 16.830 | 17.293 | 4.891 | -1.018 | 0.158 |
-| Aa_20yr | OM | 2704.000 | 30126.000 | 16.955 | 17.745 | 3.092 | -0.668 | 0.130 |
-| Aa_20yr | OM | 4200.000 | 11153.000 | 16.621 | 17.641 | 5.645 | -0.934 | 0.172 |
-| Aa_20yr | CEC | 4202.000 | 10086.000 | 22.520 | 22.599 | 6.316 | 0.270 | 0.042 |
-| Aa_20yr | CEC | 4204.000 | 4128.000 | 22.393 | 22.272 | 8.855 | 0.373 | 0.075 |
-| Aa_20yr | CEC | 4205.000 | 11359.000 | 22.313 | 22.299 | 4.793 | 0.268 | 0.038 |
-
-## 12. Aa_2020 comparison
-
-Aa_2020 is the secondary exposure period. The cell-level comparison requires both exposure values, V5, and the outcome on the same pixels, with identical model forms and spatial seeds. M3/M4 pairs are separately generated for each exposure and therefore are not treated as identical matched observations across periods. Units and exact temporal construction remain as documented in the prior audit; they were not inferred here.
-
-## 13. Main method and data limitations
-
-- The health indicators are spatial prediction surfaces rather than independent field observations.
-- The full-sample matched-pair fits are descriptive apparent estimates; their OLS intervals do not address spatial dependence.
-- Ten 5km splits are internal repeated spatial holdouts following earlier Oracle exploration, not an untouched external test set.
-- The local parameter grid is searched for Aa_20yr; the same V5 reference thresholds are applied to Aa_2020 without claiming they are optimal for that exposure.
-- V5 comprises Elevation and LST; residual environmental confounding can remain. P3 adjusts only for paired differences in those two variables.
-- The inherited Aa units/time metadata limitations remain. This phase does not validate or recalculate RUSLE.
-- Figure 8 compares fixed plotting-sample splines with prior outcome-selected full-sample model curves. The inherited green curves were selected by full-sample apparent R² from 1024 model trials across 13 model families; outcome-specific complete-case counts and selected models are in `phase-f/figures/data/08_health_response_curves.csv`. Both curve families are descriptive and use different sample scopes.
-- Maps plot sampled points and do not imply continuous observed surfaces.
-
-## 14. Provisional method recommendation
-
-The evidence does not meet the joint rule for dropping either matcher; retain M3 and M4 as parallel exploratory candidates.
-
-Current median 10-seed M3/M4 test summaries for Aa_20yr priority outcomes:
-
-| outcome | method | validation_r2_median | median_test_coverage | median_test_max_abs_smd | median_test_environment_distance | median_test_geographic_distance_m | median_test_abs_log1p_Aa_gap |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| OM | M3 | 0.001 | 0.505 | 0.010 | 0.029 | 493.314 | 2.520 |
-| OM | M4 | -0.003 | 0.483 | 0.012 | 0.030 | 505.091 | 2.573 |
-| SHI_candidate | M3 | 0.003 | 0.505 | 0.010 | 0.029 | 493.314 | 2.520 |
-| SHI_candidate | M4 | 0.000 | 0.483 | 0.012 | 0.030 | 505.091 | 2.573 |
-| SW | M3 | 0.062 | 0.505 | 0.010 | 0.029 | 493.314 | 2.520 |
-| SW | M4 | 0.040 | 0.483 | 0.012 | 0.030 | 505.091 | 2.573 |
-
-Continue to prioritize SHI, OM, and SW only if their paired difference direction, held-out performance, ΔR² stability, balance, and subgroup evidence agree. Do not promote a model based only on apparent R².
-
-## 15. Next research actions
-
-1. Obtain ChatGPT and researcher review of the matching and paired-difference estimands at the exact commit that contains the Phase F artifacts.
-2. Reconcile reviewer comments with the charter and decide whether to lock a matcher; preserve M3/M4 if no method dominates on balance, coverage, exposure separation, and repeated spatial performance.
-3. Trace source, units, and temporal definitions for Aa and the health prediction surfaces before formal inference.
-4. If an indicator remains stable, seek independent measured validation or a genuinely new spatial/temporal assessment set before making stronger claims.
-5. Do not advance the next formal phase until the review request is answered and the user approves the resulting research decision.
-
-## Required data tables
-
-- [`matching_method_comparison.csv`](phase-f/tables/matching_method_comparison.csv)
-- [`matching_balance_diagnostics.csv`](phase-f/tables/matching_balance_diagnostics.csv)
-- [`paired_difference_results.csv`](phase-f/tables/paired_difference_results.csv)
-- [`repeated_spatial_validation.csv`](phase-f/tables/repeated_spatial_validation.csv)
-- [`erosion_increment_r2.csv`](phase-f/tables/erosion_increment_r2.csv)
-- [`environmental_heterogeneity.csv`](phase-f/tables/environmental_heterogeneity.csv)
-- [`high_response_environment_groups.csv`](phase-f/tables/high_response_environment_groups.csv)
-- [`exposure_period_comparison.csv`](phase-f/tables/exposure_period_comparison.csv)
-- [`final_model_comparison.csv`](phase-f/tables/final_model_comparison.csv)
-
-## Figures
-
-- [01_matching_coverage_balance PNG](phase-f/figures/01_matching_coverage_balance.png) · [SVG](phase-f/figures/01_matching_coverage_balance.svg) · [PDF](phase-f/figures/01_matching_coverage_balance.pdf) — The 243-configuration search used 40,000 complete rows for Aa_20yr and did not access health outcomes. Coverage, SMD, environmental distance, and exposure separation were all retained; the horizontal line is a descriptive balance reference.
-- [02_matching_method_pair_fit PNG](phase-f/figures/02_matching_method_pair_fit.png) · [SVG](phase-f/figures/02_matching_method_pair_fit.svg) · [PDF](phase-f/figures/02_matching_method_pair_fit.pdf) — Full-sample paired R² is descriptive and not used as the matching selection objective. M3 is soil-specific K-means k=6 plus matching; M4 is direct nearest-neighbor matching within exact soil strata.
-- [03_primary_paired_slopes PNG](phase-f/figures/03_primary_paired_slopes.png) · [SVG](phase-f/figures/03_primary_paired_slopes.svg) · [PDF](phase-f/figures/03_primary_paired_slopes.pdf) — Points show full-sample P1 matched-pair slopes and 95% model-based confidence intervals. These intervals do not adjust for residual spatial dependence; the repeated 5km holdout results are reported separately.
-- [04_repeated_spatial_validation PNG](phase-f/figures/04_repeated_spatial_validation.png) · [SVG](phase-f/figures/04_repeated_spatial_validation.svg) · [PDF](phase-f/figures/04_repeated_spatial_validation.pdf) — Each box summarizes ten seeded, whole-block 5km spatial test splits. M0–M2 use a common complete-case pixel sample across both Aa periods; M3–M4 use independently constructed train, validation and test pairs with train-fitted transformations.
-- [05_erosion_increment_delta_r2 PNG](phase-f/figures/05_erosion_increment_delta_r2.png) · [SVG](phase-f/figures/05_erosion_increment_delta_r2.svg) · [PDF](phase-f/figures/05_erosion_increment_delta_r2.pdf) — For each seed and outcome, the environment-only and environment-plus-log1p(Aa) OLS models use the same training pixels and score the same held-out pixels. This is predictive increment, not causal effect or independent data validation.
-- [06_environmental_heterogeneity PNG](phase-f/figures/06_environmental_heterogeneity.png) · [SVG](phase-f/figures/06_environmental_heterogeneity.svg) · [PDF](phase-f/figures/06_environmental_heterogeneity.pdf) — Subgroup estimates use M4 full-sample pairs and prespecified soil, V5 K-means and environmental tertile definitions. Groups were fitted or binned descriptively; subgroup differences remain exploratory and multiple testing is adjusted by Benjamini–Hochberg in the table.
-- [07_environment_groups_map_and_high_response PNG](phase-f/figures/07_environment_groups_map_and_high_response.png) · [SVG](phase-f/figures/07_environment_groups_map_and_high_response.svg) · [PDF](phase-f/figures/07_environment_groups_map_and_high_response.pdf) — Left: a deterministic sample of valid cells colored by soil-specific V5 K-means group (Elevation and LST), shown as points on the projected grid. Right: for primary exposure Aa_20yr, the top three full-sample mean-response groups for each primary outcome. The Aa_2020 screen is available in the accompanying table. The top groups are outcome-ranked descriptive subsets, not independently validated hotspots; no continuous or causal spatial surface is inferred.
-- [08_health_response_curves PNG](phase-f/figures/08_health_response_curves.png) · [SVG](phase-f/figures/08_health_response_curves.svg) · [PDF](phase-f/figures/08_health_response_curves.pdf) — Blue points use the fixed 10,000-row plotting sample; complete cases are used for each outcome. Orange dashed curves are natural-spline fits to that same plotting sample. Green curves are prior Oracle-selected full-sample apparent model partial-dependence curves for Aa_20yr at median environmental conditions, selected by apparent R² from 1,024 model trials across 13 families. Each green curve's selected model and complete-case n are in the figure data. The curves use different sample scopes; neither is an independent validation curve.
-- [09_pair_distance_and_exposure_diagnostics PNG](phase-f/figures/09_pair_distance_and_exposure_diagnostics.png) · [SVG](phase-f/figures/09_pair_distance_and_exposure_diagnostics.svg) · [PDF](phase-f/figures/09_pair_distance_and_exposure_diagnostics.pdf) — Each point is a full-sample M4 pair. Red points indicate a zero-to-positive exposure pair. Distance distributions are matching diagnostics; the full spatial-validation performance is in Figure 4.
-- [10_exposure_period_comparison PNG](phase-f/figures/10_exposure_period_comparison.png) · [SVG](phase-f/figures/10_exposure_period_comparison.svg) · [PDF](phase-f/figures/10_exposure_period_comparison.pdf) — Aa_20yr and Aa_2020 are compared with the same complete pixels, V5 variables, OLS design and spatial seeds for the cell-level analysis. Full-sample matched pairs are exposure-specific and are displayed in the accompanying table rather than treated as paired-period identical samples.
-
-Run-level provenance, exact dependencies, input digests, fold metadata, pair-level parquet, local-grid rows, and robustness sensitivities are stored under `outputs/exploratory_oracle/phase_f_20261026_seed20261026/` (Git-ignored). The review directory contains the nine CSVs, figure files, figure data and captions.
+完整表格位于 [`phase-f/tables/`](phase-f/tables/)。后续决定应结合研究总纲、数据来源核实与审查意见，不以单一模型表观 R²推进正式研究。

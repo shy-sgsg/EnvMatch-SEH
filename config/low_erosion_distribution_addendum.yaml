@@ -1,0 +1,11 @@
+phase: H-low-erosion-distribution-addendum
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: low_erosion_distribution_addendum_20261030_seed20261030_r1
+source_run_id: low_erosion_regime_20261029_seed20261029_r2
+input_run_id: run_20261025T114741_470772Z
+output_root: outputs/exploratory_oracle
+exposures: [Aa_20yr, Aa_2020]
+gmm_sample_size: 20000
+gmm_stability_seeds: [20261029, 20261030, 20261031, 20261032, 20261033, 20261034, 20261035, 20261036, 20261037, 20261038]
+posterior_cutoffs: [0.80, 0.90, 0.95]

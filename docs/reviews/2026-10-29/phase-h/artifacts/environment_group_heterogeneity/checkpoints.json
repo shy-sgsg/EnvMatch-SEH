@@ -1,0 +1,9 @@
+{
+  "environment_group_cell_retention_complete": true,
+  "group_matched_population_support_complete": true,
+  "matched_pixel_and_within_group_pair_responses_complete": true,
+  "group_spatial_validation_complete": true,
+  "spatial_block_slope_bootstrap_complete": true,
+  "figures_and_report_complete": true,
+  "resumed_from_saved_analysis_tables": true
+}

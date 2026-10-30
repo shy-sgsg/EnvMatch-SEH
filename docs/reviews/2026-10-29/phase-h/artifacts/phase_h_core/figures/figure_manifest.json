@@ -1,0 +1,26 @@
+{
+  "figure_count": 14,
+  "figures": [
+    "01_matched_response_direction",
+    "02_matched_endpoint_boxplots",
+    "03_apparent_r2_pixel_vs_pair",
+    "04_rank_association_vs_r2",
+    "05a_fixed_20k_natural_spline",
+    "05b_historical_full_sample_apparent",
+    "05c_matched_pixel_natural_spline",
+    "05d_matched_pair_natural_spline",
+    "06_group_effect_forest",
+    "07_environment_group_method_comparison",
+    "08_selected_group_map",
+    "09_apparent_vs_spatial_test",
+    "10_h1_interaction_inference_repair",
+    "11_common_sample_period_comparison"
+  ],
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "fixed_plot_sample_size_requested": 20000,
+  "outcome_guided_selection": true
+}

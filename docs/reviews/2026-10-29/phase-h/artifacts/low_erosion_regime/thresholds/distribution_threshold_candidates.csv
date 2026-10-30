@@ -1,0 +1,3 @@
+﻿exposure,candidate_method,threshold_original,threshold_log10,retained_fraction_positive,status,candidate_source,cdf_bootstrap_valid_fraction,cdf_bootstrap_threshold_cv,outcome_guided_selection,is_primary,primary_fallback_rule,threshold_id
+Aa_20yr,empirical_CDF_breakpoint,5.050187587738037,0.7033075101595376,0.8035598391275686,valid_distribution_candidate,distribution_derived,1.0,0.03564192410219087,False,True,KDE Scott ×1 优先；否则取首个通过分布判据的候选,T01
+Aa_2020,empirical_CDF_breakpoint,0.39669153094291687,-0.40154707127785294,0.8999782741389835,valid_distribution_candidate,distribution_derived,1.0,0.03231076740557536,False,True,KDE Scott ×1 优先；否则取首个通过分布判据的候选,T01

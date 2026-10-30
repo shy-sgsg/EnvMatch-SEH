@@ -1,1 +1,1 @@
-Candidate coverage and balance from the existing outcome-blind Phase F local search. The SMD guide is descriptive and is not used alone to declare a final match.
+候选覆盖率与平衡诊断来自既有 Phase F 结果盲局地搜索。SMD 参考线仅作描述，不单独用于判定最终匹配方案。

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="872.39952pt" height="339.59952pt" viewBox="0 0 872.39952 339.59952" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-29T18:58:40.786248</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 339.59952 
+L 872.39952 339.59952 
+L 872.39952 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 45.192656 311.62452 
+L 431.87976 311.62452 
+L 431.87976 21.977656 
+L 45.192656 21.977656 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 127.291357 311.62452 
+L 127.291357 21.977656 
+" clip-path="url(#p24897987f2)" style="fill: none; stroke: #e7edf0; stroke-linecap: round"/>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #52636e" x="127.291357" y="329.879832" transform="rotate(-0 127.291357 329.879832)">KDE 峰谷</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <path d="M 349.78106 311.62452 
+L 349.78106 21.977656 
+" clip-path="url(#p24897987f2)" style="fill: none; stroke: #e7edf0; stroke-linecap: round"/>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #52636e" x="349.78106" y="329.879832" transform="rotate(-0 349.78106 329.879832)">经验 CDF 折点</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <path d="M 45.192656 311.62452 
+L 431.87976 311.62452 
+" clip-path="url(#p24897987f2)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="35.692656" y="316.002176" transform="rotate(-0 35.692656 316.002176)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_4">
+      <path d="M 45.192656 261.251152 
+L 431.87976 261.251152 
+" clip-path="url(#p24897987f2)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="35.692656" y="265.628809" transform="rotate(-0 35.692656 265.628809)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_5">
+      <path d="M 45.192656 210.877785 
+L 431.87976 210.877785 
+" clip-path="url(#p24897987f2)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="35.692656" y="215.255441" transform="rotate(-0 35.692656 215.255441)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_6">
+      <path d="M 45.192656 160.504417 
+L 431.87976 160.504417 
+" clip-path="url(#p24897987f2)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="35.692656" y="164.882073" transform="rotate(-0 35.692656 164.882073)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_7">
+      <path d="M 45.192656 110.13105 
+L 431.87976 110.13105 
+" clip-path="url(#p24897987f2)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="35.692656" y="114.508706" transform="rotate(-0 35.692656 114.508706)">0.8</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_8">
+      <path d="M 45.192656 59.757682 
+L 431.87976 59.757682 
+" clip-path="url(#p24897987f2)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="35.692656" y="64.135338" transform="rotate(-0 35.692656 64.135338)">1.0</text>
+     </g>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 9px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #253542" x="14.363438" y="166.801088" transform="rotate(-90 14.363438 166.801088)">100 次空间块重抽样中的识别比例</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 62.769343 311.62452 
+L 191.813371 311.62452 
+L 191.813371 306.587183 
+L 62.769343 306.587183 
+z
+" clip-path="url(#p24897987f2)" style="fill: #3a7c92; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 285.259046 311.62452 
+L 414.303073 311.62452 
+L 414.303073 59.757682 
+L 285.259046 59.757682 
+z
+" clip-path="url(#p24897987f2)" style="fill: #d7a548; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 45.192656 311.62452 
+L 45.192656 21.977656 
+" style="fill: none; stroke: #d5dee4; stroke-width: 1.25; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 431.87976 311.62452 
+L 431.87976 21.977656 
+" style="fill: none; stroke: #d5dee4; stroke-width: 1.25; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 45.192656 311.62452 
+L 431.87976 311.62452 
+" style="fill: none; stroke: #d5dee4; stroke-width: 1.25; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 45.192656 21.977656 
+L 431.87976 21.977656 
+" style="fill: none; stroke: #d5dee4; stroke-width: 1.25; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #253542" x="127.291357" y="298.355512" transform="rotate(-0 127.291357 298.355512)">稳定识别 2%</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #253542" x="349.78106" y="51.526011" transform="rotate(-0 349.78106 51.526011)">稳定识别 100%</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #253542" x="45.192656" y="15.977656" transform="rotate(-0 45.192656 15.977656)">20 年平均实际侵蚀</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_9">
+    <path d="M 478.512416 311.62452 
+L 865.19952 311.62452 
+L 865.19952 21.977656 
+L 478.512416 21.977656 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_3">
+     <g id="line2d_9">
+      <path d="M 560.611117 311.62452 
+L 560.611117 21.977656 
+" clip-path="url(#p95ab5aa589)" style="fill: none; stroke: #e7edf0; stroke-linecap: round"/>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #52636e" x="560.611117" y="329.879832" transform="rotate(-0 560.611117 329.879832)">KDE 峰谷</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_10">
+      <path d="M 783.10082 311.62452 
+L 783.10082 21.977656 
+" clip-path="url(#p95ab5aa589)" style="fill: none; stroke: #e7edf0; stroke-linecap: round"/>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #52636e" x="783.10082" y="329.879832" transform="rotate(-0 783.10082 329.879832)">经验 CDF 折点</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_7">
+     <g id="line2d_11">
+      <path d="M 478.512416 311.62452 
+L 865.19952 311.62452 
+" clip-path="url(#p95ab5aa589)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="469.012416" y="316.002176" transform="rotate(-0 469.012416 316.002176)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_12">
+      <path d="M 478.512416 261.251152 
+L 865.19952 261.251152 
+" clip-path="url(#p95ab5aa589)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="469.012416" y="265.628809" transform="rotate(-0 469.012416 265.628809)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_13">
+      <path d="M 478.512416 210.877785 
+L 865.19952 210.877785 
+" clip-path="url(#p95ab5aa589)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="469.012416" y="215.255441" transform="rotate(-0 469.012416 215.255441)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_14">
+      <path d="M 478.512416 160.504417 
+L 865.19952 160.504417 
+" clip-path="url(#p95ab5aa589)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="469.012416" y="164.882073" transform="rotate(-0 469.012416 164.882073)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_15">
+      <path d="M 478.512416 110.13105 
+L 865.19952 110.13105 
+" clip-path="url(#p95ab5aa589)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="469.012416" y="114.508706" transform="rotate(-0 469.012416 114.508706)">0.8</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_16">
+      <path d="M 478.512416 59.757682 
+L 865.19952 59.757682 
+" clip-path="url(#p95ab5aa589)" style="fill: none; stroke: #e7edf0; stroke-width: 0.55; stroke-linecap: round"/>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #52636e" x="469.012416" y="64.135338" transform="rotate(-0 469.012416 64.135338)">1.0</text>
+     </g>
+    </g>
+    <g id="text_21">
+     <text style="font-size: 9px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #253542" x="447.683197" y="166.801088" transform="rotate(-90 447.683197 166.801088)">100 次空间块重抽样中的识别比例</text>
+    </g>
+   </g>
+   <g id="patch_10">
+    <path d="M 496.089103 311.62452 
+L 625.133131 311.62452 
+L 625.133131 311.62452 
+L 496.089103 311.62452 
+z
+" clip-path="url(#p95ab5aa589)" style="fill: #3a7c92; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 718.578806 311.62452 
+L 847.622833 311.62452 
+L 847.622833 59.757682 
+L 718.578806 59.757682 
+z
+" clip-path="url(#p95ab5aa589)" style="fill: #d7a548; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 478.512416 311.62452 
+L 478.512416 21.977656 
+" style="fill: none; stroke: #d5dee4; stroke-width: 1.25; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 865.19952 311.62452 
+L 865.19952 21.977656 
+" style="fill: none; stroke: #d5dee4; stroke-width: 1.25; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 478.512416 311.62452 
+L 865.19952 311.62452 
+" style="fill: none; stroke: #d5dee4; stroke-width: 1.25; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 478.512416 21.977656 
+L 865.19952 21.977656 
+" style="fill: none; stroke: #d5dee4; stroke-width: 1.25; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #253542" x="560.611117" y="303.392849" transform="rotate(-0 560.611117 303.392849)">稳定识别 0%</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #253542" x="783.10082" y="51.526011" transform="rotate(-0 783.10082 51.526011)">稳定识别 100%</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #253542" x="478.512416" y="15.977656" transform="rotate(-0 478.512416 15.977656)">2020 年实际侵蚀</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p24897987f2">
+   <rect x="45.192656" y="21.977656" width="386.687104" height="289.646864"/>
+  </clipPath>
+  <clipPath id="p95ab5aa589">
+   <rect x="478.512416" y="21.977656" width="386.687104" height="289.646864"/>
+  </clipPath>
+ </defs>
+</svg>

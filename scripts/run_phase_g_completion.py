@@ -665,25 +665,29 @@ def _write_group_forest(slopes: pd.DataFrame, figure_dir: Path, review_figure_di
     plot_data = pd.concat(selections, ignore_index=True) if selections else pd.DataFrame()
     figures = []
     if not plot_data.empty:
-        fig, axes = plt.subplots(3, 3, figsize=(15, 12), constrained_layout=True)
+        plt.rcParams.update({"font.family": "Noto Sans CJK JP", "axes.titlesize": 11, "axes.labelsize": 9, "xtick.labelsize": 8, "ytick.labelsize": 8, "figure.facecolor": "white", "axes.facecolor": "white", "savefig.facecolor": "white"})
+        fig, axes = plt.subplots(3, 3, figsize=(16, 13), constrained_layout=True)
         outcomes = ["SHI_candidate", "AN", "OM", "CEC", "pH", "SW", "BD", "MBC", "RESP"]
+        outcome_labels = {"SHI_candidate": "土壤健康指数（SHI）", "AN": "碱解氮（AN）", "OM": "有机质（OM）", "CEC": "阳离子交换量（CEC）", "pH": "土壤酸碱度（pH）", "SW": "土壤含水量（SW）", "BD": "土壤容重（BD）", "MBC": "微生物量碳（MBC）", "RESP": "土壤呼吸（RESP）"}
+        group_labels = {"soil_type_group": "土壤类型", "kmeans_v5": "V5 K 均值组", "hierarchical_ward_v5": "V5 Ward 组", "gradient_Elevation": "高程分位组", "gradient_TWI": "地形湿度分位组", "gradient_LST": "地表温度分位组", "gradient_NDWI": "NDWI 分位组", "gradient_NDVI": "NDVI 分位组", "gradient_Precipitation": "降水分位组"}
         for ax, outcome in zip(axes.flat, outcomes, strict=True):
             group = plot_data.loc[plot_data["outcome"].eq(outcome)].sort_values("slope_delta_y_per_delta_log1p_erosion")
             y = np.arange(len(group))
             effect = pd.to_numeric(group["slope_delta_y_per_delta_log1p_erosion"], errors="coerce").to_numpy(dtype=float)
             lower = pd.to_numeric(group["slope_ci_low"], errors="coerce").to_numpy(dtype=float)
             upper = pd.to_numeric(group["slope_ci_high"], errors="coerce").to_numpy(dtype=float)
-            ax.errorbar(effect, y, xerr=np.vstack([effect - lower, upper - effect]), fmt="o", color="#285f8f", capsize=2, markersize=3)
+            ax.errorbar(effect, y, xerr=np.vstack([effect - lower, upper - effect]), fmt="o", color="#326A8C", ecolor="#87939B", capsize=2, markersize=4)
             ax.axvline(0, color="#777777", linewidth=0.8, linestyle="--")
-            ax.set_yticks(y, [f"{row.group_column.removeprefix('gradient_')}:{row.group_label} (n={int(row.n_pairs)})" for row in group.itertuples()])
-            ax.set_title(outcome, fontsize=9)
-            ax.set_xlabel("Δhealth / Δlog1p(Aa) (block-clustered 95% CI)", fontsize=7)
-            ax.tick_params(axis="y", labelsize=6)
-            ax.tick_params(axis="x", labelsize=7)
-        fig.suptitle("Most negative group-specific matched-pair slopes: M4 / Aa_20yr", fontsize=13)
+            ax.set_yticks(y, [f"{group_labels.get(str(row.group_column),str(row.group_column))}：{row.group_label}（n={int(row.n_pairs):,}）" for row in group.itertuples()])
+            ax.set_title(outcome_labels.get(outcome,outcome), fontsize=10, loc="left", fontweight="semibold")
+            ax.set_xlabel("Δ健康 / Δlog1p(Aa)（空间块聚类稳健 95% 区间）")
+            ax.axvline(0, color="#6B7280", linewidth=.9, linestyle="--")
+            ax.grid(axis="x", alpha=.25)
+            ax.tick_params(axis="y", labelsize=7)
+        fig.suptitle("20 年平均实际侵蚀下各指标的负向组间斜率（M4）", x=.02, y=1.02, ha="left", fontsize=16, fontweight="bold")
         for ext in ("png", "svg", "pdf"):
             target = figure_dir / f"10_environment_group_slope_forest.{ext}"
-            fig.savefig(target, dpi=220 if ext == "png" else None, bbox_inches="tight")
+            fig.savefig(target, dpi=320 if ext == "png" else None, bbox_inches="tight")
             figures.append(target)
         plt.close(fig)
     review_figure_dir.mkdir(parents=True, exist_ok=True)
@@ -692,7 +696,7 @@ def _write_group_forest(slopes: pd.DataFrame, figure_dir: Path, review_figure_di
     data_path = figure_dir / "data" / "10_environment_group_slope_forest.csv"
     _write_csv(data_path, plot_data)
     _write_csv(review_figure_dir / "data" / data_path.name, plot_data)
-    caption = "Each panel shows up to six most negative group-specific slopes for that outcome in M4/Aa_20yr. Slopes use Δlog1p(Aa) to predict high-minus-low paired health differences; 95% intervals use spatial-block cluster-robust covariance. Groups were defined from environmental variables without health outcomes; selecting the most negative groups is outcome-guided Oracle screening."
+    caption = "每个面板展示 M4、20 年平均实际侵蚀下该指标斜率最负的至多六个环境组。斜率以 Δlog1p(Aa) 解释配对高减低健康差值；95% 区间采用空间块聚类稳健协方差估计。环境组由环境变量定义，不使用健康结局；挑选最负组属于结果导向的 Oracle 筛选。"
     caption_path = figure_dir / "captions" / "10_environment_group_slope_forest.md"
     caption_path.parent.mkdir(parents=True, exist_ok=True)
     caption_path.write_text(caption + "\n", encoding="utf-8")

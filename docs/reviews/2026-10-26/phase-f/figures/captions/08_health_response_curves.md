@@ -1,5 +1,5 @@
 # 08_health_response_curves
 
-Blue points use the fixed 10,000-row plotting sample; complete cases are used for each outcome. Orange dashed curves are natural-spline fits to that same plotting sample. Green curves are prior Oracle-selected full-sample apparent model partial-dependence curves for Aa_20yr at median environmental conditions, selected by apparent R² from 1,024 model trials across 13 families. Each green curve's selected model and complete-case n are in the figure data. The curves use different sample scopes; neither is an independent validation curve.
+灰蓝色散点来自固定的 10,000 行绘图样本；每项结局使用其完整观测。橙色虚线为该样本的自然样条描述曲线。蓝色实线为早先 Oracle 全样本表观模型在环境变量中位数条件下的 Aa_20yr 偏依赖曲线，曾在 13 类模型的 1,024 次试验中按表观 R²择优。模型类型与完整样本量见图源数据。两条曲线的样本范围不同，均不是独立验证曲线。
 
 Figure data: `data/08_health_response_curves.csv`.

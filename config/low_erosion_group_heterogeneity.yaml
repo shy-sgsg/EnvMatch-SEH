@@ -1,0 +1,55 @@
+phase: H-environment-group-heterogeneity
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: low_erosion_group_heterogeneity_20261030_seed20261030_r2
+output_root: outputs/exploratory_oracle
+low_erosion_run_id: low_erosion_regime_20261029_seed20261029_r2
+group_labels_path: outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/tables/phase_h_environment_group_cell_labels.parquet
+seed: 20261030
+matching_methods:
+  - M3
+  - M4
+group_columns:
+  - soil_type_group
+  - kmeans_terrain_k4
+  - kmeans_terrain_k6
+  - kmeans_terrain_k8
+  - hierarchical_ward_v5
+  - gradient_Elevation
+  - gradient_TWI
+  - gradient_LST
+  - gradient_NDWI
+  - gradient_NDVI
+  - gradient_Precipitation
+core_group_columns:
+  - soil_type_group
+  - kmeans_terrain_k6
+  - hierarchical_ward_v5
+  - gradient_TWI
+  - gradient_LST
+spatial_validation:
+  method: M4
+  schemes:
+    - S0_all
+    - S1_both_positive
+    - T01_empirical_CDF_breakpoint
+    - T01_fixed_original
+    - T01_refit_k6_filtered_population
+  buffer_m: 500
+  seeds:
+    - 20261031
+    - 20261032
+    - 20261033
+    - 20261034
+    - 20261035
+    - 20261036
+    - 20261037
+    - 20261038
+    - 20261039
+    - 20261040
+slope_bootstrap:
+  schemes:
+    - S0_all
+    - T01_fixed_original
+    - T01_refit_k6_filtered_population
+  replicates: 199

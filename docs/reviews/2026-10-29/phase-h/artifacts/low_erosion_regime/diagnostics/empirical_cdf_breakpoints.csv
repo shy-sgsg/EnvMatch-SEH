@@ -1,0 +1,3 @@
+﻿exposure,status,threshold_log10,threshold_original,delta_aic_one_break_vs_linear,n_positive,fit_n,candidate_source
+Aa_20yr,valid_cdf_breakpoint,0.7033075101595376,5.050187587738037,11109.269930021095,195683,5000,empirical_cdf
+Aa_2020,valid_cdf_breakpoint,-0.40154707127785294,0.39669153094291687,11681.731719104977,289977,5000,empirical_cdf

@@ -1,0 +1,40 @@
+phase: H-low-erosion-regime
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: low_erosion_regime_20261029_seed20261029
+seed: 20261029
+input_run_id: run_20261025T114741_470772Z
+phase_f_run_id: phase_f_20261026_seed20261026
+phase_g_run_id: phase_g_20261027_completion
+phase_h_run_id: phase_h_20261028_seed20261028_h2
+output_root: outputs/exploratory_oracle
+exposures: [Aa_20yr, Aa_2020]
+outcomes: [SHI_candidate, AN, OM, CEC, pH, SW, BD, MBC, RESP]
+primary_soil_codes: [26, 27, 42]
+distribution:
+  positive_sample_size_kde: 30000
+  positive_sample_size_gmm: 20000
+  gmm_components: [1, 2, 3, 4]
+  kde_bandwidth_bases: [scott, silverman]
+  kde_bandwidth_multipliers: [0.5, 1.0, 1.5, 2.0]
+  otsu_histogram_bins: [32, 64, 128, 256]
+  bootstrap_spatial_replicates: 100
+  bootstrap_sample_size: 4000
+  posterior_assignment_cutoff: 0.8
+matching:
+  environment_variables: [Elevation, LST]
+  environment_caliper_standardized: 0.35
+  geographic_radius_m: 1000
+  erosion_rank_gap: 0.50
+  rematch_groups: [fixed_original, refit_k6_filtered_population]
+models:
+  families: [linear, quadratic, natural_spline, gradient_boosting]
+  fixed_sample_size: 20000
+  spatial_validation_repeats: 10
+  spatial_validation_seeds: [20261029, 20261030, 20261031, 20261032, 20261033, 20261034, 20261035, 20261036, 20261037, 20261038]
+  spatial_validation_block_size_m: 5000
+  spatial_validation_buffer_m: 500
+  paired_bootstrap_replicates: 399
+figures:
+  formats: [png, svg, pdf]
+  dpi: 320

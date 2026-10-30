@@ -1,0 +1,7 @@
+﻿exposure,selected_k_bic,low_component_identifiable,posterior_cutoff,n_positive,n_valid_including_zero,n_low_component_assigned,n_other_component_assigned,n_uncertain_positive,low_component_fraction_positive,low_component_fraction_all_valid,uncertain_fraction_positive,candidate_source,outcome_guided_selection
+Aa_20yr,2,True,0.8,195683,294243,20308,162123,13252,0.1037800933141867,0.0690177846201948,0.0677217745026394,distribution_derived_gmm_posterior,False
+Aa_20yr,2,True,0.9,195683,294243,18372,154104,23207,0.0938865409872089,0.0624381888439147,0.1185948702748833,distribution_derived_gmm_posterior,False
+Aa_20yr,2,True,0.95,195683,294243,17033,142135,36515,0.0870438413147795,0.0578875283354234,0.1866028219109478,distribution_derived_gmm_posterior,False
+Aa_2020,4,True,0.8,289977,294243,3665,129412,156900,0.0126389334326515,0.0124556913843319,0.5410773957934595,distribution_derived_gmm_posterior,False
+Aa_2020,4,True,0.9,289977,294243,3191,37071,249715,0.0110043210323577,0.0108447779556353,0.8611545053573214,distribution_derived_gmm_posterior,False
+Aa_2020,4,True,0.95,289977,294243,2850,18647,268480,0.0098283656979691,0.0096858718814041,0.925866534242371,distribution_derived_gmm_posterior,False
