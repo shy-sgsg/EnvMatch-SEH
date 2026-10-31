@@ -1,0 +1,32 @@
+figure_number,required_figure,status,artifact_path,evidence_note
+1,九项指标全样本响应曲线,available,docs/reviews/2026-10-31/phase-i/figures/i1_I05_global_response_curves.png,全样本验证选中模型 refit 曲线
+2,零侵蚀与正侵蚀状态差异,available,docs/reviews/2026-10-31/phase-i/figures/i1_I04_zero_positive_boxplots.png,
+3,九项指标相关性森林图,available,docs/reviews/2026-10-31/phase-i/figures/i1_I02_standardized_effect_forest.png,
+4,最佳模型R²比较,available,docs/reviews/2026-10-31/phase-i/figures/ic_C04_global_best_model_r2.png,验证R²用于模型族比较，测试R²仅报告
+5,非线性阈值图,partial,docs/reviews/2026-10-31/phase-i/figures/ic_C05_MBC_segmented_threshold_candidate.png,仅MBC的验证集最佳模型为segmented；Aa≈4.617为Oracle候选
+6,分位数回归系数图,available,docs/reviews/2026-10-31/phase-i/figures/i1_I07_quantile_slopes.png,
+7,土壤类型响应曲线,available,docs/reviews/2026-10-31/phase-i/figures/ic_C07_soil_type_matched_response_curves.png,9项结局，匹配对描述曲线
+8,TWI分组响应曲线,available,docs/reviews/2026-10-31/phase-i/figures/ic_C08_twi_group_matched_response_curves.png,9项结局，土类内TWI五分位
+9,Aa×TWI交互图,partial,docs/reviews/2026-10-31/phase-i/figures/ic_C09_twi_interaction_slopes.png,SHI、OM、SW组内斜率和区间
+10,Aa×NDVI交互图,partial,docs/reviews/2026-10-31/phase-i/figures/ic_C10_ndvi_interaction_slopes.png,SHI、OM、SW组内斜率和区间
+11,环境组斜率森林图,partial,docs/reviews/2026-10-31/phase-i/figures/ic_C11_environment_group_slope_forest.png,SHI、OM、SW；土类/TWI/NDVI组
+12,环境组最佳模型R²热图,partial,docs/reviews/2026-10-31/phase-i/figures/ic_C12_environment_group_apparent_r2.png,源字段为组内apparent R²；未声称最佳模型选择
+13,SHI的GWR局部系数图,available,docs/reviews/2026-10-31/phase-i/figures/i4_gwr_SHI_candidate_template.png,
+14,OM的GWR局部系数图,available,docs/reviews/2026-10-31/phase-i/figures/i4_gwr_OM_template.png,
+15,SW的GWR局部系数图,available,docs/reviews/2026-10-31/phase-i/figures/i4_gwr_SW_template.png,
+16,八项指标GWR组合图,available,docs/reviews/2026-10-31/phase-i/figures/ic_C16_eight_indicator_gwr_composite.png,八项非SHI健康指标，共用色标
+17,MGWR局部系数比较图,available,docs/reviews/2026-10-31/phase-i/figures/ic_C17_MGWR_local_coefficients.png,仅SHI、OM、SW空间均衡样本
+18,MGWR变量作用尺度图,available,docs/reviews/2026-10-31/phase-i/figures/ic_C18_MGWR_variable_scales.png,自适应邻居数与中位数距离
+19,GWR与MGWR空间结果对照,available,docs/reviews/2026-10-31/phase-i/figures/ic_C19_GWR_MGWR_difference_map.png,同一空间均衡样本、同一协变量集
+20,GRF局部R²图,available,docs/reviews/2026-10-31/phase-i/figures/i5_grf_local_r2.png,
+21,GRF局部侵蚀响应图,available,docs/reviews/2026-10-31/phase-i/figures/i5_grf_local_Aa_marginal_effect.png,
+22,SHAP侵蚀贡献空间图,available,docs/reviews/2026-10-31/phase-i/figures/i5_spatial_shap_Aa.png,
+23,空间ALE交互效应图,available,docs/reviews/2026-10-31/phase-i/figures/i5_local_ale_by_soil_type.png,
+24,SVC-GAM局部响应曲线,available,docs/reviews/2026-10-31/phase-i/figures/i5_svc_gam_local_curves.png,
+25,Local Spearman空间图,available,docs/reviews/2026-10-31/phase-i/figures/i6_local_spearman_240m.png,
+26,Bivariate LISA聚类图,available,docs/reviews/2026-10-31/phase-i/figures/i6_bivariate_local_moran_clusters.png,
+27,Getis-Ord Gi*热点图,available,docs/reviews/2026-10-31/phase-i/figures/i6_gistar_negative_response_gwr.png,
+28,综合胁迫分区图,available,docs/reviews/2026-10-31/phase-i/figures/i8_stress_zoning_map.png,
+29,物理/化学/生物维度对照,available,docs/reviews/2026-10-31/phase-i/figures/i7_health_dimension_comparison_forest.png,
+30,EnvMatch与PCNM对照森林图,deferred_source_missing,docs/reviews/2026-10-31/phase-i/figures/ic_C30_PCNM_comparison_NOT_AVAILABLE.png,只有数据缺口状态图；PCNM源表缺失
+31,综合胁迫机制路径图,deferred_source_missing,docs/reviews/2026-10-31/phase-i/figures/ic_C31_mechanism_path_NOT_AVAILABLE.png,只有数据缺口状态图；PLS-SEM源表缺失

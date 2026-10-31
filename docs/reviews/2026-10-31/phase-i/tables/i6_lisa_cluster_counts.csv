@@ -1,0 +1,46 @@
+outcome,lisa_class,cell_count,n_units,outcome_guided_selection
+SHI_candidate,HH,333,7387,True
+SHI_candidate,LL,177,7387,True
+SHI_candidate,HL,1434,7387,True
+SHI_candidate,LH,1071,7387,True
+SHI_candidate,Not significant,4372,7387,True
+AN,HH,573,7408,True
+AN,LL,352,7408,True
+AN,HL,1152,7408,True
+AN,LH,1189,7408,True
+AN,Not significant,4142,7408,True
+OM,HH,115,7408,True
+OM,LL,80,7408,True
+OM,HL,843,7408,True
+OM,LH,448,7408,True
+OM,Not significant,5922,7408,True
+CEC,HH,880,7408,True
+CEC,LL,1189,7408,True
+CEC,HL,695,7408,True
+CEC,LH,1173,7408,True
+CEC,Not significant,3471,7408,True
+pH,HH,508,7408,True
+pH,LL,227,7408,True
+pH,HL,642,7408,True
+pH,LH,605,7408,True
+pH,Not significant,5426,7408,True
+SW,HH,183,7408,True
+SW,LL,49,7408,True
+SW,HL,1103,7408,True
+SW,LH,888,7408,True
+SW,Not significant,5185,7408,True
+BD,HH,0,7408,True
+BD,LL,0,7408,True
+BD,HL,0,7408,True
+BD,LH,0,7408,True
+BD,Not significant,7408,7408,True
+MBC,HH,105,7408,True
+MBC,LL,40,7408,True
+MBC,HL,358,7408,True
+MBC,LH,138,7408,True
+MBC,Not significant,6767,7408,True
+RESP,HH,407,7408,True
+RESP,LL,74,7408,True
+RESP,HL,956,7408,True
+RESP,LH,1104,7408,True
+RESP,Not significant,4867,7408,True

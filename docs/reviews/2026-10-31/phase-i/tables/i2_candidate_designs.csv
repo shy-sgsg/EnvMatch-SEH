@@ -1,0 +1,5 @@
+candidate_id,exposure,reference_method,vector_name,environment_variables_json,distance_method,cluster_method,cluster_count,environment_caliper,geographic_radius_m,erosion_rank_gap,exposure_rule,n_matched_pairs_candidate,n_matched_pixels_candidate,outcome_guided_selection,subset_outcome_guided_selection
+stage2_Aa_2020_01,Aa_2020,M4,V5,"[""Elevation"", ""LST""]",direct_nearest_neighbor,none,0,0.35,500,0.2,positive_only,133092,266184,True,False
+stage2_Aa_2020_03,Aa_2020,M4,V5,"[""Elevation"", ""LST""]",standardized_euclidean,kmeans,4,0.35,1000,0.2,positive_only,134601,269202,True,False
+stage2_Aa_2020_06,Aa_2020,M4,V7,"[""Elevation"", ""Cur"", ""TWI"", ""LST"", ""NDWI""]",standardized_euclidean,none,0,0.75,1500,0.3,within_group_rank,117790,235580,True,False
+stage2_Aa_20yr_01,Aa_20yr,M4,V5,"[""Elevation"", ""LST""]",standardized_euclidean,kmeans,8,0.75,500,0.3,within_group_rank,111289,222578,True,False

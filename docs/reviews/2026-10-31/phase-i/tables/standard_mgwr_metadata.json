@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-31T08:45:36.583041+00:00",
+  "package": "mgwr",
+  "mgwr_version": "2.2.1",
+  "spglm_version": "1.1.0",
+  "libpysal_version": "4.15.1",
+  "python_version": "3.13.5",
+  "n_spatial_units": 770,
+  "sample_path": "/home/shy/jia/硕士论文/环境匹配/outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/tables/mgwr_fit_input_spatially_balanced.csv",
+  "predictors": [
+    "log1p_Aa",
+    "Elevation",
+    "Cur",
+    "TWI",
+    "LST",
+    "NDWI",
+    "NDBSI",
+    "EVI",
+    "NDVI",
+    "Precipitation"
+  ],
+  "outcomes": [
+    "SHI_candidate",
+    "OM",
+    "SW"
+  ],
+  "standardization": "unweighted z scores within common spatially balanced sample",
+  "kernel": "Gaussian",
+  "bandwidth": "adaptive nearest-neighbor count",
+  "criterion": "AICc",
+  "gwr_bandwidth_search": {
+    "min": 30,
+    "max": 769,
+    "tolerance": 0.001,
+    "max_iterations": 120
+  },
+  "mgwr_bandwidth_search": {
+    "min": 30,
+    "max": 769,
+    "tolerance": 0.001,
+    "max_backfitting_iterations": 20,
+    "same_bandwidth_stop_count": 3
+  },
+  "inference_chunks": 8,
+  "n_jobs": 1,
+  "outcome_guided_selection": true
+}

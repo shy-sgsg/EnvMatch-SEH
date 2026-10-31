@@ -1,0 +1,31 @@
+{
+  "phase": "I-3",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "run_id": "phase_i_20261031_seed20261031_i3_r2",
+  "created_utc": "2026-10-31T06:43:21.050747+00:00",
+  "git_commit_at_execution": "82694765485dc11f4729bb9a23b5de2d666fb969",
+  "git_worktree_status_at_execution": "M docs/DECISIONS.md\n M docs/DEVELOPMENT_LOG.md\n?? config/phase_i.yaml\n?? config/phase_i_heterogeneity.yaml\n?? config/phase_i_matching.yaml\n?? docs/reviews/2026-10-30/\n?? experiments/oracle_exploration/phase_i.py\n?? experiments/oracle_exploration/phase_i_heterogeneity.py\n?? experiments/oracle_exploration/phase_i_matching.py",
+  "runner": "experiments/oracle_exploration/phase_i_heterogeneity.py",
+  "config": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i3_r2/configs/phase_i_heterogeneity.yaml",
+  "source_runs": {
+    "phase_g": "outputs/exploratory_oracle/phase_g_20261027_completion",
+    "phase_h_heterogeneity": "outputs/exploratory_oracle/low_erosion_group_heterogeneity_20261030_seed20261030_r2"
+  },
+  "new_fits": false,
+  "reused_outputs": [
+    "Phase G group slopes/interactions/profiles/model leaderboard",
+    "Phase H filtered group response/support/5km sensitivity"
+  ],
+  "group_labels_health_blind": "Source group definitions use soil/environment variables; health outcomes guide Oracle association comparisons and candidate ranking.",
+  "supported_group_ranking_min_spatial_blocks": 5,
+  "health_values": "random-forest prediction rasters; not independent measured samples",
+  "software_versions": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.0",
+    "pyyaml": "6.0.2"
+  }
+}

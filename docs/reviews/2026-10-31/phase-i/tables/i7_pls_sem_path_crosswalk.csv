@@ -1,0 +1,7 @@
+path,indicator_or_construct_mapping,envmatch_proxy,pls_sem_coefficient,pls_sem_standardized_coefficient,standard_error,ci_lower,ci_upper,p_value,r_squared,sample_size,controls,analysis_unit,measurement_weights_and_signs,source_status,outcome_guided_selection
+Erosion → Physical,SW; BD,water content; bulk density,,,,,,,,,,,,PLS_SEM_results_not_provided,True
+Erosion → Chemical,OM; AN; CEC; pH,organic matter; available nitrogen; cation exchange capacity; pH,,,,,,,,,,,,PLS_SEM_results_not_provided,True
+Erosion → Biological,MBC; RESP,microbial biomass carbon; soil respiration,,,,,,,,,,,,PLS_SEM_results_not_provided,True
+Physical → SHI,SW; BD → SHI,existing PLS-SEM structural path,,,,,,,,,,,,PLS_SEM_results_not_provided,True
+Chemical → SHI,OM; AN; CEC; pH → SHI,existing PLS-SEM structural path,,,,,,,,,,,,PLS_SEM_results_not_provided,True
+Biological → SHI,MBC; RESP → SHI,existing PLS-SEM structural path,,,,,,,,,,,,PLS_SEM_results_not_provided,True

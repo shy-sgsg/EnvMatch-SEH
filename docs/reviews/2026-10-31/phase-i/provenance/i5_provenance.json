@@ -1,0 +1,68 @@
+{
+  "phase": "I-5",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "run_id": "phase_i_20261031_seed20261031_i5_r1",
+  "created_utc": "2026-10-31T07:10:09.553348+00:00",
+  "git_commit": "82694765485dc11f4729bb9a23b5de2d666fb969",
+  "git_status_porcelain": "M docs/DECISIONS.md\n M docs/DEVELOPMENT_LOG.md\n?? config/phase_i.yaml\n?? config/phase_i_heterogeneity.yaml\n?? config/phase_i_matching.yaml\n?? config/phase_i_spatial.yaml\n?? config/phase_i_spatial_ml.yaml\n?? docs/reviews/2026-10-30/\n?? experiments/oracle_exploration/phase_i.py\n?? experiments/oracle_exploration/phase_i_heterogeneity.py\n?? experiments/oracle_exploration/phase_i_matching.py\n?? experiments/oracle_exploration/phase_i_spatial.py\n?? experiments/oracle_exploration/phase_i_spatial_ml.py",
+  "inputs": {
+    "environment_erosion": "outputs/run_20261025T114741_470772Z/databases/environment_erosion.parquet",
+    "health": "outputs/run_20261025T114741_470772Z/databases/health.parquet"
+  },
+  "configuration": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/configs/phase_i_spatial_ml.yaml",
+  "rows": {
+    "mask": 392527,
+    "environment_and_exposure_complete": 294854,
+    "local_centers": 369
+  },
+  "analysis_unit": "240 m block means; local RF centers on 1.2 km grid; SVC-GAM 240 m units",
+  "coordinate_reference": "EPSG:32649",
+  "software": {
+    "python": "3.13.5",
+    "shap": "0.52.0",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.15.3",
+    "pandas": "2.2.3",
+    "numpy": "2.1.3",
+    "statsmodels": "0.14.4"
+  },
+  "methods": {
+    "grf": "local RF on nearest 300 block means; local random holdout is not spatial-block validation",
+    "shap": "TreeSHAP local contribution and Aa×TWI/Aa×NDVI interaction on key outcomes",
+    "svc_gam": "spatial tensor-product B-splines with Ridge penalty; 5 km block holdout"
+  },
+  "outputs": [
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/grf_local_Aa_marginal_effect.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/grf_local_Aa_marginal_effect.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/grf_local_Aa_marginal_effect.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/grf_local_r2.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/grf_local_r2.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/grf_local_r2.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/local_ale_by_soil_type.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/local_ale_by_soil_type.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/local_ale_by_soil_type.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/spatial_shap_Aa.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/spatial_shap_Aa.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/spatial_shap_Aa.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/spatial_shap_interactions.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/spatial_shap_interactions.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/spatial_shap_interactions.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/svc_gam_local_curves.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/svc_gam_local_curves.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/svc_gam_local_curves.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/svc_gam_marginal_effect_q50.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/svc_gam_marginal_effect_q50.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/figures/svc_gam_marginal_effect_q50.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/leaderboards/phase_i_spatial_ml_leaderboard.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/reports/PHASE_I_SPATIAL_ML_REPORT.md",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/tables/grf_local_feature_importance.parquet",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/tables/grf_local_metrics.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/tables/local_ale_curves_by_site.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/tables/spatial_shap_values_and_interactions.parquet",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/tables/svc_gam_local_marginal_effects.parquet",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/tables/svc_gam_local_turning_points.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/tables/svc_gam_model_comparison.csv"
+  ],
+  "report": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/reports/PHASE_I_SPATIAL_ML_REPORT.md"
+}

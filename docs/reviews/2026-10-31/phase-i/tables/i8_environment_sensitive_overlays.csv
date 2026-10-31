@@ -1,0 +1,3 @@
+overlay,units,share_of_analysis_units,TWI_low_cut,TWI_high_cut,spatial_definition,outcome_guided_selection
+27潮土·TWI q2 spatial proxy,963,0.1303641532421822,8.18666320112658,8.543429124550741,dominant SoilType=27 at >=80% of complete pixels in 240m tile; tile mean TWI q20-q40 among such tiles,True
+26冲积土·TWI q1 spatial proxy,285,0.038581291457966696,6.383684317270915,8.077393572418778,dominant SoilType=26 at >=80% of complete pixels in 240m tile; tile mean TWI q0-q20 among such tiles,True

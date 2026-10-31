@@ -1,0 +1,36 @@
+{
+  "created_at_utc": "2026-10-31T08:49:22.555169+00:00",
+  "run_id": "phase_i_20261031_seed20261031_i9_r3",
+  "phase": "I-9",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "git_head": "82694765485dc11f4729bb9a23b5de2d666fb969",
+  "git_status_porcelain": "M docs/DECISIONS.md\n M docs/DEVELOPMENT_LOG.md\n?? config/phase_i.yaml\n?? config/phase_i_closure.yaml\n?? config/phase_i_final.yaml\n?? config/phase_i_final_r3.yaml\n?? config/phase_i_health_mechanism.yaml\n?? config/phase_i_heterogeneity.yaml\n?? config/phase_i_matching.yaml\n?? config/phase_i_spatial.yaml\n?? config/phase_i_spatial_cluster.yaml\n?? config/phase_i_spatial_ml.yaml\n?? config/phase_i_spatial_zoning.yaml\n?? docs/reviews/2026-10-30/\n?? experiments/oracle_exploration/phase_i.py\n?? experiments/oracle_exploration/phase_i_closure.py\n?? experiments/oracle_exploration/phase_i_finalize.py\n?? experiments/oracle_exploration/phase_i_health_mechanism.py\n?? experiments/oracle_exploration/phase_i_heterogeneity.py\n?? experiments/oracle_exploration/phase_i_matching.py\n?? experiments/oracle_exploration/phase_i_spatial.py\n?? experiments/oracle_exploration/phase_i_spatial_cluster.py\n?? experiments/oracle_exploration/phase_i_spatial_ml.py\n?? experiments/oracle_exploration/phase_i_spatial_zoning.py\n?? experiments/oracle_exploration/phase_i_standard_mgwr.py",
+  "config_path": "config/phase_i_final_r3.yaml",
+  "source_runs": {
+    "i1": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_r2",
+    "i2": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i2_r2",
+    "i3": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i3_r2",
+    "i4": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3",
+    "i5": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1",
+    "i6": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1",
+    "i7": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1",
+    "i8": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i8_r2",
+    "closure": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1"
+  },
+  "source_data": "Previously reviewed Phase I-1 through I-8 outputs plus I-closure; standard MGWR run on a spatially balanced subset; no RUSLE reconstruction or PCNM rerun.",
+  "figure_atlas_count": 48,
+  "pcnm_source": "not provided; crosswalk fields remain blank; PCNM not rerun",
+  "pls_sem_source": "not provided; path fields remain blank",
+  "review_request": "created locally; not sent externally",
+  "software": {
+    "python": "3.13.5",
+    "pandas": "2.2.3",
+    "pyyaml": "6.0.2"
+  },
+  "reports": [
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i9_r3/reports/PHASE_I_FINAL_RESEARCH_REPORT.md",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i9_r3/reports/PHASE_I_CHATGPT_REVIEW_REQUEST.md",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i9_r3/reports/PHASE_I_FIGURE_ATLAS.html"
+  ]
+}

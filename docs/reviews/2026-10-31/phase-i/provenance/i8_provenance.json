@@ -1,0 +1,80 @@
+{
+  "created_at_utc": "2026-10-31T07:39:06.268047+00:00",
+  "run_id": "phase_i_20261031_seed20261031_i8_r2",
+  "phase": "I-8",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "git_head": "82694765485dc11f4729bb9a23b5de2d666fb969",
+  "git_status_porcelain": "M docs/DECISIONS.md\n M docs/DEVELOPMENT_LOG.md\n?? config/phase_i.yaml\n?? config/phase_i_final.yaml\n?? config/phase_i_health_mechanism.yaml\n?? config/phase_i_heterogeneity.yaml\n?? config/phase_i_matching.yaml\n?? config/phase_i_spatial.yaml\n?? config/phase_i_spatial_cluster.yaml\n?? config/phase_i_spatial_ml.yaml\n?? config/phase_i_spatial_zoning.yaml\n?? docs/reviews/2026-10-30/\n?? experiments/oracle_exploration/phase_i.py\n?? experiments/oracle_exploration/phase_i_finalize.py\n?? experiments/oracle_exploration/phase_i_health_mechanism.py\n?? experiments/oracle_exploration/phase_i_heterogeneity.py\n?? experiments/oracle_exploration/phase_i_matching.py\n?? experiments/oracle_exploration/phase_i_spatial.py\n?? experiments/oracle_exploration/phase_i_spatial_cluster.py\n?? experiments/oracle_exploration/phase_i_spatial_ml.py\n?? experiments/oracle_exploration/phase_i_spatial_zoning.py",
+  "config_path": "config/phase_i_spatial_zoning.yaml",
+  "inputs": {
+    "environment_db": "outputs/run_20261025T114741_470772Z/databases/environment_erosion.parquet",
+    "health_db": "outputs/run_20261025T114741_470772Z/databases/health.parquet",
+    "mask_pixels": 392527,
+    "environment_complete_pixels": 293633,
+    "tile_cells": 8,
+    "tile_units": 7387
+  },
+  "source_runs": {
+    "i3": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i3_r2",
+    "i4": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3",
+    "i5": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1",
+    "i6": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1"
+  },
+  "source_support": {
+    "i4_gwr_units": 7387,
+    "i4_lcr_units": 7387,
+    "i4_multiscale_svc_units": 7387,
+    "i6_local_spearman_units": 7387,
+    "i6_lisa_units": 7387,
+    "i5_grf_shi_centers": 369,
+    "grf_join": "nearest 1.2km local center by Euclidean distance in EPSG:32649; diagnostics only"
+  },
+  "zone_thresholds": {
+    "high_Aa": 11.54996166229248,
+    "strong_negative_beta": -0.45790932901428666,
+    "low_Aa": 6.654160632806666,
+    "low_SHI": 0.5741828587972201,
+    "soil27_TWI_q_low": 8.18666320112658,
+    "soil27_TWI_q_high": 8.543429124550741,
+    "soil27_candidate_units": 4817.0,
+    "soil26_TWI_q_low": 6.383684317270915,
+    "soil26_TWI_q_high": 8.077393572418778,
+    "soil26_candidate_units": 1425.0
+  },
+  "admin_locator": {
+    "source_readme": "https://github.com/panyanbin/gcoord#中国行政区geojson数据",
+    "china_source": "https://raw.githubusercontent.com/panyanbin/gcoord/master/map/%E4%B8%AD%E5%9B%BD_100000.json",
+    "henan_source": "https://raw.githubusercontent.com/panyanbin/gcoord/master/map/%E6%B2%B3%E5%8D%97%E7%9C%81_410000.json",
+    "retrieved_date": "2026-10-31",
+    "coordinates": "GeoJSON WGS84 longitude/latitude; used for locator panels only",
+    "study_area_marker": {
+      "method": "n_pixels-weighted centroid of Phase I-8 complete-case 240m blocks, transformed from EPSG:32649 to EPSG:4326",
+      "longitude": 113.0389999670979,
+      "latitude": 34.94984243363577
+    },
+    "local_copies": [
+      "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i8_r2/data/admin_boundaries/china.geojson",
+      "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i8_r2/data/admin_boundaries/henan.geojson"
+    ]
+  },
+  "method": "8x8 30m pixel block; environment-complete SHI/Aa units; existing I4 coefficients and I5-I6 diagnostics merged without refitting; four thresholded candidate classes",
+  "unit_notes": {
+    "map_units": "approximately 240m raster blocks",
+    "model_coef": "standardized local slope; sign retained",
+    "grf_join": "nearest 1.2km local center by Euclidean distance in EPSG:32649; diagnostics only",
+    "area": "n complete-case pixels * 900m2; not full cropland area"
+  },
+  "data_boundary": "precomputed Aa_20yr used as read; no RUSLE product reconstruction/validation; PCNM not rerun",
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.0",
+    "pyarrow": "19.0.0",
+    "rasterio": "1.5.0",
+    "pyyaml": "6.0.2"
+  },
+  "report": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i8_r2/reports/PHASE_I_SPATIAL_STRESS_ZONING_REPORT.md"
+}

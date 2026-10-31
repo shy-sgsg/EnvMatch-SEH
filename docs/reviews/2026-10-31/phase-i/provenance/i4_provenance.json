@@ -1,0 +1,64 @@
+{
+  "phase": "I-4",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "run_id": "phase_i_20261031_seed20261031_i4_r3",
+  "created_utc": "2026-10-31T06:54:14.455201+00:00",
+  "git_commit": "82694765485dc11f4729bb9a23b5de2d666fb969",
+  "git_status_porcelain": "M docs/DECISIONS.md\n M docs/DEVELOPMENT_LOG.md\n?? config/phase_i.yaml\n?? config/phase_i_heterogeneity.yaml\n?? config/phase_i_matching.yaml\n?? config/phase_i_spatial.yaml\n?? docs/reviews/2026-10-30/\n?? experiments/oracle_exploration/phase_i.py\n?? experiments/oracle_exploration/phase_i_heterogeneity.py\n?? experiments/oracle_exploration/phase_i_matching.py\n?? experiments/oracle_exploration/phase_i_spatial.py",
+  "inputs": {
+    "environment_erosion": "outputs/run_20261025T114741_470772Z/databases/environment_erosion.parquet",
+    "health": "outputs/run_20261025T114741_470772Z/databases/health.parquet",
+    "matched_pairs": "outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/pairs/candidate_pairs/stage2_Aa_20yr_01.parquet"
+  },
+  "configuration": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/configs/phase_i_spatial.yaml",
+  "sample_rows": 392527,
+  "env_complete_rows": 294854,
+  "pair_counts": {
+    "input_pairs": 111289,
+    "distance_within_limit": 111289,
+    "included_pairs": 111289,
+    "unique_high_cells": 111289,
+    "unique_low_cells": 111289
+  },
+  "analysis_unit": "240 m (8x8 30 m pixels) block means with source pixel/pair frequency weights",
+  "coordinate_reference": "EPSG:32649",
+  "software": {
+    "python": "3.13.5",
+    "mgwr": null,
+    "spglm": null,
+    "libpysal": null,
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "statsmodels": "0.14.4"
+  },
+  "methods": {
+    "standard_mgwr": "not run: mgwr/spglm not installed",
+    "multiscale_svc": "custom MGWR-inspired backfitting approximation; not canonical MGWR",
+    "gwr_lcr": "local ridge penalty targets condition number <= configured threshold"
+  },
+  "outputs": [
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/tables/gwr_spatial_model_summary.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/tables/full_sample_local_coefficients.parquet",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/tables/matched_pair_local_coefficients.parquet",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/tables/bandwidth_cv.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/tables/multiscale_svc_coefficients.parquet",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/tables/multiscale_svc_bandwidths.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/reports/PHASE_I_GWR_MGWR_REPORT.md",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/gwr_OM_template.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/gwr_OM_template.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/gwr_OM_template.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/gwr_SHI_candidate_template.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/gwr_SHI_candidate_template.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/gwr_SHI_candidate_template.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/gwr_SW_template.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/gwr_SW_template.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/gwr_SW_template.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/multiscale_variable_bandwidths.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/multiscale_variable_bandwidths.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/figures/multiscale_variable_bandwidths.svg"
+  ],
+  "report": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/reports/PHASE_I_GWR_MGWR_REPORT.md"
+}

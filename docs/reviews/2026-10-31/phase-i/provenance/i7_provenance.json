@@ -1,0 +1,75 @@
+{
+  "phase": "I-7",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "run_id": "phase_i_20261031_seed20261031_i7_r1",
+  "created_utc": "2026-10-31T07:23:01.889848+00:00",
+  "git_commit": "82694765485dc11f4729bb9a23b5de2d666fb969",
+  "git_status_porcelain": "M docs/DECISIONS.md\n M docs/DEVELOPMENT_LOG.md\n?? config/phase_i.yaml\n?? config/phase_i_health_mechanism.yaml\n?? config/phase_i_heterogeneity.yaml\n?? config/phase_i_matching.yaml\n?? config/phase_i_spatial.yaml\n?? config/phase_i_spatial_cluster.yaml\n?? config/phase_i_spatial_ml.yaml\n?? docs/reviews/2026-10-30/\n?? experiments/oracle_exploration/phase_i.py\n?? experiments/oracle_exploration/phase_i_health_mechanism.py\n?? experiments/oracle_exploration/phase_i_heterogeneity.py\n?? experiments/oracle_exploration/phase_i_matching.py\n?? experiments/oracle_exploration/phase_i_spatial.py\n?? experiments/oracle_exploration/phase_i_spatial_cluster.py\n?? experiments/oracle_exploration/phase_i_spatial_ml.py",
+  "inputs": {
+    "source_runs": {
+      "i1": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_r2",
+      "i2": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i2_r2",
+      "i3": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i3_r2",
+      "i4": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3",
+      "i5": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1",
+      "i6": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1"
+    },
+    "pcnm_source": null,
+    "pls_sem_source": null
+  },
+  "configuration": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1/configs/phase_i_health_mechanism.yaml",
+  "rows": {
+    "indicator_crosswalk": 9,
+    "health_dimension_summary": 4,
+    "pcnm_comparison_candidates": 27,
+    "pls_sem_expected_paths": 6
+  },
+  "health_dimensions": {
+    "physical": [
+      "SW",
+      "BD"
+    ],
+    "chemical": [
+      "OM",
+      "AN",
+      "CEC",
+      "pH"
+    ],
+    "biological": [
+      "MBC",
+      "RESP"
+    ],
+    "composite": [
+      "SHI_candidate"
+    ]
+  },
+  "source_status": {
+    "pcnm": "not provided; config/data_paths.yaml has pcnm.results=null",
+    "pls_sem": "not provided; no path coefficient table was found"
+  },
+  "analysis_limits": [
+    "indicator signs preserved",
+    "no new dimension index constructed",
+    "no PCNM rerun",
+    "no PLS-SEM paths inferred"
+  ],
+  "software": {
+    "python": "3.13.5",
+    "pandas": "2.2.3",
+    "numpy": "2.1.3",
+    "matplotlib": "3.10.0",
+    "pyyaml": "6.0.2"
+  },
+  "outputs": [
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1/tables/indicator_response_crosswalk.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1/tables/health_dimension_summary.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1/tables/EnvMatch_PCNM_comparison.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1/tables/pls_sem_path_crosswalk.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1/reports/PHASE_I_HEALTH_MECHANISM_REPORT.md",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1/figures/health_dimension_comparison_forest.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1/figures/health_dimension_comparison_forest.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1/figures/health_dimension_comparison_forest.pdf"
+  ],
+  "report": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1/reports/PHASE_I_HEALTH_MECHANISM_REPORT.md"
+}

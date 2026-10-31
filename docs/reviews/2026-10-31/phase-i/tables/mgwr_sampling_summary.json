@@ -1,0 +1,29 @@
+{
+  "sampling_design": "one 240m block-mean unit sampled per occupied fixed-grid cell",
+  "grid_cell_m": 800,
+  "seed": 20261031,
+  "source_complete_240m_units": 7387,
+  "sample_units": 770,
+  "source_pixel_count": 28920,
+  "tile_cells": 8,
+  "coordinate_reference": "EPSG:32649",
+  "analysis_unit": "240m block mean; unweighted across selected units",
+  "sample_path": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/tables/mgwr_fit_input_spatially_balanced.csv",
+  "outcomes": [
+    "SHI_candidate",
+    "OM",
+    "SW"
+  ],
+  "predictors": [
+    "log1p_Aa",
+    "Elevation",
+    "Cur",
+    "TWI",
+    "LST",
+    "NDWI",
+    "NDBSI",
+    "EVI",
+    "NDVI",
+    "Precipitation"
+  ]
+}

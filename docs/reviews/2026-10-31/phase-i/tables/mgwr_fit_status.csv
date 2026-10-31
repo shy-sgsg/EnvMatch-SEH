@@ -1,0 +1,4 @@
+outcome,status,n_spatial_units,gwr_bandwidth_neighbors,mgwr_iterations,mgwr_converged_before_iteration_cap,error,outcome_guided_selection
+SHI_candidate,ok,770,32,8,True,,True
+OM,ok,770,44,7,True,,True
+SW,ok,770,46,6,True,,True

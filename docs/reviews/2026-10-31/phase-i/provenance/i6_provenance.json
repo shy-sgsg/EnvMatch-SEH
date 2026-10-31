@@ -1,0 +1,84 @@
+{
+  "phase": "I-6",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "run_id": "phase_i_20261031_seed20261031_i6_r1",
+  "created_utc": "2026-10-31T07:17:10.380848+00:00",
+  "git_commit": "82694765485dc11f4729bb9a23b5de2d666fb969",
+  "git_status_porcelain": "M docs/DECISIONS.md\n M docs/DEVELOPMENT_LOG.md\n?? config/phase_i.yaml\n?? config/phase_i_heterogeneity.yaml\n?? config/phase_i_matching.yaml\n?? config/phase_i_spatial.yaml\n?? config/phase_i_spatial_cluster.yaml\n?? config/phase_i_spatial_ml.yaml\n?? docs/reviews/2026-10-30/\n?? experiments/oracle_exploration/phase_i.py\n?? experiments/oracle_exploration/phase_i_heterogeneity.py\n?? experiments/oracle_exploration/phase_i_matching.py\n?? experiments/oracle_exploration/phase_i_spatial.py\n?? experiments/oracle_exploration/phase_i_spatial_cluster.py\n?? experiments/oracle_exploration/phase_i_spatial_ml.py",
+  "inputs": {
+    "environment_erosion": "outputs/run_20261025T114741_470772Z/databases/environment_erosion.parquet",
+    "health": "outputs/run_20261025T114741_470772Z/databases/health.parquet",
+    "i4_local_coefficients": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/tables/full_sample_local_coefficients.parquet"
+  },
+  "configuration": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/configs/phase_i_spatial_cluster.yaml",
+  "rows": {
+    "mask_pixels": 392527,
+    "environment_and_exposure_complete_pixels": 294854,
+    "analysis_units_by_outcome": {
+      "SHI_candidate": 7387,
+      "AN": 7408,
+      "OM": 7408,
+      "CEC": 7408,
+      "pH": 7408,
+      "SW": 7408,
+      "BD": 7408,
+      "MBC": 7408,
+      "RESP": 7408
+    }
+  },
+  "analysis_unit": "8x8 pixels; approximately 240 m summary units",
+  "coordinate_reference": "EPSG:32649",
+  "methods": {
+    "local_spearman": {
+      "neighbors": 100,
+      "distance_median_m": 1421.7427093098183,
+      "p_values": "not computed; overlapping windows are descriptive"
+    },
+    "bivariate_local_moran": {
+      "neighbors": 8,
+      "weights": "row-standardized KNN; focal exposure × neighbor-lagged health",
+      "permutations": 999,
+      "seed": 20261036,
+      "p_values": "two-sided global randomization pseudo-p; BH within outcome"
+    },
+    "gistar": {
+      "source": "Phase I-4 environment-adjusted GWR and GWR-LCR",
+      "radius_m": 1000.0,
+      "weights": "binary distance band including focal unit",
+      "strength": "max(-standardized_beta, 0)",
+      "p_values": "two-sided normal approximation; BH within outcome and model"
+    }
+  },
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.0",
+    "pyyaml": "6.0.2"
+  },
+  "outputs": [
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/tables/local_spearman.parquet",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/tables/bivariate_local_moran.parquet",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/tables/same_site_erosion_health_colocation.csv",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/tables/local_negative_response_gistar.parquet",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/reports/PHASE_I_SPATIAL_CLUSTER_REPORT.md",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/local_spearman_240m.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/local_spearman_240m.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/local_spearman_240m.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/bivariate_local_moran_clusters.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/bivariate_local_moran_clusters.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/bivariate_local_moran_clusters.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/same_site_erosion_health_colocation.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/same_site_erosion_health_colocation.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/same_site_erosion_health_colocation.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/gistar_negative_response_gwr.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/gistar_negative_response_gwr.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/gistar_negative_response_gwr.pdf",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/gistar_negative_response_gwr-lcr.png",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/gistar_negative_response_gwr-lcr.svg",
+    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/figures/gistar_negative_response_gwr-lcr.pdf"
+  ],
+  "report": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/reports/PHASE_I_SPATIAL_CLUSTER_REPORT.md"
+}

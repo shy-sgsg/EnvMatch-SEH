@@ -1,0 +1,11 @@
+rule,threshold_or_count,outcome_guided_selection
+high_Aa,11.54996166229248,True
+strong_negative_beta,-0.45790932901428666,True
+low_Aa,6.654160632806666,True
+low_SHI,0.5741828587972201,True
+soil27_TWI_q_low,8.18666320112658,True
+soil27_TWI_q_high,8.543429124550741,True
+soil27_candidate_units,4817.0,True
+soil26_TWI_q_low,6.383684317270915,True
+soil26_TWI_q_high,8.077393572418778,True
+soil26_candidate_units,1425.0,True

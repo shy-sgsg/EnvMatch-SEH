@@ -1,0 +1,53 @@
+{
+  "phase": "I-2",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "run_id": "phase_i_20261031_seed20261031_i2_r2",
+  "input_run_id": "run_20261025T114741_470772Z",
+  "phase_h_run_id": "phase_h_20261028_seed20261028_h2",
+  "matching_method": "M4",
+  "created_utc": "2026-10-31T06:39:18.799800+00:00",
+  "git_commit_at_execution": "82694765485dc11f4729bb9a23b5de2d666fb969",
+  "git_worktree_status_at_execution": "M docs/DECISIONS.md\n M docs/DEVELOPMENT_LOG.md\n?? config/phase_i.yaml\n?? config/phase_i_matching.yaml\n?? docs/reviews/2026-10-30/\n?? experiments/oracle_exploration/phase_i.py\n?? experiments/oracle_exploration/phase_i_matching.py",
+  "runner": "experiments/oracle_exploration/phase_i_matching.py",
+  "config": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i2_r2/configs/phase_i_matching.yaml",
+  "source_candidate_pair_dir": "outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/pairs/candidate_pairs",
+  "source_model_trials": "outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/tables/phase_h_model_trials.csv",
+  "global_reference_table": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_r2/results/global_response/global_associations.csv",
+  "candidate_ids": {
+    "Aa_20yr": [
+      "stage2_Aa_20yr_01"
+    ],
+    "Aa_2020": [
+      "stage2_Aa_2020_01",
+      "stage2_Aa_2020_03",
+      "stage2_Aa_2020_06"
+    ]
+  },
+  "curve_candidates": {
+    "Aa_20yr": "stage2_Aa_20yr_01",
+    "Aa_2020": "stage2_Aa_2020_06"
+  },
+  "population_definitions": {
+    "all_erosion": "all saved M4 candidate pairs",
+    "zero_positive": "exactly one endpoint has Aa=0 and the other Aa>0",
+    "both_positive": "both endpoints have Aa>0"
+  },
+  "analysis_units": {
+    "matched_pair": "oriented high-minus-low outcome differences; one row per pair",
+    "matched_pixel": "unique endpoints deduplicated by cell_id within each candidate and population"
+  },
+  "model_search": "Phase H apparent model trials reused; no models refitted; subgroup trial coverage is OLS only",
+  "xgboost_available": false,
+  "health_values": "random-forest prediction rasters; not independent measured samples",
+  "software_versions": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.0",
+    "scikit_learn": "1.6.1",
+    "pyarrow": "19.0.0",
+    "pyyaml": "6.0.2"
+  }
+}

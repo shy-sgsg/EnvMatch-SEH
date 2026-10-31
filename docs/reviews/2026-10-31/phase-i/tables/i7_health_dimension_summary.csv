@@ -1,0 +1,5 @@
+health_dimension,n_indicators,global_beta_negative_indicators,global_beta_positive_indicators,global_beta_median,matched_pair_beta_negative_indicators,matched_pair_beta_positive_indicators,matched_pair_beta_median,environment_adjusted_GWR_beta_median,local_spearman_median_of_indicators,global_GAM_slope_sign_change_indicators,spatial_test_R2_median,composite_dimension_index_constructed,note
+SHI综合,1,1,0,-0.4721457323322652,1,0,-0.1441304802818492,-0.33005159875466,-0.5908910891089109,0,0.1867877929165324,False,SHI is retained as the existing composite response; no reweighting
+物理,2,2,0,-0.3758544614999162,2,0,-0.14329535386647554,-0.5466222754006895,-0.5862404744805397,2,0.16865416668356573,False,indicator signs retained; summary is descriptive across indicators
+化学,4,3,1,-0.17804477297860186,3,1,-0.03396251024953105,-0.01702730809200445,-0.099632468143661,4,-0.031073053637067,False,indicator signs retained; summary is descriptive across indicators
+生物,2,2,0,-0.15972083273315546,0,2,0.05208865268847735,-0.24964573276075386,-0.33003346422652313,2,0.04328134801637,False,indicator signs retained; summary is descriptive across indicators

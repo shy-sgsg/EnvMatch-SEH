@@ -1,0 +1,64 @@
+zone,profile_variable,mean,median,q25,q75,units
+T1 高Aa—强负向响应,Elevation,106.39729686450005,106.17994008745465,105.05553607940674,107.17225376036319,source raster units; metadata not expanded in Phase I
+T1 高Aa—强负向响应,Cur,-0.0018466688245754451,0.0029622604920258445,-0.013689428129291805,0.014674238879857138,source raster units; metadata not expanded in Phase I
+T1 高Aa—强负向响应,TWI,8.616663047440369,8.502406120300293,8.082236669280313,9.038376669883728,source raster units; metadata not expanded in Phase I
+T1 高Aa—强负向响应,LST,16.940625696431034,17.084382820129395,16.51852056719155,17.473467765535627,source raster units; metadata not expanded in Phase I
+T1 高Aa—强负向响应,NDWI,-0.40321645169984327,-0.4057307769270504,-0.42772293693432184,-0.38241776670041305,source raster units; metadata not expanded in Phase I
+T1 高Aa—强负向响应,NDBSI,-0.023937273207096443,-0.021375379152595998,-0.04438721060075543,-0.0006771668714101515,source raster units; metadata not expanded in Phase I
+T1 高Aa—强负向响应,EVI,0.2758892457506213,0.27549295192179474,0.25204527830039414,0.3011366975354566,source raster units; metadata not expanded in Phase I
+T1 高Aa—强负向响应,NDVI,0.39253212994190745,0.3966423907587605,0.36511557702919833,0.4231340482319687,source raster units; metadata not expanded in Phase I
+T1 高Aa—强负向响应,Precipitation,643.9931425671898,645.4052026922053,641.4459405517578,647.35068709762,source raster units; metadata not expanded in Phase I
+T1 高Aa—强负向响应,dominant_SoilType_27.0,0.5008025682182986,,,,share of 240m units
+T1 高Aa—强负向响应,dominant_SoilType_26.0,0.3418940609951846,,,,share of 240m units
+T1 高Aa—强负向响应,dominant_SoilType_85.0,0.13804173354735153,,,,share of 240m units
+T1 高Aa—强负向响应,dominant_SoilType_42.0,0.019261637239165328,,,,share of 240m units
+T2 高Aa—弱负向响应,Elevation,109.34521395334029,109.0390379163954,107.24206393105644,111.172056498201,source raster units; metadata not expanded in Phase I
+T2 高Aa—弱负向响应,Cur,-0.004559413271706575,-0.00039547023117625477,-0.018193485489388442,0.015163697646114502,source raster units; metadata not expanded in Phase I
+T2 高Aa—弱负向响应,TWI,8.510831619972281,8.419520969824358,7.968234419822693,8.9785337384258,source raster units; metadata not expanded in Phase I
+T2 高Aa—弱负向响应,LST,16.90363138326064,16.94697948506004,16.712940838141712,17.189438437930608,source raster units; metadata not expanded in Phase I
+T2 高Aa—弱负向响应,NDWI,-0.44014931777816546,-0.4461688194983925,-0.4688740357756615,-0.41981073810126807,source raster units; metadata not expanded in Phase I
+T2 高Aa—弱负向响应,NDBSI,-0.06231305925956774,-0.06409172772175886,-0.08671796669721858,-0.037436367866272725,source raster units; metadata not expanded in Phase I
+T2 高Aa—弱负向响应,EVI,0.3091877825921367,0.31267662849780675,0.2909827822305519,0.33322354033589363,source raster units; metadata not expanded in Phase I
+T2 高Aa—弱负向响应,NDVI,0.4441073397844017,0.4522260745509049,0.40592423230409624,0.48341815761931534,source raster units; metadata not expanded in Phase I
+T2 高Aa—弱负向响应,Precipitation,637.5003589332938,636.9924088959001,631.2161416941675,642.4773526659199,source raster units; metadata not expanded in Phase I
+T2 高Aa—弱负向响应,dominant_SoilType_27.0,0.501187648456057,,,,share of 240m units
+T2 高Aa—弱负向响应,dominant_SoilType_26.0,0.3028503562945368,,,,share of 240m units
+T2 高Aa—弱负向响应,dominant_SoilType_42.0,0.17814726840855108,,,,share of 240m units
+T2 高Aa—弱负向响应,dominant_SoilType_85.0,0.017814726840855107,,,,share of 240m units
+T3 低Aa—低SHI,Elevation,107.35941677859519,107.79605799693142,106.68412008574515,108.36771400876947,source raster units; metadata not expanded in Phase I
+T3 低Aa—低SHI,Cur,-0.005252984857835161,0.0035238690469492923,-0.008284028310780105,0.011813177242606283,source raster units; metadata not expanded in Phase I
+T3 低Aa—低SHI,TWI,8.975549112920879,8.870917113454718,8.399228780500351,9.295933465814958,source raster units; metadata not expanded in Phase I
+T3 低Aa—低SHI,LST,16.65143084568066,16.720905748464293,16.317325088977814,16.916324745144763,source raster units; metadata not expanded in Phase I
+T3 低Aa—低SHI,NDWI,-0.43688103638134473,-0.4515904911710199,-0.4665588113691723,-0.41081356273816166,source raster units; metadata not expanded in Phase I
+T3 低Aa—低SHI,NDBSI,-0.07524788637598402,-0.08536183303826815,-0.10217418922737706,-0.05056104952421777,source raster units; metadata not expanded in Phase I
+T3 低Aa—低SHI,EVI,0.3026740032335884,0.3280378754997084,0.276490391002998,0.345123239557047,source raster units; metadata not expanded in Phase I
+T3 低Aa—低SHI,NDVI,0.46944144836290796,0.4731803376116651,0.44032201125864456,0.5072018125990652,source raster units; metadata not expanded in Phase I
+T3 低Aa—低SHI,Precipitation,641.197374078174,640.0824165344238,638.4422819299782,644.7543463504061,source raster units; metadata not expanded in Phase I
+T3 低Aa—低SHI,dominant_SoilType_26.0,0.6833333333333333,,,,share of 240m units
+T3 低Aa—低SHI,dominant_SoilType_27.0,0.26666666666666666,,,,share of 240m units
+T3 低Aa—低SHI,dominant_SoilType_42.0,0.03333333333333333,,,,share of 240m units
+T3 低Aa—低SHI,dominant_SoilType_85.0,0.016666666666666666,,,,share of 240m units
+T4 环境敏感候选,Elevation,109.3143187580384,108.9571831443093,106.60385661222497,111.28087303855203,source raster units; metadata not expanded in Phase I
+T4 环境敏感候选,Cur,0.003229646179316337,0.004188124173586922,-0.005499222679769076,0.0124008001964855,source raster units; metadata not expanded in Phase I
+T4 环境敏感候选,TWI,8.288614516667424,8.335225051304079,8.237782178606306,8.438812725005612,source raster units; metadata not expanded in Phase I
+T4 环境敏感候选,LST,16.78709653487487,16.840907018692768,16.639805698394774,16.972239326028262,source raster units; metadata not expanded in Phase I
+T4 环境敏感候选,NDWI,-0.4726496312774592,-0.4746140916096537,-0.49630685995022455,-0.45550067363114194,source raster units; metadata not expanded in Phase I
+T4 环境敏感候选,NDBSI,-0.09902068510977723,-0.0988232981827524,-0.12271182611584663,-0.07292020074757082,source raster units; metadata not expanded in Phase I
+T4 环境敏感候选,EVI,0.337550684815747,0.33767039490782697,0.3177153600586785,0.3594419291762055,source raster units; metadata not expanded in Phase I
+T4 环境敏感候选,NDVI,0.5066984317390336,0.5101063077042742,0.47439261315003883,0.542946315237454,source raster units; metadata not expanded in Phase I
+T4 环境敏感候选,Precipitation,636.7655083016929,636.5639904391381,631.2420379638672,641.2110573508522,source raster units; metadata not expanded in Phase I
+T4 环境敏感候选,dominant_SoilType_27.0,0.8522372528616025,,,,share of 240m units
+T4 环境敏感候选,dominant_SoilType_26.0,0.14776274713839752,,,,share of 240m units
+其他/未分类,Elevation,109.10467588664483,108.69782198392429,105.96382322149762,111.78868750806124,source raster units; metadata not expanded in Phase I
+其他/未分类,Cur,-0.00238780058121861,-0.00037189120723103936,-0.01041734216934336,0.008928277664572784,source raster units; metadata not expanded in Phase I
+其他/未分类,TWI,8.864511129660702,8.841453527149401,8.390971305323582,9.245604929716691,source raster units; metadata not expanded in Phase I
+其他/未分类,LST,16.82119397341788,16.87606815581626,16.677984317143757,17.00621848270811,source raster units; metadata not expanded in Phase I
+其他/未分类,NDWI,-0.47121214439397574,-0.47310320660471916,-0.4932397251066409,-0.4518018196026484,source raster units; metadata not expanded in Phase I
+其他/未分类,NDBSI,-0.09323516089263711,-0.09353155612337347,-0.11599856366713841,-0.07010122463107109,source raster units; metadata not expanded in Phase I
+其他/未分类,EVI,0.334047763056062,0.33438043892383573,0.3170561543826399,0.35241427285629406,source raster units; metadata not expanded in Phase I
+其他/未分类,NDVI,0.5004095607260822,0.5042318299412727,0.46613329742103815,0.5360982049913967,source raster units; metadata not expanded in Phase I
+其他/未分类,Precipitation,636.78833451855,636.4454391767393,630.6319087101863,641.4264221191406,source raster units; metadata not expanded in Phase I
+其他/未分类,dominant_SoilType_27.0,0.6757804529687819,,,,share of 240m units
+其他/未分类,dominant_SoilType_26.0,0.16568047337278108,,,,share of 240m units
+其他/未分类,dominant_SoilType_42.0,0.14996939400122425,,,,share of 240m units
+其他/未分类,dominant_SoilType_85.0,0.008569679657212814,,,,share of 240m units
