@@ -1,0 +1,23 @@
+phase: I-4
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: phase_i_20261031_seed20261031_i4_r3
+input_run_id: run_20261025T114741_470772Z
+matched_run_id: outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2
+matched_candidate: stage2_Aa_20yr_01
+primary_exposure: Aa_20yr
+exposure_transform: log1p
+outcomes: [SHI_candidate, AN, OM, CEC, pH, SW, BD, MBC, RESP]
+key_outcomes: [SHI_candidate, OM, SW]
+environment_covariates: [Elevation, Cur, TWI, LST, NDWI, NDBSI, EVI, NDVI, Precipitation]
+tile_cells: 8
+cell_size_m: 30
+bandwidth_neighbors: [30, 40, 50, 70, 100, 140, 200, 300, 440, 600]
+multiscale_bandwidth_neighbors: [30, 50, 80, 120, 180, 260, 380, 540, 760, 1000, 1400]
+cv_target_units: 400
+cv_seed: 20261034
+multiscale_iterations: 3
+pair_max_geographic_distance_m: 1000
+local_ridge_condition_threshold: 30
+map_dpi: 300
+output_root: outputs/exploratory_oracle/phase_i

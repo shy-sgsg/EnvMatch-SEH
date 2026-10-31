@@ -1,0 +1,18 @@
+phase: I-6
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: phase_i_20261031_seed20261031_i6_r1
+input_run_id: run_20261025T114741_470772Z
+i4_run_id: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3
+primary_exposure: Aa_20yr
+outcomes: [SHI_candidate, AN, OM, CEC, pH, SW, BD, MBC, RESP]
+environment_covariates: [Elevation, Cur, TWI, LST, NDWI, NDBSI, EVI, NDVI, Precipitation]
+tile_cells: 8
+local_spearman_neighbors: 100
+bivariate_lisa_neighbors: 8
+bivariate_lisa_permutations: 999
+bivariate_lisa_seed: 20261036
+gi_star_radius_m: 1000
+fdr_alpha: 0.05
+map_dpi: 300
+output_root: outputs/exploratory_oracle/phase_i

@@ -1,0 +1,41 @@
+phase: I-1
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: phase_i_20261031_seed20261031_r2
+input_run_id: run_20261025T114741_470772Z
+phase_h_run_id: low_erosion_regime_20261029_seed20261029_r2
+seed: 20261031
+primary_exposure: Aa_20yr
+supplementary_exposure: Aa_2020
+outcomes:
+  - SHI_candidate
+  - AN
+  - OM
+  - CEC
+  - pH
+  - SW
+  - BD
+  - MBC
+  - RESP
+soil_type_sensitivity_exclude: [85]
+spatial_block_size_m: 5000
+spatial_split:
+  test_fraction: 0.20
+  validation_fraction_of_train_validation: 0.25
+  seed_offset: 1
+block_bootstrap:
+  replicates: 399
+  confidence_level: 0.95
+model_search:
+  selection_metric: validation_r2
+  tree_training_max_rows: 30000
+  spline_knots: 7
+  spline_ridge_alpha: 10.0
+  gam_spline_df: 8
+  gam_alpha: 10.0
+  segmented_threshold_quantiles: [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+quantile_regression:
+  quantiles: [0.1, 0.25, 0.5, 0.75, 0.9]
+  training_sample_max_rows: 20000
+  max_iterations: 1000
+output_root: outputs/exploratory_oracle/phase_i

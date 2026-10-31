@@ -106,3 +106,88 @@
 - 复核到 Aa_2020 CDF 阈值完整精度为 0.3966915309429168，六位小数显示为 0.396692。用显示值复算会多算 1 个被筛除像元；摘要与主报告现按完整精度修正为保留 260,974 格、筛除 33,269 格。
 - 中文离线图集更新至 83 张；审查包更新至 333 个文件、100,731,624 字节（96.07 MiB）。最终核对确认 384 个本地文件链接全部存在，且无 `outputs/` 链接；昨天原版聚类空间图仍在审查包中。
 - 验证：`pytest -q` 为 203 项通过、2 条 seaborn `PendingDeprecationWarning`；`python -m compileall -q src experiments scripts tests` 和 `git diff --check` 通过。阈值表 29 行、GMM 种子试验 80 行，且 10 个种子/期、三档后验阈值均已写入审查包。
+
+## 2026-10-31：Phase I-1 全样本响应探索
+
+- 在 `EXPLORATORY_ORACLE` 下完成九项健康预测指标与 Aa_20yr/Aa_2020 的全掩膜完整案例关联、零/正值差异、5 km 空间块模型搜索、分位数回归及全样本 GAM。Aa_20yr 主分析以全部耕地掩膜行逐结局完整案例计算；不把要求全环境变量完整的 `valid_cell` 标记误作全局筛选条件。SoilType=85 留在主分析并提供排除敏感性。
+- 权威运行 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_r2/`；r2 配置最大分位数迭代数为 1,000，45/45 分位数拟合状态为 `ok`。全样本 GAM 对九项结局输出按 5 km 块聚类稳健点态区间、有效自由度与局部斜率；全部 8 组图件保存 PNG/SVG/PDF。
+- 主要描述性结果：Aa_20yr 对 SW 的 Spearman ρ=-0.584，对 SHI=-0.469、OM=-0.415；对 CEC 为 +0.168。零/正侵蚀 Hedges' g 中 SW、SHI、OM 的绝对值约为 1.16、0.89、0.65。空间测试 R²跨结局约 -0.072 至 0.317，不把像元量作为独立验证证据。
+- 复用既有对齐数据库和 Phase H 结果做范围核对；代码增加环境与健康数据库按 cell_id 的 x/y 坐标对齐检查。未重建/验证 RUSLE 因子乘积、未重跑 PCNM、未修改研究总纲。配置、输入路径、软件版本、模型边界及限制见报告和 `manifests/provenance.json`。
+- 尚未完成 Phase I 全部阶段；I-2 起按实施计划继续，最终阶段仍需集成报告和审查材料。
+
+## 2026-10-31：Phase I-2 M4 匹配条件关联
+
+- 复用 Phase H H2 已保存的 M4 stage2 配对候选和 864 条候选模型试验，未重做匹配或重复拟合模型。输出区分唯一匹配端点像元与配对高减低差值，并按全侵蚀范围、零—正、双正值分别计算 Spearman、Kendall τ-b、均值/中位数差、标准化斜率和负向配对比例。
+- Aa_20yr M4 主要候选 `stage2_Aa_20yr_01` 共 111,289 对（零—正 68,172；双正 43,117）。Aa_2020 保留三种 H2 M4 候选；候选 01/03 全为双正，候选 06 含零—正 3,306 对和双正 114,484 对，故分组结果分别标记候选，不混并为同一样本。
+- 对 Aa_20yr 主候选，SW 配对差值 Spearman 为 −0.272（全范围）、−0.326（零—正）和 −0.296（双正）；SW 负向配对比例依次为 77.8%、80.5%、73.5%。匹配端点 SHI/OM/SW Spearman 为 −0.452/−0.416/−0.567，与 I-1 全样本 −0.469/−0.415/−0.584 接近；端点关联系统上不等于配对差值关系。
+- 复用 H2 表观模型排行榜：Aa_20yr 全范围 Matched-Pixel SHI 随机森林 R²=0.505，Matched-Pair SW 随机森林 R²=0.101。零—正与双正子组仅保留 OLS；不把同样本 R²称为泛化性能。XGBoost 未安装，未新增依赖。生成匹配关联表、模型排行榜、分箱响应曲线及 PNG/SVG/PDF 图。
+- 权威运行 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i2_r2/`；r1 作为缺少全样本对照表的初版保留并标记预览。报告/清单同时披露候选设计、Oracle 筛选、预测栅格单位、软件版本和模型限制。
+- I-3 至 I-9 尚未完成，继续按 Phase I 优先级推进。
+
+## 2026-10-31：Phase I-3 环境异质性整合
+
+- 新增摘要运行 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i3_r2/`，以 Phase G 全配对 M4 环境组结果和 Phase H 低值过滤敏感性为输入；未重跑匹配、聚类或模型。
+- 汇总土类、TWI、NDVI、NDWI、LST 及其交互响应。M4/Aa_20yr 中，27 潮土 SHI/OM/SW 标准化斜率为 −0.246/−0.294/−0.316，126 个交互中 123 个经 BH 校正 q<0.05；报告保留 Oracle 选择与空间依赖限制。
+- 将 Phase H 26:q1 低 TWI 组明确标为不同总体的敏感性候选：每组约 601 对（SHI 完整案例 593），同块 bootstrap 使用 16 个 5 km 块，不能与全配对 27:q2 直接作优劣比较。
+- 生成环境组斜率/交互/支持表、模型与低值敏感性表及 3 组 PNG/SVG/PDF 图；r2 更正支持数量和热图舍入标签，r1 保留为非权威初稿。详细来源、字段和运行状态见报告与 `manifests/provenance.json`。
+- I-1 至 I-3 已完成；I-4 至 I-9 继续按实施计划推进。
+
+## 2026-10-31：Phase I-4 空间变化系数探索
+
+- 新增 `experiments/oracle_exploration/phase_i_spatial.py` 与配置 `config/phase_i_spatial.yaml`，完成 `EXPLORATORY_ORACLE` I-4。权威输出为 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3/`；r1/r2 状态已标为被后续带宽/制图版本取代。
+- 全掩膜有效行 392,527；环境变量共同完整的 Aa 行 294,854。对九项指标拟合全掩膜 GWR、共同环境子集 GWR、环境调整 GWR 与 GWR-LCR。采用约 240 m 汇总节点、像元频数权重、自适应高斯核；带宽以抽取节点 leave-one-unit-out 误差选择，30–600 邻域候选中 54 个标准 GWR 拟合有 31 个触及下界。
+- SHI/OM/SW 环境调整 GWR 的局部平均标准化斜率为 −0.330/−0.556/−0.680，LCR 为 −0.218/−0.387/−0.464；全掩膜未调整 GWR 为 −0.360/−0.645/−0.731。环境局部条件数偏高且 LCR 所有位置均惩罚，故收缩结果作为敏感性比较。
+- 复用 111,289 对 Aa_20yr M4 配对，以配对中点分别建全配对、零—正和双正空间模型。SHI/OM/SW 组内局部平均标准化斜率依次为：全配对 −0.261/−0.164/−0.424，零—正 −0.344/−0.557/−0.567，双正 −0.337/−0.348/−0.470。不同配对总体不合并解释。
+- 为 SHI/OM/SW 输出逐变量自适应尺度 backfitting 近似；专用 `mgwr`/`spglm` 未安装，因此明确不报告标准 MGWR。多尺度近似有 6 个变量取候选下界、11 个取上界，带宽结果仅作探索。局部标准误/区间使用模型协方差、未作空间块稳健校正。
+- 生成九指标局部系数与匹配局部系数 Parquet、模型/带宽排行榜、变量带宽表、局部岭摘要、SHI/OM/SW 的 PNG/SVG/PDF 系数地图及多尺度带宽图。未修改研究总纲，未重算/验证 RUSLE 因子乘积、未重跑 PCNM。
+- I-4 已完成；I-5 至 I-9 尚待推进。
+
+## 2026-10-31：Phase I-5 空间机器学习与非线性响应
+
+- 新增 `experiments/oracle_exploration/phase_i_spatial_ml.py` 与 `config/phase_i_spatial_ml.yaml`，权威运行 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1/`。覆盖九项指标的地理加权随机森林局部预测和 Aa 有限差分效应；对 SHI/OM/SW 输出局部 TreeSHAP、Aa×TWI/Aa×NDVI 交互与 ALE 曲线。
+- 采用约 240 m 空间汇总单元、局部随机留出及 5 km SVC-GAM 空间块测试。随机森林局部 R²受邻近训练/验证单元依赖影响；SVC-GAM 为 B-spline 张量积加 Ridge 的近似实现。SHI/OM/SW 的局部 Aa 中位边际效应为 −0.144/−0.263/−0.437，测试 R²相对全局 GAM 仅增加 +0.014/+0.007/+0.005。
+- 刷新报告表格、SoilType=85 ALE 支持量警示、空间机器学习综合排行榜、provenance 与输出清单。保留 SoilType=85 但不解释仅 8–9 个中心的 ALE；报告指出 SHAP 基线贡献与有限差分导数不是同一量。所有运行显式设置 `outcome_guided_selection=true`。
+- 未重算或验证 RUSLE 因子乘积、未重跑 PCNM、未修改研究总纲。I-6 至 I-9 继续执行。
+
+## 2026-10-31：Phase I-6 局部空间关联与热点
+
+- 新增 `experiments/oracle_exploration/phase_i_spatial_cluster.py` 和配置 `config/phase_i_spatial_cluster.yaml`，权威运行位于 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1/`。共同环境完整样本按 8×8 汇总为约 240 m 单元，覆盖九项预测健康指标。
+- 完成 100 近邻 Local Spearman（仅作描述统计）、8 近邻 Bivariate Local Moran（999 次全局随机置换及结局内 BH FDR）、同位 Aa—健康四象限共现，以及基于 I-4 GWR/GWR-LCR 系数的 1 km Gi* 热点。明确区分同位高 Aa—低健康和邻域滞后 HL 类。
+- 九项结果表、五套九面板空间图（PNG/SVG/PDF）、报告和输入/软件/方法 provenance 已写入 Oracle 独立输出。GWR 与 GWR-LCR 的热点范围存在明显差别；结果定位为探索性空间线索。未重算/验证 RUSLE 因子乘积、未重跑 PCNM、未修改研究总纲。
+- I-6 已完成；I-7 至 I-9 继续执行。
+
+## 2026-10-31：Phase I-7 健康维度与既有成果衔接
+
+- 新增 `experiments/oracle_exploration/phase_i_health_mechanism.py` 与配置 `config/phase_i_health_mechanism.yaml`；权威报告及对照表位于 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1/`。复用 I-1 至 I-6 汇总，不重跑模型。
+- 将 SW/BD、OM/AN/CEC/pH、MBC/RESP 按物理、化学、生物维度列示，原指标方向不翻转。因为没有已核实的指标方向、构念载荷和维度权重，未构造新维度指数或推断 PLS-SEM 路径。PCNM 结果配置为 null，且无可读结果表；PLS-SEM 路径/载荷源表缺失，交叉表保留空值，PCNM 未重跑。
+- EnvMatch 对照显示不同分析单位的 SHI/OM/SW 估计均有负向线索，但强度不同；例如 I-1 β 为 −0.472/−0.421/−0.595，I-2 匹配差值 β 约 −0.144/−0.100/−0.269，I-4 环境调整 GWR 系数中位数 −0.330/−0.556/−0.680。对照图明确误差区间口径差异，不做绝对效应排名。
+- 报告、PCNM字段表、PLS-SEM路径交叉表、健康维度统计及森林图写入Oracle输出；I-8至I-9继续执行。
+
+## 2026-10-31：Phase I-8 空间胁迫候选分区
+
+- 新增 `experiments/oracle_exploration/phase_i_spatial_zoning.py` 和 `config/phase_i_spatial_zoning.yaml`；权威运行 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i8_r1/`。重用I-4局部系数、I-5最近1.2km GRF中心及I-6局部空间诊断，不重新拟合模型；仅使用预计算 Aa_20yr。
+- 对 293,633 个环境和 SHI 共同完整的30m像元按 8×8 块汇总，形成 7,387 个约240m单元。用Aa q80、局部GWR负系数q20、Aa q50、SHI q20划定互斥T1–T4及其他区。T1 623单元、18.88 km²等价面积；T2 842、24.00 km²；T3 60、2.05 km²；T4 961、38.77 km²；其他4,901。面积不是全耕地面积，仅按完整案例支持换算。
+- 27潮土/TWI q2与26冲积土/TWI q1以≥80%主导土类块及土类内块均值分位形成空间代理，分别标记963和285个单元，单独出图且允许与主分区重叠。治理建议作为现场核验候选，引用水土保持和土壤培肥官方指导；不直接外推外地施用量。行政区底图未提供，未添加中国/河南位置插图。
+- 输出综合分区地图（600 dpi PNG/SVG/PDF）、分区像元数据、统计表、环境剖面、候选代理表、建议表、运行配置和 provenance。未运行标准 MGWR；I-4 多尺度 SVC 近似保持原方法标签。I-9 继续执行。
+
+## 2026-10-31：Phase I-9 综合报告、审查请求与图件索引
+
+- 新增 `experiments/oracle_exploration/phase_i_finalize.py` 与配置 `config/phase_i_final.yaml`；权威输出为 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i9_r1/`。最终报告按科学问题组织，逐指标比较 I-1/I-2/I-4/I-6 估计，并汇总 I-3、I-5、I-7、I-8 结果。
+
+## 2026-10-31：Phase I-8 定位插图与 I-9 图集刷新
+
+- 为满足图件位置表达，新增中国与河南省 WGS84 GeoJSON 定位输入（来源和获取日期记录在 I8 r2 provenance）；上排显示中国—河南位置、河南—温县完整案例加权中心，下排保留原研究区分区图。GeoJSON只作定位示意，不参与统计分区；温县精细轮廓仍来自项目耕地掩膜。
+- I8 r2 复用 I8 r1 的分类逻辑和已有 I3–I6结果，未改变统计结果；当前权威图件及其报告、配置、来源副本和provenance位于 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i8_r2/`。I9 图集随后更新至该图件。
+- I9 r2 更新 I8 图件来源链接与图集预览；当前综合报告位于 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i9_r2/`。I9 不拟合新模型。
+- 生成 `PHASE_I_FINAL_RESEARCH_REPORT.md`、`PHASE_I_CHATGPT_REVIEW_REQUEST.md` 与 `PHASE_I_FIGURE_ATLAS.html`。图谱索引八个权威阶段运行共34张PNG预览，并链接可用的SVG/PDF。I-7中PCNM/PLS-SEM结果源缺失继续留空；不重跑PCNM、不推断路径。
+- 审查请求按附件要求以前置读取研究总纲为审查指令，标明目前 Git HEAD 不包含未提交工作，并仅保存在本地；未向外部发送。报告与图谱中的相对链接均指向本地Oracle阶段材料。
+- I-1至I-9交付物已生成。Phase I为结果导向探索，待独立审查；结果不代表FORMAL阶段设计、研究假设或因果效应已验证。
+
+## 2026-10-31：Phase I-C 图件闭合、标准 MGWR 与 I-9 r3
+
+- 新增 `experiments/oracle_exploration/phase_i_closure.py`、`experiments/oracle_exploration/phase_i_standard_mgwr.py` 和对应配置。闭环权威运行：`outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/`；标准 `mgwr==2.2.1` 安装于 `/tmp/envmatch-mgwr-venv` 隔离临时环境，没有修改项目依赖。
+- 在7,387个完整240m单元中按固定800m格网坐标均衡抽取770单元，不使用健康响应选点。对SHI、OM、SW使用同样本标准GWR/MGWR、Gaussian adaptive kernel、AICc带宽及九项环境协变量。三项MGWR均成功并在20次上限前收敛（8/7/6次）。模型级R²：GWR 0.887/0.714/0.834，MGWR 0.869/0.696/0.822；MGWR AICc分别为770.33/1389.80/972.27，GWR为781.57/1417.29/989.47。该空间均衡样本等权结果与I-4全单元像元频数加权GWR的估计对象不同。
+- Aa的MGWR带宽：SHI 32邻居、中位距离2.64km；OM和SW均767邻居、中位距离23.78km，接近770样本的搜索上界。`mgwr==2.2.1`未实现多带宽MGWR局部R²，故MGWR局部表该字段留空；模型级统计和局部系数仍可用。
+- 补绘核心图04–12及16–19，明确保留图5/9–12的部分满足边界；图30/31仅为PCNM、PLS-SEM源数据缺口状态图。31项核心图件状态为24可用、5部分、2延期。PCNM/PLS-SEM源表未提供，比较值继续为空，没有重跑或推断。
+- 最终综合报告、图件索引及本地审查请求更新为 `outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i9_r3/`；图集共48张PNG，报告和图集的本地相对链接检查无缺失。审查请求只写入本地，没有外发。I-9 r3仍为未提交工作树内容；HEAD不包含这些改动。
+- Phase I本轮可由现有数据支持的分析与图件闭合已完成，整体仍为Oracle探索，不代表独立实证验证；取得PCNM结果表与PLS-SEM路径/载荷源表后，才能补做核心图30/31对应的科学比较。

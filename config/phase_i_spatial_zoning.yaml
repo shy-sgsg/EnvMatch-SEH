@@ -1,0 +1,29 @@
+phase: I-8
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: phase_i_20261031_seed20261031_i8_r2
+input_run_id: run_20261025T114741_470772Z
+primary_exposure: Aa_20yr
+health_outcome: SHI_candidate
+environment_covariates: [Elevation, Cur, TWI, LST, NDWI, NDBSI, EVI, NDVI, Precipitation]
+tile_cells: 8
+high_erosion_quantile: 0.80
+strong_negative_beta_quantile: 0.20
+low_erosion_quantile: 0.50
+low_shi_quantile: 0.20
+soil27_tile_share_min: 0.80
+soil27_twi_q2: [0.20, 0.40]
+source_runs:
+  i3: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i3_r2
+  i4: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3
+  i5: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1
+  i6: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1
+admin_boundaries:
+  china: outputs/exploratory_oracle/phase_i/_shared_inputs/admin_boundaries/china.geojson
+  henan: outputs/exploratory_oracle/phase_i/_shared_inputs/admin_boundaries/henan.geojson
+  source_readme: https://github.com/panyanbin/gcoord#中国行政区geojson数据
+  china_geojson: https://raw.githubusercontent.com/panyanbin/gcoord/master/map/%E4%B8%AD%E5%9B%BD_100000.json
+  henan_geojson: https://raw.githubusercontent.com/panyanbin/gcoord/master/map/%E6%B2%B3%E5%8D%97%E7%9C%81_410000.json
+  retrieved_date: "2026-10-31"
+output_root: outputs/exploratory_oracle/phase_i
+map_dpi: 600

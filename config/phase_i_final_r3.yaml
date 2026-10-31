@@ -1,0 +1,15 @@
+phase: I-9
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: phase_i_20261031_seed20261031_i9_r3
+source_runs:
+  i1: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_r2
+  i2: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i2_r2
+  i3: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i3_r2
+  i4: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r3
+  i5: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1
+  i6: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1
+  i7: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i7_r1
+  i8: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i8_r2
+  closure: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1
+output_root: outputs/exploratory_oracle/phase_i

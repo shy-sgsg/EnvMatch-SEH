@@ -1,0 +1,26 @@
+phase: I-5
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: phase_i_20261031_seed20261031_i5_r1
+input_run_id: run_20261025T114741_470772Z
+outcomes: [SHI_candidate, AN, OM, CEC, pH, SW, BD, MBC, RESP]
+key_outcomes: [SHI_candidate, OM, SW]
+environment_covariates: [Elevation, Cur, TWI, LST, NDWI, NDBSI, EVI, NDVI, Precipitation]
+soil_type_categories: [26, 27, 42, 85]
+tile_cells: 8
+cell_size_m: 30
+target_grid_m: 1200
+local_rf_neighbors: 300
+local_holdout_fraction: 0.25
+rf_n_estimators: 100
+rf_min_samples_leaf: 5
+rf_max_features: 0.8
+cv_seed: 20261035
+shap_outcomes: [SHI_candidate, OM, SW]
+ale_bins: 5
+gam_spatial_knots: 5
+gam_exposure_knots: 5
+gam_alphas: [0.01, 0.1, 1, 10, 100, 1000]
+spatial_block_size_m: 5000
+map_dpi: 300
+output_root: outputs/exploratory_oracle/phase_i

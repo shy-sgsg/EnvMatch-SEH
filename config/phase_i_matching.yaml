@@ -1,0 +1,35 @@
+phase: I-2
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: phase_i_20261031_seed20261031_i2_r2
+input_run_id: run_20261025T114741_470772Z
+phase_h_run_id: phase_h_20261028_seed20261028_h2
+primary_exposure: Aa_20yr
+supplementary_exposure: Aa_2020
+outcomes:
+  - SHI_candidate
+  - AN
+  - OM
+  - CEC
+  - pH
+  - SW
+  - BD
+  - MBC
+  - RESP
+matching_method: M4
+candidate_pairs:
+  Aa_20yr:
+    - stage2_Aa_20yr_01
+  Aa_2020:
+    - stage2_Aa_2020_01
+    - stage2_Aa_2020_03
+    - stage2_Aa_2020_06
+curve_candidates:
+  Aa_20yr: stage2_Aa_20yr_01
+  Aa_2020: stage2_Aa_2020_06
+candidate_pair_dir: outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/pairs/candidate_pairs
+model_trials: outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/tables/phase_h_model_trials.csv
+global_reference_table: outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_r2/results/global_response/global_associations.csv
+output_root: outputs/exploratory_oracle/phase_i
+figure_dpi: 300
+curve_bins: 25

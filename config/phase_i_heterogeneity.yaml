@@ -1,0 +1,21 @@
+phase: I-3
+mode: EXPLORATORY_ORACLE
+outcome_guided_selection: true
+run_id: phase_i_20261031_seed20261031_i3_r2
+primary_exposure: Aa_20yr
+supplementary_exposure: Aa_2020
+outcomes:
+  - SHI_candidate
+  - AN
+  - OM
+  - CEC
+  - pH
+  - SW
+  - BD
+  - MBC
+  - RESP
+phase_g_run: outputs/exploratory_oracle/phase_g_20261027_completion
+phase_h_heterogeneity_run: outputs/exploratory_oracle/low_erosion_group_heterogeneity_20261030_seed20261030_r2
+output_root: outputs/exploratory_oracle/phase_i
+spatial_block_min_for_supported_ranking: 5
+figure_dpi: 300
