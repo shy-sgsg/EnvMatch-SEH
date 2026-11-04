@@ -45,5 +45,6 @@
     "tables": "docs/reviews/2026-11-05/phase-k/{tables,matching,spatial,sem}/",
     "figures": "docs/reviews/2026-11-05/phase-k/figures/ (A-I PNG/SVG/PDF plus figure source CSVs)",
     "reports": "docs/reviews/2026-11-05/phase-k/reports/"
-  }
+  },
+  "review_baseline_commit": "aaf63778069bba54848565c7de0521ee621ac84f"
 }
