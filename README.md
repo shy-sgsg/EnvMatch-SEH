@@ -6,7 +6,7 @@
 
 研究方向以 [研究总纲](docs/RESEARCH_CHARTER.md) 为准。首版总纲提交后，其正文受审批机制保护；科研任务按 [治理协议](docs/governance/CODEX_TASK_PROTOCOL.md) 和 [阶段门](docs/governance/RESEARCH_STAGE_GATES.md) 执行。ChatGPT 阶段审查协议和总纲变更申请流程分别见 `docs/governance/`。
 
-面向非专业读者的全项目详报提供 [Markdown](docs/PROJECT_FULL_REPORT.md)、[LaTeX](docs/PROJECT_FULL_REPORT.tex) 和 [PDF](docs/PROJECT_FULL_REPORT.pdf) 三种版本。
+面向非专业读者的全项目详报提供 [Markdown](docs/PROJECT_FULL_REPORT.md)、[LaTeX](docs/PROJECT_FULL_REPORT.tex) 和 [PDF](docs/PROJECT_FULL_REPORT.pdf) 三种版本。最新成果的固定版本与 ChatGPT 审查范围见[审查请求](docs/reviews/2026-11-04/CHATGPT_REVIEW_REQUEST.md)。
 
 ## 研究背景与研究区
 
