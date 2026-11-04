@@ -971,6 +971,7 @@ def corrected_cec_path(path_text: str) -> bool:
         "docs/reviews/2026-10-29/phase-h/",
         "docs/reviews/2026-10-31/phase-i/",
         "docs/reviews/2026-11-02/phase-j/",
+        "docs/reviews/2026-11-05/phase-k/",
     )
     if relative.startswith(verified_doc_roots):
         return True
@@ -1222,6 +1223,50 @@ function update(){{const q=search.value.toLowerCase();let n=0;for(const c of car
 </script></body></html>'''
 
 
+def add_phase_k(items: list[dict[str, Any]]) -> None:
+    """Add the reviewed 20-year single-exposure Phase K figures to the full atlas."""
+    root = ROOT / "docs/reviews/2026-11-05/phase-k"
+    manifest = root / "figures/FIGURE_MANIFEST.csv"
+    captions = {
+        "A": ("全域关系、环境匹配与非线性响应", "先比较九项指标的总体关系，再看环境相近配对后的差异和三项重点指标的平滑曲线。相关系数来自不同统计单位，不能直接彼此相减。"),
+        "B": ("九项健康结局的局部回归地图", "九幅地图分别显示SHI和八项土壤指标的局部回归系数。颜色表示关系方向和强弱；系数为负不等于通过显著性检验。"),
+        "C": ("现场核查位置候选图", "把侵蚀水平、SHI、局部系数和环境背景组合成候选区域，帮助安排后续实地抽样。它们不是经实测验证的正式风险区。"),
+        "D": ("逐步控制环境后的SHI关系", "比较逐步加入环境信息时侵蚀与SHI的条件关系变化。控制后关系仍为负，但侵蚀额外提供的预测信息较小。"),
+        "E": ("全域与环境匹配结果对照", "并列展示全域像元、匹配端点和匹配配对差值的路径结果。三类数据单位不同，应分别阅读。"),
+        "F": ("侵蚀与土壤健康不同方面的关系", "展示侵蚀与物理、化学、生物活动指标组合及SHI的标准化关系，并给出空间分块区间。"),
+        "G": ("环境信息之外侵蚀增加的预测信息", "比较控制不同环境背景后，加入侵蚀变量所增加的模型解释量。增量表示预测改善，不表示因果贡献。"),
+        "H": ("侵蚀、健康维度与SHI关系示意图", "把核心路径模型中的直接关系和健康维度与SHI之间的关系画在一起。箭头表达模型关联设定，不代表因果方向已被证明。"),
+        "I": ("研究发现综合示意图", "把全域相关、环境相近配对、局部回归、环境控制模型和现场抽样候选区串成一条证据线。所有数字均来自已保存的20年平均侵蚀结果。"),
+        "J": ("土类与地形湿度分组的SHI关系（补充图）", "展示不同土类和地形湿度组合中的SHI路径估计，帮助观察环境差异。分组曾按探索结果筛选，不能当作独立验证。"),
+    }
+    sources = {
+        "A": "A_source_global.csv", "B": "B_source_local_betas.csv",
+        "C": "C_source_zone_profiles.csv", "D": "D_E_source_sem_rankings.csv",
+        "E": "D_E_source_sem_rankings.csv", "F": "F_H_source_sem_paths.csv",
+        "G": "G_source_sem_increment.csv", "H": "F_H_source_sem_paths.csv",
+        "I": "I_source_integrated_findings.csv", "J": "J_source_sem_groups.csv",
+    }
+    if not manifest.is_file():
+        return
+    with manifest.open("r", encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        letter = str(row.get("图号", "")).strip()
+        if letter not in captions:
+            continue
+        stem = str(row.get("文件基名", "")).strip()
+        image = root / "figures" / f"{letter}_{stem}.png"
+        title, caption = captions[letter]
+        items.append(make_item(
+            title=f"图{letter}｜{title}", phase="阶段 K｜20年平均侵蚀单情景综合结果",
+            question="侵蚀与土壤健康的关系在总体、环境匹配和不同地点是否一致？",
+            experiment="复用阶段 F–J 已保存结果，整理单一侵蚀情景证据",
+            chart_type="综合统计图" if letter in {"A", "I"} else ("局部空间图" if letter in {"B", "C"} else "路径与模型图"),
+            image=image, caption=caption, source=root / "figures" / sources[letter],
+            svg=image.with_suffix(".svg"), pdf=image.with_suffix(".pdf"),
+            scope_note="仅展示20年平均实际侵蚀情景；属于结果导向的探索性条件关联。"))
+
+
 def main() -> None:
     items: list[dict[str, Any]] = []
     add_initial(items)
@@ -1255,6 +1300,7 @@ def main() -> None:
     add_matched_unit_supplement(items)
     add_environment_group_heterogeneity(items)
     add_distribution_addendum(items)
+    add_phase_k(items)
     figure_group_count, figure_file_count = add_project_figure_inventory(items)
 
     items = [

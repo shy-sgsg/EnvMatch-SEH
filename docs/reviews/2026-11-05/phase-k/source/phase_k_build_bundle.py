@@ -97,11 +97,11 @@ config={
 
 # Cross-stage evidence index, retaining the exact population and estimand for each claim.
 crosswalk=[
-['环境匹配能否保留可比像元？','F','M3/M4空间留出匹配','M4覆盖率中位数0.483；最大绝对SMD中位数0.012','匹配质量好不等于无混杂；探索性设计诊断','docs/reviews/2026-10-26/PHASE_F_RESEARCH_REPORT.md'],
-['配对内健康差异是否随侵蚀差变化？','F-G','20年侵蚀M4配对差值','SHI/SW/OM差值秩相关约-0.128/-0.192/-0.114（早期约90,848对版本）','与后续111,289对候选版本分开；统计总体不同','docs/reviews/2026-10-27/phase-g/PHASE_G_RESEARCH_REPORT.md'],
+['环境匹配能否保留可比像元？','F','空间约束环境匹配的留出评价','该匹配方案覆盖率中位数0.483；最大绝对SMD中位数0.012','匹配质量好不等于无混杂；探索性设计诊断','docs/reviews/2026-10-26/PHASE_F_RESEARCH_REPORT.md'],
+['配对内健康差异是否随侵蚀差变化？','F-G','20年侵蚀环境相近配对差值','SHI/SW/OM差值秩相关约-0.128/-0.192/-0.114（早期约90,848对版本）','与后续111,289对候选版本分开；统计总体不同','docs/reviews/2026-10-27/phase-g/PHASE_G_RESEARCH_REPORT.md'],
 ['低值筛选会改变结论吗？','H','全样本与结果导向低值筛选','全域保留更完整；CDF筛选后的配对端点相关普遍减弱，空间测试未一致改善','Oracle敏感性，不能把筛选结果当正式阈值或验证','docs/reviews/2026-10-29/phase-h/PHASE_H_FINAL_SUMMARY.md'],
 ['九项健康结局的总体方向如何？','I','30m预测像元；完整案例n约384k-388k','20年侵蚀与SW -0.584、SHI -0.469、OM -0.415；CEC +0.168；其余多数为弱至中等负相关','全域秩相关；像元有空间依赖，CEC不作因果解释','outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_r2/results/global_response/global_associations.csv'],
-['环境匹配后关联还在吗？','I','M4第二套20年侵蚀匹配，111,289对','SHI/SW/OM配对差值Spearman约-0.144/-0.272/-0.115','差值层相关不等于匹配造成的效应衰减','outputs/exploratory_oracle/phase_i/phase_i_cec_corrected_20_2p9_plus18_20261031_i2/tables/matched_pair_associations.csv'],
+['环境匹配后关联还在吗？','I','更新环境匹配设计，111,289对','SHI/SW/OM配对差值Spearman约-0.144/-0.272/-0.115','差值层相关不等于匹配造成的效应衰减','outputs/exploratory_oracle/phase_i/phase_i_cec_corrected_20_2p9_plus18_20261031_i2/tables/matched_pair_associations.csv'],
 ['关联是否随位置变化？','I-J','GWR-LCR 7,387个240m单元及770个均衡点模型','SHI/OM/SW局部β中位数约-0.222/-0.395/-0.486；负系数比例约99.6%/100%/100%','局部系数比例不是显著比例；点位来自预测面','docs/reviews/2026-11-02/phase-j/spatial_synthesis/local_coefficient_distribution_summary.csv'],
 ['哪些环境位置值得进一步核查？','I-J','240m组合单元和候选压力分区','T1约18.882km²、均值Aa=15.67、均值SHI=0.549、β中位数=-0.567','分区经过结果筛选，仅为核查候选，不是正式风险等级','docs/reviews/2026-11-02/phase-j/spatial_synthesis/SPATIAL_STRESS_ENVIRONMENT_PROFILE.csv'],
 ['控制环境后是否仍有直接关联？','J','D1共同环境完整案例，n=293,145；5km块稳健分段路径','SHI标准化直接β=-0.113；R²=0.601；条件ΔR²=0.0079','结果导向模型比较，非因果中介；SHI来自健康指标体系','docs/reviews/2026-11-02/phase-j/results/SEM_MODEL_RANKINGS.csv'],
@@ -111,7 +111,7 @@ with (RUN/'tables/phase_fj_evidence_crosswalk.csv').open('w',encoding='utf-8-sig
 
 # Four evidence-led findings.
 findings=[
-['1','整体上，较高的20年平均侵蚀与较低的SHI、SW、OM同时出现','全域Spearman：SW -0.584（n=388,092），SHI -0.469（n=384,737），OM -0.415（n=388,092）。M4配对差值相关分别约-0.272、-0.144、-0.115（111,289对设计）。','方向在全域和匹配差值中均为负；两种统计单位不能相减来声称匹配削弱幅度。'],
+['1','整体上，较高的20年平均侵蚀与较低的SHI、SW、OM同时出现','全域Spearman：SW -0.584（n=388,092），SHI -0.469（n=384,737），OM -0.415（n=388,092）。更新环境匹配配对差值相关分别约-0.272、-0.144、-0.115（111,289对设计）。','方向在全域和匹配差值中均为负；两种统计单位不能相减来声称匹配削弱幅度。'],
 ['2','九项结局反应不同，不能说所有土壤指标都一致变差','全域Spearman排序：SW -0.584、SHI -0.469、OM -0.415、RESP -0.272、AN -0.233、BD -0.200、MBC -0.118、pH -0.109、CEC +0.168。','CEC采用供给图层；任何单一指标相关都不能代表整体健康，相关不证明因果。'],
 ['3','空间局部回归显示负向关系占主导，但强弱因地点而异','GWR-LCR的SHI、OM、SW局部β中位数约-0.222、-0.395、-0.486；负系数单元比例约99.6%、100%、100%。770点GWR/MGWR的系数排序一致性有限。','系数为局部条件估计；负系数占比不是显著性比例，带宽不是精确作用半径。'],
 ['4','控制核心环境后，20年侵蚀与SHI仍有较弱的负向条件关系','D1完整案例n=293,145，5km块稳健模型：SHI标准化直接β=-0.113，R²=0.601，侵蚀条件ΔR²=0.0079。物理/化学/生物活动维度对应β约-0.389/-0.251/-0.066。','条件关联与预测增量不是因果贡献；空间预测像元不是独立实测点。']]

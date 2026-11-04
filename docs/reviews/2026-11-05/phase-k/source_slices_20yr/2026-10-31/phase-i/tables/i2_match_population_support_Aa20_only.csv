@@ -1,0 +1,4 @@
+﻿exposure,candidate_id,population,method,n_pairs,n_unique_endpoints,median_geographic_distance_m,median_environmental_distance,source_file,outcome_guided_selection
+Aa_20yr,stage2_Aa_20yr_01,all_erosion,M4,111289,222578,301.4962686336267,0.0321345380186411,outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/pairs/candidate_pairs/stage2_Aa_20yr_01.parquet,True
+Aa_20yr,stage2_Aa_20yr_01,zero_positive,M4,68172,136344,323.10988842807024,0.0304651033830089,outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/pairs/candidate_pairs/stage2_Aa_20yr_01.parquet,True
+Aa_20yr,stage2_Aa_20yr_01,both_positive,M4,43117,86234,270.0,0.0346565842411415,outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/pairs/candidate_pairs/stage2_Aa_20yr_01.parquet,True

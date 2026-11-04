@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="851.4pt" height="480.096pt" viewBox="0 0 851.4 480.096" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-05T02:38:16.624150</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 480.096
+L 851.4 480.096
+L 851.4 0
+L 0 0
+z
+" style="fill: #f7f9fb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 27.288 259.607232
+L 162.882 259.607232
+Q 177.948 259.607232 177.948 251.224704
+L 177.948 98.476416
+Q 177.948 90.093888 162.882 90.093888
+L 27.288 90.093888
+Q 12.222 90.093888 12.222 98.476416
+L 12.222 251.224704
+Q 12.222 259.607232 27.288 259.607232
+z
+" clip-path="url(#p261979f281)" style="fill: #e8f1f8; stroke: #35749a; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 177.948 174.85056
+Q 177.5295 174.85056 178.899854 174.85056
+" clip-path="url(#p261979f281)" style="fill: none; stroke: #778995; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 184.899854 177.85056
+L 178.899854 174.85056
+L 184.899854 171.85056
+z
+" clip-path="url(#p261979f281)" style="fill: #778995; stroke: #778995; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 192.177 259.607232
+L 327.771 259.607232
+Q 342.837 259.607232 342.837 251.224704
+L 342.837 98.476416
+Q 342.837 90.093888 327.771 90.093888
+L 192.177 90.093888
+Q 177.111 90.093888 177.111 98.476416
+L 177.111 251.224704
+Q 177.111 259.607232 192.177 259.607232
+z
+" clip-path="url(#p261979f281)" style="fill: #eaf4ed; stroke: #4b8a65; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 342.837 174.85056
+Q 342.4185 174.85056 343.788854 174.85056
+" clip-path="url(#p261979f281)" style="fill: none; stroke: #778995; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 349.788854 177.85056
+L 343.788854 174.85056
+L 349.788854 171.85056
+z
+" clip-path="url(#p261979f281)" style="fill: #778995; stroke: #778995; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 357.066 259.607232
+L 492.66 259.607232
+Q 507.726 259.607232 507.726 251.224704
+L 507.726 98.476416
+Q 507.726 90.093888 492.66 90.093888
+L 357.066 90.093888
+Q 342 90.093888 342 98.476416
+L 342 251.224704
+Q 342 259.607232 357.066 259.607232
+z
+" clip-path="url(#p261979f281)" style="fill: #fff1df; stroke: #d28a37; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 507.726 174.85056
+Q 507.3075 174.85056 508.677854 174.85056
+" clip-path="url(#p261979f281)" style="fill: none; stroke: #778995; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 514.677854 177.85056
+L 508.677854 174.85056
+L 514.677854 171.85056
+z
+" clip-path="url(#p261979f281)" style="fill: #778995; stroke: #778995; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 521.955 259.607232
+L 657.549 259.607232
+Q 672.615 259.607232 672.615 251.224704
+L 672.615 98.476416
+Q 672.615 90.093888 657.549 90.093888
+L 521.955 90.093888
+Q 506.889 90.093888 506.889 98.476416
+L 506.889 251.224704
+Q 506.889 259.607232 521.955 259.607232
+z
+" clip-path="url(#p261979f281)" style="fill: #eeeafa; stroke: #7865a7; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 672.615 174.85056
+Q 672.1965 174.85056 673.566854 174.85056
+" clip-path="url(#p261979f281)" style="fill: none; stroke: #778995; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 679.566854 177.85056
+L 673.566854 174.85056
+L 679.566854 171.85056
+z
+" clip-path="url(#p261979f281)" style="fill: #778995; stroke: #778995; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 686.844 259.607232
+L 822.438 259.607232
+Q 837.504 259.607232 837.504 251.224704
+L 837.504 98.476416
+Q 837.504 90.093888 822.438 90.093888
+L 686.844 90.093888
+Q 671.778 90.093888 671.778 98.476416
+L 671.778 251.224704
+Q 671.778 259.607232 686.844 259.607232
+z
+" clip-path="url(#p261979f281)" style="fill: #fce9e7; stroke: #c65e53; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 21px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #19334a" x="425.7" y="40.596838" transform="rotate(-0 425.7 40.596838)">侵蚀与土壤健康：从总体关系到实地核查线索</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12.5px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #526778" x="425.7" y="64.00211" transform="rotate(-0 425.7 64.00211)">只看20年平均实际侵蚀；下列每一步回答的问题不同，统计单位也不同</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #35749a" x="95.085" y="120.015513" transform="rotate(-0 95.085 120.015513)">① 看总体</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(50.730375 138.53792)">约38.8万有效像元</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(95.085 151.611925)"/>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(67.395625 164.68593)">SW  −0.584</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(67.974875 177.759935)">SHI −0.469</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(66.22225 190.83394)">OM  −0.415</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(95.085 203.907945)"/>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(67.085 216.98195)">全域秩相关</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #4b8a65" x="259.974" y="120.015513" transform="rotate(-0 259.974 120.015513)">② 看相近对象</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(212.06775 138.53792)">111,289对匹配设计</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(259.974 151.611925)"/>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(232.284625 164.68593)">SW  −0.272</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(232.863875 177.759935)">SHI −0.144</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(231.11125 190.83394)">OM  −0.115</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(259.974 203.907945)"/>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(220.774 216.98195)">配对差值秩相关</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #d28a37" x="424.863" y="120.015513" transform="rotate(-0 424.863 120.015513)">③ 看地点差异</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(377.5255 138.53792)">约7,400个空间单元</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(424.863 151.611925)"/>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(397.173625 164.68593)">SW  −0.486</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(396.00025 177.759935)">OM  −0.395</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(397.752875 190.83394)">SHI −0.222</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(424.863 203.907945)"/>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(385.663 216.98195)">局部系数中位数</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #7865a7" x="589.752" y="120.015513" transform="rotate(-0 589.752 120.015513)">④ 控制环境</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(558.64575 138.53792)">293,145像元</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(548.848375 151.611925)">35个5 km空间块</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(589.752 164.68593)"/>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(551.441875 177.759935)">SHI路径 −0.113</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(558.49175 190.83394)">ΔR² = 0.0079</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(589.752 203.907945)"/>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(550.552 216.98195)">加入环境信息后</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #c65e53" x="754.641" y="120.015513" transform="rotate(-0 754.641 120.015513)">⑤ 指向现场</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(712.862375 138.53792)">623个240 m单元</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(704.20775 151.611925)">面积等价18.882 km²</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(754.641 164.68593)"/>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(716.946875 177.759935)">平均侵蚀 15.67</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(719.41525 190.83394)">平均SHI 0.549</text>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(754.641 203.907945)"/>
+    <text style="font-size: 11.2px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #233746" transform="translate(721.041 216.98195)">先做现场核查</text>
+   </g>
+   <g id="text_13">
+    <g id="patch_11">
+     <path d="M 225.602344 320.074897
+L 625.797656 320.074897
+Q 632.047656 320.074897 632.047656 313.824897
+L 632.047656 301.322943
+Q 632.047656 295.072943 625.797656 295.072943
+L 225.602344 295.072943
+Q 219.352344 295.072943 219.352344 301.322943
+L 219.352344 313.824897
+Q 219.352344 320.074897 225.602344 320.074897
+z
+" style="fill: #ffffff; stroke: #cad5dc; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 12.5px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #314e62" x="425.7" y="310.82099" transform="rotate(-0 425.7 310.82099)">九项指标并非同方向：CEC全域相关为 +0.168；其余指标强弱各不相同。</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #19334a" x="425.7" y="366.834393" transform="rotate(-0 425.7 366.834393)">这些结果共同支持：若干土壤指标与侵蚀存在负向空间条件关联，关系强弱会随指标、地点和控制方式变化。</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #586b77" transform="translate(194.7 412.906343)">解释边界：结果来自空间预测栅格且有空间依赖；配对、像元和空间单元不可混作同一种样本。</text>
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; fill: #586b77" transform="translate(238.7 426.83346)">路径模型不是因果证明；候选位置只用于安排独立实测，不是正式风险分区。</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p261979f281">
+   <rect x="7.2" y="7.2" width="837" height="465.696"/>
+  </clipPath>
+ </defs>
+</svg>

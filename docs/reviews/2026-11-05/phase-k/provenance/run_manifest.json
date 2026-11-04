@@ -9,7 +9,9 @@
   "reuse_policy": "Reuse Phase F-J saved outputs; no full matching, low-erosion, GWR/MGWR bandwidth, or SEM structure searches were rerun.",
   "single_exposure_policy": "The 20yr_only bundle excludes the other erosion period from exposure, covariates, grouping, matching, and model selection.",
   "figure_set": {
-    "count": 9,
+    "count": 10,
+    "core_count": 9,
+    "supplementary_count": 1,
     "labels": [
       "A",
       "B",
@@ -19,7 +21,22 @@
       "F",
       "G",
       "H",
+      "I",
+      "J"
+    ],
+    "core_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
       "I"
+    ],
+    "supplementary_labels": [
+      "J"
     ],
     "formats": [
       "PNG",
@@ -35,7 +52,12 @@
     "阶段K技术报告.md",
     "精简研究报告.md",
     "汇报提纲_17页.md",
-    "七分钟汇报稿.md"
+    "七分钟汇报稿.md",
+    "PHASE_K_CORE_SCIENTIFIC_FINDINGS.md",
+    "PHASE_K_MATCHING_NONLINEAR_SYNTHESIS.md",
+    "PHASE_K_GWR_MGWR_SPATIAL_SYNTHESIS.md",
+    "PHASE_K_SEM_SYNTHESIS_REPORT.md",
+    "PHASE_K_SPATIAL_STRESS_ZONES_REPORT.md"
   ],
   "review_archive": "docs/reviews/2026-11-05/phase-k/",
   "inputs_manifest": "docs/reviews/2026-11-05/phase-k/provenance/analysis_config.json",
@@ -43,8 +65,21 @@
   "build_script": "docs/reviews/2026-11-05/phase-k/source/phase_k_build_bundle.py",
   "delivery_outputs": {
     "tables": "docs/reviews/2026-11-05/phase-k/{tables,matching,spatial,sem}/",
-    "figures": "docs/reviews/2026-11-05/phase-k/figures/ (A-I PNG/SVG/PDF plus figure source CSVs)",
-    "reports": "docs/reviews/2026-11-05/phase-k/reports/"
+    "figures": "figures/ (A-I core and supplementary J; PNG/SVG/PDF plus figure source CSVs)",
+    "reports": "docs/reviews/2026-11-05/phase-k/reports/",
+    "single_period_slices": "source_slices_20yr/ and outputs/exploratory_oracle/phase_k/phase_k_20261104_seed20261104_r1/20yr_only/source_slices_20yr/"
   },
-  "review_baseline_commit": "aaf63778069bba54848565c7de0521ee621ac84f"
+  "review_baseline_commit": "aaf63778069bba54848565c7de0521ee621ac84f",
+  "inventory": {
+    "review_artifacts": 764,
+    "confirmed_dual_period_tables": 94,
+    "single_period_table_slices": 94,
+    "slice_manifest": "results/DUAL_TABLE_20YR_SLICE_MANIFEST.csv",
+    "all_slice_checks": "PASS"
+  },
+  "build_scripts": [
+    "source/phase_k_build_bundle.py",
+    "source/phase_k_inventory_and_slices.py",
+    "source/phase_k_finalize_deliverables.py"
+  ]
 }

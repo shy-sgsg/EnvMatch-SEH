@@ -1,0 +1,5 @@
+﻿exposure,histogram_bins,threshold_log10,threshold_original,retained_fraction_positive,candidate_source,status
+Aa_20yr,32,0.5675029464595646,3.6940515056937344,0.8650368197543987,otsu_comparison,comparison_threshold
+Aa_20yr,64,0.5948796427245621,3.934410249060075,0.8553732311953517,otsu_comparison,comparison_threshold
+Aa_20yr,128,0.6085679908570607,4.060392256388764,0.8497672255637945,otsu_comparison,comparison_threshold
+Aa_20yr,256,0.6154121649233101,4.124888037522965,0.8468850130057286,otsu_comparison,comparison_threshold

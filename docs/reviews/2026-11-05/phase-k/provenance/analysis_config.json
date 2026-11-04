@@ -27,7 +27,8 @@
     "F",
     "G",
     "H",
-    "I"
+    "I",
+    "J"
   ],
   "primary_input_tables": {
     "global": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_r2/results/global_response/global_associations.csv",
@@ -47,5 +48,28 @@
     "sem_env": "docs/reviews/2026-11-02/phase-j/results/SEM_ENVIRONMENT_GROUP_COMPARISON.csv",
     "population": "docs/reviews/2026-11-02/phase-j/data/population_counts.csv"
   },
-  "interpretation": "Exploratory conditional associations from predicted raster values; pixels are spatially dependent and do not equal independent measured sites. Spatial and subgroup patterns are descriptive; no causal claim."
+  "interpretation": "Exploratory conditional associations from predicted raster values; pixels are spatially dependent and do not equal independent measured sites. Spatial and subgroup patterns are descriptive; no causal claim.",
+  "figure_roles": {
+    "core": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I"
+    ],
+    "supplementary": [
+      "J"
+    ]
+  },
+  "synthesis_deliverables": [
+    "PHASE_K_CORE_SCIENTIFIC_FINDINGS.md",
+    "PHASE_K_MATCHING_NONLINEAR_SYNTHESIS.md",
+    "PHASE_K_GWR_MGWR_SPATIAL_SYNTHESIS.md",
+    "PHASE_K_SEM_SYNTHESIS_REPORT.md",
+    "PHASE_K_SPATIAL_STRESS_ZONES_REPORT.md"
+  ]
 }

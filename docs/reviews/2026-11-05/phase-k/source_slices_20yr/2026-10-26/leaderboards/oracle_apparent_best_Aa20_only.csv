@@ -1,0 +1,10 @@
+﻿exposure,outcome,selection_objective,selection_rule,target_retention_fraction,sample_retention_ratio,n,n_complete_cases,apparent_r2,r_squared,coefficient,direction,evaluation_set
+Aa_20yr,AN,maximize_apparent_ols_r2_at_fixed_retention,lowest_absolute_full_fit_residual,0.05,0.0500006451363173,19376.0,387515.0,0.995403172094786,0.995403172094786,-0.2909594828904582,negative,apparent
+Aa_20yr,BD,maximize_apparent_ols_r2_at_fixed_retention,lowest_absolute_full_fit_residual,0.05,0.0499998304170722,14742.0,294841.0,0.9863448078236712,0.9863448078236712,-0.0028903169530208,negative,apparent
+Aa_20yr,CEC,maximize_apparent_ols_r2_at_fixed_retention,lowest_absolute_full_fit_residual,0.05,0.0499998304170722,14742.0,294841.0,0.9790669068128308,0.9790669068128308,0.0726640298337898,positive,apparent
+Aa_20yr,MBC,maximize_apparent_ols_r2_at_fixed_retention,lowest_absolute_full_fit_residual,0.05,0.0499998304170722,14742.0,294841.0,0.9831899278088028,0.9831899278088028,-0.1559518915774514,negative,apparent
+Aa_20yr,OM,maximize_apparent_ols_r2_at_fixed_retention,lowest_absolute_full_fit_residual,0.05,0.0499998304170722,14742.0,294841.0,0.996095959666268,0.996095959666268,-0.181120945504856,negative,apparent
+Aa_20yr,RESP,maximize_apparent_ols_r2_at_fixed_retention,lowest_absolute_full_fit_residual,0.05,0.0499998304170722,14742.0,294841.0,0.99295787735789,0.99295787735789,-5.703450643326375,negative,apparent
+Aa_20yr,SHI_candidate,maximize_apparent_ols_r2_at_fixed_retention,lowest_absolute_full_fit_residual,0.05,0.0500006497979128,19237.0,384735.0,0.9977172517472316,0.9977172517472316,-0.0032945527905483,negative,apparent
+Aa_20yr,SW,maximize_apparent_ols_r2_at_fixed_retention,lowest_absolute_full_fit_residual,0.05,0.0500002580392116,19377.0,387538.0,0.9977085278757754,0.9977085278757754,-0.4145288098977617,negative,apparent
+Aa_20yr,pH,maximize_apparent_ols_r2_at_fixed_retention,lowest_absolute_full_fit_residual,0.05,0.0499989825196882,14742.0,294846.0,0.96116124639179,0.96116124639179,-0.0013486881612573,negative,apparent

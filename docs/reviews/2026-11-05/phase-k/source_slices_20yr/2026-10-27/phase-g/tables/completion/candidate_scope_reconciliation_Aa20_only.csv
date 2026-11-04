@@ -1,0 +1,10 @@
+﻿exposure,outcome,apparent_candidate_rows,eligible_candidate_rows,excluded_candidate_rows,apparent_unique_candidates,retained_row_fraction,excluded_rows_include_water_soil_85
+Aa_20yr,AN,164,163,1,140,0.9939024390243902,True
+Aa_20yr,BD,162,161,1,138,0.9938271604938272,True
+Aa_20yr,CEC,162,161,1,138,0.9938271604938272,True
+Aa_20yr,MBC,162,161,1,138,0.9938271604938272,True
+Aa_20yr,OM,162,161,1,138,0.9938271604938272,True
+Aa_20yr,RESP,162,161,1,138,0.9938271604938272,True
+Aa_20yr,SHI_candidate,163,162,1,139,0.9938650306748468,True
+Aa_20yr,SW,163,162,1,139,0.9938650306748468,True
+Aa_20yr,pH,162,161,1,138,0.9938271604938272,True

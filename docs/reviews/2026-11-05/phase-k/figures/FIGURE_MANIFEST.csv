@@ -1,10 +1,11 @@
-﻿图号,文件基名,主题,数据来源,暴露情景,当前格式
-A,20yr_global_match_nonlinear,全域相关、匹配差值和GAM响应,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
-B,20yr_nine_outcome_local_maps,九项结局的局部回归系数地图,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
-C,20yr_candidate_environment_zones,空间敏感位置候选分区,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
-D,20yr_sem_control_hierarchy,不同环境控制层级下的SHI路径,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
-E,20yr_full_matched_sem,全域和匹配总体的路径对照,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
-F,20yr_sem_dimension_paths,侵蚀与健康维度路径,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
-G,20yr_sem_incremental_fit,环境控制下的侵蚀预测增量,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
-H,20yr_sem_path_diagram,结构路径图,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
-I,20yr_soil_twi_sem,土类×地形湿度子组路径,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
+﻿图号,文件基名,主题,数据来源,图件类别,暴露情景
+A,20yr_global_match_nonlinear,全域相关、环境相近配对与非线性响应,A_source_global.csv；A_source_matched.csv；full_sample_gam_curves_20yr.csv,核心图,20年平均实际侵蚀
+B,20yr_nine_outcome_local_maps,SHI和八项土壤指标的局部回归地图,B_source_local_betas.csv,核心图,20年平均实际侵蚀
+C,20yr_candidate_environment_zones,现场核查位置候选图,C_source_zone_profiles.csv；C_source_zone_tiles.csv,核心图,20年平均实际侵蚀
+D,20yr_sem_control_hierarchy,环境控制层级与SHI路径,D_E_source_sem_rankings.csv,核心图,20年平均实际侵蚀
+E,20yr_full_matched_sem,全域和环境匹配总体对照,D_E_source_sem_rankings.csv,核心图,20年平均实际侵蚀
+F,20yr_sem_dimension_paths,侵蚀与土壤健康维度路径,F_H_source_sem_paths.csv,核心图,20年平均实际侵蚀
+G,20yr_sem_incremental_fit,环境控制下侵蚀增加的预测信息,G_source_sem_increment.csv,核心图,20年平均实际侵蚀
+H,20yr_sem_path_diagram,侵蚀与健康维度和SHI的核心路径图,F_H_source_sem_paths.csv,核心图,20年平均实际侵蚀
+I,20yr_integrated_findings,总体、匹配、局部、控制与现场核查的综合科学发现,I_source_integrated_findings.csv,核心图,20年平均实际侵蚀
+J,20yr_soil_twi_sem,土类与地形湿度组合中的SHI路径,J_source_sem_groups.csv,补充图,20年平均实际侵蚀
