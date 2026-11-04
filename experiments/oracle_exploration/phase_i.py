@@ -191,7 +191,12 @@ def _association_table(
                 if len(x) < 3 or np.ptp(x) == 0 or np.ptp(y) == 0:
                     continue
                 hx = np.log1p(x)
-                hrow = prior.loc[prior["exposure"].eq(exposure) & prior["outcome"].eq(outcome)] if population == "mask_all" else pd.DataFrame()
+                has_prior_keys = {"exposure", "outcome"}.issubset(prior.columns)
+                hrow = (
+                    prior.loc[prior["exposure"].eq(exposure) & prior["outcome"].eq(outcome)]
+                    if population == "mask_all" and has_prior_keys
+                    else pd.DataFrame()
+                )
                 if len(hrow) and int(hrow.iloc[0]["n"]) == len(x):
                     rho = float(hrow.iloc[0]["spearman_rho"])
                     rho_p = float(hrow.iloc[0]["spearman_p"])

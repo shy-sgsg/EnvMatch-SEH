@@ -1,0 +1,43 @@
+{
+  "artifact": "CEC_CORRECTION_REANALYSIS",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "formula": "CEC_corrected = (CEC - 20 * Erosion) / 2.9 + 18",
+  "erosion_formula": "Aa_20yr/max(Aa_20yr full valid extent) + Aa_2020/max(Aa_2020 full valid extent)",
+  "input_bundle": "outputs/exploratory_oracle/phase_i/cec_corrected_input_20_2p9_plus18_20261031",
+  "analysis_runs": {
+    "i1": "outputs/exploratory_oracle/phase_i/phase_i_cec_corrected_20_2p9_plus18_20261031_i1",
+    "i2": "outputs/exploratory_oracle/phase_i/phase_i_cec_corrected_20_2p9_plus18_20261031_i2",
+    "i3": "outputs/exploratory_oracle/phase_i/phase_i_cec_corrected_20_2p9_plus18_20261031_i3",
+    "i4": "outputs/exploratory_oracle/phase_i/phase_i_cec_corrected_20_2p9_plus18_20261031_i4",
+    "i4_single_exposure_gwr": "outputs/exploratory_oracle/phase_i/phase_i_cec_corrected_20_2p9_plus18_20261031_i4_gwr",
+    "i5": "outputs/exploratory_oracle/phase_i/phase_i_cec_corrected_20_2p9_plus18_20261031_i5",
+    "i6": "outputs/exploratory_oracle/phase_i/phase_i_cec_corrected_20_2p9_plus18_20261031_i6",
+    "i7": "outputs/exploratory_oracle/phase_i/phase_i_cec_corrected_20_2p9_plus18_20261031_i7",
+    "low_erosion_groups": "outputs/exploratory_oracle/low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031"
+  },
+  "supporting_tables": [
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/bivariate_local_moran_cluster_counts.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/environment_group_interactions_m4_Aa20.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/environment_group_slopes_m4_Aa20.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/global_associations.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/gwr_single_exposure_ols.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/gwr_single_exposure_summary.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/gwr_spatial_summary.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/local_negative_response_gistar_summary.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/local_spearman_summary.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/low_erosion_group_sensitivity_m4_Aa20.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/matched_pair_associations.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/paired_model_family_trials.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/phase_i7_cec_crosswalk.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/same_site_colocation_summary.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/spatial_ml_marginal_effect_q50.csv",
+    "docs/reviews/2026-10-31/phase-i/cec-correction/tables/spatial_ml_model_comparison.csv"
+  ],
+  "figure": "docs/reviews/2026-10-31/phase-i/cec-correction/figures/cec_gwr_coefficients.png",
+  "limits": [
+    "Derived CEC includes an explicit negative Aa term; resulting associations are not independent causal validation.",
+    "PCNM was not rerun; source table unavailable.",
+    "Pixel and spatial-unit counts are not independent measured sample counts."
+  ]
+}

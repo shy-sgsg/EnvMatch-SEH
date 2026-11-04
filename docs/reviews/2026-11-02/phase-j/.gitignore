@@ -1,0 +1,6 @@
+# Keep the full local review package, but do not place large row-level inputs in Git.
+/data/*.parquet
+/inputs/**/*.parquet
+/inputs/**/*.tif
+/inputs/**/*.tiff
+/sem/lavaan_cbsem/lavaan_cbsem_input.csv.gz

@@ -1,0 +1,4 @@
+﻿outcome,label,n_common_units,pearson_local_beta_correlation,sign_agreement_fraction,mean_absolute_beta_difference,outcome_guided_selection
+OM,有机质（OM）,770,0.2906622874429737,1.0,0.04904742230506912,True
+SHI_candidate,土壤健康指数（SHI）,770,0.5367182069962906,1.0,0.04195863039268972,True
+SW,土壤含水量（SW）,770,0.20016844288173594,1.0,0.03994092222914589,True

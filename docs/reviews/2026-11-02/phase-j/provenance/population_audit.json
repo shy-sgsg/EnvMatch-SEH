@@ -1,0 +1,245 @@
+{
+  "phase_i8_240m_reproduction": {
+    "rows": 7387,
+    "pixels": 293633,
+    "max_abs_differences": {
+      "n_pixels": 0.0,
+      "Aa_20yr_mean": 0.0,
+      "SHI_mean": 0.0
+    }
+  },
+  "D2_variable_specific_support": {
+    "base_pixels": 293633,
+    "blocks": 7387,
+    "variables": {
+      "Aa_20yr": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "Aa_2020": {
+        "valid_pixel_support": 293146,
+        "missing_pixel_support": 487,
+        "blocks_with_missing_support": 162
+      },
+      "SHI_candidate": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "AN": {
+        "valid_pixel_support": 293632,
+        "missing_pixel_support": 1,
+        "blocks_with_missing_support": 1
+      },
+      "OM": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "CEC": {
+        "valid_pixel_support": 293146,
+        "missing_pixel_support": 487,
+        "blocks_with_missing_support": 162
+      },
+      "pH": {
+        "valid_pixel_support": 293632,
+        "missing_pixel_support": 1,
+        "blocks_with_missing_support": 1
+      },
+      "SW": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "BD": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "MBC": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "RESP": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "Elevation": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "Cur": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "TWI": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "LST": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "NDWI": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "NDBSI": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "EVI": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "NDVI": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "Precipitation": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "SoilType": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "x": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      },
+      "y": {
+        "valid_pixel_support": 293633,
+        "missing_pixel_support": 0,
+        "blocks_with_missing_support": 0
+      }
+    },
+    "aggregation": "each block-variable mean uses that variable's non-missing pixels"
+  },
+  "D1_full_complete_pixels": 384211,
+  "D1_common_environment_complete_pixels": 293145,
+  "D3_M4_unique_pixels": 181794,
+  "D4_M4_pairs": 111289,
+  "D4_pair_endpoint_unique_count": 222578,
+  "D4_zero_positive_pairs": 68172,
+  "D4_both_positive_pairs": 43117,
+  "D5_positive_pixels": 195013,
+  "D6_zero_positive_pairs": 68172,
+  "D7_soil_twi_groups": [
+    {
+      "SoilType": 26.0,
+      "twi_group": "q1",
+      "n": 14848
+    },
+    {
+      "SoilType": 26.0,
+      "twi_group": "q2",
+      "n": 14849
+    },
+    {
+      "SoilType": 26.0,
+      "twi_group": "q3",
+      "n": 14849
+    },
+    {
+      "SoilType": 26.0,
+      "twi_group": "q4",
+      "n": 14849
+    },
+    {
+      "SoilType": 27.0,
+      "twi_group": "q1",
+      "n": 48163
+    },
+    {
+      "SoilType": 27.0,
+      "twi_group": "q2",
+      "n": 48163
+    },
+    {
+      "SoilType": 27.0,
+      "twi_group": "q3",
+      "n": 48163
+    },
+    {
+      "SoilType": 27.0,
+      "twi_group": "q4",
+      "n": 48163
+    },
+    {
+      "SoilType": 42.0,
+      "twi_group": "q1",
+      "n": 8688
+    },
+    {
+      "SoilType": 42.0,
+      "twi_group": "q2",
+      "n": 8688
+    },
+    {
+      "SoilType": 42.0,
+      "twi_group": "q3",
+      "n": 8688
+    },
+    {
+      "SoilType": 42.0,
+      "twi_group": "q4",
+      "n": 8688
+    }
+  ],
+  "D4_pair_source": "outputs/exploratory_oracle/phase_i/cec_corrected_input_20_2p9_plus18_20261031/pairs/candidate_pairs/stage2_Aa_20yr_01.parquet",
+  "D3_membership_source": "outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/pixels/matched_pixel_unique.parquet",
+  "D3_D4_endpoint_overlap": {
+    "D3_phase_h_unique_endpoint_count": 181794,
+    "D4_stage2_pair_endpoint_count": 222578,
+    "shared_endpoint_count": 133533,
+    "D3_only_endpoint_count": 48261,
+    "D4_only_endpoint_count": 89045,
+    "interpretation": "D3 and D4 are different historical M4 match versions and are not a single shared endpoint population"
+  },
+  "matching_versions": {
+    "D3": {
+      "source": "Phase H matched pairs inherited from Phase F/G M4 Aa_20yr design",
+      "environment_caliper": 0.35,
+      "geographic_radius_m": 1000,
+      "minimum_within_group_erosion_percentile_gap": 0.5,
+      "matched_pairs": 90897,
+      "unique_endpoints": 181794
+    },
+    "D4": {
+      "source_candidate_id": "stage2_Aa_20yr_01",
+      "stage": "Phase H Stage 2",
+      "environment_caliper": 0.75,
+      "geographic_radius_m": 500,
+      "minimum_within_group_erosion_percentile_gap": 0.3,
+      "kmeans_groups_per_soil_type": 8,
+      "matched_pairs": 111289,
+      "unique_endpoints": 222578
+    }
+  },
+  "outcome_guided_selection": true,
+  "population_selection_basis": {
+    "D1_full_pixels": "CEC与健康完整案例；完整案例定义，不按健康效应筛选",
+    "D1_common_env_case": "主要环境变量共同完整案例；用于M0–M3同样本比较",
+    "D2_240m_blocks": "复现既有Phase I8的8×8环境完整单元支持（历史单元以SHI候选值参与汇总）",
+    "D3_M4_unique_pixels": "Phase H沿用Phase F/G历史M4/Aa_20yr端点成员（环境卡尺0.35、地理上限1,000m、组内侵蚀百分位差至少0.50）；按cell_id回连当前健康与CEC值",
+    "D4_M4_pair_differences": "Phase H第二阶段候选stage2_Aa_20yr_01（环境卡尺0.75、地理上限500m、土类内8组、组内侵蚀百分位差至少0.30）；按cell_id重算端点差。与D3为不同匹配版本",
+    "D5_positive_erosion": "D1共同环境完整案例中Aa_20yr大于0",
+    "D6_zero_positive_pairs": "D4中低侵蚀端为0且高侵蚀端大于0的既定配对",
+    "D7_soil_TWI_groups": "主土类26/27/42内按各土类TWI秩划分四分位；未按SEM斜率挑选分组"
+  }
+}

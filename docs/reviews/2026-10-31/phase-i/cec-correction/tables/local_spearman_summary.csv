@@ -1,0 +1,2 @@
+outcome,n_units,rho_median,rho_p10,rho_p90,negative_ratio,median_neighborhood_radius_m,outcome_guided_selection
+CEC,7396,-0.3089588958895889,-0.6229955650205522,0.0101710171017101,0.8930502974580855,1421.784999558311,True

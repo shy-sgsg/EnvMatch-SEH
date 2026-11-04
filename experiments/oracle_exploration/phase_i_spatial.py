@@ -466,7 +466,10 @@ def _save_multiscale_bandwidth_figure(run_dir: Path, bandwidths: pd.DataFrame, d
 def _report(run_dir: Path, summary: pd.DataFrame, pair_counts: dict[str, int], n_mask: int,
             n_env: int, package_status: dict[str, Any], config: dict[str, Any],
             multiscale_bandwidths: pd.DataFrame) -> str:
-    key = summary.loc[summary["outcome"].isin(KEY_OUTCOMES)].copy()
+    report_outcomes = list(config["outcomes"])
+    key_outcomes = [outcome for outcome in config.get("key_outcomes", KEY_OUTCOMES)
+                    if outcome in report_outcomes]
+    key = summary.loc[summary["outcome"].isin(key_outcomes)].copy()
     summary_lookup = summary.set_index(["outcome", "analysis_population", "model_family"])
     lines = [
         "# Phase I-4：GWR 与空间变化系数探索", "",
@@ -484,7 +487,7 @@ def _report(run_dir: Path, summary: pd.DataFrame, pair_counts: dict[str, int], n
         "| 指标 | 未调整 GWR β̄（负向比） | 环境调整 GWR β̄（负向比） | 环境调整 GWR-LCR β̄（负向比） | 匹配全配对 β̄（负向比） |",
         "|---|---:|---:|---:|---:|",
     ]
-    for outcome in OUTCOMES:
+    for outcome in report_outcomes:
         cells = []
         for population, family in [
             ("mask_all_complete_case", "GWR"),
@@ -503,7 +506,7 @@ def _report(run_dir: Path, summary: pd.DataFrame, pair_counts: dict[str, int], n
     lines.extend([
         "",
         f"- 标准 GWR 的 {len(gwr_rows)} 个拟合中有 {n_at_min} 个选中邻域候选下限 k={minimum}（{n_at_max} 个选中上限 k={maximum}）。多项估计的优选局部尺度可能低于当前候选下界；不把带宽当作唯一已识别尺度。",
-        f"- 环境调整 GWR 的局部条件数较高（9 项结局的条件数 P95 中位数为 {summary.loc[summary['model_family'].eq('GWR') & summary['analysis_population'].eq('environment_adjusted'), 'local_condition_p95'].dropna().median():.0f}）；GWR-LCR 在 {np.nanmean(lcr_penalty):.0%} 的局部单元施加岭惩罚，系数向零收缩，方向作为敏感性对照。",
+        f"- 环境调整 GWR 的局部条件数 P95 中位数为 {summary.loc[summary['model_family'].eq('GWR') & summary['analysis_population'].eq('environment_adjusted'), 'local_condition_p95'].dropna().median():.0f}；GWR-LCR 在 {np.nanmean(lcr_penalty):.0%} 的局部单元施加岭惩罚，系数向零收缩，方向作为敏感性对照。",
         "",
         "## 环境调整多尺度局部系数", "",
         "下表使用逐变量带宽的多尺度 SVC backfitting 近似（见方法限制），仅对 SHI、OM、SW 拟合；尺度是适应性邻居距离中位数。",
@@ -524,14 +527,14 @@ def _report(run_dir: Path, summary: pd.DataFrame, pair_counts: dict[str, int], n
     lines.extend(["", "## 匹配配对差值的局部响应", "",
                   "以下局部标准化斜率来自匹配高端减低端的 ΔY 对 Δlog1p(Aa)；全配对、零—正和双正估计使用独立空间支持。",
                   "", "| 指标 | 全配对 β̄（负向比） | 零—正 β̄（负向比） | 双正 β̄（负向比） |", "|---|---:|---:|---:|"])
-    for outcome in KEY_OUTCOMES:
+    for outcome in key_outcomes:
         cells = []
         for population in ("matched_all", "matched_zero_positive", "matched_both_positive"):
             row = summary_lookup.loc[(outcome, population, "GWR")]
             cells.append(f"{row['local_beta_standardized_mean']:.3f} ({row['negative_effect_ratio']:.1%})")
         lines.append(f"| {LABELS[outcome]} | " + " | ".join(cells) + " |")
     lines.extend(["", "## 关键结果地图", ""])
-    for outcome in KEY_OUTCOMES:
+    for outcome in key_outcomes:
         label = LABELS[outcome]
         rows = key.loc[key["outcome"].eq(outcome)]
         if rows.empty:

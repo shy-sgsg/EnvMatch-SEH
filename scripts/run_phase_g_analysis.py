@@ -742,7 +742,7 @@ def _generate_figures(
     outcomes = list(config["outcomes"])
     outcome_labels = {"SHI_candidate": "土壤健康指数（SHI）", "AN": "碱解氮（AN）", "OM": "有机质（OM）", "CEC": "阳离子交换量（CEC）", "pH": "土壤酸碱度（pH）", "SW": "土壤含水量（SW）", "BD": "土壤容重（BD）", "MBC": "微生物量碳（MBC）", "RESP": "土壤呼吸（RESP）"}
     group_labels = {"soil_type": "土壤类型", "kmeans_v5": "V5 土类内 K 均值", "hierarchical_ward_v5": "V5 土类内 Ward 聚类", "gradient_Elevation": "高程分位组", "gradient_TWI": "地形湿度指数分位组", "gradient_LST": "地表温度分位组", "gradient_NDWI": "NDWI 分位组", "gradient_NDVI": "NDVI 分位组", "gradient_Precipitation": "降水分位组"}
-    model_labels = {"random_forest": "随机森林", "extra_trees": "极端随机树", "hist_gradient_boosting": "直方图梯度提升", "ols": "普通最小二乘", "piecewise": "分段回归", "log_exposure": "对数暴露回归", "environment_group_fixed_effects": "环境组固定效应"}
+    model_labels = {"random_forest": "随机森林", "extra_trees": "极端随机树", "hist_gradient_boosting": "直方图梯度提升", "ols": "普通最小二乘", "piecewise": "分段回归", "log_exposure": "对数暴露回归", "environment_group_fixed_effects": "环境组固定效应", "statsmodels_gam": "高斯广义加性模型（GAM）"}
     palette = {"blue": "#3D6F91", "orange": "#D99139", "red": "#B4494B", "teal": "#3B8C83", "gray": "#7A8084", "light": "#D9DEE2"}
 
     # Figure 1: outcome-blind matching search coverage and balance.
@@ -820,6 +820,14 @@ def _generate_figures(
         for _, row in selected.iterrows():
             r2_rows.append({"outcome": row.get("outcome"), "ranking_type": rank_type, "label": label, "r_squared": _as_float(row.get("r_squared")), "candidate_id": row.get("candidate_id"), "model_name": row.get("model_name"), "n": row.get("n"), "direction": row.get("direction")})
     r2_data = pd.DataFrame.from_records(r2_rows)
+    # The refreshed CEC row is a spatial validation score, not a comparable
+    # full-sample apparent R². Leave that category blank until it is re-fit on
+    # the corrected CEC outcome under the same apparent-fit design.
+    cec_apparent = r2_data["outcome"].eq("CEC") & r2_data["ranking_type"].eq("highest_full_sample_apparent_r2")
+    r2_data.loc[cec_apparent, ["r_squared", "n"]] = np.nan
+    r2_data.loc[cec_apparent, "candidate_id"] = "corrected_CEC_full_sample_apparent_r2_not_available"
+    r2_data.loc[cec_apparent, "model_name"] = "not_reestimated"
+    r2_data.loc[cec_apparent, "direction"] = "unavailable"
     fig, ax = plt.subplots(figsize=(13, 5.5), constrained_layout=True)
     x = np.arange(len(outcomes))
     width = 0.19
@@ -832,8 +840,8 @@ def _generate_figures(
     ax.set_ylabel("R²（各行按对应测试集定义）")
     ax.set_title("20 年平均实际侵蚀下的像元级健康预测拟合")
     ax.legend(frameon=False, ncol=2, loc="best")
-    ax.text(0.01, -0.27, "全像元与匹配子集模型均包含环境变量，R²不代表侵蚀的独立贡献；配对差值模型另行报告。", transform=ax.transAxes, fontsize=8, color="#4B5563")
-    figures.append(_save_figure(fig, "04_model_r2_comparison", r2_data, "图中 R²均为像元级健康栅格预测拟合。全体合格像元、结果导向筛选的匹配子集和空间测试块具有不同样本范围；匹配配对差值模型的 R²不在此图混排。", paths))
+    ax.text(0.01, -0.27, "CEC 当前没有与其他结局同口径的全像元表观 R²；这里只显示空间测试 R²。所有 R²均不代表侵蚀的独立贡献；配对差值模型另行报告。", transform=ax.transAxes, fontsize=8, color="#4B5563")
+    figures.append(_save_figure(fig, "04_model_r2_comparison", r2_data, "CEC 当前没有可与其他结局同口径比较的全像元表观 R²，也没有重估后的匹配子集模型，因此这些 CEC 柱位留空。图中 CEC 只显示 I-1 验证集选模后的空间测试 R²=-0.012（n=43,363）。其他指标沿用原 Phase G 结果；不同柱对应不同样本范围与模型选择规则，不表示侵蚀的独立因果解释。", paths))
 
     # Figure 5: natural spline and previously selected full-sample best model.
     fig, axes = plt.subplots(3, 3, figsize=(13, 10), constrained_layout=True)
@@ -846,16 +854,22 @@ def _generate_figures(
         best = response_curves.loc[response_curves["outcome"].eq(outcome) & response_curves["curve_type"].eq("oracle_best_full_sample_apparent_model")].sort_values("exposure_value")
         title = outcome
         if not best.empty:
-            ax.plot(best["exposure_value"], best["predicted_outcome"], color=palette["red"], linewidth=1.7, label="历史全样本择优表观模型")
             best_row = best.iloc[0]
-            title = f"{outcome_labels.get(outcome,outcome)} · {model_labels.get(str(best_row['model_name']),str(best_row['model_name']))} · R²={_as_float(best_row.get('apparent_r_squared')):.3f}"
+            selection_metric = str(best_row.get("selection_metric", ""))
+            if outcome == "CEC" and "held-out 5 km spatial blocks" in selection_metric:
+                line_label = "5 km 空间验证选出的高斯广义加性模型（GAM）"
+                title = f"CEC · 高斯广义加性模型（GAM）· 空间验证 R²={_as_float(best_row.get('apparent_r_squared')):.3f}"
+            else:
+                line_label = "历史全样本择优表观模型"
+                title = f"{outcome_labels.get(outcome,outcome)} · {model_labels.get(str(best_row['model_name']),str(best_row['model_name']))} · R²={_as_float(best_row.get('apparent_r_squared')):.3f}"
+            ax.plot(best["exposure_value"], best["predicted_outcome"], color=palette["red"], linewidth=1.7, label=line_label)
         ax.set_title(title, fontsize=9, loc="left", fontweight="semibold")
         ax.set_xlabel("20 年平均实际侵蚀 Aa（源栅格值）")
         ax.set_ylabel("健康指标预测值")
         if position == 0:
             ax.legend(frameon=False, fontsize=6)
-    fig.suptitle("两类描述性响应曲线｜固定 20,000 像元样本与历史 Oracle 择优模型", x=.02, y=1.02, ha="left", fontsize=15, fontweight="bold")
-    figures.append(_save_figure(fig, "05_response_curves", response_curves, "虚线自然样条拟合于固定的共同 20,000 个完整像元样本（土类 26/27/42），未按拟合优度挑选。红色实线为此前 13 类模型、1,024 次全样本表观 R²搜索中入选的模型曲线；环境变量固定在记录的中位数或参考值。两者均描述预测栅格，不是独立验证。", paths))
+    fig.suptitle("两类描述性响应曲线｜固定 20,000 像元样本与各指标拟合模型", x=.02, y=1.02, ha="left", fontsize=15, fontweight="bold")
+    figures.append(_save_figure(fig, "05_response_curves", response_curves, "虚线自然样条拟合于固定的共同 20,000 个完整像元样本（土类 26/27/42），未按拟合优度挑选。除 CEC 外，红色实线为此前全样本模型搜索入选的曲线；CEC 红色实线为按 5 km 空间验证结果选出的高斯广义加性模型（GAM）。图中 CEC 点值与曲线均使用本项目当前数据版本。", paths))
 
     # Figure 6: standardized negative slopes in the largest-support candidate groups.
     group_data = group_associations.loc[

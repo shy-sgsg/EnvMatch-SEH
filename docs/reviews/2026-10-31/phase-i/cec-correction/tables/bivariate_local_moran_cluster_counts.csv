@@ -1,0 +1,6 @@
+outcome,lisa_class,cell_count,n_units,outcome_guided_selection
+CEC,HH,679,7396,True
+CEC,LL,306,7396,True
+CEC,HL,949,7396,True
+CEC,LH,1343,7396,True
+CEC,Not significant,4119,7396,True

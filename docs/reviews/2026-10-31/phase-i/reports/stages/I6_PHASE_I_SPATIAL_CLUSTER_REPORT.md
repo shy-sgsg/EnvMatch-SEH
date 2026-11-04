@@ -1,5 +1,10 @@
 # Phase I-6：局部空间关联与负向响应热点
 
+> **CEC 更新说明（2026-11-01）：** 本阶段现行 CEC 数值以校正值为准，表中 CEC 行链接至[CEC 校正重分析](../../cec-correction/CEC_CORRECTION_REANALYSIS.md)；旧版 CEC 数值和图件只保留在原运行归档。
+
+<!-- CEC_CORRECTION_NOTICE -->
+
+
 权威运行：`outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i6_r1`。运行模式为 `EXPLORATORY_ORACLE`，`outcome_guided_selection=true`。
 
 ## 总体与空间尺度
@@ -16,7 +21,7 @@
 | SHI | 7,387 | -0.591 | -0.768–-0.317 | 99.9% |
 | AN | 7,408 | 0.001 | -0.324–0.322 | 49.8% |
 | OM | 7,408 | -0.616 | -0.762–-0.427 | 100.0% |
-| CEC | 7,408 | 0.533 | 0.351–0.696 | 0.2% |
+| CEC（校正值） | [校正后 CEC 结果与表格](../../cec-correction/CEC_CORRECTION_REANALYSIS.md) | — | — | — |
 | pH | 7,408 | -0.200 | -0.477–0.096 | 80.6% |
 | SW | 7,408 | -0.783 | -0.868–-0.631 | 100.0% |
 | BD | 7,408 | -0.389 | -0.528–-0.240 | 100.0% |
@@ -32,7 +37,7 @@
 | SHI | 1,434 | 333 | 177 | 1,071 |
 | AN | 1,152 | 573 | 352 | 1,189 |
 | OM | 843 | 115 | 80 | 448 |
-| CEC | 695 | 880 | 1,189 | 1,173 |
+| CEC（校正值） | [校正后 CEC 结果与表格](../../cec-correction/CEC_CORRECTION_REANALYSIS.md) | — | — | — |
 | pH | 642 | 508 | 227 | 605 |
 | SW | 1,103 | 183 | 49 | 888 |
 | BD | 0 | 0 | 0 | 0 |
@@ -48,7 +53,7 @@
 | SHI | 2,473 | 33.5% |
 | AN | 2,094 | 28.3% |
 | OM | 2,682 | 36.2% |
-| CEC | 1,819 | 24.6% |
+| CEC（校正值） | [校正后 CEC 结果与表格](../../cec-correction/CEC_CORRECTION_REANALYSIS.md) | — |
 | pH | 2,072 | 28.0% |
 | SW | 3,011 | 40.6% |
 | BD | 2,600 | 35.1% |
@@ -65,8 +70,8 @@
 | AN | GWR-LCR | 1,680 | 2,788 |
 | OM | GWR | 1,750 | 3,378 |
 | OM | GWR-LCR | 2,962 | 2,610 |
-| CEC | GWR | 157 | 0 |
-| CEC | GWR-LCR | 133 | 0 |
+| CEC（校正值） | [校正后 CEC 结果与表格](../../cec-correction/CEC_CORRECTION_REANALYSIS.md) | — | — |
+| CEC（校正值） | [校正后 CEC 结果与表格](../../cec-correction/CEC_CORRECTION_REANALYSIS.md) | — | — |
 | pH | GWR | 1,722 | 2,594 |
 | pH | GWR-LCR | 1,715 | 2,798 |
 | SW | GWR | 1,965 | 3,098 |

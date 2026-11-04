@@ -1,0 +1,9 @@
+﻿dataset,n_rows,n_unique_cell_or_pair,analysis_unit,selection_basis,outcome_guided_selection
+D1_full_pixels,384211,384211,30m raster pixel,CEC与健康完整案例；完整案例定义，不按健康效应筛选,True
+D1_common_env_case,293145,293145,30m raster pixel,主要环境变量共同完整案例；用于M0–M3同样本比较,True
+D2_240m_blocks,7387,7387,240m block,复现既有Phase I8的8×8环境完整单元支持（历史单元以SHI候选值参与汇总）,True
+D3_M4_unique_pixels,181794,181794,30m raster pixel,"Phase H沿用Phase F/G历史M4/Aa_20yr端点成员（环境卡尺0.35、地理上限1,000m、组内侵蚀百分位差至少0.50）；按cell_id回连当前健康与CEC值",True
+D4_M4_pair_differences,111289,111289,matched pair,Phase H第二阶段候选stage2_Aa_20yr_01（环境卡尺0.75、地理上限500m、土类内8组、组内侵蚀百分位差至少0.30）；按cell_id重算端点差。与D3为不同匹配版本,True
+D5_positive_erosion,195013,195013,30m raster pixel,D1共同环境完整案例中Aa_20yr大于0,True
+D6_zero_positive_pairs,68172,68172,matched pair,D4中低侵蚀端为0且高侵蚀端大于0的既定配对,True
+D7_soil_TWI_groups,286799,286799,30m raster pixel,主土类26/27/42内按各土类TWI秩划分四分位；未按SEM斜率挑选分组,True

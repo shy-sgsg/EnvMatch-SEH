@@ -1,0 +1,13 @@
+﻿dataset,method,structure,control,path,direct_effect,indirect_effect,total_effect_component,ci_low,ci_high,interval_status,interpretation,outcome_guided_selection
+D1_common_env_case,piecewise_sem,S4_chained_health_dimensions,M1,E→Physical→SHI,,-0.0816043248780431,-0.0816043248780431,,,not computed,product of standardized conditional associations; not causal mediation,True
+D1_common_env_case,piecewise_sem,S4_chained_health_dimensions,M1,E→Chemical→SHI,,-0.0645642937519499,-0.0645642937519499,,,not computed,product of standardized conditional associations; not causal mediation,True
+D1_common_env_case,piecewise_sem,S4_chained_health_dimensions,M1,E→Biological→SHI,,0.0005651977872922,0.0005651977872922,,,not computed,product of standardized conditional associations; not causal mediation,True
+D2_240m_blocks,piecewise_sem,S4_chained_health_dimensions,M1,E→Physical→SHI,,-0.1152158838508781,-0.1152158838508781,,,not computed,product of standardized conditional associations; not causal mediation,True
+D2_240m_blocks,piecewise_sem,S4_chained_health_dimensions,M1,E→Chemical→SHI,,-0.0150414955071283,-0.0150414955071283,,,not computed,product of standardized conditional associations; not causal mediation,True
+D2_240m_blocks,piecewise_sem,S4_chained_health_dimensions,M1,E→Biological→SHI,,0.0213164379846529,0.0213164379846529,,,not computed,product of standardized conditional associations; not causal mediation,True
+D3_M4_unique_pixels,piecewise_sem,S4_chained_health_dimensions,M1,E→Physical→SHI,,-0.0888824859463147,-0.0888824859463147,,,not computed,product of standardized conditional associations; not causal mediation,True
+D3_M4_unique_pixels,piecewise_sem,S4_chained_health_dimensions,M1,E→Chemical→SHI,,-0.0751926807527671,-0.0751926807527671,,,not computed,product of standardized conditional associations; not causal mediation,True
+D3_M4_unique_pixels,piecewise_sem,S4_chained_health_dimensions,M1,E→Biological→SHI,,-0.0085910086446426,-0.0085910086446426,,,not computed,product of standardized conditional associations; not causal mediation,True
+D4_M4_pair_differences,piecewise_sem,S4_chained_health_dimensions,M1,E→Physical→SHI,,-0.0662274267981063,-0.0662274267981063,,,not computed,product of standardized conditional associations; not causal mediation,True
+D4_M4_pair_differences,piecewise_sem,S4_chained_health_dimensions,M1,E→Chemical→SHI,,-0.0104769025246345,-0.0104769025246345,,,not computed,product of standardized conditional associations; not causal mediation,True
+D4_M4_pair_differences,piecewise_sem,S4_chained_health_dimensions,M1,E→Biological→SHI,,0.0090351096477342,0.0090351096477342,,,not computed,product of standardized conditional associations; not causal mediation,True

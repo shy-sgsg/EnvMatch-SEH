@@ -1,0 +1,10 @@
+﻿model_family,outcome_a,label_a,outcome_b,label_b,n_common_units,strongest_negative_decile_units_each,spearman_local_beta_rho,decile_overlap_units,decile_overlap_jaccard,selection_definition,outcome_guided_selection
+GWR-LCR,SHI_candidate,土壤健康指数（SHI）,OM,有机质（OM）,7387,738,0.7021277204690565,385,0.3528872593950504,各指标同一空间支持上局部β最低的10%单元；纯描述性重叠,True
+GWR-LCR,SHI_candidate,土壤健康指数（SHI）,SW,土壤含水量（SW）,7387,738,0.6619744111012463,384,0.3516483516483517,各指标同一空间支持上局部β最低的10%单元；纯描述性重叠,True
+GWR-LCR,OM,有机质（OM）,SW,土壤含水量（SW）,7387,738,0.8298506174669537,472,0.4701195219123506,各指标同一空间支持上局部β最低的10%单元；纯描述性重叠,True
+GWR,SHI_candidate,土壤健康指数（SHI）,OM,有机质（OM）,770,77,0.6226264069023123,46,0.42592592592592593,各指标同一空间支持上局部β最低的10%单元；纯描述性重叠,True
+GWR,SHI_candidate,土壤健康指数（SHI）,SW,土壤含水量（SW）,770,77,0.561774562991971,44,0.4,各指标同一空间支持上局部β最低的10%单元；纯描述性重叠,True
+GWR,OM,有机质（OM）,SW,土壤含水量（SW）,770,77,0.9441122305866554,62,0.6739130434782609,各指标同一空间支持上局部β最低的10%单元；纯描述性重叠,True
+MGWR,SHI_candidate,土壤健康指数（SHI）,OM,有机质（OM）,770,77,0.2675557298550422,28,0.2222222222222222,各指标同一空间支持上局部β最低的10%单元；纯描述性重叠,True
+MGWR,SHI_candidate,土壤健康指数（SHI）,SW,土壤含水量（SW）,770,77,0.343801790292002,28,0.2222222222222222,各指标同一空间支持上局部β最低的10%单元；纯描述性重叠,True
+MGWR,OM,有机质（OM）,SW,土壤含水量（SW）,770,77,0.9824000421613168,61,0.6559139784946236,各指标同一空间支持上局部β最低的10%单元；纯描述性重叠,True

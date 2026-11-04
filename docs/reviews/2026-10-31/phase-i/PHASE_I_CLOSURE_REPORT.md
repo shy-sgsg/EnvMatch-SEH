@@ -1,5 +1,10 @@
 # Phase I 图件闭合与标准 MGWR 补充报告
 
+> **CEC correction notice (2026-10-31):** CEC 结果已改用公式校正值；各阶段旧 CEC 数值已从本清单撤下，校正后的完整结果见 [CEC 校正重分析](cec-correction/CEC_CORRECTION_REANALYSIS.md)。
+
+<!-- CEC_CORRECTION_NOTICE -->
+
+
 phase: I-closure
 mode: EXPLORATORY_ORACLE
 outcome_guided_selection: true
@@ -42,11 +47,11 @@ outcome_guided_selection: true
 | 9. Aa×TWI交互图 (partial) | [PNG](figures/ic_C09_twi_interaction_slopes.png) |  |  |
 | 10. Aa×NDVI交互图 (partial) | [PNG](figures/ic_C10_ndvi_interaction_slopes.png) |  |  |
 | 11. 环境组斜率森林图 (partial) | [PNG](figures/ic_C11_environment_group_slope_forest.png) |  |  |
-| 12. 环境组最佳模型R²热图 (partial) | [PNG](figures/ic_C12_environment_group_apparent_r2.png) |  |  |
+| 12. 环境组最佳模型拟合度图（已撤下） | 源表只有 CEC 单列，无法支持原图标题所示的多指标比较；历史文件保留在运行归档 |  |  |
 | 13. SHI的GWR局部系数图 (available) | [PNG](figures/i4_gwr_SHI_candidate_template.png) |  |  |
 | 14. OM的GWR局部系数图 (available) | [PNG](figures/i4_gwr_OM_template.png) |  |  |
 | 15. SW的GWR局部系数图 (available) | [PNG](figures/i4_gwr_SW_template.png) |  |  |
-| 16. 八项指标GWR组合图 (available) | [PNG](figures/ic_C16_eight_indicator_gwr_composite.png) |  |  |
+| 16. 九项健康结局 GWR 组合图（SHI + 八项土壤指标） | [PNG](figures/ic_C16_nine_outcome_gwr_composite.png) |  |  |
 | 17. MGWR局部系数比较图 (available) | [PNG](figures/ic_C17_MGWR_local_coefficients.png) |  |  |
 | 18. MGWR变量作用尺度图 (available) | [PNG](figures/ic_C18_MGWR_variable_scales.png) |  |  |
 | 19. GWR与MGWR空间结果对照 (available) | [PNG](figures/ic_C19_GWR_MGWR_difference_map.png) |  |  |

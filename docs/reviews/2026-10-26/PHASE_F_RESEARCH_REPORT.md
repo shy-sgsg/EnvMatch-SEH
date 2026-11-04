@@ -1,5 +1,10 @@
 # Phase F 探索性研究报告：环境匹配、配对差值与空间稳定性
 
+> **CEC 更新说明（2026-11-01）：** Phase F 含 CEC 的图件和源表已替换为公式校正值；旧运行中的 CEC 数值仅保留归档。校正式、结果和解释边界见[CEC 校正重分析](../2026-10-31/phase-i/cec-correction/CEC_CORRECTION_REANALYSIS.md)。
+
+<!-- CEC_CORRECTION_NOTICE -->
+
+
 - **运行编号：** `phase_f_20261026_seed20261026`
 - **分析模式：** `EXPLORATORY_ORACLE`；本报告不构成因果结论、独立验证或正式设计锁定。
 - **输入运行：** `run_20261025T114741_470772Z`

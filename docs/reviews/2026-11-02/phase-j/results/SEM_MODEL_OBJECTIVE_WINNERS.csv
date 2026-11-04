@@ -1,0 +1,17 @@
+﻿objective,method,dataset,population_label,structure,control,criterion,value,additional_fit,interpretation,outcome_guided_selection
+A｜整体拟合候选,CB_SEM_lavaan_ML,D1_common_env_case,全域共同完整像元,S2_direct_plus_indirect_SHI,M3,同一总体SHI方程、S2/S3候选中的最低AIC,1732266.68677691,CFI=1.000; TLI=1.000; RMSEA=0.000; SRMR=5.54e-10; df=0.0; n=293145,需要结合自由度判断；df=0为饱和模型，其CFI/RMSEA不能作为独立拟合质量证据。,True
+B｜侵蚀增量最大,piecewise_sem,D1_common_env_case,全域共同完整像元,S2_direct_plus_indirect_SHI,M0,同一SHI方程中最大条件ΔR²,0.0170177144652559,R²full=0.553; R²without=0.536; β=-0.157; n=293145,这是模型内侵蚀的条件预测增量；不据此将未调整模型解释为最佳科学模型。,True
+C｜负向直接路径最明显,piecewise_sem,D1_common_env_case,全域共同完整像元,S2_direct_plus_indirect_SHI,M0,同一总体S2分段路径中侵蚀→SHI标准化β最小,-0.1567848007245976,SHI R²=0.553; n=293145,路径绝对值大不代表因果效应或外部预测最好。,True
+D｜最佳科学解释候选,piecewise_sem,D1_common_env_case,全域共同完整像元,S2_direct_plus_indirect_SHI,M1,核心环境控制 + 5 km空间块协方差路径区间,-0.1129687415338837,SHI R²=0.601; 侵蚀ΔR²=0.0079; n=293145,保留可解释环境控制和空间块协方差；不称为拟合冠军。,True
+A｜整体拟合候选,CB_SEM_lavaan_ML,D2_240m_blocks,240米空间汇总单元,S2_direct_plus_indirect_SHI,M3,同一总体SHI方程、S2/S3候选中的最低AIC,7145.75625081584,CFI=1.000; TLI=1.000; RMSEA=0.000; SRMR=2.95e-09; df=0.0; n=7387,需要结合自由度判断；df=0为饱和模型，其CFI/RMSEA不能作为独立拟合质量证据。,True
+B｜侵蚀增量最大,piecewise_sem,D2_240m_blocks,240米空间汇总单元,S2_direct_plus_indirect_SHI,M0,同一SHI方程中最大条件ΔR²,0.0046300287507308,R²full=0.722; R²without=0.718; β=-0.097; n=7375,这是模型内侵蚀的条件预测增量；不据此将未调整模型解释为最佳科学模型。,True
+C｜负向直接路径最明显,piecewise_sem,D2_240m_blocks,240米空间汇总单元,S2_direct_plus_indirect_SHI,M0,同一总体S2分段路径中侵蚀→SHI标准化β最小,-0.0972582287867183,SHI R²=0.722; n=7375,路径绝对值大不代表因果效应或外部预测最好。,True
+D｜最佳科学解释候选,piecewise_sem,D2_240m_blocks,240米空间汇总单元,S2_direct_plus_indirect_SHI,M1,核心环境控制 + 5 km空间块协方差路径区间,-0.0611201619716252,SHI R²=0.768; 侵蚀ΔR²=0.0016; n=7375,保留可解释环境控制和空间块协方差；不称为拟合冠军。,True
+A｜整体拟合候选,CB_SEM_lavaan_ML,D3_M4_unique_pixels,M4匹配端点像元,S2_direct_plus_indirect_SHI,M3,同一总体SHI方程、S2/S3候选中的最低AIC,843200.129221548,CFI=1.000; TLI=1.000; RMSEA=0.000; SRMR=9.14e-09; df=0.0; n=142451,需要结合自由度判断；df=0为饱和模型，其CFI/RMSEA不能作为独立拟合质量证据。,True
+B｜侵蚀增量最大,piecewise_sem,D3_M4_unique_pixels,M4匹配端点像元,S2_direct_plus_indirect_SHI,M3,同一SHI方程中最大条件ΔR²,0.0150314759708616,R²full=0.620; R²without=0.605; β=-0.152; n=142256,这是模型内侵蚀的条件预测增量；不据此将未调整模型解释为最佳科学模型。,True
+C｜负向直接路径最明显,piecewise_sem,D3_M4_unique_pixels,M4匹配端点像元,S2_direct_plus_indirect_SHI,M3,同一总体S2分段路径中侵蚀→SHI标准化β最小,-0.1516072769402505,SHI R²=0.620; n=142256,路径绝对值大不代表因果效应或外部预测最好。,True
+D｜最佳科学解释候选,piecewise_sem,D3_M4_unique_pixels,M4匹配端点像元,S2_direct_plus_indirect_SHI,M1,核心环境控制 + 5 km空间块协方差路径区间,-0.1412778559067293,SHI R²=0.562; 侵蚀ΔR²=0.0132; n=142256,保留可解释环境控制和空间块协方差；不称为拟合冠军。,True
+A｜整体拟合候选,CB_SEM_lavaan_ML,D4_M4_pair_differences,M4配对差值,S2_direct_plus_indirect_SHI,M2,同一总体SHI方程、S2/S3候选中的最低AIC,779739.613644791,CFI=1.000; TLI=1.000; RMSEA=0.000; SRMR=2.14e-09; df=0.0; n=110656,需要结合自由度判断；df=0为饱和模型，其CFI/RMSEA不能作为独立拟合质量证据。,True
+B｜侵蚀增量最大,piecewise_sem,D4_M4_pair_differences,M4配对差值,S2_direct_plus_indirect_SHI,M3,同一SHI方程中最大条件ΔR²,0.0053636132089188,R²full=0.322; R²without=0.317; β=-0.082; n=110656,这是模型内侵蚀的条件预测增量；不据此将未调整模型解释为最佳科学模型。,True
+C｜负向直接路径最明显,piecewise_sem,D4_M4_pair_differences,M4配对差值,S2_direct_plus_indirect_SHI,M3,同一总体S2分段路径中侵蚀→SHI标准化β最小,-0.0820640364157111,SHI R²=0.322; n=110656,路径绝对值大不代表因果效应或外部预测最好。,True
+D｜最佳科学解释候选,piecewise_sem,D4_M4_pair_differences,M4配对差值,S2_direct_plus_indirect_SHI,M1,核心环境控制 + 5 km空间块协方差路径区间,-0.0688416882644146,SHI R²=0.308; 侵蚀ΔR²=0.0039; n=110656,保留可解释环境控制和空间块协方差；不称为拟合冠军。,True

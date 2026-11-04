@@ -1,0 +1,17 @@
+﻿dataset,control,controls,n,outcome_guided_selection
+D1_common_env_case,M0,,293145,True
+D1_common_env_case,M1,z_Elevation;z_TWI;z_NDVI;z_LST;soil_26;soil_27;soil_42,293145,True
+D1_common_env_case,M2,terrain_PC;vegetation_thermal_PC;soil_26;soil_27;soil_42,293145,True
+D1_common_env_case,M3,z_Elevation;z_TWI;z_NDVI;z_LST;soil_26;soil_27;soil_42;space_x;space_y;space_x2;space_y2;space_xy,293145,True
+D2_240m_blocks,M0,,7387,True
+D2_240m_blocks,M1,z_Elevation;z_TWI;z_NDVI;z_LST;soil_26;soil_27;soil_42,7387,True
+D2_240m_blocks,M2,terrain_PC;vegetation_thermal_PC;soil_26;soil_27;soil_42,7387,True
+D2_240m_blocks,M3,z_Elevation;z_TWI;z_NDVI;z_LST;soil_26;soil_27;soil_42;space_x;space_y;space_x2;space_y2;space_xy,7387,True
+D3_M4_unique_pixels,M0,,142451,True
+D3_M4_unique_pixels,M1,z_Elevation;z_TWI;z_NDVI;z_LST;soil_26;soil_27,142451,True
+D3_M4_unique_pixels,M2,terrain_PC;vegetation_thermal_PC;soil_26;soil_27,142451,True
+D3_M4_unique_pixels,M3,z_Elevation;z_TWI;z_NDVI;z_LST;soil_26;soil_27;space_x;space_y;space_x2;space_y2;space_xy,142451,True
+D4_M4_pair_differences,M0,,110656,True
+D4_M4_pair_differences,M1,z_Elevation;z_TWI;z_NDVI;z_LST;soil_26;soil_27,110656,True
+D4_M4_pair_differences,M2,terrain_PC;vegetation_thermal_PC;soil_26;soil_27,110656,True
+D4_M4_pair_differences,M3,z_Elevation;z_TWI;z_NDVI;z_LST;soil_26;soil_27;space_x;space_y;space_x2;space_y2;space_xy,110656,True

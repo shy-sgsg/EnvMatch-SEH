@@ -1,0 +1,35 @@
+{
+  "source_run": "outputs/exploratory_oracle/phase_i/cec_corrected_input_20_2p9_plus18_20261031",
+  "environment_rows": 392527,
+  "health_rows": 392527,
+  "cell_id_unique": true,
+  "cell_id_sets_equal": true,
+  "one_to_one_join_rows": 392527,
+  "valid_env_rows": 294243,
+  "valid_health_rows": 386849,
+  "valid_env_health_intersection": 293074,
+  "phase_j_model_required_variables_finite_rows": 293145,
+  "valid_env_false_but_phase_j_required_variables_finite_rows": 71,
+  "auxiliary_missing_counts_in_these_rows": {
+    "Aa_20yr_nearest": 71,
+    "Aa_2020_nearest": 44
+  },
+  "validity_note": "D1 complete-case construction uses only the variables required by each model. Seventy-one rows have valid health and finite Phase J model variables while the broader environment-stack flag is false because an auxiliary nearest-exposure field is missing; they are not missing any variable used in the Phase J model.",
+  "coordinate_max_abs_differences": {
+    "row": 0.0,
+    "col": 0.0,
+    "x": 0.0,
+    "y": 0.0
+  },
+  "corrected_cec_formula_check": {
+    "n_valid": 387448,
+    "max_abs_error": 0.0,
+    "median_abs_error": 0.0,
+    "q99_abs_error": 0.0
+  },
+  "corrected_cec_range": [
+    16.725814080006995,
+    26.836542310975705
+  ],
+  "outcome_guided_selection": true
+}

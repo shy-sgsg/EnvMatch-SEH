@@ -39,9 +39,6 @@
     "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/figures/core_figures/C11_environment_group_slope_forest.png",
     "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/figures/core_figures/C11_environment_group_slope_forest.svg",
     "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/figures/core_figures/C11_environment_group_slope_forest.pdf",
-    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/figures/core_figures/C12_environment_group_apparent_r2.png",
-    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/figures/core_figures/C12_environment_group_apparent_r2.svg",
-    "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/figures/core_figures/C12_environment_group_apparent_r2.pdf",
     "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/figures/core_figures/C16_eight_indicator_gwr_composite.png",
     "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/figures/core_figures/C16_eight_indicator_gwr_composite.svg",
     "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_closure_r1/figures/core_figures/C16_eight_indicator_gwr_composite.pdf",
@@ -107,5 +104,8 @@
     "available": 24,
     "partial": 5,
     "deferred_source_missing": 2
-  }
+  },
+  "retired_figures": [
+    "C12_environment_group_apparent_r2: withdrawn from active gallery because the source contains only CEC; historical run outputs are retained."
+  ]
 }

@@ -478,7 +478,7 @@ def _figure_5(run_dir: Path, figure_dir: Path, cells: pd.DataFrame, config: dict
         outputs["legacy_full_sample"] = legacy
         _curve_panel(
             figure_dir, "05b_historical_full_sample_apparent", legacy,
-            title="历史全样本模型择优表观曲线", x_label="20 年平均实际侵蚀量 Aa（沿用历史横轴尺度）",
+            title="历史全样本响应曲线", x_label="20 年平均实际侵蚀量 Aa（沿用历史横轴尺度）",
             caption="继承自 F 阶段结果导向探索中 20 年平均实际侵蚀量的模型曲线。历史来源记录了 13 类模型的 1,024 次试验，并按全样本表观 R²选择模型。曲线使用原始侵蚀量横轴，且曾按健康结局择优；仅供历史参照，不与固定样本样条或本轮匹配曲线直接比较。",
         )
 

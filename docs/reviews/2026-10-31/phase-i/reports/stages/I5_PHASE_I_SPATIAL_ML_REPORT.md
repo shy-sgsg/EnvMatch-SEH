@@ -1,5 +1,10 @@
 # Phase I-5：地理加权随机森林、空间 SHAP/ALE 与 SVC-GAM
 
+> **CEC 更新说明（2026-11-01）：** 本阶段现行 CEC 数值以校正值为准，表中 CEC 行链接至[CEC 校正重分析](../../cec-correction/CEC_CORRECTION_REANALYSIS.md)；旧版 CEC 数值和图件只保留在原运行归档。
+
+<!-- CEC_CORRECTION_NOTICE -->
+
+
 权威运行：`outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i5_r1`。运行模式为 `EXPLORATORY_ORACLE`，`outcome_guided_selection=true`。
 
 ## 样本与建模尺度
@@ -43,8 +48,8 @@
 | AN | svc_gam | 0.683 | 0.398 | 0.791 | 1000 |
 | OM | global_GAM | 0.589 | 0.598 | 0.662 | 1000 |
 | OM | svc_gam | 0.593 | 0.605 | 0.657 | 1000 |
-| CEC | global_GAM | 0.732 | 0.757 | 0.482 | 10 |
-| CEC | svc_gam | 0.731 | 0.764 | 0.475 | 10 |
+| CEC（校正值） | [校正后 CEC 结果与表格](../../cec-correction/CEC_CORRECTION_REANALYSIS.md) | — | — | — | — |
+| CEC（校正值） | [校正后 CEC 结果与表格](../../cec-correction/CEC_CORRECTION_REANALYSIS.md) | — | — | — | — |
 | pH | global_GAM | 0.139 | -0.206 | 1.131 | 100 |
 | pH | svc_gam | 0.150 | -0.145 | 1.101 | 100 |
 | SW | global_GAM | 0.818 | 0.750 | 0.499 | 0.01 |

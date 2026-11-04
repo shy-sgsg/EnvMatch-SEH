@@ -1,0 +1,180 @@
+{
+  "run_id": "phase_j_20261102_seed20261102_r10",
+  "outcome_guided_selection": true,
+  "model_refit": false,
+  "description": "Figures J-S and W-Z were rendered from saved Phase J r10 tables. Figure T reuses the saved direction-score sensitivity figure. Figures U-V use saved, corrected-CEC local GWR tables from Phase I. No model refits were run.",
+  "figures": [
+    {
+      "letter": "J",
+      "id": "J_sem_control_sensitivity",
+      "title": "不同控制条件下 SHI 直接路径的跨总体比较",
+      "explanation": "四个面板分别表示全域环境完整像元、240 m汇总单元、环境匹配端点和匹配对差值。M0至M3逐步改变环境/空间控制。横线为5 km空间块聚类区间；该图用于显示模型条件敏感性，不作因果解释。",
+      "png": "figures/supplementary/J_sem_control_sensitivity.png",
+      "svg": "figures/supplementary/J_sem_control_sensitivity.svg",
+      "pdf": "figures/supplementary/J_sem_control_sensitivity.pdf",
+      "source": "figures/supplementary/data/J_sem_control_sensitivity_source.csv"
+    },
+    {
+      "letter": "K",
+      "id": "K_sem_method_comparison",
+      "title": "三种结构模型方法的路径系数对照",
+      "explanation": "比较分段路径模型、协方差型SEM与形成性PLS-PM在同一全域样本上的侵蚀路径。分段模型区间按5 km空间块聚类；协方差型SEM区间按常规独立同分布假设计算；PLS-PM未提供区间，故只显示点估计。各模型的构念定义和估计假设不同，系数仅用于方向和量级的探索性对照。",
+      "png": "figures/supplementary/K_sem_method_comparison.png",
+      "svg": "figures/supplementary/K_sem_method_comparison.svg",
+      "pdf": "figures/supplementary/K_sem_method_comparison.pdf",
+      "source": "figures/supplementary/data/K_sem_method_comparison_source.csv"
+    },
+    {
+      "letter": "L",
+      "id": "L_sem_fit_increment_sensitivity",
+      "title": "不同总体下 SHI 模型拟合度与侵蚀增量",
+      "explanation": "左图为SHI模型内R²，右图为在同一控制条件上加入侵蚀变量后得到的条件ΔR²。M0不控制环境；M1加入高程、地形湿度、植被、地表温度和土类；M2使用环境主成分；M3在核心环境变量上增加空间位置趋势。更高的总拟合度不等于侵蚀具有更大的独立增量；所有数值均为表观模型内拟合。",
+      "png": "figures/supplementary/L_sem_fit_increment_sensitivity.png",
+      "svg": "figures/supplementary/L_sem_fit_increment_sensitivity.svg",
+      "pdf": "figures/supplementary/L_sem_fit_increment_sensitivity.pdf",
+      "source": "figures/supplementary/data/L_sem_fit_increment_sensitivity_source.csv"
+    },
+    {
+      "letter": "M",
+      "id": "M_local_coefficient_distributions",
+      "title": "三项重点结局的局部系数空间分布",
+      "explanation": "比较SHI、OM和SW在局部共线性收缩GWR、同样本标准GWR及标准MGWR中的局部系数分布。线段表示空间单元间的系数分位数范围，不是置信区间；三类模型使用的空间单元数和模型设定不同。",
+      "png": "figures/supplementary/M_local_coefficient_distributions.png",
+      "svg": "figures/supplementary/M_local_coefficient_distributions.svg",
+      "pdf": "figures/supplementary/M_local_coefficient_distributions.pdf",
+      "source": "figures/supplementary/data/M_local_coefficient_distributions_source.csv"
+    },
+    {
+      "letter": "N",
+      "id": "N_local_response_overlap",
+      "title": "三项结局的强负向局部区域重合度",
+      "explanation": "每格比较两个结局各自局部系数最低十分位的空间单元集合。Jaccard值越高，两个低系数区域的空间重合越多；它不表示两种结局的系数相等，也不构成显著性检验。",
+      "png": "figures/supplementary/N_local_response_overlap.png",
+      "svg": "figures/supplementary/N_local_response_overlap.svg",
+      "pdf": "figures/supplementary/N_local_response_overlap.pdf",
+      "source": "figures/supplementary/data/N_local_response_overlap_source.csv"
+    },
+    {
+      "letter": "O",
+      "id": "O_local_beta_environment_association",
+      "title": "局部系数与连续环境变量的秩相关",
+      "explanation": "热图展示局部侵蚀系数与高程、地形湿度、植被、水分指数和地表温度的Spearman相关。正负号表示空间高低排序的共同方向；相关不等于环境变量造成了局部系数变化。",
+      "png": "figures/supplementary/O_local_beta_environment_association.png",
+      "svg": "figures/supplementary/O_local_beta_environment_association.svg",
+      "pdf": "figures/supplementary/O_local_beta_environment_association.pdf",
+      "source": "figures/supplementary/data/O_local_beta_environment_association_source.csv"
+    },
+    {
+      "letter": "P",
+      "id": "P_local_beta_environment_contrasts",
+      "title": "环境强弱组的局部系数描述性差异",
+      "explanation": "每个点是按各环境变量分组后，局部系数最负组与最弱负组的中位数之差。越负表示两个已挑出的组之间差异越大；分组选择参考了结果本身，因此只能作为探索性定位，不是环境因果效应或正式组间显著性检验。",
+      "png": "figures/supplementary/P_local_beta_environment_contrasts.png",
+      "svg": "figures/supplementary/P_local_beta_environment_contrasts.svg",
+      "pdf": "figures/supplementary/P_local_beta_environment_contrasts.pdf",
+      "source": "figures/supplementary/data/P_local_beta_environment_contrasts_source.csv"
+    },
+    {
+      "letter": "Q",
+      "id": "Q_soil_twi_dimension_paths",
+      "title": "不同土类和地形湿度组中的健康维度路径",
+      "explanation": "每个面板对应一个土类，纵向按该土类内部的地形湿度四分位从低到高排列，颜色区分物理、化学和生物活动维度。区间按5 km空间块聚类。结果来自结果导向挑选的环境组，组间差异尚未通过正式的多组系数等值检验。",
+      "png": "figures/supplementary/Q_soil_twi_dimension_paths.png",
+      "svg": "figures/supplementary/Q_soil_twi_dimension_paths.svg",
+      "pdf": "figures/supplementary/Q_soil_twi_dimension_paths.pdf",
+      "source": "figures/supplementary/data/Q_soil_twi_dimension_paths_source.csv"
+    },
+    {
+      "letter": "R",
+      "id": "R_chained_path_products",
+      "title": "链式维度路径的标准化关联乘积",
+      "explanation": "图中为侵蚀到单个健康维度、再到SHI的标准化条件关联系数乘积，并比较四类分析总体。它不是经因果识别的中介效应；当前没有为这些乘积计算置信区间，图线只连接不同总体的点估计。",
+      "png": "figures/supplementary/R_chained_path_products.png",
+      "svg": "figures/supplementary/R_chained_path_products.svg",
+      "pdf": "figures/supplementary/R_chained_path_products.pdf",
+      "source": "figures/supplementary/data/R_chained_path_products_source.csv"
+    },
+    {
+      "letter": "S",
+      "id": "S_two_part_erosion_paths",
+      "title": "侵蚀发生状态与正侵蚀强度的路径对照",
+      "explanation": "左侧路径表示全域像元从零侵蚀到正侵蚀的状态关联；右侧路径只在正侵蚀像元中表示侵蚀强度关联。二者的样本数与暴露定义不同，不应相减或解释为因果分解。图示SHI和三类健康维度，区间按5 km空间块聚类。",
+      "png": "figures/supplementary/S_two_part_erosion_paths.png",
+      "svg": "figures/supplementary/S_two_part_erosion_paths.svg",
+      "pdf": "figures/supplementary/S_two_part_erosion_paths.pdf",
+      "source": "figures/supplementary/data/S_two_part_erosion_paths_source.csv"
+    },
+    {
+      "letter": "T",
+      "id": "T_health_direction_sensitivity",
+      "title": "原始指标与健康方向统一评分的敏感性对照",
+      "explanation": "对比八项指标原始值、方向统一评分、健康维度和SHI的条件关联。CEC标签仍写CEC，但因恢复公式含侵蚀项，其关联不作为独立侵蚀效应；方向转换后的SHI未精确复现既有SHI栅格，所以只作敏感性比较。",
+      "png": "figures/supplementary/T_health_direction_sensitivity.png",
+      "svg": "figures/supplementary/T_health_direction_sensitivity.svg",
+      "pdf": "figures/supplementary/T_health_direction_sensitivity.pdf",
+      "source": "figures/supplementary/data/T_health_direction_sensitivity_source.csv"
+    },
+    {
+      "letter": "U",
+      "id": "U_nine_outcome_local_beta_maps",
+      "title": "SHI与八项土壤指标的240米局部侵蚀系数地图",
+      "explanation": "九个小图使用当前CEC数据版本下保存的GWR-LCR局部标准化系数和真实投影坐标。每个指标采用自己的98%绝对分位对称色阶，适合查看各指标内部的空间形态，不宜直接比较不同面板的色彩深浅。局部置信区间是模型内区间，没有用于显著性热点判定；CEC的恢复公式含侵蚀项，存在代数耦合。",
+      "png": "figures/supplementary/U_nine_outcome_local_beta_maps.png",
+      "svg": "figures/supplementary/U_nine_outcome_local_beta_maps.svg",
+      "pdf": "figures/supplementary/U_nine_outcome_local_beta_maps.pdf",
+      "source": "figures/supplementary/data/U_nine_outcome_local_beta_maps_source.csv",
+      "input_table": "outputs/exploratory_oracle/phase_i/phase_i_20261101_corrected_cec_nine_outcome_refresh_r2/tables/full_sample_local_coefficients.parquet",
+      "input_cec_run": "phase_i_20261101_corrected_cec_nine_outcome_refresh_r2"
+    },
+    {
+      "letter": "V",
+      "id": "V_gwr_mgwr_difference_maps",
+      "title": "标准MGWR相对标准GWR的局部系数差值地图",
+      "explanation": "三幅地图显示770个共同空间位置上MGWR减去标准GWR的局部标准化系数差值，使用共同颜色范围。正值表示MGWR估计相对更高，负值表示相对更低；该差值是模型对照，不代表显著区域或因果差异。",
+      "png": "figures/supplementary/V_gwr_mgwr_difference_maps.png",
+      "svg": "figures/supplementary/V_gwr_mgwr_difference_maps.svg",
+      "pdf": "figures/supplementary/V_gwr_mgwr_difference_maps.pdf",
+      "source": "figures/supplementary/data/V_gwr_mgwr_difference_maps_source.csv"
+    },
+    {
+      "letter": "W",
+      "id": "W_sem_parallel_dimensions_diagram",
+      "title": "侵蚀与三类土壤健康维度的平行路径图",
+      "explanation": "按已保存的S1分段路径模型绘图；箭头标签给出标准化β和5 km空间块聚类95%区间，结局框内为R²。模型控制高程、地形湿度、植被指数、地表温度和土类（M1）；图中仅画侵蚀到三类健康维度的焦点路径。箭头表示条件关联，不是已验证的因果关系。",
+      "png": "figures/supplementary/W_sem_parallel_dimensions_diagram.png",
+      "svg": "figures/supplementary/W_sem_parallel_dimensions_diagram.svg",
+      "pdf": "figures/supplementary/W_sem_parallel_dimensions_diagram.pdf",
+      "source": "figures/supplementary/data/W_sem_parallel_dimensions_diagram_source.csv"
+    },
+    {
+      "letter": "X",
+      "id": "X_sem_chained_dimensions_diagram",
+      "title": "侵蚀与健康维度链式路径图",
+      "explanation": "将S4链式结构拆成三组便于阅读的路径：侵蚀到健康结局、健康维度之间、健康维度到SHI。框内为各结局模型R²，箭头为标准化β点估计；完整95%空间块区间见图源表。模型控制核心环境变量和土类，图中箭头是条件关联，不是已证实的中介因果链。",
+      "png": "figures/supplementary/X_sem_chained_dimensions_diagram.png",
+      "svg": "figures/supplementary/X_sem_chained_dimensions_diagram.svg",
+      "pdf": "figures/supplementary/X_sem_chained_dimensions_diagram.pdf",
+      "source": "figures/supplementary/data/X_sem_chained_dimensions_diagram_source.csv"
+    },
+    {
+      "letter": "Y",
+      "id": "Y_sem_nine_outcome_diagram",
+      "title": "侵蚀与SHI及八项土壤指标的单结局路径图",
+      "explanation": "展示S5结构下侵蚀暴露到SHI和八项土壤指标的九条标准化条件路径；结局框中的R²来自各自单结局模型。M1控制高程、地形湿度、植被指数、地表温度和土类。CEC标签仅写CEC，但恢复公式含侵蚀项，因此该路径存在代数耦合。箭头不是因果证据，区间见源表。",
+      "png": "figures/supplementary/Y_sem_nine_outcome_diagram.png",
+      "svg": "figures/supplementary/Y_sem_nine_outcome_diagram.svg",
+      "pdf": "figures/supplementary/Y_sem_nine_outcome_diagram.pdf",
+      "source": "figures/supplementary/data/Y_sem_nine_outcome_diagram_source.csv"
+    },
+    {
+      "letter": "Z",
+      "id": "Z_sem_two_part_path_diagram",
+      "title": "侵蚀发生与正侵蚀强度的两组结构路径图",
+      "explanation": "左右两图分别展示S6中侵蚀发生状态和正侵蚀强度到SHI及三类健康维度的标准化条件路径；左侧使用全域样本，右侧只使用正侵蚀像元。框内是各自模型R²，箭头点估计的95%空间块区间见图源表。两种暴露定义和样本不同，不能相减或视为因果分解。",
+      "png": "figures/supplementary/Z_sem_two_part_path_diagram.png",
+      "svg": "figures/supplementary/Z_sem_two_part_path_diagram.svg",
+      "pdf": "figures/supplementary/Z_sem_two_part_path_diagram.pdf",
+      "source": "figures/supplementary/data/Z_sem_two_part_path_diagram_source.csv"
+    }
+  ]
+}

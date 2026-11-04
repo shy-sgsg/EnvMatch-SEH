@@ -1,0 +1,3 @@
+outcome,model_family,alpha,n_spatial_units,n_5km_blocks,validation_r2,test_r2_spatial_block,test_rmse_standardized,test_mae_standardized,outcome_guided_selection
+CEC,global_GAM,10.0,7396,34,0.84132875749438,0.686000078018912,0.4973611884100566,0.3876222947806346,True
+CEC,svc_gam,10.0,7396,34,0.8379666115465512,0.7007810612579906,0.4855138922757617,0.3760276971597295,True

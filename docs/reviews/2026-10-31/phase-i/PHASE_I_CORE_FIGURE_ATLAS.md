@@ -1,5 +1,10 @@
 # Phase I 图件审查索引
 
+> **CEC 已统一校正（2026-11-01）：** I1–I7 活动图件与表格中的 CEC 均按 `CEC_corrected=(CEC−20×Erosion)/2.9+18` 更新；Erosion 为两张完整对齐 Aa 栅格分别按全域最大值归一化后相加。九项 GWR、Local Spearman、LISA、同位共现与 Gi* 图使用八项原结局加校正 CEC。C12 因仅含 CEC 单列而撤下；旧运行和旧 CEC 图保留在原输出目录，不进入总图集。方法和公式见[CEC 校正重分析](cec-correction/CEC_CORRECTION_REANALYSIS.md)。
+
+<!-- CEC_CORRECTION_NOTICE -->
+
+
 审查目标提交：`8da02898c56366abfbca3661aaa693e21247b76a`。图件为 I9 r3 图集中的48张PNG预览；31项核心图件的完整状态见 [`tables/core_figure_completeness.csv`](tables/core_figure_completeness.csv)。
 
 ## 01. I1 · I02_standardized_effect_forest
@@ -22,6 +27,8 @@
 
 ![I1 I04_zero_positive_boxplots](figures/i1_I04_zero_positive_boxplots.png)
 
+九个面板比较零侵蚀与正侵蚀像元的健康结局分布。CEC 面板已替换为校正值；校正公式包含侵蚀量，所以 CEC 的组间差异不能作为独立侵蚀效应证据。
+
 ## 06. I1 · I07_quantile_slopes
 
 ![I1 I07_quantile_slopes](figures/i1_I07_quantile_slopes.png)
@@ -33,6 +40,8 @@
 ## 08. I1 · I08_full_sample_gam_curves
 
 ![I1 I08_full_sample_gam_curves](figures/i1_I08_full_sample_gam_curves.png)
+
+九个面板展示 SHI 和八项土壤指标随侵蚀变化的 GAM 拟合曲线及 95% 区间；CEC 曲线使用校正值。校正公式直接含侵蚀项，CEC 曲线的负向变化不能独立解释为侵蚀效应。
 
 ## 09. I2 · I10_m4_best_apparent_r2
 
@@ -166,30 +175,26 @@
 
 ![I-C C11_environment_group_slope_forest](figures/ic_C11_environment_group_slope_forest.png)
 
-## 42. I-C · C12_environment_group_apparent_r2
+## 42. I-C · C16_nine_outcome_gwr_composite
 
-![I-C C12_environment_group_apparent_r2](figures/ic_C12_environment_group_apparent_r2.png)
+![I-C 九项健康结局环境调整 GWR 局部系数](figures/ic_C16_nine_outcome_gwr_composite.png)
 
-## 43. I-C · C16_eight_indicator_gwr_composite
-
-![I-C C16_eight_indicator_gwr_composite](figures/ic_C16_eight_indicator_gwr_composite.png)
-
-## 44. I-C · C17_MGWR_local_coefficients
+## 43. I-C · C17_MGWR_local_coefficients
 
 ![I-C C17_MGWR_local_coefficients](figures/ic_C17_MGWR_local_coefficients.png)
 
-## 45. I-C · C18_MGWR_variable_scales
+## 44. I-C · C18_MGWR_variable_scales
 
 ![I-C C18_MGWR_variable_scales](figures/ic_C18_MGWR_variable_scales.png)
 
-## 46. I-C · C19_GWR_MGWR_difference_map
+## 45. I-C · C19_GWR_MGWR_difference_map
 
 ![I-C C19_GWR_MGWR_difference_map](figures/ic_C19_GWR_MGWR_difference_map.png)
 
-## 47. I-C · C30_PCNM_comparison_NOT_AVAILABLE
+## 46. I-C · C30_PCNM_comparison_NOT_AVAILABLE
 
 ![I-C C30_PCNM_comparison_NOT_AVAILABLE](figures/ic_C30_PCNM_comparison_NOT_AVAILABLE.png)
 
-## 48. I-C · C31_mechanism_path_NOT_AVAILABLE
+## 47. I-C · C31_mechanism_path_NOT_AVAILABLE
 
 ![I-C C31_mechanism_path_NOT_AVAILABLE](figures/ic_C31_mechanism_path_NOT_AVAILABLE.png)

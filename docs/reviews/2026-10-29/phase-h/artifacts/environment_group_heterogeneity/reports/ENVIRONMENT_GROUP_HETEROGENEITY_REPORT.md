@@ -1,6 +1,8 @@
 # 低侵蚀筛选前后的环境组响应与空间表现
 
-运行编号：`low_erosion_group_heterogeneity_20261030_seed20261030_r2`；模式：`EXPLORATORY_ORACLE`，`outcome_guided_selection=true`。沿用低侵蚀主分析 `low_erosion_regime_20261029_seed20261029_r2` 的 Aa 和配对群体，以及既有环境变量分组标签 `outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/tables/phase_h_environment_group_cell_labels.parquet`；没有用健康结果重新构造环境组。未重算 RUSLE 因子乘积，未重跑 PCNM。
+> **CEC 校正说明（2026-11-01）：** 本报告的环境组 CEC 结果来自校正值运行 `low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031`，使用 `CEC_corrected=(CEC−20×Erosion)/2.9+18`。负向关联含公式机械写入的侵蚀成分，不能作为独立因果证据；校正公式及总体结果见[CEC 校正重分析](../../../../../2026-10-31/phase-i/cec-correction/CEC_CORRECTION_REANALYSIS.md)。
+
+运行编号：`low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031`；模式：`EXPLORATORY_ORACLE`，`outcome_guided_selection=true`。沿用低侵蚀主分析 `cec_corrected_low_erosion_pairs_20_2p9_plus18_20261031` 的 Aa 和配对群体，以及既有环境变量分组标签 `outputs/exploratory_oracle/phase_h_20261028_seed20261028_h2/tables/phase_h_environment_group_cell_labels.parquet`；没有用健康结果重新构造环境组。未重算 RUSLE 因子乘积，未重跑 PCNM。
 
 ## 分析口径
 
@@ -13,34 +15,34 @@
 
 ## 各环境组低值排除比例
 
-下表显示核心环境分组中，分布阈值以下的像元比例最高的组。完整像元数、保留数及 11 种环境分组结果见 `tables/group_cell_retention.csv.gz`。
+下表显示核心环境分组中，分布阈值以下的像元比例最高的组。完整像元数、保留数及 11 种环境分组结果见 `tables/group_cell_retention.csv`。
 
-| 侵蚀时期   | 分组方式             | 环境组    |   有效像元数 |   阈值以下像元数 |   阈值排除比例 |
-|:-----------|:---------------------|:----------|-------------:|-----------------:|---------------:|
-| Aa_2020    | 地表温度梯度分组     | 未分组    |         6563 |             1091 |          0.166 |
-| Aa_2020    | 地表温度梯度分组     | 26·q5     |        12073 |             1853 |          0.153 |
-| Aa_2020    | 地形湿度指数梯度分组 | 未分组    |         6563 |             1091 |          0.166 |
-| Aa_2020    | 地形湿度指数梯度分组 | 27·q3     |        38589 |             5377 |          0.139 |
-| Aa_2020    | Ward 层次分组（k=5） | 未分组    |         6563 |             1091 |          0.166 |
-| Aa_2020    | Ward 层次分组（k=5） | 26·5      |         8966 |             1396 |          0.156 |
-| Aa_2020    | 地形 K-means（k=6）  | 26·组0    |         7961 |             1377 |          0.173 |
-| Aa_2020    | 地形 K-means（k=6）  | 未分组    |         6563 |             1091 |          0.166 |
-| Aa_2020    | 土壤类型             | 未分组    |         6563 |             1091 |          0.166 |
-| Aa_2020    | 土壤类型             | 27 潮土   |       193007 |            22871 |          0.118 |
-| Aa_20yr    | 地表温度梯度分组     | 27·q2     |        38521 |            24716 |          0.642 |
-| Aa_20yr    | 地表温度梯度分组     | 42·q1     |         7222 |             4333 |          0.600 |
-| Aa_20yr    | 地形湿度指数梯度分组 | 27·q4     |        38711 |            21697 |          0.560 |
-| Aa_20yr    | 地形湿度指数梯度分组 | 27·q5     |        38805 |            21708 |          0.559 |
-| Aa_20yr    | Ward 层次分组（k=5） | 27·3      |        18657 |            14397 |          0.772 |
-| Aa_20yr    | Ward 层次分组（k=5） | 42·2      |         5249 |             3272 |          0.623 |
-| Aa_20yr    | 地形 K-means（k=6）  | 27·组1    |        28505 |            20380 |          0.715 |
-| Aa_20yr    | 地形 K-means（k=6）  | 42·组5    |         4833 |             2998 |          0.620 |
-| Aa_20yr    | 土壤类型             | 27 潮土   |       193007 |           102786 |          0.533 |
-| Aa_20yr    | 土壤类型             | 42 脱潮土 |        34940 |            17888 |          0.512 |
+| 侵蚀时期   | 分组方式             | 环境组       |   有效像元数 |   阈值以下像元数 |   阈值排除比例 |
+|:-----------|:---------------------|:-------------|-------------:|-----------------:|---------------:|
+| Aa_2020    | 地表温度梯度分组     | 未分组       |         6563 |             1091 |          0.166 |
+| Aa_2020    | 地表温度梯度分组     | 26冲积土·q5  |        12073 |             1853 |          0.153 |
+| Aa_2020    | 地形湿度指数梯度分组 | 未分组       |         6563 |             1091 |          0.166 |
+| Aa_2020    | 地形湿度指数梯度分组 | 27潮土·q3    |        38589 |             5377 |          0.139 |
+| Aa_2020    | Ward 层次分组（k=5） | 未分组       |         6563 |             1091 |          0.166 |
+| Aa_2020    | Ward 层次分组（k=5） | 26冲积土·5   |         8966 |             1396 |          0.156 |
+| Aa_2020    | 地形 K-means（k=6）  | 26冲积土·组0 |         7961 |             1377 |          0.173 |
+| Aa_2020    | 地形 K-means（k=6）  | 未分组       |         6563 |             1091 |          0.166 |
+| Aa_2020    | 土壤类型             | 未分组       |         6563 |             1091 |          0.166 |
+| Aa_2020    | 土壤类型             | 27 潮土      |       193007 |            22871 |          0.118 |
+| Aa_20yr    | 地表温度梯度分组     | 27潮土·q2    |        38521 |            24716 |          0.642 |
+| Aa_20yr    | 地表温度梯度分组     | 42脱潮土·q1  |         7222 |             4333 |          0.600 |
+| Aa_20yr    | 地形湿度指数梯度分组 | 27潮土·q4    |        38711 |            21697 |          0.560 |
+| Aa_20yr    | 地形湿度指数梯度分组 | 27潮土·q5    |        38805 |            21708 |          0.559 |
+| Aa_20yr    | Ward 层次分组（k=5） | 27潮土·3     |        18657 |            14397 |          0.772 |
+| Aa_20yr    | Ward 层次分组（k=5） | 42脱潮土·2   |         5249 |             3272 |          0.623 |
+| Aa_20yr    | 地形 K-means（k=6）  | 27潮土·组1   |        28505 |            20380 |          0.715 |
+| Aa_20yr    | 地形 K-means（k=6）  | 42脱潮土·组5 |         4833 |             2998 |          0.620 |
+| Aa_20yr    | 土壤类型             | 27 潮土      |       193007 |           102786 |          0.533 |
+| Aa_20yr    | 土壤类型             | 42 脱潮土    |        34940 |            17888 |          0.512 |
 
 ## 土类内匹配支持量与平衡
 
-下表以 M4、20 年平均 Aa 为例，比较全部原配对、过滤后沿用原分组重配和过滤后重拟合 k=6 组。图中着色的标准化环境差由配对端点的连续环境值重算：各变量绝对差除以全体有效耕地像元标准差，再对变量取均值；“配对表环境距离”则单独保留原匹配表中的距离字段，两者口径不同。完整 11 种组别的像元数、配对数、唯一端点、空间块、地理距离和环境距离见 `tables/group_population_support.csv.gz`。
+下表以 M4、20 年平均 Aa 为例，比较全部原配对、过滤后沿用原分组重配和过滤后重拟合 k=6 组。图中着色的标准化环境差由配对端点的连续环境值重算：各变量绝对差除以全体有效耕地像元标准差，再对变量取均值；“配对表环境距离”则单独保留原匹配表中的距离字段，两者口径不同。完整 11 种组别的像元数、配对数、唯一端点、空间块、地理距离和环境距离见 `tables/group_population_support.csv`。
 
 | 土壤类型   | 群体方案            |   有效像元数 |   阈值以上像元数 |   唯一匹配端点像元数 |   同组配对数 | 配对数相对基线     | 平均绝对标准化环境差异   | 配对表环境距离均值   | 平均地理距离（米）   |
 |:-----------|:--------------------|-------------:|-----------------:|---------------------:|-------------:|:-------------------|:-------------------------|:---------------------|:---------------------|
@@ -59,14 +61,14 @@
 
 ## 九项健康指标的组内秩关联变化
 
-以下对 M4、20 年平均 Aa、阈值后固定原环境组重配作支持量总结：基线和过滤方案中的组内有效观测均不少于 30 才计入。正转负/负转正是描述性方向变化；Oracle 搜索结果需要后续独立或预先锁定设计复核。每个组、每项指标、两种分析单位和所有匹配方案的原始数值见 `tables/group_response_comparison.csv.gz`。
+以下对 M4、20 年平均 Aa、阈值后固定原环境组重配作支持量总结：基线和过滤方案中的组内有效观测均不少于 30 才计入。正转负/负转正是描述性方向变化；Oracle 搜索结果需要后续独立或预先锁定设计复核。每个组、每项指标、两种分析单位和所有匹配方案的原始数值见 `tables/group_response_comparison.csv`。
 
 | 环境分组             | 健康指标            |   满足样本量门槛的组数 |   负向关联组数（基线） |   负向关联组数（过滤重配） |   正转负组数 |   负转正组数 |   ρ下降至少 0.1 的组数 |
 |:---------------------|:--------------------|-----------------------:|-----------------------:|---------------------------:|-------------:|-------------:|-----------------------:|
 | 土壤类型             | 土壤健康指数（SHI） |                      3 |                      3 |                          3 |            0 |            0 |                      0 |
 | 土壤类型             | 碱解氮（AN）        |                      3 |                      1 |                          1 |            0 |            0 |                      0 |
 | 土壤类型             | 有机质（OM）        |                      3 |                      3 |                          3 |            0 |            0 |                      0 |
-| 土壤类型             | 阳离子交换量（CEC） |                      3 |                      0 |                          0 |            0 |            0 |                      0 |
+| 土壤类型             | 阳离子交换量（CEC） |                      3 |                      3 |                          3 |            0 |            0 |                      1 |
 | 土壤类型             | 土壤酸碱度（pH）    |                      3 |                      3 |                          3 |            0 |            0 |                      0 |
 | 土壤类型             | 土壤含水量（SW）    |                      3 |                      3 |                          3 |            0 |            0 |                      0 |
 | 土壤类型             | 土壤容重（BD）      |                      3 |                      2 |                          3 |            1 |            0 |                      0 |
@@ -75,7 +77,7 @@
 | 地形 K-means（k=6）  | 土壤健康指数（SHI） |                     18 |                     18 |                         17 |            0 |            1 |                      1 |
 | 地形 K-means（k=6）  | 碱解氮（AN）        |                     18 |                      4 |                         10 |            8 |            2 |                      3 |
 | 地形 K-means（k=6）  | 有机质（OM）        |                     18 |                     18 |                         18 |            0 |            0 |                      3 |
-| 地形 K-means（k=6）  | 阳离子交换量（CEC） |                     18 |                      3 |                          1 |            1 |            3 |                      0 |
+| 地形 K-means（k=6）  | 阳离子交换量（CEC） |                     18 |                     18 |                         17 |            0 |            1 |                      7 |
 | 地形 K-means（k=6）  | 土壤酸碱度（pH）    |                     18 |                     13 |                         15 |            3 |            1 |                      4 |
 | 地形 K-means（k=6）  | 土壤含水量（SW）    |                     18 |                     18 |                         18 |            0 |            0 |                      1 |
 | 地形 K-means（k=6）  | 土壤容重（BD）      |                     18 |                     13 |                         16 |            4 |            1 |                      2 |
@@ -84,7 +86,7 @@
 | Ward 层次分组（k=5） | 土壤健康指数（SHI） |                     18 |                     18 |                         17 |            0 |            1 |                      1 |
 | Ward 层次分组（k=5） | 碱解氮（AN）        |                     18 |                      6 |                          9 |            6 |            3 |                      4 |
 | Ward 层次分组（k=5） | 有机质（OM）        |                     18 |                     18 |                         18 |            0 |            0 |                      2 |
-| Ward 层次分组（k=5） | 阳离子交换量（CEC） |                     18 |                      3 |                          1 |            1 |            3 |                      0 |
+| Ward 层次分组（k=5） | 阳离子交换量（CEC） |                     18 |                     17 |                         18 |            1 |            0 |                      4 |
 | Ward 层次分组（k=5） | 土壤酸碱度（pH）    |                     18 |                     13 |                         15 |            3 |            1 |                      4 |
 | Ward 层次分组（k=5） | 土壤含水量（SW）    |                     18 |                     18 |                         18 |            0 |            0 |                      1 |
 | Ward 层次分组（k=5） | 土壤容重（BD）      |                     18 |                     13 |                         17 |            5 |            1 |                      3 |
@@ -93,7 +95,7 @@
 | 地形湿度指数梯度分组 | 土壤健康指数（SHI） |                     15 |                     15 |                         15 |            0 |            0 |                      1 |
 | 地形湿度指数梯度分组 | 碱解氮（AN）        |                     15 |                      5 |                          7 |            4 |            2 |                      2 |
 | 地形湿度指数梯度分组 | 有机质（OM）        |                     15 |                     15 |                         15 |            0 |            0 |                      1 |
-| 地形湿度指数梯度分组 | 阳离子交换量（CEC） |                     15 |                      2 |                          1 |            1 |            2 |                      0 |
+| 地形湿度指数梯度分组 | 阳离子交换量（CEC） |                     15 |                     14 |                         15 |            1 |            0 |                      4 |
 | 地形湿度指数梯度分组 | 土壤酸碱度（pH）    |                     15 |                     13 |                         11 |            2 |            4 |                      3 |
 | 地形湿度指数梯度分组 | 土壤含水量（SW）    |                     15 |                     15 |                         15 |            0 |            0 |                      0 |
 | 地形湿度指数梯度分组 | 土壤容重（BD）      |                     15 |                     12 |                         14 |            3 |            1 |                      3 |
@@ -102,7 +104,7 @@
 | 地表温度梯度分组     | 土壤健康指数（SHI） |                     15 |                     15 |                         15 |            0 |            0 |                      1 |
 | 地表温度梯度分组     | 碱解氮（AN）        |                     15 |                      5 |                         11 |            7 |            1 |                      2 |
 | 地表温度梯度分组     | 有机质（OM）        |                     15 |                     15 |                         15 |            0 |            0 |                      1 |
-| 地表温度梯度分组     | 阳离子交换量（CEC） |                     15 |                      3 |                          0 |            0 |            3 |                      0 |
+| 地表温度梯度分组     | 阳离子交换量（CEC） |                     15 |                     15 |                         15 |            0 |            0 |                      3 |
 | 地表温度梯度分组     | 土壤酸碱度（pH）    |                     15 |                     12 |                         11 |            3 |            4 |                      3 |
 | 地表温度梯度分组     | 土壤含水量（SW）    |                     15 |                     15 |                         15 |            0 |            0 |                      0 |
 | 地表温度梯度分组     | 土壤容重（BD）      |                     15 |                     12 |                         15 |            3 |            0 |                      0 |
@@ -111,35 +113,37 @@
 
 ## 空间留出表现
 
-组内线性测试的完整 10 次划分、训练/测试样本量、5 km 组数、缓冲后状态与测试 R²见 `spatial_validation/group_spatial_validation.csv.gz`；按组汇总的 R²中位数、四分位数和负斜率比例见 `tables/group_spatial_summary.csv.gz`。
+组内线性测试的完整 10 次划分、训练/测试样本量、5 km 组数、缓冲后状态与测试 R²见 `spatial_validation/group_spatial_validation.csv`；按组汇总的 R²中位数、四分位数和负斜率比例见 `tables/group_spatial_summary.csv`。
 
 | 侵蚀时期          | 匹配方案            |   分组类型数 |   有效空间测试单元数 |   成功空间划分总数 |
 |:------------------|:--------------------|-------------:|---------------------:|-------------------:|
-| 2020 年实际侵蚀   | 全部原始匹配对      |            5 |                  603 |               6012 |
+| 2020 年实际侵蚀   | 全部原始匹配对      |            5 |                  603 |               6009 |
+| 2020 年实际侵蚀   | 两端均为正侵蚀      |            5 |                   67 |                668 |
 | 2020 年实际侵蚀   | CDF 阈值筛选原配对  |            5 |                  594 |               5904 |
 | 2020 年实际侵蚀   | 阈值后固定原组重配  |            5 |                  594 |               5877 |
 | 2020 年实际侵蚀   | 阈值后重拟合 k=6 组 |            5 |                  603 |               5994 |
 | 20 年平均实际侵蚀 | 全部原始匹配对      |            5 |                  594 |               5930 |
+| 20 年平均实际侵蚀 | 两端均为正侵蚀      |            5 |                   62 |                587 |
 | 20 年平均实际侵蚀 | CDF 阈值筛选原配对  |            5 |                  198 |               1881 |
 | 20 年平均实际侵蚀 | 阈值后固定原组重配  |            5 |                  549 |               5345 |
 | 20 年平均实际侵蚀 | 阈值后重拟合 k=6 组 |            5 |                  603 |               5958 |
 
 ## 空间块斜率区间
 
-`tables/group_pair_slope_spatial_bootstrap.csv.gz` 为同环境组且两端位于同一 5 km 块的配对斜率，按空间块有放回抽样计算 95% 区间。区间少于 5 个空间块时留空；图中重点展示 26 冲积土、27 潮土、42 脱潮土的 SHI、OM 和 SW。
+`tables/group_pair_slope_spatial_bootstrap.csv` 为同环境组且两端位于同一 5 km 块的配对斜率，按空间块有放回抽样计算 95% 区间。区间少于 5 个空间块时留空；图中重点展示 26 冲积土、27 潮土、42 脱潮土的 SHI、OM 和 SW。
 
 ## 图件
 
 - [固定环境组内超过分布阈值的有效像元比例；颜色深浅表示该组被阈值排除的比例](../figures/png/HET01_group_low_value_retention.png)；源数据 `figures/data/HET01_group_low_value_retention_source.csv`。
-- [颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对](../figures/png/HET02_group_rho_change_20yr_S1_both_positive.png)；源数据 `figures/data/HET02_group_rho_change_20yr_S1_both_positive_source.csv`。
-- [颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对](../figures/png/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint.png)；源数据 `figures/data/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint_source.csv`。
-- [颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对](../figures/png/HET02_group_rho_change_20yr_T01_fixed_original.png)；源数据 `figures/data/HET02_group_rho_change_20yr_T01_fixed_original_source.csv`。
-- [颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对](../figures/png/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population.png)；源数据 `figures/data/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population_source.csv`。
-- [颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对](../figures/png/HET02_group_rho_change_2020_S1_both_positive.png)；源数据 `figures/data/HET02_group_rho_change_2020_S1_both_positive_source.csv`。
-- [颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对](../figures/png/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint.png)；源数据 `figures/data/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint_source.csv`。
-- [颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对](../figures/png/HET02_group_rho_change_2020_T01_fixed_original.png)；源数据 `figures/data/HET02_group_rho_change_2020_T01_fixed_original_source.csv`。
-- [颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对](../figures/png/HET02_group_rho_change_2020_T01_refit_k6_filtered_population.png)；源数据 `figures/data/HET02_group_rho_change_2020_T01_refit_k6_filtered_population_source.csv`。
-- [颜色表示 T01_fixed_original 组内空间测试 R²中位数减去 S0 基线](../figures/png/HET03_group_spatial_test_change.png)；源数据 `figures/data/HET03_group_spatial_test_change_source.csv`。
+- [读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值](../figures/png/HET02_group_rho_change_20yr_S1_both_positive.png)；源数据 `figures/data/HET02_group_rho_change_20yr_S1_both_positive_source.csv`。
+- [读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值](../figures/png/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint.png)；源数据 `figures/data/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint_source.csv`。
+- [读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值](../figures/png/HET02_group_rho_change_20yr_T01_fixed_original.png)；源数据 `figures/data/HET02_group_rho_change_20yr_T01_fixed_original_source.csv`。
+- [读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值](../figures/png/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population.png)；源数据 `figures/data/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population_source.csv`。
+- [读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值](../figures/png/HET02_group_rho_change_2020_S1_both_positive.png)；源数据 `figures/data/HET02_group_rho_change_2020_S1_both_positive_source.csv`。
+- [读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值](../figures/png/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint.png)；源数据 `figures/data/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint_source.csv`。
+- [读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值](../figures/png/HET02_group_rho_change_2020_T01_fixed_original.png)；源数据 `figures/data/HET02_group_rho_change_2020_T01_fixed_original_source.csv`。
+- [读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值](../figures/png/HET02_group_rho_change_2020_T01_refit_k6_filtered_population.png)；源数据 `figures/data/HET02_group_rho_change_2020_T01_refit_k6_filtered_population_source.csv`。
+- [读图：每行是一个土类或环境组，每列是一项土壤健康指标](../figures/png/HET03_group_spatial_test_change.png)；源数据 `figures/data/HET03_group_spatial_test_change_source.csv`。
 - [点为同土类、同 5 km 块配对上的固定线性斜率，横线为按 5 km 空间块重抽样得到的 95% 区间](../figures/png/HET04_soil_group_paired_slopes.png)；源数据 `figures/data/HET04_soil_group_paired_slopes_source.csv`。
 - [每个气泡代表一个环境组与一个匹配方案；气泡大小按该组同组配对数缩放，颜色表示从配对端点环境值重算的连续环境差平均绝对标准化幅度，各变量以全体有效耕地像元标准差统一量纲](../figures/png/HET05_group_matching_support_balance.png)；源数据 `figures/data/HET05_group_matching_support_balance_source.csv`。
 

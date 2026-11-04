@@ -1,0 +1,38 @@
+{
+  "run_id": "exploratory_oracle/phase_i/cec_corrected_input_20_2p9_plus18_20261031",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "purpose": "Derived corrected CEC input for reanalysis; original source inputs are retained unchanged.",
+  "source_run_id": "run_20261025T114741_470772Z",
+  "source_cec_raster": "outputs/run_20261025T114741_470772Z/maps/aligned/CEC.tif",
+  "source_environment_database": "outputs/run_20261025T114741_470772Z/databases/environment_erosion.parquet",
+  "source_health_database": "outputs/run_20261025T114741_470772Z/databases/health.parquet",
+  "formula": "CEC_corrected = (CEC - 20 * Erosion) / 2.9 + 18",
+  "erosion_formula": "Erosion = Aa_20yr / max(Aa_20yr full valid extent) + Aa_2020 / max(Aa_2020 full valid extent)",
+  "maxima_full_valid_extent": {
+    "Aa_20yr": 143.00503540039062,
+    "Aa_2020": 48.76557540893555
+  },
+  "grid": {
+    "width": 1240,
+    "height": 977,
+    "crs": "EPSG:32649",
+    "transform": [
+      30.0,
+      0.0,
+      667233.48744166,
+      0.0,
+      -30.0,
+      3882987.2369028507
+    ]
+  },
+  "valid_common_raster_cells": 387448,
+  "database_rows": 392527,
+  "corrected_database_valid_cells": 387448,
+  "corrected_min": 16.725814080006995,
+  "corrected_max": 26.836542310975705,
+  "raster_database_max_abs_difference_float32": 9.536733571735567e-07,
+  "other_health_columns_unchanged": true,
+  "derived_raster": "maps/aligned/CEC_corrected.tif",
+  "compatibility_raster": "maps/aligned/CEC.tif"
+}

@@ -157,7 +157,7 @@
   },
   {
     "id": "M01_nonlinear_model_family_comparison",
-    "title": "固定抽样上比较线性、二次、多项式样条和梯度提升的表观 R²",
+    "title": "固定抽样上比较四类响应模型的表观 R²",
     "scientific_question": "过滤侵蚀低值后，健康响应是否更适合非线性模型？",
     "experiment": "模型形式比较",
     "figure_type": "模型比较热图",

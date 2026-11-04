@@ -58,6 +58,12 @@ ENVIRONMENT_VARIABLES = (
 )
 SCHEME_ORDER = tuple(SCHEME_LABELS)
 FILTER_SCHEMES = tuple(scheme for scheme in SCHEME_ORDER if scheme != "S0_all")
+HET_SCHEME_LABELS = {
+    "S1_both_positive": "只保留两端侵蚀均大于零的配对",
+    "T01_empirical_CDF_breakpoint": "按侵蚀分布阈值筛选，沿用原配对",
+    "T01_fixed_original": "阈值筛选后沿用原环境组并重新配对",
+    "T01_refit_k6_filtered_population": "阈值筛选后重新分成六组再配对",
+}
 PLOT_STYLE = {
     "figure.facecolor": "white", "axes.facecolor": "white", "savefig.facecolor": "white",
     "axes.edgecolor": "#D6E0E5", "axes.labelcolor": "#263B49", "text.color": "#263B49",
@@ -543,7 +549,9 @@ def _build_figures(
                     if previous is not None and current != previous:
                         ax.axhline(position, color="#526875", linewidth=.8)
                     previous = current
-            title = f"{EXPOSURE_LABELS[exposure]} · M4 · {SCHEME_LABELS[scheme]}"
+            method_label = "同土类内直接最近邻匹配（M4）"
+            scheme_label = HET_SCHEME_LABELS[scheme]
+            title = f"{EXPOSURE_LABELS[exposure]} · {method_label} · {scheme_label}"
             fig.suptitle(f"环境组内关联相对基线的变化\n{title}", x=.04, y=.995, ha="left", fontsize=14, fontweight="bold")
             fig.subplots_adjust(left=.24, right=.96, bottom=.08, top=.94)
             source = selected[[
@@ -553,9 +561,18 @@ def _build_figures(
             ]].copy()
             figures.append(_save(
                 fig, figure_root, f"HET02_group_rho_change_{exposure.removeprefix('Aa_')}_{scheme}", source,
-                f"颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对。空白表示两种样本的有效量至少一方不足 {support_floor}。筛选和重配改变了估计总体，变化不等于因果效应或纯模型改进。",
+                (
+                    f"读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值。"
+                    f"每格颜色是当前方案的 Spearman 秩相关系数 ρ 减去 S0（全部原始配对）的基线 ρ：红色表示相关系数比基线更高，蓝色表示更低，接近白色表示变化较小。"
+                    f"空白表示该格当前样本或基线样本少于 {support_floor} 个，无法稳定展示。"
+                    f"\n匹配方法：M4 是方法编号，表示先限制配对两端属于同一土类，再按环境相似程度直接寻找最近邻；它不先把环境切成六个 K-means 小组。"
+                    f"\n本图的筛选方案是：{scheme_label}。S1 只保留两端 Aa 都大于零的原配对；T01 阈值来自 Aa 经验累积分布的断点，后缀说明是沿用原配对、在原环境组内重配，还是重新分成六组后重配。"
+                    f"筛选或重配后研究的是不同一批像元/配对，所以颜色变化不能解释为因果效应或单纯的模型改善。"
+                    f"\nCEC 数据说明：本图使用当前 CEC 数据；Erosion 为 Aa_20yr 与 Aa_2020 分别除以各自完整有效栅格全域最大值后相加。"
+                    f"当前 CEC 的恢复公式包含侵蚀量，因此相关的一部分由公式直接带入，不是独立验证，也不能单独证明侵蚀导致真实 CEC 下降。"
+                ),
                 scientific_question="低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
-                experiment=f"{EXPOSURE_LABELS[exposure]} {SCHEME_LABELS[scheme]} 组内秩相关比较",
+                experiment=f"{EXPOSURE_LABELS[exposure]}：{scheme_label}；M4 同土类最近邻配对",
                 figure_type="环境组响应变化热图",
             ))
 
@@ -606,12 +623,14 @@ def _build_figures(
                 if previous is not None and current != previous:
                     ax.axhline(position, color="#526875", linewidth=.8)
                 previous = current
-        fig.suptitle("阈值后固定原环境组重配：组内空间测试表现相对基线的变化\nM4 · 5 km 整块留出 · 500 m 训练缓冲 · 固定线性模型",
+        fig.suptitle("阈值后固定原环境组重配：各环境组的空间测试表现相对基线如何变化\n同土类内直接最近邻配对 · 5 km 整块留出 · 500 m 训练缓冲 · 固定线性模型",
                      x=.04, y=.995, ha="left", fontsize=14, fontweight="bold")
         fig.subplots_adjust(left=.24, right=.96, bottom=.08, top=.94)
         figures.append(_save(
             fig, figure_root, "HET03_group_spatial_test_change", spatial_rows,
-            "颜色表示 T01_fixed_original 组内空间测试 R²中位数减去 S0 基线。配对两端须位于同一 5 km 块；训练块按留出块 500 m 缓冲剔除邻近样本；模型固定为线性基线，不按测试分数选组或选模型。空白表示基线或当前方案不足 5 次有效划分。",
+            "读图：每行是一个土类或环境组，每列是一项土壤健康指标。颜色表示阈值后固定原环境组重新配对时，空间测试 R² 的中位数减去全部原始配对（S0）的中位数；红色代表测试拟合分数上升，蓝色代表下降。这里的 R² 是对未参与训练的整块空间数据的预测表现，不是相关系数。空白表示当前方案或基线少于 5 次有效划分。\n"
+            "验证方式：配对两端位于同一 5 km 空间块；留出空间块周围 500 m 内的训练样本也剔除，减少邻近像元泄漏。使用事先固定的线性模型，并重复 10 次空间划分。M4 表示同一土类内直接按环境相似程度找最近邻。\n"
+            "CEC 数据说明：本图使用当前 CEC 数据；Erosion 是两期 Aa 分别除以各自完整有效栅格全域最大值后相加。当前 CEC 的恢复公式包含侵蚀量，因此负向关联或预测变化的一部分由公式机械带入，应作为探索性描述，不是独立验证或因果结论。",
             scientific_question="低值过滤并在固定环境组内重配后，组内响应能否在留出空间块保持？",
             experiment="M4 环境组空间留出比较", figure_type="空间块稳健热图",
         ))

@@ -23,103 +23,119 @@
     },
     {
       "id": "HET02_group_rho_change_20yr_S1_both_positive",
-      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "title": "读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值",
       "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
-      "experiment": "20 年平均实际侵蚀 两端均为正侵蚀 组内秩相关比较",
+      "experiment": "20 年平均实际侵蚀：只保留两端侵蚀均大于零的配对；M4 同土类最近邻配对",
       "figure_type": "环境组响应变化热图",
       "png": "png/HET02_group_rho_change_20yr_S1_both_positive.png",
       "svg": "svg/HET02_group_rho_change_20yr_S1_both_positive.svg",
       "pdf": "pdf/HET02_group_rho_change_20yr_S1_both_positive.pdf",
       "source": "data/HET02_group_rho_change_20yr_S1_both_positive_source.csv",
-      "caption": "captions/HET02_group_rho_change_20yr_S1_both_positive.md"
+      "caption": "captions/HET02_group_rho_change_20yr_S1_both_positive.md",
+      "cec_corrected_source_run_id": "low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031",
+      "cec_corrected_formula": "CEC_corrected=(CEC-20×Erosion)/2.9+18"
     },
     {
       "id": "HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint",
-      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "title": "读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值",
       "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
-      "experiment": "20 年平均实际侵蚀 CDF 阈值筛选原配对 组内秩相关比较",
+      "experiment": "20 年平均实际侵蚀：按侵蚀分布阈值筛选，沿用原配对；M4 同土类最近邻配对",
       "figure_type": "环境组响应变化热图",
       "png": "png/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint.png",
       "svg": "svg/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint.svg",
       "pdf": "pdf/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint.pdf",
       "source": "data/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint_source.csv",
-      "caption": "captions/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint.md"
+      "caption": "captions/HET02_group_rho_change_20yr_T01_empirical_CDF_breakpoint.md",
+      "cec_corrected_source_run_id": "low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031",
+      "cec_corrected_formula": "CEC_corrected=(CEC-20×Erosion)/2.9+18"
     },
     {
       "id": "HET02_group_rho_change_20yr_T01_fixed_original",
-      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "title": "读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值",
       "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
-      "experiment": "20 年平均实际侵蚀 阈值后固定原组重配 组内秩相关比较",
+      "experiment": "20 年平均实际侵蚀：阈值筛选后沿用原环境组并重新配对；M4 同土类最近邻配对",
       "figure_type": "环境组响应变化热图",
       "png": "png/HET02_group_rho_change_20yr_T01_fixed_original.png",
       "svg": "svg/HET02_group_rho_change_20yr_T01_fixed_original.svg",
       "pdf": "pdf/HET02_group_rho_change_20yr_T01_fixed_original.pdf",
       "source": "data/HET02_group_rho_change_20yr_T01_fixed_original_source.csv",
-      "caption": "captions/HET02_group_rho_change_20yr_T01_fixed_original.md"
+      "caption": "captions/HET02_group_rho_change_20yr_T01_fixed_original.md",
+      "cec_corrected_source_run_id": "low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031",
+      "cec_corrected_formula": "CEC_corrected=(CEC-20×Erosion)/2.9+18"
     },
     {
       "id": "HET02_group_rho_change_20yr_T01_refit_k6_filtered_population",
-      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "title": "读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值",
       "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
-      "experiment": "20 年平均实际侵蚀 阈值后重拟合 k=6 组 组内秩相关比较",
+      "experiment": "20 年平均实际侵蚀：阈值筛选后重新分成六组再配对；M4 同土类最近邻配对",
       "figure_type": "环境组响应变化热图",
       "png": "png/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population.png",
       "svg": "svg/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population.svg",
       "pdf": "pdf/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population.pdf",
       "source": "data/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population_source.csv",
-      "caption": "captions/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population.md"
+      "caption": "captions/HET02_group_rho_change_20yr_T01_refit_k6_filtered_population.md",
+      "cec_corrected_source_run_id": "low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031",
+      "cec_corrected_formula": "CEC_corrected=(CEC-20×Erosion)/2.9+18"
     },
     {
       "id": "HET02_group_rho_change_2020_S1_both_positive",
-      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "title": "读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值",
       "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
-      "experiment": "2020 年实际侵蚀 两端均为正侵蚀 组内秩相关比较",
+      "experiment": "2020 年实际侵蚀：只保留两端侵蚀均大于零的配对；M4 同土类最近邻配对",
       "figure_type": "环境组响应变化热图",
       "png": "png/HET02_group_rho_change_2020_S1_both_positive.png",
       "svg": "svg/HET02_group_rho_change_2020_S1_both_positive.svg",
       "pdf": "pdf/HET02_group_rho_change_2020_S1_both_positive.pdf",
       "source": "data/HET02_group_rho_change_2020_S1_both_positive_source.csv",
-      "caption": "captions/HET02_group_rho_change_2020_S1_both_positive.md"
+      "caption": "captions/HET02_group_rho_change_2020_S1_both_positive.md",
+      "cec_corrected_source_run_id": "low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031",
+      "cec_corrected_formula": "CEC_corrected=(CEC-20×Erosion)/2.9+18"
     },
     {
       "id": "HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint",
-      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "title": "读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值",
       "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
-      "experiment": "2020 年实际侵蚀 CDF 阈值筛选原配对 组内秩相关比较",
+      "experiment": "2020 年实际侵蚀：按侵蚀分布阈值筛选，沿用原配对；M4 同土类最近邻配对",
       "figure_type": "环境组响应变化热图",
       "png": "png/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint.png",
       "svg": "svg/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint.svg",
       "pdf": "pdf/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint.pdf",
       "source": "data/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint_source.csv",
-      "caption": "captions/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint.md"
+      "caption": "captions/HET02_group_rho_change_2020_T01_empirical_CDF_breakpoint.md",
+      "cec_corrected_source_run_id": "low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031",
+      "cec_corrected_formula": "CEC_corrected=(CEC-20×Erosion)/2.9+18"
     },
     {
       "id": "HET02_group_rho_change_2020_T01_fixed_original",
-      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "title": "读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值",
       "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
-      "experiment": "2020 年实际侵蚀 阈值后固定原组重配 组内秩相关比较",
+      "experiment": "2020 年实际侵蚀：阈值筛选后沿用原环境组并重新配对；M4 同土类最近邻配对",
       "figure_type": "环境组响应变化热图",
       "png": "png/HET02_group_rho_change_2020_T01_fixed_original.png",
       "svg": "svg/HET02_group_rho_change_2020_T01_fixed_original.svg",
       "pdf": "pdf/HET02_group_rho_change_2020_T01_fixed_original.pdf",
       "source": "data/HET02_group_rho_change_2020_T01_fixed_original_source.csv",
-      "caption": "captions/HET02_group_rho_change_2020_T01_fixed_original.md"
+      "caption": "captions/HET02_group_rho_change_2020_T01_fixed_original.md",
+      "cec_corrected_source_run_id": "low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031",
+      "cec_corrected_formula": "CEC_corrected=(CEC-20×Erosion)/2.9+18"
     },
     {
       "id": "HET02_group_rho_change_2020_T01_refit_k6_filtered_population",
-      "title": "颜色表示该方案组内 Spearman ρ 减去 S0 全部原配对的组内 ρ；每像元按唯一 cell_id 计数，配对仅保留两端属于同一环境组的配对",
+      "title": "读图：左半图把匹配对中的像元合并后按 cell_id 去重，每个像元只计一次；右半图只看同一对两端属于同一环境组的配对差值",
       "scientific_question": "低值筛选与重配后，不同环境组内九项健康响应的秩相关如何改变？",
-      "experiment": "2020 年实际侵蚀 阈值后重拟合 k=6 组 组内秩相关比较",
+      "experiment": "2020 年实际侵蚀：阈值筛选后重新分成六组再配对；M4 同土类最近邻配对",
       "figure_type": "环境组响应变化热图",
       "png": "png/HET02_group_rho_change_2020_T01_refit_k6_filtered_population.png",
       "svg": "svg/HET02_group_rho_change_2020_T01_refit_k6_filtered_population.svg",
       "pdf": "pdf/HET02_group_rho_change_2020_T01_refit_k6_filtered_population.pdf",
       "source": "data/HET02_group_rho_change_2020_T01_refit_k6_filtered_population_source.csv",
-      "caption": "captions/HET02_group_rho_change_2020_T01_refit_k6_filtered_population.md"
+      "caption": "captions/HET02_group_rho_change_2020_T01_refit_k6_filtered_population.md",
+      "cec_corrected_source_run_id": "low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031",
+      "cec_corrected_formula": "CEC_corrected=(CEC-20×Erosion)/2.9+18"
     },
     {
       "id": "HET03_group_spatial_test_change",
-      "title": "颜色表示 T01_fixed_original 组内空间测试 R²中位数减去 S0 基线",
+      "title": "读图：每行是一个土类或环境组，每列是一项土壤健康指标",
       "scientific_question": "低值过滤并在固定环境组内重配后，组内响应能否在留出空间块保持？",
       "experiment": "M4 环境组空间留出比较",
       "figure_type": "空间块稳健热图",
@@ -127,7 +143,9 @@
       "svg": "svg/HET03_group_spatial_test_change.svg",
       "pdf": "pdf/HET03_group_spatial_test_change.pdf",
       "source": "data/HET03_group_spatial_test_change_source.csv",
-      "caption": "captions/HET03_group_spatial_test_change.md"
+      "caption": "captions/HET03_group_spatial_test_change.md",
+      "cec_corrected_source_run_id": "low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031",
+      "cec_corrected_formula": "CEC_corrected=(CEC-20×Erosion)/2.9+18"
     },
     {
       "id": "HET04_soil_group_paired_slopes",
@@ -153,5 +171,8 @@
       "source": "data/HET05_group_matching_support_balance_source.csv",
       "caption": "captions/HET05_group_matching_support_balance.md"
     }
-  ]
+  ],
+  "cec_corrected_source_run_id": "low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031",
+  "cec_corrected_formula": "CEC_corrected=(CEC-20×Erosion)/2.9+18",
+  "cec_refresh_note": "HET02/HET03 的 CEC 行来自校正运行；其余八项健康指标沿用原完整分析行。"
 }

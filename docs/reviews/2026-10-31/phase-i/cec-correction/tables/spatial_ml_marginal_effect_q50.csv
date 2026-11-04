@@ -1,0 +1,2 @@
+outcome,exposure_quantile,n_spatial_units,mean_marginal_effect_standardized,median_marginal_effect_standardized,negative_effect_fraction,outcome_guided_selection
+CEC,0.5,7396,-0.05915139201293376,-0.0622793108480757,0.7295835586803677,True

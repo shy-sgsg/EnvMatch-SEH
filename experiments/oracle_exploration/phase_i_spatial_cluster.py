@@ -173,10 +173,17 @@ def _save_map_grid(run_dir: Path, name: str, frames: list[tuple[str, pd.DataFram
                    mask_info: tuple[np.ndarray, np.ndarray, np.ndarray], dpi: int,
                    value_kind: str, title: str) -> list[str]:
     mask, xcoords, ycoords = mask_info
-    fig, axes = plt.subplots(3, 3, figsize=(17, 13.5), constrained_layout=True)
+    n_panels = len(frames)
+    n_columns = min(3, max(n_panels, 1))
+    n_rows = int(np.ceil(n_panels / n_columns))
+    fig, axes = plt.subplots(n_rows, n_columns,
+                             figsize=(5.7 * n_columns, 4.5 * n_rows),
+                             squeeze=False, constrained_layout=True)
     mappable = None
     palette = LISA_COLORS if value_kind == "lisa" else COLOCATION_COLORS if value_kind == "colocation" else HOTSPOT_COLORS
-    for panel, (ax, (outcome, frame, value_col)) in enumerate(zip(axes.ravel(), frames, strict=True)):
+    for panel, (ax, (outcome, frame, value_col)) in enumerate(
+        zip(axes.ravel()[:n_panels], frames, strict=True)
+    ):
         if value_kind == "continuous":
             values = pd.to_numeric(frame[value_col], errors="coerce").to_numpy(dtype=float)
             valid = np.isfinite(values)
@@ -196,7 +203,7 @@ def _save_map_grid(run_dir: Path, name: str, frames: list[tuple[str, pd.DataFram
         ax.set_aspect("equal", adjustable="datalim")
     fig.suptitle(title, fontsize=15)
     if value_kind == "continuous":
-        fig.colorbar(mappable, ax=list(axes.ravel()), shrink=.70,
+        fig.colorbar(mappable, ax=list(axes.ravel()[:n_panels]), shrink=.70,
                      label="Local Spearman ρ" if frames[0][2] == "local_spearman" else "Getis–Ord Gi* z")
     else:
         handles = [Line2D([0], [0], marker="s", linestyle="", color=color, markersize=7, label=label)
@@ -217,6 +224,9 @@ def _report(run_dir: Path, local_summary: pd.DataFrame, lisa_summary: pd.DataFra
             same_site_summary: pd.DataFrame, gi_summary: pd.DataFrame,
             n_env_pixels: int, local_k: int, local_radius_median: float,
             n_units_by_outcome: dict[str, int], config: dict[str, Any]) -> str:
+    report_outcomes = list(config["outcomes"])
+    key_outcomes = [outcome for outcome in config.get("key_outcomes", KEY_OUTCOMES)
+                    if outcome in report_outcomes]
     lines = ["# Phase I-6：局部空间关联与负向响应热点", "",
              f"权威运行：`{run_dir.relative_to(ROOT)}`。运行模式为 `EXPLORATORY_ORACLE`，`outcome_guided_selection=true`。", "",
              "## 总体与空间尺度", "",
@@ -231,7 +241,7 @@ def _report(run_dir: Path, local_summary: pd.DataFrame, lisa_summary: pd.DataFra
     lines.extend(["", "## Bivariate Local Moran's I", "",
                   "分类中的 HH/LL/HL/LH 依次表示焦点位置 Aa 高/低与邻域健康空间滞后高/低；HL 表示高侵蚀位置邻域健康偏低。该分类来自空间滞后关联，不表示焦点像元自身健康低。", "",
                   "| 指标 | FDR 显著 HL 单元 | FDR 显著 HH | FDR 显著 LL | FDR 显著 LH |", "|---|---:|---:|---:|---:|"])
-    for outcome in OUTCOMES:
+    for outcome in report_outcomes:
         d = lisa_summary[lisa_summary.outcome.eq(outcome)].set_index("lisa_class").cell_count
         lines.append(f"| {LABELS[outcome]} | {int(d.get('HL',0)):,} | {int(d.get('HH',0)):,} | {int(d.get('LL',0)):,} | {int(d.get('LH',0)):,} |")
     lines.extend(["", "## 同一位置的高 Aa—低健康共现", "",
@@ -245,7 +255,7 @@ def _report(run_dir: Path, local_summary: pd.DataFrame, lisa_summary: pd.DataFra
         lines.append(f"| {LABELS[r.outcome]} | {r.model_family} | {r.hotspot_count:,} | {r.coldspot_count:,} |")
     gi_lookup = gi_summary.set_index(["outcome", "model_family"])
     lines.append("")
-    for outcome in KEY_OUTCOMES:
+    for outcome in key_outcomes:
         gwr = int(gi_lookup.loc[(outcome, "GWR"), "hotspot_count"])
         lcr = int(gi_lookup.loc[(outcome, "GWR-LCR"), "hotspot_count"])
         lines.append(f"- **{LABELS[outcome]}** 的高值热点在 GWR/GWR-LCR 分别有 {gwr:,}/{lcr:,} 个单元；该差异显示热点范围对局部共线性收缩方案敏感，不能当作稳定的区域分类。")

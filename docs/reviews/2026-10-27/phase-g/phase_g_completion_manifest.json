@@ -213,28 +213,28 @@
     },
     {
       "path": "docs/reviews/2026-10-27/phase-g/figures/completion/10_environment_group_slope_forest.pdf",
-      "bytes": 29466,
-      "sha256": "1b8868d475c17936dd6ce60a7ae9fd92e8e1a9019b9913e8adef458b5cd119f9"
+      "bytes": 74283,
+      "sha256": "98472636a9add489588f69bfe6b85d14059755888ceeced9d864ce189e0aac20"
     },
     {
       "path": "docs/reviews/2026-10-27/phase-g/figures/completion/10_environment_group_slope_forest.png",
-      "bytes": 388872,
-      "sha256": "1a4b0ac827c8fafe7a27598e20820827c71335b519c9ca28490eeaa49c26ffff"
+      "bytes": 883806,
+      "sha256": "be3f598230867af2732c9bfa4625a2361ce2c9557c8ce823294ecd1f782f2eb9"
     },
     {
       "path": "docs/reviews/2026-10-27/phase-g/figures/completion/10_environment_group_slope_forest.svg",
-      "bytes": 321266,
-      "sha256": "3bdcc9860ad375a3c0e484e724462faf2d47ee003f02ae81917cc85da286698d"
+      "bytes": 417886,
+      "sha256": "a318ee05c9b8c5d7e9170f2df2b637e97f16b70fdc3de53c152c2e7728d40a72"
     },
     {
       "path": "docs/reviews/2026-10-27/phase-g/figures/completion/captions/10_environment_group_slope_forest.md",
-      "bytes": 375,
-      "sha256": "ea6c58f4756c0902ac444fad3b2f00c4ce91b5e77c13a348e5518013ad07a2e3"
+      "bytes": 435,
+      "sha256": "36a448ed1fea748f9b9c40fc6b2e8ff61de869f979c239c1ab67195f993348e0"
     },
     {
       "path": "docs/reviews/2026-10-27/phase-g/figures/completion/data/10_environment_group_slope_forest.csv",
-      "bytes": 29480,
-      "sha256": "5a2faec508fba8c5599af7e0b4ee2a00da8946976ebfbe7f9ee4ca0efbbe6946"
+      "bytes": 29406,
+      "sha256": "29750c49b3df7eabe26318338bc955d5089aa652713a78cad6cc95c4db4492d6"
     },
     {
       "path": "docs/reviews/2026-10-27/phase-g/figures/data/01_matching_quality.csv",
@@ -488,28 +488,28 @@
     },
     {
       "path": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/10_environment_group_slope_forest.pdf",
-      "bytes": 29466,
-      "sha256": "1b8868d475c17936dd6ce60a7ae9fd92e8e1a9019b9913e8adef458b5cd119f9"
+      "bytes": 74283,
+      "sha256": "98472636a9add489588f69bfe6b85d14059755888ceeced9d864ce189e0aac20"
     },
     {
       "path": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/10_environment_group_slope_forest.png",
-      "bytes": 388872,
-      "sha256": "1a4b0ac827c8fafe7a27598e20820827c71335b519c9ca28490eeaa49c26ffff"
+      "bytes": 883806,
+      "sha256": "be3f598230867af2732c9bfa4625a2361ce2c9557c8ce823294ecd1f782f2eb9"
     },
     {
       "path": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/10_environment_group_slope_forest.svg",
-      "bytes": 321266,
-      "sha256": "3bdcc9860ad375a3c0e484e724462faf2d47ee003f02ae81917cc85da286698d"
+      "bytes": 417886,
+      "sha256": "a318ee05c9b8c5d7e9170f2df2b637e97f16b70fdc3de53c152c2e7728d40a72"
     },
     {
       "path": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/captions/10_environment_group_slope_forest.md",
-      "bytes": 375,
-      "sha256": "ea6c58f4756c0902ac444fad3b2f00c4ce91b5e77c13a348e5518013ad07a2e3"
+      "bytes": 435,
+      "sha256": "36a448ed1fea748f9b9c40fc6b2e8ff61de869f979c239c1ab67195f993348e0"
     },
     {
       "path": "outputs/exploratory_oracle/phase_g_20261027_completion/figures/data/10_environment_group_slope_forest.csv",
-      "bytes": 29480,
-      "sha256": "5a2faec508fba8c5599af7e0b4ee2a00da8946976ebfbe7f9ee4ca0efbbe6946"
+      "bytes": 29406,
+      "sha256": "29750c49b3df7eabe26318338bc955d5089aa652713a78cad6cc95c4db4492d6"
     },
     {
       "path": "outputs/exploratory_oracle/phase_g_20261027_completion/provenance.json",

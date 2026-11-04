@@ -6,6 +6,8 @@
 
 研究方向以 [研究总纲](docs/RESEARCH_CHARTER.md) 为准。首版总纲提交后，其正文受审批机制保护；科研任务按 [治理协议](docs/governance/CODEX_TASK_PROTOCOL.md) 和 [阶段门](docs/governance/RESEARCH_STAGE_GATES.md) 执行。ChatGPT 阶段审查协议和总纲变更申请流程分别见 `docs/governance/`。
 
+面向非专业读者的全项目详报提供 [Markdown](docs/PROJECT_FULL_REPORT.md)、[LaTeX](docs/PROJECT_FULL_REPORT.tex) 和 [PDF](docs/PROJECT_FULL_REPORT.pdf) 三种版本。
+
 ## 研究背景与研究区
 
 研究区为河南省焦作市温县耕地，既有研究的耕地面积约 347.877 km²，空间分辨率为 30 m。当前分析直接使用用户提供的预计算实际侵蚀 `Aa_20yr` 与 `Aa_2020`，不重建或验证 RUSLE 因子乘积；仍记录输入栅格可读性、范围和空间对齐情况。正式模式的其他质量阶段门按总纲执行。已有土壤健康制图以 AN、OM、CEC、pH、SW、BD、MBC、RESP 八项指标为基础，随机森林预测栅格经隶属度和权重形成 SHI。已有 PCNM 空间控制成果予以保留；本轮 Oracle 探索不开展 PCNM 比较。
@@ -117,7 +119,7 @@ python scripts/audit_real_data.py --data-root "环境匹配原数据" --project-
 
 ## 研究进度
 
-正式模式的 G2/G3 状态仍按现有审查记录管理。用户已授权独立 Oracle 探索；当前基于已有统一数据库建立实验框架，Oracle 结果尚待执行。原始数据、本地路径映射和大型运行输出均不纳入 Git。本轮不开展 PCNM。
+正式模式的 G2/G3 状态仍按现有审查记录管理。用户已授权独立 Oracle 探索；现有探索成果及 Phase J 综合运行保存在 outputs/exploratory_oracle/，并有本地审查包。2026-11-03补充了GWR/MGWR局部系数分位数、跨指标强负向区域重叠和环境背景描述；新增结果仍待独立复核。原始数据、本地路径映射和大型运行输出均不纳入 Git。本轮不开展 PCNM。
 
 ## 开发与测试
 

@@ -1,0 +1,5 @@
+﻿method,status,n_models
+CB_SEM_custom_observed_path,ok,12
+CB_SEM_lavaan_ML,ok,48
+PLS_PM_ModeB_formative,ok,176
+piecewise_sem,ok,1346

@@ -1,0 +1,535 @@
+{
+  "run_id": "phase_j_20261102_seed20261102_r10",
+  "method": "Mode-B formative PLS path model",
+  "populations": [
+    "D1_common_env_case",
+    "D2_240m_blocks",
+    "D3_M4_unique_pixels",
+    "D4_M4_pair_differences"
+  ],
+  "structures": [
+    "S1_parallel_dimensions",
+    "S2_direct_plus_indirect_SHI",
+    "S3_indirect_only_SHI"
+  ],
+  "controls": [
+    "M0",
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "control_definition": {
+    "M0": "erosion only",
+    "M1": "Elevation, TWI, NDVI, LST, and population-supported soil-class dummies",
+    "M2": "terrain and vegetation-thermal principal components plus soil-class dummies",
+    "M3": "M1 controls plus x, y, x2, y2, and xy spatial trend terms"
+  },
+  "health_blocks": {
+    "Physical": [
+      "SW",
+      "-BD"
+    ],
+    "Chemical": [
+      "OM",
+      "AN"
+    ],
+    "Biological": [
+      "MBC",
+      "RESP"
+    ],
+    "SHI": [
+      "SHI"
+    ]
+  },
+  "cec": "Analyzed separately; excluded from the chemical composite because its formula contains erosion.",
+  "path_structures": {
+    "S1_parallel_dimensions": "Erosion and controls to Physical, Chemical, and Biological; no SHI equation.",
+    "S2_direct_plus_indirect_SHI": "Erosion and controls to three dimensions and SHI; dimensions also point to SHI.",
+    "S3_indirect_only_SHI": "Erosion and controls to three dimensions; dimensions and controls point to SHI, with no direct erosion-to-SHI path."
+  },
+  "inner_model": "OLS on standardized construct scores and standardized controls; full versus no-erosion R2 computed on identical rows for each endogenous equation.",
+  "uncertainty": "No bootstrap intervals; no spatially robust PLS inference.",
+  "outcome_guided_selection": true,
+  "sample_support": [
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S1_parallel_dimensions",
+      "control": "M0",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S1_parallel_dimensions",
+      "control": "M1",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S1_parallel_dimensions",
+      "control": "M2",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S1_parallel_dimensions",
+      "control": "M3",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M0",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M1",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M2",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M3",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M0",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M1",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M2",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M3",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S1_parallel_dimensions",
+      "control": "M0",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S1_parallel_dimensions",
+      "control": "M1",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S1_parallel_dimensions",
+      "control": "M2",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S1_parallel_dimensions",
+      "control": "M3",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M0",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M1",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M2",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M3",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M0",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M1",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M2",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M3",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S1_parallel_dimensions",
+      "control": "M0",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S1_parallel_dimensions",
+      "control": "M1",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S1_parallel_dimensions",
+      "control": "M2",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S1_parallel_dimensions",
+      "control": "M3",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M0",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M1",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M2",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M3",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M0",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M1",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M2",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M3",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S1_parallel_dimensions",
+      "control": "M0",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S1_parallel_dimensions",
+      "control": "M1",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S1_parallel_dimensions",
+      "control": "M2",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S1_parallel_dimensions",
+      "control": "M3",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M0",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M1",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M2",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M3",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M0",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M1",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M2",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M3",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "status": "ok",
+      "converged": true,
+      "outcome_guided_selection": true
+    }
+  ]
+}

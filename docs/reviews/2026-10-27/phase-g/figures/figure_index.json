@@ -20,7 +20,7 @@
       "pdf": "figures/02_paired_health_differences.pdf"
     },
     "data": "figures/data/02_paired_health_differences.csv",
-    "caption": "figures/captions/02_paired_health_differences.md",
+    "caption": "每个箱线图汇总复用 Phase F M4 配对中高侵蚀端减低侵蚀端的健康预测值。须线表示第 10–90 百分位，菱形表示均值。单位沿用源栅格；部分指标单位元数据仍未核实。 CEC 使用校正值 CEC_corrected=(CEC−20×Erosion)/2.9+18；配对成员 ID 与 Phase F 原匹配设计固定。",
     "rows": 9
   },
   {
@@ -32,7 +32,7 @@
       "pdf": "figures/03_pair_association_heatmap.pdf"
     },
     "data": "figures/data/03_pair_association_heatmap.csv",
-    "caption": "figures/captions/03_pair_association_heatmap.md",
+    "caption": "Spearman 相关以配对高减低侵蚀差和高减低健康差计算。配套表中的 95% 相关区间使用 Fisher-z 近似，并以 5 km 配对中点空间块数作为有效样本量；在空间依赖存在时，P 值仍仅作描述性参考。 CEC 的配对相关已按校正值重算，配对成员与空间分块保持原设计。",
     "rows": 18
   },
   {
@@ -44,7 +44,7 @@
       "pdf": "figures/04_model_r2_comparison.pdf"
     },
     "data": "figures/data/04_model_r2_comparison.csv",
-    "caption": "figures/captions/04_model_r2_comparison.md",
+    "caption": "校正后 CEC 没有可与其他结局同口径比较的全像元表观 R²，也没有重估后的匹配子集模型，因此这些 CEC 柱位留空。图中 CEC 只显示 I-1 验证集选模后的空间测试 R²=-0.012（n=43,363）。其他指标沿用原 Phase G 结果；不同柱对应不同样本范围与模型选择规则，不表示侵蚀的独立因果解释。",
     "rows": 36
   },
   {
@@ -56,8 +56,8 @@
       "pdf": "figures/05_response_curves.pdf"
     },
     "data": "figures/data/05_response_curves.csv",
-    "caption": "figures/captions/05_response_curves.md",
-    "rows": 1800
+    "caption": "虚线为固定共同 20,000 像元样本的自然样条。CEC 实线更新为按 5 km 空间验证 R²选模的校正后 I1 Gaussian GAM（测试 R²=−0.012），不再使用历史正向相关模型；其余指标仍为历史 Phase G Oracle 曲线。图中 CEC 散点由同一随机样本的校正值替换。",
+    "rows": 1950
   },
   {
     "name": "06_environment_group_forest",
@@ -68,7 +68,7 @@
       "pdf": "figures/06_environment_group_forest.pdf"
     },
     "data": "figures/data/06_environment_group_forest.csv",
-    "caption": "figures/captions/06_environment_group_forest.md",
+    "caption": "入图候选要求至少 100 个配对，且斜率与 Spearman 方向均为负。经 Oracle 授权后，按健康结局对环境组排序。区间按 5 km 配对中点空间块重抽样；候选选择已使用全研究区，不构成独立验证。 CEC 组内关联按更正值重算；分组规则与配对成员沿用原 Phase G。",
     "rows": 18
   },
   {
@@ -80,7 +80,7 @@
       "pdf": "figures/07_grouping_method_comparison.pdf"
     },
     "data": "figures/data/07_grouping_method_comparison.csv",
-    "caption": "figures/captions/07_grouping_method_comparison.md",
+    "caption": "每个分布汇总九项结局中各环境组的 Spearman 相关；每组至少保留 100 个配对。土类、K 均值、Ward 聚类和单变量分位组均由环境/土壤值定义，不使用健康值；高亮组的选择则使用了健康结局。 CEC 组内 Spearman 系数已按校正值重算；其余结局沿用原 Phase G。",
     "rows": 1161
   },
   {
@@ -104,7 +104,7 @@
       "pdf": "figures/09_spatial_validation.pdf"
     },
     "data": "figures/data/09_spatial_validation.csv",
-    "caption": "figures/captions/09_spatial_validation.md",
+    "caption": "左图为历史像元模型经验证集筛选后，在空间测试块上的得分；右图为 Phase F M3/M4 配对 OLS 在 10 次 5 km 空间随机划分中的测试 R²。由于此前 Oracle 搜索已使用全研究区，这些划分是内部诊断，不是未触碰的外部验证；像元和配对指标分别呈现。 CEC 像元模型使用更正后 I1 的空间验证/测试结果，配对模型使用更正后的 Phase F 重复空间划分。",
     "rows": 189
   }
 ]

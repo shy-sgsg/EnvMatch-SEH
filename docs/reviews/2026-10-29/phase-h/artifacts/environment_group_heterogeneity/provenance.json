@@ -81,5 +81,8 @@
   "group_response_rows": 56871,
   "group_population_rows": 3520,
   "spatial_validation_rows": 57960,
-  "input_paths": {}
+  "input_paths": {},
+  "cec_corrected_source_run_id": "low_erosion_group_heterogeneity_cec_corrected_20_2p9_plus18_20261031",
+  "cec_corrected_formula": "CEC_corrected=(CEC-20×Erosion)/2.9+18",
+  "cec_refresh_note": "HET02/HET03 CEC 行经独立公式复算并以校正运行重绘；非 CEC 行沿用原完整结果。旧版 CEC 图仍留在历史运行归档，不进入总图集。"
 }

@@ -1,0 +1,2783 @@
+{
+  "custom_pls_pm": [
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S1_parallel_dimensions",
+      "control": "M0",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 2,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S1_parallel_dimensions",
+      "control": "M1",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S1_parallel_dimensions",
+      "control": "M2",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ],
+        "Control_5_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S1_parallel_dimensions",
+      "control": "M3",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ],
+        "Control_8_space_x": [
+          "space_x"
+        ],
+        "Control_9_space_y": [
+          "space_y"
+        ],
+        "Control_10_space_x2": [
+          "space_x2"
+        ],
+        "Control_11_space_y2": [
+          "space_y2"
+        ],
+        "Control_12_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M0",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 2,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M1",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M2",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ],
+        "Control_5_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M3",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ],
+        "Control_8_space_x": [
+          "space_x"
+        ],
+        "Control_9_space_y": [
+          "space_y"
+        ],
+        "Control_10_space_x2": [
+          "space_x2"
+        ],
+        "Control_11_space_y2": [
+          "space_y2"
+        ],
+        "Control_12_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M0",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 2,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M1",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M2",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ],
+        "Control_5_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D1_common_env_case",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M3",
+      "status": "ok",
+      "n": 293145,
+      "spatial_blocks_5km": 35,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ],
+        "Control_8_space_x": [
+          "space_x"
+        ],
+        "Control_9_space_y": [
+          "space_y"
+        ],
+        "Control_10_space_x2": [
+          "space_x2"
+        ],
+        "Control_11_space_y2": [
+          "space_y2"
+        ],
+        "Control_12_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S1_parallel_dimensions",
+      "control": "M0",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 2,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S1_parallel_dimensions",
+      "control": "M1",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S1_parallel_dimensions",
+      "control": "M2",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ],
+        "Control_5_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S1_parallel_dimensions",
+      "control": "M3",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ],
+        "Control_8_space_x": [
+          "space_x"
+        ],
+        "Control_9_space_y": [
+          "space_y"
+        ],
+        "Control_10_space_x2": [
+          "space_x2"
+        ],
+        "Control_11_space_y2": [
+          "space_y2"
+        ],
+        "Control_12_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M0",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 2,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M1",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M2",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ],
+        "Control_5_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M3",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ],
+        "Control_8_space_x": [
+          "space_x"
+        ],
+        "Control_9_space_y": [
+          "space_y"
+        ],
+        "Control_10_space_x2": [
+          "space_x2"
+        ],
+        "Control_11_space_y2": [
+          "space_y2"
+        ],
+        "Control_12_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M0",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 2,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M1",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M2",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ],
+        "Control_5_soil_42": [
+          "soil_42"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27",
+        "soil_42"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D2_240m_blocks",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M3",
+      "status": "ok",
+      "n": 7387,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_soil_42": [
+          "soil_42"
+        ],
+        "Control_8_space_x": [
+          "space_x"
+        ],
+        "Control_9_space_y": [
+          "space_y"
+        ],
+        "Control_10_space_x2": [
+          "space_x2"
+        ],
+        "Control_11_space_y2": [
+          "space_y2"
+        ],
+        "Control_12_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "soil_42",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S1_parallel_dimensions",
+      "control": "M0",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 2,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S1_parallel_dimensions",
+      "control": "M1",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S1_parallel_dimensions",
+      "control": "M2",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S1_parallel_dimensions",
+      "control": "M3",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_space_x": [
+          "space_x"
+        ],
+        "Control_8_space_y": [
+          "space_y"
+        ],
+        "Control_9_space_x2": [
+          "space_x2"
+        ],
+        "Control_10_space_y2": [
+          "space_y2"
+        ],
+        "Control_11_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M0",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 2,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M1",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M2",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M3",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_space_x": [
+          "space_x"
+        ],
+        "Control_8_space_y": [
+          "space_y"
+        ],
+        "Control_9_space_x2": [
+          "space_x2"
+        ],
+        "Control_10_space_y2": [
+          "space_y2"
+        ],
+        "Control_11_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M0",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 2,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M1",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M2",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D3_M4_unique_pixels",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M3",
+      "status": "ok",
+      "n": 142451,
+      "spatial_blocks_5km": 34,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_space_x": [
+          "space_x"
+        ],
+        "Control_8_space_y": [
+          "space_y"
+        ],
+        "Control_9_space_x2": [
+          "space_x2"
+        ],
+        "Control_10_space_y2": [
+          "space_y2"
+        ],
+        "Control_11_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S1_parallel_dimensions",
+      "control": "M0",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 2,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S1_parallel_dimensions",
+      "control": "M1",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S1_parallel_dimensions",
+      "control": "M2",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S1_parallel_dimensions",
+      "control": "M3",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 5,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_space_x": [
+          "space_x"
+        ],
+        "Control_8_space_y": [
+          "space_y"
+        ],
+        "Control_9_space_x2": [
+          "space_x2"
+        ],
+        "Control_10_space_y2": [
+          "space_y2"
+        ],
+        "Control_11_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S1_parallel_dimensions; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M0",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M1",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 4,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M2",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S2_direct_plus_indirect_SHI",
+      "control": "M3",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 5,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_space_x": [
+          "space_x"
+        ],
+        "Control_8_space_y": [
+          "space_y"
+        ],
+        "Control_9_space_x2": [
+          "space_x2"
+        ],
+        "Control_10_space_y2": [
+          "space_y2"
+        ],
+        "Control_11_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S2_direct_plus_indirect_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M0",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ]
+      },
+      "controls": [],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M1",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 4,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M2",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 3,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_terrain_PC": [
+          "terrain_PC"
+        ],
+        "Control_2_vegetation_thermal_PC": [
+          "vegetation_thermal_PC"
+        ],
+        "Control_3_soil_26": [
+          "soil_26"
+        ],
+        "Control_4_soil_27": [
+          "soil_27"
+        ]
+      },
+      "controls": [
+        "terrain_PC",
+        "vegetation_thermal_PC",
+        "soil_26",
+        "soil_27"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    },
+    {
+      "dataset": "D4_M4_pair_differences",
+      "structure": "S3_indirect_only_SHI",
+      "control": "M3",
+      "status": "ok",
+      "n": 110656,
+      "spatial_blocks_5km": 33,
+      "converged": true,
+      "iterations": 5,
+      "max_weight_change": 0.0,
+      "indicator_blocks": {
+        "Erosion": [
+          "z_E"
+        ],
+        "Physical": [
+          "z_SW",
+          "z_BD"
+        ],
+        "Chemical": [
+          "z_OM",
+          "z_AN"
+        ],
+        "Biological": [
+          "z_MBC",
+          "z_RESP"
+        ],
+        "SHI": [
+          "z_SHI"
+        ],
+        "Control_1_z_Elevation": [
+          "z_Elevation"
+        ],
+        "Control_2_z_TWI": [
+          "z_TWI"
+        ],
+        "Control_3_z_NDVI": [
+          "z_NDVI"
+        ],
+        "Control_4_z_LST": [
+          "z_LST"
+        ],
+        "Control_5_soil_26": [
+          "soil_26"
+        ],
+        "Control_6_soil_27": [
+          "soil_27"
+        ],
+        "Control_7_space_x": [
+          "space_x"
+        ],
+        "Control_8_space_y": [
+          "space_y"
+        ],
+        "Control_9_space_x2": [
+          "space_x2"
+        ],
+        "Control_10_space_y2": [
+          "space_y2"
+        ],
+        "Control_11_space_xy": [
+          "space_xy"
+        ]
+      },
+      "controls": [
+        "z_Elevation",
+        "z_TWI",
+        "z_NDVI",
+        "z_LST",
+        "soil_26",
+        "soil_27",
+        "space_x",
+        "space_y",
+        "space_x2",
+        "space_y2",
+        "space_xy"
+      ],
+      "measurement_spec": "formative Mode B S3_indirect_only_SHI; physical=[SW,-BD], chemical=[OM,AN], biological=[MBC,RESP]; M1-M3 controls enter as fixed single-indicator exogenous constructs; CEC and pH remain separate",
+      "outcome_guided_selection": true
+    }
+  ],
+  "package_status": {
+    "semopy": false,
+    "lavaan": true,
+    "piecewiseSEM": false,
+    "plspm": false
+  },
+  "reason": "A mature lavaan CB-SEM fit was completed in an isolated R library under /tmp; project dependencies were not changed.",
+  "spatial_inference": "piecewise path equations use 5 km block-cluster robust covariance when at least 8 blocks are represented; CB fit indices are naive iid descriptive indices; PLS paths have no bootstrap intervals.",
+  "outcome_guided_selection": true,
+  "lavaan_cbsem": {
+    "available": true,
+    "package": "lavaan",
+    "version": "0.7.3",
+    "model_count": 48,
+    "path_count": 1390,
+    "populations": [
+      "D1_common_env_case",
+      "D2_240m_blocks",
+      "D3_M4_unique_pixels",
+      "D4_M4_pair_differences"
+    ],
+    "structures": [
+      "S1_parallel_dimensions",
+      "S2_direct_plus_indirect_SHI",
+      "S3_indirect_only_SHI"
+    ],
+    "controls": [
+      "M0",
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "fit_index_caveat": "Conventional iid ML fit indices; spatial dependence is handled only by the separate piecewise path analysis and must be considered in interpretation."
+  },
+  "pls_control_expansion": {
+    "method": "Mode-B formative PLS outer weights with single-indicator exogenous controls in inner equations",
+    "populations": [
+      "D1_common_env_case",
+      "D2_240m_blocks",
+      "D3_M4_unique_pixels",
+      "D4_M4_pair_differences"
+    ],
+    "controls": [
+      "M0",
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "equations": 64,
+    "status": "ok",
+    "common_rows_within_population": true,
+    "uncertainty": "No bootstrap; path coefficients and R2 increments are descriptive and not spatially robust.",
+    "outcome_guided_selection": true
+  },
+  "pls_structure_control_expansion": {
+    "method": "Mode-B formative PLS outer weights with single-indicator exogenous controls in inner equations",
+    "populations": [
+      "D1_common_env_case",
+      "D2_240m_blocks",
+      "D3_M4_unique_pixels",
+      "D4_M4_pair_differences"
+    ],
+    "structures": [
+      "S1_parallel_dimensions",
+      "S2_direct_plus_indirect_SHI",
+      "S3_indirect_only_SHI"
+    ],
+    "controls": [
+      "M0",
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "equations": 176,
+    "status": "ok",
+    "common_rows_within_population": true,
+    "uncertainty": "No bootstrap; path coefficients and R2 increments are descriptive and not spatially robust.",
+    "outcome_guided_selection": true
+  }
+}

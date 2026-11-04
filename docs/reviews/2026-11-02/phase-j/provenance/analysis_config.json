@@ -1,0 +1,72 @@
+{
+  "phase": "J",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "exposure": "log1p(Aa_20yr)",
+  "paired_exposure": "high_endpoint_log1p_Aa_minus_low_endpoint_log1p_Aa",
+  "cec_formula": "(CEC_old - 20*(Aa_20yr/143.00503540039062 + Aa_2020/48.76557540893555))/2.9 + 18",
+  "dimension_definitions": {
+    "physical": "(z_SW-z_BD)/2",
+    "chemical": "(z_OM+z_AN)/2",
+    "biological_activity": "(z_MBC+z_RESP)/2; activity construct, raw response directions retained"
+  },
+  "structures": [
+    "S1_parallel_dimensions",
+    "S2_direct_plus_indirect_SHI",
+    "S3_indirect_only_SHI",
+    "S4_chained_health_dimensions",
+    "S5_indicator_responses",
+    "S6_two_part_erosion"
+  ],
+  "controls": {
+    "M0": [],
+    "M1": [
+      "Elevation",
+      "TWI",
+      "NDVI",
+      "LST",
+      "SoilType reference-coded"
+    ],
+    "M2": [
+      "terrain_PC",
+      "vegetation_thermal_PC",
+      "SoilType reference-coded"
+    ],
+    "M3": [
+      "M1",
+      "standardized x/y linear and quadratic spatial terms"
+    ]
+  },
+  "methods": {
+    "piecewise_sem": "standardized regression equations, 5 km block-cluster covariance when supported",
+    "CB_SEM_custom_observed_path": "custom observed-variable covariance path approximation on sample-standardized scale; iid descriptive indices; not a mature package or spatially robust",
+    "CB_SEM_lavaan_ML": "mature lavaan observed-variable covariance-based path models for S1-S3 on representative D1-D4 populations and M0-M3 controls; standard iid maximum-likelihood fit indices; not spatially robust",
+    "PLS_PM_ModeB_formative": "local Mode-B formative weight iteration across S1-S3 and M0-M3 in D1-D4; controls are fixed single-indicator constructs; common rows within each population; no bootstrap intervals or spatially robust inference"
+  },
+  "spatial_summary": {
+    "local_coefficient_quantiles": "min, P5, P25, median, P75, P95, max and unit-level negative fraction from saved Phase I coefficients",
+    "strong_negative_overlap": "within each common support, compare lowest 10% local-beta units across SHI, OM and SW; descriptive Jaccard and Spearman statistics",
+    "environment_context": "join saved local coefficients to 240 m unit environment; continuous variables grouped by whole-domain rank quartiles; descriptive only",
+    "model_comparison": "saved GWR, GWR-LCR and MGWR local coefficients; no spatial model refit"
+  },
+  "groups": {
+    "soil_codes": {
+      "26": "冲积土",
+      "27": "潮土",
+      "42": "脱潮土"
+    },
+    "TWI": "within-soil quartiles"
+  },
+  "populations": {
+    "D1_full_pixels": "CEC与健康完整案例；完整案例定义，不按健康效应筛选",
+    "D1_common_env_case": "主要环境变量共同完整案例；用于M0–M3同样本比较",
+    "D2_240m_blocks": "复现既有Phase I8的8×8环境完整单元支持（历史单元以SHI候选值参与汇总）",
+    "D3_M4_unique_pixels": "Phase H沿用Phase F/G历史M4/Aa_20yr端点成员（环境卡尺0.35、地理上限1,000m、组内侵蚀百分位差至少0.50）；按cell_id回连当前健康与CEC值",
+    "D4_M4_pair_differences": "Phase H第二阶段候选stage2_Aa_20yr_01（环境卡尺0.75、地理上限500m、土类内8组、组内侵蚀百分位差至少0.30）；按cell_id重算端点差。与D3为不同匹配版本",
+    "D5_positive_erosion": "D1共同环境完整案例中Aa_20yr大于0",
+    "D6_zero_positive_pairs": "D4中低侵蚀端为0且高侵蚀端大于0的既定配对",
+    "D7_soil_TWI_groups": "主土类26/27/42内按各土类TWI秩划分四分位；未按SEM斜率挑选分组"
+  },
+  "pcnm": "deferred to Phase K",
+  "outcome_guided_selection_objective": "summarize F–I evidence and explore conditional path structure, health dimensions, and environment heterogeneity"
+}
