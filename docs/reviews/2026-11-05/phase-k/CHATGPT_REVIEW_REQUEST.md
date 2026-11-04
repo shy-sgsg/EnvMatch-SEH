@@ -5,7 +5,7 @@
 ## 1. 项目与版本
 
 - 仓库：`https://github.com/shy-sgsg/EnvMatch-SEH`
-- 审查基准提交 SHA：`aaf63778069bba54848565c7de0521ee621ac84f`
+- 审查基准提交 SHA：`37d09bd42684038888c4e483fabe285e91d3fcf2`
 - 研究总纲：`docs/RESEARCH_CHARTER.md`（须在上述提交中读取）
 - 阶段：Phase K，探索性结果整理与20年平均实际侵蚀单情景汇总，不是正式阶段门通过。
 - 主审查入口：`docs/reviews/2026-11-05/phase-k/README.md`

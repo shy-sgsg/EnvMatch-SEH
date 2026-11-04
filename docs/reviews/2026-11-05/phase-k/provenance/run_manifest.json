@@ -69,7 +69,7 @@
     "reports": "docs/reviews/2026-11-05/phase-k/reports/",
     "single_period_slices": "source_slices_20yr/ and outputs/exploratory_oracle/phase_k/phase_k_20261104_seed20261104_r1/20yr_only/source_slices_20yr/"
   },
-  "review_baseline_commit": "aaf63778069bba54848565c7de0521ee621ac84f",
+  "review_baseline_commit": "37d09bd42684038888c4e483fabe285e91d3fcf2",
   "inventory": {
     "review_artifacts": 764,
     "confirmed_dual_period_tables": 94,
