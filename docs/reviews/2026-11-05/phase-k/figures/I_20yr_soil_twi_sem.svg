@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="784.648125pt" height="352.7075pt" viewBox="0 0 784.648125 352.7075" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-05T01:04:30.201077</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 352.7075
+L 784.648125 352.7075
+L 784.648125 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 123.128125 313.860625
+L 777.448125 313.860625
+L 777.448125 22.318125
+L 123.128125 22.318125
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m78a3ed2263" d="M 0 0
+L 0 3.5
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m78a3ed2263" x="168.192106" y="313.860625" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="168.192106" y="328.459062" transform="rotate(-0 168.192106 328.459062)">-0.20</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m78a3ed2263" x="313.070656" y="313.860625" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="313.070656" y="328.459062" transform="rotate(-0 313.070656 328.459062)">-0.15</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m78a3ed2263" x="457.949206" y="313.860625" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="457.949206" y="328.459062" transform="rotate(-0 457.949206 328.459062)">-0.10</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m78a3ed2263" x="602.827757" y="313.860625" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="602.827757" y="328.459062" transform="rotate(-0 602.827757 328.459062)">-0.05</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m78a3ed2263" x="747.706307" y="313.860625" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="747.706307" y="328.459062" transform="rotate(-0 747.706307 328.459062)">0.00</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="450.288125" y="343.104375" transform="rotate(-0 450.288125 343.104375)">20年平均侵蚀对SHI的标准化路径 β（模型区间）</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <defs>
+       <path id="m35e5da2f8e" d="M 0 0
+L -3.5 0
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="35.570057" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="39.369276" transform="rotate(-0 116.128125 39.369276)">冲积土 / 湿度最低四分位</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="59.664478" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="63.463697" transform="rotate(-0 116.128125 63.463697)">冲积土 / 湿度较低四分位</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="83.7589" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="87.558119" transform="rotate(-0 116.128125 87.558119)">冲积土 / 湿度较高四分位</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="107.853321" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="111.65254" transform="rotate(-0 116.128125 111.65254)">冲积土 / 湿度最高四分位</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="131.947743" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="135.746962" transform="rotate(-0 116.128125 135.746962)">潮土 / 湿度最低四分位</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="156.042164" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="159.841383" transform="rotate(-0 116.128125 159.841383)">潮土 / 湿度较低四分位</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="180.136586" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="183.935804" transform="rotate(-0 116.128125 183.935804)">潮土 / 湿度较高四分位</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="204.231007" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="208.030226" transform="rotate(-0 116.128125 208.030226)">潮土 / 湿度最高四分位</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="228.325429" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="232.124647" transform="rotate(-0 116.128125 232.124647)">脱潮土 / 湿度最低四分位</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="252.41985" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="256.219069" transform="rotate(-0 116.128125 256.219069)">脱潮土 / 湿度较低四分位</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="276.514272" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="280.31349" transform="rotate(-0 116.128125 280.31349)">脱潮土 / 湿度较高四分位</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m35e5da2f8e" x="123.128125" y="300.608693" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="116.128125" y="304.407912" transform="rotate(-0 116.128125 304.407912)">脱潮土 / 湿度最高四分位</text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 278.253761 35.570057
+L 430.29914 35.570057
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+    <path d="M 274.783327 59.664478
+L 456.297774 59.664478
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+    <path d="M 255.060134 83.7589
+L 420.06841 83.7589
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+    <path d="M 253.156838 107.853321
+L 410.95722 107.853321
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+    <path d="M 284.320117 131.947743
+L 597.064696 131.947743
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+    <path d="M 152.869943 156.042164
+L 411.362483 156.042164
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+    <path d="M 206.937819 180.136586
+L 465.620787 180.136586
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+    <path d="M 296.192238 204.231007
+L 513.516863 204.231007
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+    <path d="M 332.092933 228.325429
+L 469.748109 228.325429
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+    <path d="M 244.549011 252.41985
+L 405.570383 252.41985
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+    <path d="M 398.346585 276.514272
+L 508.810683 276.514272
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+    <path d="M 485.995711 300.608693
+L 712.157249 300.608693
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #777777"/>
+   </g>
+   <g id="line2d_18">
+    <defs>
+     <path id="m667766e6ba" d="M 0 2
+L 0 -2
+" style="stroke: #777777"/>
+    </defs>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#m667766e6ba" x="278.253761" y="35.570057" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="274.783327" y="59.664478" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="255.060134" y="83.7589" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="253.156838" y="107.853321" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="284.320117" y="131.947743" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="152.869943" y="156.042164" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="206.937819" y="180.136586" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="296.192238" y="204.231007" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="332.092933" y="228.325429" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="244.549011" y="252.41985" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="398.346585" y="276.514272" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="485.995711" y="300.608693" style="fill: #777777; stroke: #777777"/>
+    </g>
+   </g>
+   <g id="line2d_19">
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#m667766e6ba" x="430.29914" y="35.570057" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="456.297774" y="59.664478" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="420.06841" y="83.7589" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="410.95722" y="107.853321" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="597.064696" y="131.947743" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="411.362483" y="156.042164" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="465.620787" y="180.136586" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="513.516863" y="204.231007" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="469.748109" y="228.325429" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="405.570383" y="252.41985" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="508.810683" y="276.514272" style="fill: #777777; stroke: #777777"/>
+     <use xlink:href="#m667766e6ba" x="712.157249" y="300.608693" style="fill: #777777; stroke: #777777"/>
+    </g>
+   </g>
+   <g id="line2d_20">
+    <path d="M 747.706307 313.860625
+L 747.706307 22.318125
+" clip-path="url(#pd9ed88c685)" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 123.128125 313.860625
+L 123.128125 22.318125
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 123.128125 313.860625
+L 777.448125 313.860625
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="C0_0_be41a83b35" d="M 0 3.464102
+C 0.91869 3.464102 1.799877 3.099102 2.44949 2.44949
+C 3.099102 1.799877 3.464102 0.91869 3.464102 -0
+C 3.464102 -0.91869 3.099102 -1.799877 2.44949 -2.44949
+C 1.799877 -3.099102 0.91869 -3.464102 0 -3.464102
+C -0.91869 -3.464102 -1.799877 -3.099102 -2.44949 -2.44949
+C -3.099102 -1.799877 -3.464102 -0.91869 -3.464102 0
+C -3.464102 0.91869 -3.099102 1.799877 -2.44949 2.44949
+C -1.799877 3.099102 -0.91869 3.464102 0 3.464102
+z
+"/>
+    </defs>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="354.276451" y="35.570057" style="fill: #2f6b91; stroke: #2f6b91"/>
+    </g>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="365.54055" y="59.664478" style="fill: #2f6b91; stroke: #2f6b91"/>
+    </g>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="337.564272" y="83.7589" style="fill: #2f6b91; stroke: #2f6b91"/>
+    </g>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="332.057029" y="107.853321" style="fill: #2f6b91; stroke: #2f6b91"/>
+    </g>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="440.692407" y="131.947743" style="fill: #d4804b; stroke: #d4804b"/>
+    </g>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="282.116213" y="156.042164" style="fill: #d4804b; stroke: #d4804b"/>
+    </g>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="336.279303" y="180.136586" style="fill: #d4804b; stroke: #d4804b"/>
+    </g>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="404.854551" y="204.231007" style="fill: #d4804b; stroke: #d4804b"/>
+    </g>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="400.920521" y="228.325429" style="fill: #5d9474; stroke: #5d9474"/>
+    </g>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="325.059697" y="252.41985" style="fill: #5d9474; stroke: #5d9474"/>
+    </g>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="453.578634" y="276.514272" style="fill: #5d9474; stroke: #5d9474"/>
+    </g>
+    <g clip-path="url(#pd9ed88c685)">
+     <use xlink:href="#C0_0_be41a83b35" x="599.07648" y="300.608693" style="fill: #5d9474; stroke: #5d9474"/>
+    </g>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="450.288125" y="16.318125" transform="rotate(-0 450.288125 16.318125)">土类与地形湿度组合中的关联差异（结果导向候选）</text>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_21">
+     <path d="M 710.448125 268.954375
+L 720.448125 268.954375
+L 730.448125 268.954375
+" style="fill: none; stroke: #ffffff; stroke-width: 1.5; stroke-linecap: square"/>
+     <defs>
+      <path id="m3646540fee" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #ffffff"/>
+     </defs>
+     <g>
+      <use xlink:href="#m3646540fee" x="720.448125" y="268.954375" style="fill: #2f6b91; stroke: #ffffff"/>
+     </g>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: start" x="738.448125" y="272.454375" transform="rotate(-0 738.448125 272.454375)">冲积土</text>
+    </g>
+    <g id="line2d_22">
+     <path d="M 710.448125 283.955938
+L 720.448125 283.955938
+L 730.448125 283.955938
+" style="fill: none; stroke: #ffffff; stroke-width: 1.5; stroke-linecap: square"/>
+     <defs>
+      <path id="ma5e78bbe5f" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #ffffff"/>
+     </defs>
+     <g>
+      <use xlink:href="#ma5e78bbe5f" x="720.448125" y="283.955938" style="fill: #d4804b; stroke: #ffffff"/>
+     </g>
+    </g>
+    <g id="text_21">
+     <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: start" x="738.448125" y="287.455938" transform="rotate(-0 738.448125 287.455938)">潮土</text>
+    </g>
+    <g id="line2d_23">
+     <path d="M 710.448125 298.9575
+L 720.448125 298.9575
+L 730.448125 298.9575
+" style="fill: none; stroke: #ffffff; stroke-width: 1.5; stroke-linecap: square"/>
+     <defs>
+      <path id="m757e6b619b" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #ffffff"/>
+     </defs>
+     <g>
+      <use xlink:href="#m757e6b619b" x="720.448125" y="298.9575" style="fill: #5d9474; stroke: #ffffff"/>
+     </g>
+    </g>
+    <g id="text_22">
+     <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: start" x="738.448125" y="302.4575" transform="rotate(-0 738.448125 302.4575)">脱潮土</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd9ed88c685">
+   <rect x="123.128125" y="22.318125" width="654.32" height="291.5425"/>
+  </clipPath>
+ </defs>
+</svg>

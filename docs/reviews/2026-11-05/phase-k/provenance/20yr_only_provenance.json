@@ -1,0 +1,51 @@
+{
+  "run_id": "phase_k_20261104_seed20261104_r1",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "primary_exposure": "log1p(Aa_20yr)",
+  "exposure_scenario": "20yr_only",
+  "official_health_inputs": [
+    "SHI",
+    "AN",
+    "OM",
+    "CEC",
+    "pH",
+    "SW",
+    "BD",
+    "MBC",
+    "RESP"
+  ],
+  "input_policy": "Use supplied SHI and CEC layers as-is; do not reconstruct either layer. Use existing Aa_20yr values; do not rebuild RUSLE products.",
+  "independent_single_exposure_policy": "No Aa_2020 variable is used as an exposure, covariate, grouping field, matching field, or model selector in the 20yr_only bundle. Matching memberships and model tables are historical Aa_20yr-specific results.",
+  "reuse_policy": "Reuse audited Phase F-J model results and source tables; single-exposure tables are filtered to Aa_20yr or extracted from results explicitly configured with log1p(Aa_20yr). No full model search or GWR/MGWR/SEM refit is performed in this consolidation run.",
+  "figures": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I"
+  ],
+  "primary_input_tables": {
+    "global": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_r2/results/global_response/global_associations.csv",
+    "matched": "outputs/exploratory_oracle/phase_i/phase_i_cec_corrected_20_2p9_plus18_20261031_i2/tables/matched_pair_associations.csv",
+    "gam": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_r2/results/nonlinear/full_sample_gam_curves.csv",
+    "env_slopes": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i3_r2/tables/environment_group_slopes_m4.csv",
+    "env_interactions": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i3_r2/tables/environment_interactions_m4.csv",
+    "gwr_summary": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i4_r2/tables/gwr_spatial_model_summary.csv",
+    "zone_summary": "outputs/exploratory_oracle/phase_i/phase_i_20261031_seed20261031_i8_r2/tables/stress_zone_summary.csv",
+    "local_maps": "docs/reviews/2026-11-02/phase-j/figures/supplementary/data/U_nine_outcome_local_beta_maps_source.csv",
+    "zone_tiles": "docs/reviews/2026-11-02/phase-j/figures/data/figure_C_240m_stress_zones.csv",
+    "zone_profiles": "docs/reviews/2026-11-02/phase-j/figures/data/figure_C_environment_profiles.csv",
+    "zone_env_profiles": "docs/reviews/2026-11-02/phase-j/spatial_synthesis/SPATIAL_STRESS_ENVIRONMENT_PROFILE.csv",
+    "sem_rank": "docs/reviews/2026-11-02/phase-j/results/SEM_MODEL_RANKINGS.csv",
+    "sem_paths": "docs/reviews/2026-11-02/phase-j/results/SEM_PATH_COEFFICIENTS.csv",
+    "sem_increment": "docs/reviews/2026-11-02/phase-j/results/SEM_EROSION_INCREMENTAL_CONTRIBUTION.csv",
+    "sem_env": "docs/reviews/2026-11-02/phase-j/results/SEM_ENVIRONMENT_GROUP_COMPARISON.csv",
+    "population": "docs/reviews/2026-11-02/phase-j/data/population_counts.csv"
+  },
+  "interpretation": "Exploratory conditional associations from predicted raster values; pixels are spatially dependent and do not equal independent measured sites. Spatial and subgroup patterns are descriptive; no causal claim."
+}

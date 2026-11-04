@@ -1,0 +1,49 @@
+{
+  "run_id": "phase_k_20261104_seed20261104_r1",
+  "delivery_date": "2026-11-05",
+  "mode": "EXPLORATORY_ORACLE",
+  "outcome_guided_selection": true,
+  "primary_exposure": "log1p(Aa_20yr)",
+  "exposure_scenario": "20yr_only",
+  "source_of_shi_and_cec": "User-provided project layers used as-is; no reconstruction or substitution.",
+  "reuse_policy": "Reuse Phase F-J saved outputs; no full matching, low-erosion, GWR/MGWR bandwidth, or SEM structure searches were rerun.",
+  "single_exposure_policy": "The 20yr_only bundle excludes the other erosion period from exposure, covariates, grouping, matching, and model selection.",
+  "figure_set": {
+    "count": 9,
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I"
+    ],
+    "formats": [
+      "PNG",
+      "SVG",
+      "PDF"
+    ],
+    "source_tables_included": true
+  },
+  "reports": [
+    "正式学术研究报告_20年侵蚀单情景.md",
+    "正式学术研究报告_20年侵蚀单情景.tex",
+    "正式学术研究报告_20年侵蚀单情景.pdf",
+    "阶段K技术报告.md",
+    "精简研究报告.md",
+    "汇报提纲_17页.md",
+    "七分钟汇报稿.md"
+  ],
+  "review_archive": "docs/reviews/2026-11-05/phase-k/",
+  "inputs_manifest": "docs/reviews/2026-11-05/phase-k/provenance/analysis_config.json",
+  "interpretation": "Exploratory conditional associations from predicted raster values; spatial dependence remains; no causal claim or independent field validation.",
+  "build_script": "docs/reviews/2026-11-05/phase-k/source/phase_k_build_bundle.py",
+  "delivery_outputs": {
+    "tables": "docs/reviews/2026-11-05/phase-k/{tables,matching,spatial,sem}/",
+    "figures": "docs/reviews/2026-11-05/phase-k/figures/ (A-I PNG/SVG/PDF plus figure source CSVs)",
+    "reports": "docs/reviews/2026-11-05/phase-k/reports/"
+  }
+}

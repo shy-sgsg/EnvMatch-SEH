@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="820.66pt" height="342.16641pt" viewBox="0 0 820.66 342.16641" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-05T01:04:28.276753</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 342.16641
+L 820.66 342.16641
+L 820.66 -0
+L -0 -0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 51.15 294.626606
+L 393.264731 294.626606
+L 393.264731 49.008
+L 51.15 49.008
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m854193a455" d="M 0 0
+L 0 3.5
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m854193a455" x="66.70067" y="294.626606" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(44.096805 325.867808) rotate(-20)">无环境控制</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m854193a455" x="170.3718" y="294.626606" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(143.069472 329.28801) rotate(-20)">核心环境控制</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m854193a455" x="274.042931" y="294.626606" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(242.04214 332.708211) rotate(-20)">环境主成分控制</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m854193a455" x="377.714062" y="294.626606" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(345.713271 332.708211) rotate(-20)">环境加空间趋势</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5">
+      <defs>
+       <path id="mef6417c7dd" d="M 0 0
+L -3.5 0
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mef6417c7dd" x="51.15" y="288.041143" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="291.840362" transform="rotate(-0 44.15 291.840362)">-0.16</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="51.15" y="259.557561" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="263.356779" transform="rotate(-0 44.15 263.356779)">-0.14</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="51.15" y="231.073978" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="234.873197" transform="rotate(-0 44.15 234.873197)">-0.12</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="51.15" y="202.590395" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="206.389614" transform="rotate(-0 44.15 206.389614)">-0.10</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="51.15" y="174.106813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="177.906031" transform="rotate(-0 44.15 177.906031)">-0.08</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="51.15" y="145.62323" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="149.422449" transform="rotate(-0 44.15 149.422449)">-0.06</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="51.15" y="117.139647" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="120.938866" transform="rotate(-0 44.15 120.938866)">-0.04</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="51.15" y="88.656065" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="92.455283" transform="rotate(-0 44.15 92.455283)">-0.02</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="51.15" y="60.172482" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="63.971701" transform="rotate(-0 44.15 63.971701)">0.00</text>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="15.325" y="171.817303" transform="rotate(-90 15.325 171.817303)">SHI标准化直接路径 β</text>
+    </g>
+   </g>
+   <g id="line2d_14">
+    <path d="M 66.70067 283.462123
+L 170.3718 221.060206
+L 274.042931 226.014464
+L 377.714062 210.792904
+" clip-path="url(#p01dfc5f588)" style="fill: none; stroke: #2f6b91; stroke-width: 2; stroke-linecap: square"/>
+    <defs>
+     <path id="mf17928b140" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #2f6b91"/>
+    </defs>
+    <g clip-path="url(#p01dfc5f588)">
+     <use xlink:href="#mf17928b140" x="66.70067" y="283.462123" style="fill: #2f6b91; stroke: #2f6b91"/>
+     <use xlink:href="#mf17928b140" x="170.3718" y="221.060206" style="fill: #2f6b91; stroke: #2f6b91"/>
+     <use xlink:href="#mf17928b140" x="274.042931" y="226.014464" style="fill: #2f6b91; stroke: #2f6b91"/>
+     <use xlink:href="#mf17928b140" x="377.714062" y="210.792904" style="fill: #2f6b91; stroke: #2f6b91"/>
+    </g>
+   </g>
+   <g id="line2d_15">
+    <path d="M 51.15 60.172482
+L 393.264731 60.172482
+" clip-path="url(#p01dfc5f588)" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 51.15 294.626606
+L 51.15 49.008
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 51.15 294.626606
+L 393.264731 294.626606
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="222.207366" y="43.008" transform="rotate(-0 222.207366 43.008)">侵蚀—SHI条件关联</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 471.345269 294.626606
+L 813.46 294.626606
+L 813.46 49.008
+L 471.345269 49.008
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 486.895938 294.626606
+L 552.372442 294.626606
+L 552.372442 60.704124
+L 486.895938 60.704124
+z
+" clip-path="url(#pc65d214e68)" style="fill: #d4804b"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 568.741568 294.626606
+L 634.218071 294.626606
+L 634.218071 186.273355
+L 568.741568 186.273355
+z
+" clip-path="url(#pc65d214e68)" style="fill: #d4804b"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 650.587197 294.626606
+L 716.063701 294.626606
+L 716.063701 176.602511
+L 650.587197 176.602511
+z
+" clip-path="url(#pc65d214e68)" style="fill: #d4804b"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 732.432827 294.626606
+L 797.90933 294.626606
+L 797.90933 200.180151
+L 732.432827 200.180151
+z
+" clip-path="url(#pc65d214e68)" style="fill: #d4804b"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_5">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m854193a455" x="519.63419" y="294.626606" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(497.030325 325.867808) rotate(-20)">无环境控制</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m854193a455" x="601.47982" y="294.626606" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(574.177492 329.28801) rotate(-20)">核心环境控制</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m854193a455" x="683.325449" y="294.626606" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(651.324658 332.708211) rotate(-20)">环境主成分控制</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m854193a455" x="765.171079" y="294.626606" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(733.170288 332.708211) rotate(-20)">环境加空间趋势</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_10">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="471.345269" y="294.626606" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="464.345269" y="298.425824" transform="rotate(-0 464.345269 298.425824)">0.000</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="471.345269" y="267.134961" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="464.345269" y="270.934179" transform="rotate(-0 464.345269 270.934179)">0.002</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="471.345269" y="239.643316" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="464.345269" y="243.442535" transform="rotate(-0 464.345269 243.442535)">0.004</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="471.345269" y="212.151671" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="464.345269" y="215.95089" transform="rotate(-0 464.345269 215.95089)">0.006</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="471.345269" y="184.660026" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="464.345269" y="188.459245" transform="rotate(-0 464.345269 188.459245)">0.008</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="471.345269" y="157.168381" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="464.345269" y="160.9676" transform="rotate(-0 464.345269 160.9676)">0.010</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="471.345269" y="129.676736" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="464.345269" y="133.475955" transform="rotate(-0 464.345269 133.475955)">0.012</text>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="471.345269" y="102.185091" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="464.345269" y="105.98431" transform="rotate(-0 464.345269 105.98431)">0.014</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#mef6417c7dd" x="471.345269" y="74.693446" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="464.345269" y="78.492665" transform="rotate(-0 464.345269 78.492665)">0.016</text>
+     </g>
+    </g>
+    <g id="text_29">
+     <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="433.229644" y="171.817303" transform="rotate(-90 433.229644 171.817303)">加入侵蚀后的条件ΔR²</text>
+    </g>
+   </g>
+   <g id="patch_10">
+    <path d="M 471.345269 294.626606
+L 471.345269 49.008
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 471.345269 294.626606
+L 813.46 294.626606
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="642.402634" y="43.008" transform="rotate(-0 642.402634 43.008)">侵蚀变量的额外预测信息</text>
+   </g>
+  </g>
+  <g id="text_31">
+   <text style="font-size: 12px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="410.26" y="16.318125" transform="rotate(-0 410.26 16.318125)">不同环境控制层级下的SHI路径</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p01dfc5f588">
+   <rect x="51.15" y="49.008" width="342.114731" height="245.618606"/>
+  </clipPath>
+  <clipPath id="pc65d214e68">
+   <rect x="471.345269" y="49.008" width="342.114731" height="245.618606"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,10 @@
+﻿图号,文件基名,主题,数据来源,暴露情景,当前格式
+A,20yr_global_match_nonlinear,全域相关、匹配差值和GAM响应,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
+B,20yr_nine_outcome_local_maps,九项结局的局部回归系数地图,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
+C,20yr_candidate_environment_zones,空间敏感位置候选分区,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
+D,20yr_sem_control_hierarchy,不同环境控制层级下的SHI路径,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
+E,20yr_full_matched_sem,全域和匹配总体的路径对照,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
+F,20yr_sem_dimension_paths,侵蚀与健康维度路径,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
+G,20yr_sem_incremental_fit,环境控制下的侵蚀预测增量,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
+H,20yr_sem_path_diagram,结构路径图,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF
+I,20yr_soil_twi_sem,土类×地形湿度子组路径,Phase F-J已保存数据表的Aa_20yr专用切片,Aa_20yr,PNG/SVG/PDF

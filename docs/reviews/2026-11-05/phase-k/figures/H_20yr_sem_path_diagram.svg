@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="784.8pt" height="396.077812pt" viewBox="0 0 784.8 396.077812" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-05T01:04:29.791708</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 396.077812
+L 784.8 396.077812
+L 784.8 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <g id="patch_2">
+     <path d="M 55.089406 227.245359
+L 144.206594 227.245359
+Q 150.256594 227.245359 150.256594 221.195359
+L 150.256594 197.520266
+Q 150.256594 191.470266 144.206594 191.470266
+L 55.089406 191.470266
+Q 49.039406 191.470266 49.039406 197.520266
+L 49.039406 221.195359
+Q 49.039406 227.245359 55.089406 227.245359
+z
+" style="fill: #f9ede7; stroke: #59798c; stroke-width: 1.2; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(55.089406 205.878547)">20年平均实际侵蚀</text>
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(66.648 218.551922)">（对数尺度）</text>
+   </g>
+   <g id="text_2">
+    <g id="patch_3">
+     <path d="M 308.768 112.352559
+L 352.768 112.352559
+Q 358.818 112.352559 358.818 106.302559
+L 358.818 82.627466
+Q 358.818 76.577466 352.768 76.577466
+L 308.768 76.577466
+Q 302.718 76.577466 302.718 82.627466
+L 302.718 106.302559
+Q 302.718 112.352559 308.768 112.352559
+z
+" style="fill: #f1f6f8; stroke: #59798c; stroke-width: 1.2; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(308.768 90.985747)">物理维度</text>
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(310.374172 103.659122)">SW、BD</text>
+   </g>
+   <g id="text_3">
+    <g id="patch_4">
+     <path d="M 308.768 194.931759
+L 352.768 194.931759
+Q 358.818 194.931759 358.818 188.881759
+L 358.818 165.206666
+Q 358.818 159.156666 352.768 159.156666
+L 308.768 159.156666
+Q 302.718 159.156666 302.718 165.206666
+L 302.718 188.881759
+Q 302.718 194.931759 308.768 194.931759
+z
+" style="fill: #f1f6f8; stroke: #59798c; stroke-width: 1.2; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(308.768 173.564947)">化学维度</text>
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(309.046437 186.238322)">OM、AN</text>
+   </g>
+   <g id="text_4">
+    <g id="patch_5">
+     <path d="M 297.768 277.510959
+L 363.768 277.510959
+Q 369.818 277.510959 369.818 271.460959
+L 369.818 247.785866
+Q 369.818 241.735866 363.768 241.735866
+L 297.768 241.735866
+Q 291.718 241.735866 291.718 247.785866
+L 291.718 271.460959
+Q 291.718 277.510959 297.768 277.510959
+z
+" style="fill: #f1f6f8; stroke: #59798c; stroke-width: 1.2; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(297.768 256.144147)">生物活动维度</text>
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(301.578469 268.817522)">MBC、RESP</text>
+   </g>
+   <g id="text_5">
+    <g id="patch_6">
+     <path d="M 613.632 194.931759
+L 679.632 194.931759
+Q 685.682 194.931759 685.682 188.881759
+L 685.682 165.206666
+Q 685.682 159.156666 679.632 159.156666
+L 613.632 159.156666
+Q 607.582 159.156666 607.582 165.206666
+L 607.582 188.881759
+Q 607.582 194.931759 613.632 194.931759
+z
+" style="fill: #f1f6f8; stroke: #59798c; stroke-width: 1.2; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(613.632 173.564947)">土壤健康指数</text>
+    <text style="font-size: 11px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(638.056297 186.238322)">SHI</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 162.645974 207.902719
+Q 215.2069 151.912584 266.466965 97.308183
+" style="fill: none; stroke: #2f6b91; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 262.271093 98.855652
+L 266.466965 97.308183
+L 265.187418 101.593362
+" style="fill: none; stroke: #2f6b91; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <g id="patch_8">
+     <path d="M 195.9705 158.034225
+L 234.4455 158.034225
+L 234.4455 141.065006
+L 195.9705 141.065006
+z
+" style="fill: #ffffff; opacity: 0.8"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="215.208" y="151.911412" transform="rotate(-0 215.208 151.911412)">β=-0.39</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 163.198947 208.782897
+Q 215.208906 193.200741 265.398165 178.164066
+" style="fill: none; stroke: #2f6b91; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 260.992446 177.396186
+L 265.398165 178.164066
+L 262.140429 181.227913
+" style="fill: none; stroke: #2f6b91; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <g id="patch_10">
+     <path d="M 195.9705 199.323825
+L 234.4455 199.323825
+L 234.4455 182.354606
+L 195.9705 182.354606
+z
+" style="fill: #ffffff; opacity: 0.8"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="215.208" y="193.201012" transform="rotate(-0 215.208 193.201012)">β=-0.25</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 163.093619 210.203038
+Q 215.207067 234.490178 265.597761 257.974439
+" style="fill: none; stroke: #2f6b91; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 262.817007 254.471953
+L 265.597761 257.974439
+L 261.12732 258.097551
+" style="fill: none; stroke: #2f6b91; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <g id="patch_12">
+     <path d="M 195.9705 240.613425
+L 234.4455 240.613425
+L 234.4455 223.644206
+L 195.9705 223.644206
+z
+" style="fill: #ffffff; opacity: 0.8"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="215.208" y="234.490612" transform="rotate(-0 215.208 234.490612)">β=-0.07</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 394.189975 95.361705
+Q 486.269451 141.42347 581.328626 175.720795
+" style="fill: none; stroke: #d4804b; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 578.244807 172.481959
+L 581.328626 175.720795
+L 576.887266 176.244549
+" style="fill: none; stroke: #d4804b; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="text_9">
+    <g id="patch_14">
+     <path d="M 470.910234 140.800305
+L 506.489766 140.800305
+L 506.489766 123.831086
+L 470.910234 123.831086
+z
+" style="fill: #ffffff; opacity: 0.8"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="488.7" y="134.677492" transform="rotate(-0 488.7 134.677492)">β=0.21</text>
+   </g>
+   <g id="patch_15">
+    <path d="M 394.395474 176.925725
+Q 488.698704 171.384777 581.104548 176.814091
+" style="fill: none; stroke: #d4804b; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 577.228742 174.582919
+L 581.104548 176.814091
+L 576.994126 178.576032
+" style="fill: none; stroke: #d4804b; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="text_10">
+    <g id="patch_16">
+     <path d="M 470.910234 184.244145
+L 506.489766 184.244145
+L 506.489766 167.274926
+L 470.910234 167.274926
+z
+" style="fill: #ffffff; opacity: 0.8"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="488.7" y="178.121332" transform="rotate(-0 488.7 178.121332)">β=0.34</text>
+   </g>
+   <g id="patch_17">
+    <path d="M 394.189975 258.72672
+Q 486.269451 212.664955 581.328626 178.36763
+" style="fill: none; stroke: #d4804b; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 576.887266 177.843876
+L 581.328626 178.36763
+L 578.244807 181.606466
+" style="fill: none; stroke: #d4804b; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="text_11">
+    <g id="patch_18">
+     <path d="M 470.910234 225.533745
+L 506.489766 225.533745
+L 506.489766 208.564526
+L 470.910234 208.564526
+z
+" style="fill: #ffffff; opacity: 0.8"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="488.7" y="219.410932" transform="rotate(-0 488.7 219.410932)">β=0.14</text>
+   </g>
+   <g id="patch_19">
+    <path d="M 163.162587 208.674998
+Q 368.658105 134.415934 581.17318 176.287811
+" style="fill: none; stroke: #2f6b91; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 577.635259 173.552283
+L 581.17318 176.287811
+L 576.862005 177.476831
+" style="fill: none; stroke: #2f6b91; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="text_12">
+    <g id="patch_20">
+     <path d="M 353.9025 204.350385
+L 392.3775 204.350385
+L 392.3775 187.381166
+L 353.9025 187.381166
+z
+" style="fill: #ffffff; opacity: 0.8"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="373.14" y="198.227572" transform="rotate(-0 373.14 198.227572)">β=-0.11</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #555555" x="392.4" y="360.154612" transform="rotate(-0 392.4 360.154612)">核心环境变量与空间背景作为控制项进入模型；路径表示条件关联，不作因果链解释。</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="392.4" y="17.837812" transform="rotate(-0 392.4 17.837812)">核心路径结构示意（全域共同样本，控制主要环境背景）</text>
+   </g>
+  </g>
+ </g>
+</svg>

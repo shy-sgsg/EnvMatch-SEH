@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="820.66pt" height="342.186327pt" viewBox="0 0 820.66 342.186327" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-05T01:04:28.777879</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 342.186327
+L 820.66 342.186327
+L 820.66 0
+L -0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 51.15 305.728621
+L 399.805 305.728621
+L 399.805 49.008
+L 51.15 49.008
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 66.997955 49.008
+L 157.557695 49.008
+L 157.557695 244.512002
+L 66.997955 244.512002
+z
+" clip-path="url(#p73f4e701a5)" style="fill: #2f6b91"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 180.19763 49.008
+L 270.75737 49.008
+L 270.75737 293.50383
+L 180.19763 293.50383
+z
+" clip-path="url(#p73f4e701a5)" style="fill: #5d9474"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 293.397305 49.008
+L 383.957045 49.008
+L 383.957045 168.145607
+L 293.397305 168.145607
+z
+" clip-path="url(#p73f4e701a5)" style="fill: #d4804b"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m8281735ae5" d="M 0 0
+L 0 3.5
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m8281735ae5" x="112.277825" y="305.728621" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(83.47348 332.635716) rotate(-12)">全域共同样本</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m8281735ae5" x="225.4775" y="305.728621" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(206.454631 328.477482) rotate(-12)">匹配端点</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m8281735ae5" x="338.677175" y="305.728621" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(309.87283 332.635716) rotate(-12)">匹配配对差值</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <defs>
+       <path id="m66ee6d812f" d="M 0 0
+L -3.5 0
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m66ee6d812f" x="51.15" y="291.292369" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="295.091588" transform="rotate(-0 44.15 295.091588)">-0.14</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="51.15" y="256.680316" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="260.479535" transform="rotate(-0 44.15 260.479535)">-0.12</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="51.15" y="222.068264" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="225.867482" transform="rotate(-0 44.15 225.867482)">-0.10</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="51.15" y="187.456211" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="191.25543" transform="rotate(-0 44.15 191.25543)">-0.08</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="51.15" y="152.844158" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="156.643377" transform="rotate(-0 44.15 156.643377)">-0.06</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="51.15" y="118.232105" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="122.031324" transform="rotate(-0 44.15 122.031324)">-0.04</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="51.15" y="83.620053" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="87.419271" transform="rotate(-0 44.15 87.419271)">-0.02</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="51.15" y="49.008" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="44.15" y="52.807219" transform="rotate(-0 44.15 52.807219)">0.00</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="15.325" y="177.368311" transform="rotate(-90 15.325 177.368311)">SHI标准化直接路径 β</text>
+    </g>
+   </g>
+   <g id="line2d_12">
+    <path d="M 51.15 49.008
+L 399.805 49.008
+" clip-path="url(#p73f4e701a5)" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 51.15 305.728621
+L 51.15 49.008
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 51.15 305.728621
+L 399.805 305.728621
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="225.4775" y="43.008" transform="rotate(-0 225.4775 43.008)">不同总体中的系数</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_8">
+    <path d="M 464.805 305.728621
+L 813.46 305.728621
+L 813.46 49.008
+L 464.805 49.008
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 480.652955 305.728621
+L 571.212695 305.728621
+L 571.212695 61.232791
+L 480.652955 61.232791
+z
+" clip-path="url(#pd6eed64db1)" style="fill: #2f6b91"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 593.85263 305.728621
+L 684.41237 305.728621
+L 684.41237 187.080857
+L 593.85263 187.080857
+z
+" clip-path="url(#pd6eed64db1)" style="fill: #5d9474"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 707.052305 305.728621
+L 797.612045 305.728621
+L 797.612045 213.436648
+L 707.052305 213.436648
+z
+" clip-path="url(#pd6eed64db1)" style="fill: #d4804b"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_4">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m8281735ae5" x="525.932825" y="305.728621" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(497.12848 332.635716) rotate(-12)">全域共同样本</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m8281735ae5" x="639.1325" y="305.728621" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(620.109631 328.477482) rotate(-12)">匹配端点</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m8281735ae5" x="752.332175" y="305.728621" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif" transform="translate(723.52783 332.635716) rotate(-12)">匹配配对差值</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_9">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="464.805" y="305.728621" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="457.805" y="309.52784" transform="rotate(-0 457.805 309.52784)">0</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="464.805" y="264.026421" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="457.805" y="267.82564" transform="rotate(-0 457.805 267.82564)">50000</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="464.805" y="222.324221" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="457.805" y="226.12344" transform="rotate(-0 457.805 226.12344)">100000</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="464.805" y="180.622021" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="457.805" y="184.421239" transform="rotate(-0 457.805 184.421239)">150000</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="464.805" y="138.91982" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="457.805" y="142.719039" transform="rotate(-0 457.805 142.719039)">200000</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="464.805" y="97.21762" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="457.805" y="101.016839" transform="rotate(-0 457.805 101.016839)">250000</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m66ee6d812f" x="464.805" y="55.51542" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: end" x="457.805" y="59.314639" transform="rotate(-0 457.805 59.314639)">300000</text>
+     </g>
+    </g>
+    <g id="text_24">
+     <text style="font-size: 10px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="418.355" y="177.368311" transform="rotate(-90 418.355 177.368311)">分析单位数量</text>
+    </g>
+   </g>
+   <g id="patch_12">
+    <path d="M 464.805 305.728621
+L 464.805 49.008
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 464.805 305.728621
+L 813.46 305.728621
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="639.1325" y="43.008" transform="rotate(-0 639.1325 43.008)">各总体大小（单位不同）</text>
+   </g>
+  </g>
+  <g id="text_26">
+   <text style="font-size: 12px; font-family: 'WenQuanYi Micro Hei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="410.26" y="16.318125" transform="rotate(-0 410.26 16.318125)">全域与匹配总体对照：总体不同，不能视作同一人群的前后比较</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p73f4e701a5">
+   <rect x="51.15" y="49.008" width="348.655" height="256.720621"/>
+  </clipPath>
+  <clipPath id="pd6eed64db1">
+   <rect x="464.805" y="49.008" width="348.655" height="256.720621"/>
+  </clipPath>
+ </defs>
+</svg>
