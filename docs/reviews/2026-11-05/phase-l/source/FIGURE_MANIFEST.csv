@@ -1,11 +1,14 @@
 ﻿file,title_zh,data_source,exposure,operation
-L_global_spearman.png,九项健康结果的全域秩相关排序,phase-k/figures/A_source_global.csv,Aa_20yr,table visualization only; no model refit
-M_matched_pair_spearman.png,九项指标的配对差值秩相关,phase-k/figures/A_source_matched.csv,Aa_20yr,table visualization only; no model refit
+L_global_spearman.png,九项健康结果的全域秩相关排序,Phase K全域源表；CEC由Phase I CEC校正重分析覆盖,Aa_20yr,table visualization only; no model refit
+M_matched_pair_spearman.png,九项指标的配对差值秩相关,Phase K匹配源表；CEC由Phase I CEC校正重分析覆盖,Aa_20yr,table visualization only; no model refit
 N_gam_three_outcomes.png,三项重点结局的全样本GAM响应曲线,phase-k/figures/A_source_gam.csv,Aa_20yr,table visualization only; no model refit
-O_local_beta_distribution.png,九项结果的局部系数分布,phase-k/figures/B_source_local_betas.csv,Aa_20yr,table visualization only; no model refit
-P_local_sign_summary.png,局部系数中位数与负号占比,phase-k/figures/B_source_local_betas.csv,Aa_20yr,table visualization only; no model refit
-Q_soil_group_slopes.png,土类分组下九项健康结果的标准化配对斜率,phase-k/matching/environment_group_slopes_20yr.csv,Aa_20yr,table visualization only; no model refit
+V_global_match_gam_corrected.png,总体关联、匹配差值和三项重点曲线,Phase L校正后全域与匹配源表及Phase K GAM曲线源表,Aa_20yr,table visualization only; no model refit
+O_local_beta_distribution.png,九项结果的局部系数分布,Phase K局部源表；CEC与Phase J校正后局部系数逐单元核对,Aa_20yr,table visualization only; no model refit
+P_local_sign_summary.png,局部系数中位数与负号占比,Phase K局部源表；CEC与Phase J校正后局部系数逐单元核对,Aa_20yr,table visualization only; no model refit
+X_nine_outcome_local_maps_corrected.png,九项结果的局部回归系数地图,Phase K局部源表；CEC由Phase J校正后局部系数逐单元替换,Aa_20yr,saved local estimates plotted; no model refit
+Q_soil_group_slopes.png,土类分组下九项健康结果的标准化配对斜率,Phase K土类斜率；CEC由Phase I校正后M4源表覆盖,Aa_20yr,table visualization only; no model refit
 R_sem_control_paths.png,控制变量增加时侵蚀到SHI的路径和拟合增量,phase-k/sem/sem_model_rankings_20yr.csv,Aa_20yr,table visualization only; no model refit
 S_sem_dimension_paths.png,物理、化学、生物活动和SHI的维度路径比较,phase-k/sem/sem_path_coefficients_20yr.csv,Aa_20yr,table visualization only; no model refit
 T_zone_profiles.png,四类空间候选区的指标画像,phase-k/spatial/stress_zone_profiles_20yr.csv,Aa_20yr,table visualization only; no model refit
 U_analysis_units_flow.png,不同分析使用的样本单位与支持尺度,phase-k result index and source tables,Aa_20yr,table visualization only; no model refit
+Y_integrated_evidence_corrected.png,从总体关系到空间候选的综合证据图,Phase L corrected CEC sources plus Phase K single-exposure summaries,Aa_20yr,saved summary values visualized; no model refit

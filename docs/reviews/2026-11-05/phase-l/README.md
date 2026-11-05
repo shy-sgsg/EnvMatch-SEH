@@ -15,6 +15,6 @@
 - [`图表目录`](FINAL_REPORT_TABLE_INDEX.md)（20幅图、15张表）
 - [`证据交叉索引`](FINAL_REPORT_EVIDENCE_CROSSWALK.csv)
 - [`详细提纲`](FINAL_REPORT_DETAILED_OUTLINE.md)、[`技术摘要`](PHASE_L_TECHNICAL_SUMMARY.md)、[`排版核对`](DOCUMENT_QA.md)、[`篇幅核对`](WORD_COUNT_VERIFICATION.md)
-- [`ChatGPT审查请求`](CHATGPT_REVIEW_REQUEST.md)，固定到报告提交SHA。
+- [`ChatGPT审查请求`](PHASE_L_CHATGPT_REVIEW_REQUEST.md)，固定到报告提交SHA。
 
-上游证据来自同日期Phase K的单期整理包；固定版本和审查范围见审查请求。报告将全域相关、匹配差值、局部系数和路径估计分别解释，探索性结果不等同于独立因果验证。
+上游证据来自同日期Phase K的单期整理包；所有报告中涉及CEC的图表均采用Phase I CEC重分析结果，并在Phase L保存绘图源表。报告将全域相关、匹配差值、局部系数和路径估计分别解释，探索性结果不等同于独立因果验证。

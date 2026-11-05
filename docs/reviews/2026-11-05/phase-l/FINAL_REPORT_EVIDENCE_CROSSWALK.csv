@@ -1,13 +1,13 @@
 ﻿报告结论,所在位置,来源文件,核对数字或证据,解释边界
-全域九项秩相关,第二章2.2,docs/reviews/2026-11-05/phase-k/tables/global_associations_20yr.csv,"SW −0.584；SHI −0.469；OM −0.415；CEC +0.168；有效像元约384,737–388,092",全域空间排序关联；预测栅格而非实测田块，不能据此推断因果
-重点指标空间块线性区间,第二章2.2,docs/reviews/2026-11-05/phase-k/tables/global_associations_20yr.csv,标准化β：SHI −0.472、SW −0.595、OM −0.421；35个空间块，399次重抽样,与Spearman估计目标不同；内部空间区间不是外部验证
-环境匹配差值,第二章2.3,docs/reviews/2026-11-05/phase-k/matching/matched_pair_associations_20yr.csv,"当前候选111,289对；SHI −0.144、SW −0.272、OM −0.115",匹配只控制已测变量；与全域单像元统计单位不同，不能计算衰减量
-低值和零值分布,第一章1.6、第二章2.4.1,docs/reviews/2026-11-05/phase-k/source_slices_20yr/2026-10-29/phase-h/artifacts/low_erosion_regime/diagnostics/empirical_cdf_breakpoints_Aa20_only.csv,"有效294,243；零值98,560（33.5%）；经验折点约5.0502，低于或等于折点约46.6%",折点是分布诊断而非自然或管理阈值；主分析保留有效样本
-非线性曲线,第二章2.4,docs/reviews/2026-11-05/phase-k/tables/full_sample_gam_curves_20yr.csv,SHI、SW、OM曲线总体随log(1+侵蚀)增加而下降,拟合曲线不是时间轨迹；两端区间变宽、弯折不等于因果阈值
-土类分组斜率,第二章2.5,docs/reviews/2026-11-05/phase-k/matching/environment_group_slopes_20yr.csv,不同土类中九项结果斜率大小不同,分组结果部分受结果导向探索影响，需独立预先设定后复核
-局部回归系数,第二章2.6,docs/reviews/2026-11-05/phase-k/spatial/nine_outcome_local_beta_maps_20yr.csv,240米单元：SHI中位β −0.222、OM −0.395、SW −0.486；负向比例约99.7%、100%、100%,局部估计符号不是显著比例，也不代表受影响面积
-GWR与MGWR比较,第二章2.6,docs/reviews/2026-11-05/phase-k/spatial/gwr_model_summary_20yr.csv,共同770点；GWR/MGWR R²略有差别；MGWR带宽及系数排序不完全一致,样本内拟合和均衡抽样点不能当作全域外部测试
-环境控制路径,第二章2.7,docs/reviews/2026-11-05/phase-k/sem/sem_model_rankings_20yr.csv,"核心控制SHI路径β −0.113；R² 0.601；条件ΔR² 0.0079；n=293,145、35块",R²为整组变量拟合；ΔR²为样本内增量；均非因果贡献百分比
-健康维度路径,第二章2.7,docs/reviews/2026-11-05/phase-k/sem/sem_path_coefficients_20yr.csv,侵蚀到物理−0.389、化学−0.251、生物活动−0.066、SHI−0.113,维度由选定指标构成；路径方向依赖模型结构，不能直接称为中介机制
-候选核查区,第二章2.8,docs/reviews/2026-11-05/phase-k/spatial/stress_zone_profiles_20yr.csv,四类候选区数量和画像用于指导抽样设计,探索性候选区不是官方风险区；面积是有效栅格单元换算
-单期整理与来源范围,全报告,docs/reviews/2026-11-05/phase-k/provenance/20yr_only_provenance.json,复用已保存的Aa_20yr结果；本报告不重跑匹配、GWR/MGWR或SEM搜索,报告是证据整合和制版，不构成新模型验证；PCNM比较仍待后续
+全域九项秩相关,第二章2.2与2.11,docs/reviews/2026-11-05/phase-l/source/global_associations_20yr_corrected_CEC.csv；权威重分析：docs/reviews/2026-10-31/phase-i/cec-correction/tables/global_associations.csv,"SW −0.584；SHI −0.469；OM −0.415；CEC −0.286；有效像元约384,737–388,092",全域预测栅格的空间排序关联；与实测田块结果分开解释
+重点指标空间块线性区间,第二章2.2,docs/reviews/2026-11-05/phase-l/source/global_associations_20yr_corrected_CEC.csv,"标准化β：SHI −0.472、SW −0.595、OM −0.421、CEC −0.305；35个空间块，399次重抽样",与Spearman回答的问题不同；区间以空间块为重复单位
+环境匹配差值,第二章2.3与2.11,docs/reviews/2026-11-05/phase-l/source/matched_pair_associations_20yr_corrected_CEC.csv；权威重分析：docs/reviews/2026-10-31/phase-i/cec-correction/tables/matched_pair_associations.csv,"当前候选111,289对；SHI −0.144、SW −0.272、OM −0.115、CEC −0.100；CEC负向端点比例69.2%",在已纳入匹配条件和匹配支持范围内的差值关联
+低值和零值分布,第一章1.6、第二章2.4.1,docs/reviews/2026-11-05/phase-k/source_slices_20yr/2026-10-29/phase-h/artifacts/low_erosion_regime/diagnostics/empirical_cdf_breakpoints_Aa20_only.csv,"有效294,243；零值98,560（33.5%）；经验折点约5.0502，低于或等于折点约46.6%",折点是当前分布诊断结果，用于解释数据形状
+非线性曲线,第二章2.4,docs/reviews/2026-11-05/phase-k/tables/full_sample_gam_curves_20yr.csv,SHI、SW、OM曲线总体随log(1+侵蚀)增加而下降,曲线展示拟合响应形状及区间
+土类分组斜率,第二章2.5与图5,docs/reviews/2026-11-05/phase-l/source/environment_group_slopes_20yr_corrected_CEC.csv；权威重分析：docs/reviews/2026-10-31/phase-i/cec-correction/tables/environment_group_slopes_m4_Aa20.csv,"CEC标准化斜率：土类26 −0.049、27 −0.309、42 −0.325；其他指标同时展示",组内斜率描述当前分组和匹配支持下的条件差异
+局部回归系数,第二章2.6与图7–9,docs/reviews/2026-11-05/phase-l/source/local_betas_20yr_corrected_CEC.csv；权威重分析：docs/reviews/2026-10-31/phase-i/cec-correction/tables/gwr_spatial_summary.csv,"240米单元：SHI中位β −0.222、OM −0.395、SW −0.486；CEC中位β −0.152，96.7%局部估计为负",局部系数描述模型估计的空间差异
+GWR与MGWR比较,第二章2.6,docs/reviews/2026-11-05/phase-k/spatial/gwr_model_summary_20yr.csv,共同770点；GWR/MGWR R²和带宽对照,均衡抽样点上的模型比较，结合空间支持解释
+环境控制路径,第二章2.7,docs/reviews/2026-11-05/phase-k/sem/sem_model_rankings_20yr.csv,"核心控制SHI路径β −0.113；R² 0.601；条件ΔR² 0.0079；n=293,145、35块",R²为整组变量拟合；ΔR²为样本内增量
+健康维度路径,第二章2.7,docs/reviews/2026-11-05/phase-k/sem/sem_path_coefficients_20yr.csv,侵蚀到物理−0.389、化学−0.251、生物活动−0.066、SHI−0.113,维度路径描述模型结构中的条件关联
+候选核查区,第二章2.8与图17–18,docs/reviews/2026-11-05/phase-k/spatial/stress_zone_profiles_20yr.csv,四类候选区数量和画像用于构建现场抽样框,面积为有效栅格单元换算值
+单期整理与来源范围,全报告,docs/reviews/2026-11-05/phase-k/provenance/20yr_only_provenance.json；CEC依据：docs/reviews/2026-10-31/phase-i/cec-correction/README.md,本报告主情景为Aa_20yr；CEC图件源表由权威CEC重分析覆盖,本阶段整理既有结果并更新报告图表；不重新运行匹配、GWR/MGWR或SEM搜索

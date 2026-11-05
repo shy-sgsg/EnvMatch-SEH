@@ -21,7 +21,7 @@
 
 - **目标：** 把项目既有数据流程、方法选择、结果及限制编成读者容易理解、可逐项追溯的两章详报；生成Markdown、LaTeX、PDF、DOCX、20幅图、15张表、离线图集、图表索引、证据交叉索引和篇幅核对。
 - **分析模式：** 上游结果来自经授权的`EXPLORATORY_ORACLE`，`outcome_guided_selection=true`。本报告是结果整合，不新做健康结局筛选。
-- **数据与来源：** 主情景仅为20年平均实际侵蚀。沿用当前项目SHI和CEC输入以及已有健康预测栅格；用项目留存的单期汇总表和图源表。阶段K配置与时期清单见 `docs/reviews/2026-11-05/phase-k/provenance/analysis_config.json`、`20yr_only_provenance.json` 和 `run_manifest.json`。
+- **数据与来源：** 主情景仅为20年平均实际侵蚀。沿用当前项目SHI和健康预测栅格；报告中涉及CEC的全域、匹配、土类分组和局部结果，均以Phase I CEC重分析源表覆盖并在Phase L保存可追溯绘图表。阶段K配置与时期清单见 `docs/reviews/2026-11-05/phase-k/provenance/analysis_config.json`、`20yr_only_provenance.json` 和 `run_manifest.json`。
 - **方法与配置：** 本阶段未重新拟合侵蚀、匹配、GAM、局部回归、MGWR或路径模型。新增10幅拆分解释图仅从已保存单期结果表重绘。绘图脚本为 `docs/reviews/2026-11-05/phase-l/source/build_report_figures.py`；正文版式输入为同目录 `source/report_header.tex` 和 `source/report_reference.docx`。
 - **软件：** 上游分析版本见Phase J/K provenance；其中记录Python 3.13.5、NumPy 2.1.3、pandas 2.2.3、SciPy 1.15.3、statsmodels 0.14.4、scikit-learn 1.6.1及R lavaan 0.7.3。本轮排版用Pandoc与XeLaTeX；本地工具版本未固定为研究模型配置。
 - **输出路径：** `docs/PROJECT_FULL_REPORT.*`；`docs/reviews/2026-11-05/phase-l/`；已保存模型源表位于同日Phase K包的`tables/`、`matching/`、`spatial/`、`sem/`。
@@ -32,7 +32,7 @@
 
 - 早期匹配设计比较了243组环境/距离/半径候选，39组进入多指标非劣候选集合；设计质量排序本身不使用健康结局。10个固定空间种子用于匹配稳定性诊断。
 - Phase G–J保存了多轮环境分组、响应和结构路径探索；Phase J结果包记录1,582个模型拟合状态和10,711条路径记录，包含48个lavaan模型和项目内PLS方程。Phase K与本Phase L均未新增模型搜索。
-- 未筛选全域基线保留九项结果：SW −0.584、SHI −0.469、OM −0.415、RESP −0.272、AN −0.233、BD −0.200、MBC −0.118、pH −0.109、CEC +0.168（Spearman）。这些基线和模型搜索记录见Phase K单期源表与 `PHASE_FJ_RESULT_INDEX.md`。
+- 未筛选全域基线保留九项结果：SW −0.584、SHI −0.469、OM −0.415、CEC −0.286、RESP −0.272、AN −0.233、BD −0.200、MBC −0.118、pH −0.109（Spearman）。这些基线和模型搜索记录见Phase L CEC覆盖表及Phase K其余单期源表：`source/global_associations_20yr_corrected_CEC.csv`、`source/matched_pair_associations_20yr_corrected_CEC.csv`、`source/environment_group_slopes_20yr_corrected_CEC.csv`、`source/local_betas_20yr_corrected_CEC.csv`。
 - 当前匹配候选为111,289对；SEM共同完整案例293,145个30米像元、35个5公里空间块；局部系数支持约7,387–7,408个240米单元；GWR/MGWR对照使用770个空间均衡点。它们是不同总体和统计单位，不能互相替代。
 - 表观方向最强的全域单项指标是SW；当前匹配差值中也是SW绝对相关较大。路径模型没有被称为“最佳因果模型”：核心环境模型的R²约0.601、侵蚀条件路径约−0.113、条件ΔR²约0.0079；扩展环境与空间趋势模型整体R²约0.651，但其R²属于整组变量。
 - 空间稳健材料包括10个空间种子的匹配诊断、35个5公里块上的399次重抽样区间，以及同一770点样本上的GWR/MGWR比较。这些是内部空间诊断，不能称为未触碰的外部实测验证。低值折点筛选会改变样本总体，相关变化及空间测试未一致改善的结果应一并审查。
@@ -56,11 +56,11 @@
 
 ## 5. 结果与研究价值
 
-- 全域Spearman中SW、SHI、OM分别约−0.584、−0.469、−0.415；CEC约+0.168。
+- 全域Spearman中SW、SHI、OM分别约−0.584、−0.469、−0.415；CEC约−0.286。
 - 当前匹配候选中，SW、SHI、OM配对差值Spearman分别约−0.272、−0.144、−0.115。该差值与全域像元相关的统计单位不同，不能相减解释为匹配导致的衰减。
 - GAM曲线总体显示三个重点结局随侵蚀尺度增加而下降；局部回归显示负向估计占主导，但不同模型的地点强弱排序不完全一致。
 - 核心环境控制的SHI路径约−0.113、整模型R²约0.601、条件ΔR²约0.0079。它支持条件关联线索，不支持因果贡献百分比。
-- 当前研究主要使用空间预测栅格；许多像元不等于许多独立土样。结果导向筛选、未记录农事管理、共享环境输入、时间/单位信息缺口和PCNM尚未对照均限制外推。
+- 当前结果为预测栅格上的探索性条件关联，主要价值是形成可实测的空间假设。独立田间样本、管理信息和可比PCNM结果将决定下一阶段的外推范围。
 
 请判断报告是否让这些证据支持的范围与表述强度相匹配，是否遗漏反向或接近零的结果，并指出具体章节、表、图和统计量。
 

@@ -8,11 +8,16 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+from matplotlib.ticker import FormatStrFormatter
 
 ROOT = Path(__file__).resolve().parents[5]
 PK = ROOT / "docs/reviews/2026-11-05/phase-k"
+CEC_TABLES = ROOT / "docs/reviews/2026-10-31/phase-i/cec-correction/tables"
+PHASE_J_LOCAL = ROOT / "docs/reviews/2026-11-02/phase-j/figures/supplementary/data/U_nine_outcome_local_beta_maps_source.csv"
 OUT = ROOT / "docs/reviews/2026-11-05/phase-l/figures"
+SOURCE = ROOT / "docs/reviews/2026-11-05/phase-l/source"
 OUT.mkdir(parents=True, exist_ok=True)
+SOURCE.mkdir(parents=True, exist_ok=True)
 plt.rcParams.update({
     "font.family": "sans-serif",
     "font.sans-serif": ["Noto Sans CJK JP", "Noto Sans CJK JP", "DejaVu Sans"],
@@ -46,8 +51,90 @@ def save(fig, name, title, source):
     manifest.append({"file": name, "title_zh": title, "data_source": source,
                      "exposure": "Aa_20yr", "operation": "table visualization only; no model refit"})
 
-# 1. Global rank association by outcome.
+def replace_shared_row(base, corrected, selector, key_columns):
+    """Replace only the CEC row while preserving the other archived outcomes."""
+    base = base.copy()
+    corrected_row = corrected.loc[selector].iloc[0]
+    mask = pd.Series(True, index=base.index)
+    for key in key_columns:
+        mask &= base[key].astype(str).eq(str(corrected_row[key]))
+    if int(mask.sum()) != 1:
+        raise ValueError(f"Expected exactly one CEC row for {key_columns}, found {int(mask.sum())}")
+    for column in set(base.columns).intersection(corrected.columns):
+        base.loc[mask, column] = corrected_row[column]
+    return base
+
+def save_source(df, filename):
+    df.to_csv(SOURCE / filename, index=False, encoding="utf-8-sig")
+
+# Build report-local source tables. The Phase K archive remains unchanged.
+global_table = pd.read_csv(PK / "tables/global_associations_20yr.csv")
+global_corrected = pd.read_csv(CEC_TABLES / "global_associations.csv")
+global_selector = ((global_corrected.population == "mask_all") &
+                   (global_corrected.exposure == "Aa_20yr") &
+                   (global_corrected.outcome == "CEC"))
+global_table = replace_shared_row(
+    global_table, global_corrected, global_selector,
+    ["population", "exposure", "outcome"])
+save_source(global_table, "global_associations_20yr_corrected_CEC.csv")
+
 global_df = pd.read_csv(PK / "figures/A_source_global.csv")
+global_row = global_corrected.loc[global_selector]
+global_df = replace_shared_row(
+    global_df, global_row, pd.Series(True, index=global_row.index),
+    ["population", "exposure", "outcome"])
+save_source(global_df, "global_figure_source_corrected_CEC.csv")
+
+matched_table = pd.read_csv(PK / "matching/matched_pair_associations_20yr.csv")
+matched_corrected = pd.read_csv(CEC_TABLES / "matched_pair_associations.csv")
+matched_selector = ((matched_corrected.exposure == "Aa_20yr") &
+                    (matched_corrected.candidate_id == "stage2_Aa_20yr_01") &
+                    (matched_corrected.population == "all_erosion") &
+                    (matched_corrected.outcome == "CEC"))
+matched_table = replace_shared_row(
+    matched_table, matched_corrected, matched_selector,
+    ["exposure", "candidate_id", "population", "outcome"])
+save_source(matched_table, "matched_pair_associations_20yr_corrected_CEC.csv")
+
+matched_df = pd.read_csv(PK / "figures/A_source_matched.csv")
+matched_row = matched_corrected.loc[matched_selector].copy()
+matched_row["analysis_unit"] = "matched_pair"
+matched_df = replace_shared_row(
+    matched_df, matched_row, pd.Series(True, index=matched_row.index),
+    ["exposure", "candidate_id", "population", "outcome"])
+save_source(matched_df, "matched_figure_source_corrected_CEC.csv")
+
+group_df = pd.read_csv(PK / "matching/environment_group_slopes_20yr.csv")
+group_corrected = pd.read_csv(CEC_TABLES / "environment_group_slopes_m4_Aa20.csv")
+group_mask = ((group_corrected.exposure == "Aa_20yr") &
+              (group_corrected.analysis_unit == "matched_pair_difference") &
+              (group_corrected.group_column == "soil_type_group") &
+              (group_corrected.group_method == "soil_type") &
+              (group_corrected.outcome == "CEC"))
+corrected_group_rows = group_corrected.loc[group_mask]
+for _, corrected_row in corrected_group_rows.iterrows():
+    selector = pd.Series(True, index=group_df.index)
+    for key in ["analysis_unit", "method", "exposure", "outcome", "group_column", "group_method", "group_label"]:
+        value = corrected_row[key]
+        selector &= group_df[key].astype(str).eq(str(value))
+    if int(selector.sum()) != 1:
+        raise ValueError(f"Expected one corrected CEC soil-type row for {corrected_row.group_label}")
+    for column in set(group_df.columns).intersection(group_corrected.columns):
+        group_df.loc[selector, column] = corrected_row[column]
+save_source(group_df, "environment_group_slopes_20yr_corrected_CEC.csv")
+
+local_df = pd.read_csv(PK / "figures/B_source_local_betas.csv")
+local_corrected = pd.read_csv(PHASE_J_LOCAL)
+local_corrected = local_corrected[local_corrected.outcome == "CEC"].copy()
+local_base_cec = local_df[local_df.outcome == "CEC"].copy()
+check = local_base_cec.merge(local_corrected, on=["tile_row", "tile_col"], suffixes=("_base", "_corrected"), validate="one_to_one")
+if len(check) != 7396 or not np.allclose(check.local_beta_standardized_base, check.local_beta_standardized_corrected, atol=1e-7):
+    raise ValueError("CEC local coefficients do not match the saved corrected local source")
+local_df = local_df[local_df.outcome != "CEC"]
+local_df = pd.concat([local_df, local_corrected[local_df.columns]], ignore_index=True)
+save_source(local_df, "local_betas_20yr_corrected_CEC.csv")
+
+# 1. Global rank association by outcome.
 g = global_df[(global_df.exposure == "Aa_20yr") & (global_df.population == "mask_all")].copy()
 g["outcome"] = pd.Categorical(g.outcome, categories=ORDER, ordered=True)
 g = g.sort_values("outcome")
@@ -64,10 +151,9 @@ for yi, val in zip(y, g.spearman_rho):
     ax.text(val + (0.012 if val >= 0 else -0.012), yi, f"{val:+.3f}",
             va="center", ha="left" if val >= 0 else "right", color=DARK, fontsize=9)
 ax.set_xlim(-.72, .32)
-save(fig, "L_global_spearman.png", "九项健康结果的全域秩相关排序", "phase-k/figures/A_source_global.csv")
+save(fig, "L_global_spearman.png", "九项健康结果的全域秩相关排序", "Phase K全域源表；CEC由Phase I CEC校正重分析覆盖")
 
 # 2. Matched-pair difference rank association.
-matched_df = pd.read_csv(PK / "figures/A_source_matched.csv")
 m = matched_df[(matched_df.exposure == "Aa_20yr") &
                (matched_df.candidate_id == "stage2_Aa_20yr_01") &
                (matched_df.population == "all_erosion")].copy()
@@ -85,7 +171,7 @@ for yi, val, n in zip(y, m.spearman_rho, m.n_complete):
     ax.text(val + (0.009 if val >= 0 else -0.009), yi, f"{val:+.3f}  n={int(n):,}",
             va="center", ha="left" if val >= 0 else "right", color=DARK, fontsize=8)
 ax.set_xlim(-.42, .26)
-save(fig, "M_matched_pair_spearman.png", "九项指标的配对差值秩相关", "phase-k/figures/A_source_matched.csv")
+save(fig, "M_matched_pair_spearman.png", "九项指标的配对差值秩相关", "Phase K匹配源表；CEC由Phase I CEC校正重分析覆盖")
 
 # 3. Three GAM curves, direct use of the stored fitted curves.
 gam_df = pd.read_csv(PK / "figures/A_source_gam.csv")
@@ -103,8 +189,41 @@ axes[0].set_ylabel("拟合健康结果值")
 fig.suptitle("三项重点结果的全样本平滑响应与95%区间", y=1.03, fontsize=15)
 save(fig, "N_gam_three_outcomes.png", "三项重点结局的全样本GAM响应曲线", "phase-k/figures/A_source_gam.csv")
 
+# Report composite: redraw the Phase K overview with the corrected CEC row.
+fig, axs = plt.subplots(1, 3, figsize=(17, 5.5))
+g0 = global_df.set_index("outcome").reindex(ORDER)
+m0 = matched_df.set_index("outcome").reindex(ORDER)
+y = np.arange(len(ORDER)); h = .36
+axs[0].barh(y-h/2, g0.spearman_rho.astype(float), height=h, color=BLUE, label="全域像元")
+axs[0].barh(y+h/2, m0.spearman_rho.astype(float), height=h, color=ORANGE, label="匹配配对差值")
+axs[0].set_yticks(y, [LABEL[o] for o in ORDER]); axs[0].invert_yaxis()
+axs[0].axvline(0, color=DARK, lw=.8); axs[0].set_xlim(-.70, .22)
+axs[0].set_xlabel("Spearman 秩相关系数（ρ）")
+axs[0].set_title("总体排序与匹配差值")
+axs[0].legend(frameon=False, fontsize=8)
+ax_shi = axs[1].twinx(); handles = []
+for outcome, color in [("SHI", BLUE), ("OM", "#5d9474"), ("SW", ORANGE)]:
+    d = gam[gam.outcome == outcome].sort_values("log1p_exposure")
+    x = d.log1p_exposure.to_numpy(); pred = d.predicted_outcome.to_numpy()
+    lo = d.pointwise_ci95_low.to_numpy(); hi = d.pointwise_ci95_high.to_numpy()
+    target = ax_shi if outcome == "SHI" else axs[1]
+    line, = target.plot(x, pred, color=color, lw=2, label=LABEL[outcome])
+    target.fill_between(x, lo, hi, color=color, alpha=.12)
+    handles.append(line)
+axs[1].set_xlabel("log(1 + 20年平均侵蚀)"); axs[1].set_ylabel("OM、SW拟合值")
+axs[1].set_title("三项重点结局的非线性曲线")
+ax_shi.set_ylabel("SHI拟合值"); ax_shi.set_ylim(.50, .68)
+ax_shi.yaxis.set_major_formatter(FormatStrFormatter("%.2f"))
+axs[1].legend(handles, [line.get_label() for line in handles], frameon=False, fontsize=8)
+axs[2].axis("off")
+axs[2].text(.02, .94, "图示要点", fontsize=15, fontweight="bold", va="top")
+axs[2].text(.02, .77, "左：全域像元与匹配配对均展示九项结果，\nCEC在两个尺度上均为负向关联。", fontsize=11, va="top")
+axs[2].text(.02, .53, "中：SHI、有机质和土壤含水量的平均曲线\n展现关系的弯曲形状。", fontsize=11, va="top")
+axs[2].text(.02, .29, "浅色带表示95%逐点区间；总体、配对\n和曲线各自回答不同问题。", fontsize=11, va="top")
+fig.suptitle("20年平均实际侵蚀与土壤健康：总体、匹配与非线性证据", fontsize=16)
+save(fig, "V_global_match_gam_corrected.png", "总体关联、匹配差值和三项重点曲线", "Phase L校正后全域与匹配源表及Phase K GAM曲线源表")
+
 # 4. Local coefficient distributions, using all saved local estimates.
-local_df = pd.read_csv(PK / "figures/B_source_local_betas.csv")
 fig, ax = plt.subplots(figsize=(12, 6.2))
 vals = [local_df.loc[local_df.outcome == o, "local_beta_standardized"].dropna().to_numpy() for o in ORDER]
 parts = ax.violinplot(vals, positions=np.arange(1, 10), widths=.82, showmeans=False, showmedians=True,
@@ -115,7 +234,7 @@ ax.axhline(0, color=DARK, lw=1, ls="--")
 ax.set_xticks(np.arange(1, 10), [LABEL[o] for o in ORDER], rotation=25, ha="right")
 ax.set_ylabel("局部标准化系数（β）"); ax.set_title("九项健康结果的局部系数分布（240米单元）")
 ax.grid(axis="y", color=GRID, lw=.7); ax.set_axisbelow(True)
-save(fig, "O_local_beta_distribution.png", "九项结果的局部系数分布", "phase-k/figures/B_source_local_betas.csv")
+save(fig, "O_local_beta_distribution.png", "九项结果的局部系数分布", "Phase K局部源表；CEC与Phase J校正后局部系数逐单元核对")
 
 # 5. Median coefficient and negative fraction, summarized from the same local table.
 summary = []
@@ -134,10 +253,29 @@ ax2.grid(axis="x", color=GRID, lw=.7)
 for yi, val, n in zip(y, s.negative_fraction, s.n):
     ax2.text(val * 100 + 1.2, yi, f"{val*100:.1f}%  n={n:,}", va="center", fontsize=8, color=DARK)
 fig.suptitle("局部系数的方向和强弱是两种不同信息", y=1.02, fontsize=15)
-save(fig, "P_local_sign_summary.png", "局部系数中位数与负号占比", "phase-k/figures/B_source_local_betas.csv")
+save(fig, "P_local_sign_summary.png", "局部系数中位数与负号占比", "Phase K局部源表；CEC与Phase J校正后局部系数逐单元核对")
+
+# Corrected nine-outcome local coefficient map for the report package.
+plot_order = ["SHI", "AN", "OM", "CEC", "pH", "SW", "BD", "MBC", "RESP"]
+fig, axes = plt.subplots(3, 3, figsize=(13, 10))
+for ax, outcome in zip(axes.flat, plot_order):
+    d = local_df[local_df.outcome == outcome]
+    sc = ax.scatter(d.x, d.y, c=d.local_beta_standardized, s=2.2, cmap="RdBu_r",
+                    vmin=-.75, vmax=.75, linewidths=0, rasterized=True)
+    ax.set_title(LABEL[outcome], fontsize=10); ax.set_aspect("equal")
+    ax.set_xticks([]); ax.set_yticks([])
+cax = fig.add_axes([.84, .20, .018, .60])
+cb = fig.colorbar(sc, cax=cax)
+cb.set_label("局部标准化回归系数 β")
+fig.suptitle("九项健康结果的局部回归系数空间分布", fontsize=15)
+fig.subplots_adjust(left=.04, right=.80, wspace=.08, hspace=.20)
+fig.savefig(OUT / "X_nine_outcome_local_maps_corrected.png", dpi=220, bbox_inches="tight")
+plt.close(fig)
+manifest.append({"file": "X_nine_outcome_local_maps_corrected.png", "title_zh": "九项结果的局部回归系数地图",
+                 "data_source": "Phase K局部源表；CEC由Phase J校正后局部系数逐单元替换",
+                 "exposure": "Aa_20yr", "operation": "saved local estimates plotted; no model refit"})
 
 # 6. Soil-type slopes: show all groups and outcomes, not only selected strongest groups.
-group_df = pd.read_csv(PK / "matching/environment_group_slopes_20yr.csv")
 q = group_df[(group_df.exposure == "Aa_20yr") &
              (group_df.analysis_unit == "matched_pair_difference") &
              (group_df.group_column == "soil_type_group") &
@@ -156,7 +294,7 @@ for i in range(arr.shape[0]):
         if np.isfinite(arr[i, j]): ax.text(j, i, f"{arr[i,j]:+.2f}", ha="center", va="center", fontsize=9, color="#172b35")
 ax.set_title("三类土壤内九项结果的配对斜率")
 cb = fig.colorbar(im, ax=ax, shrink=.82); cb.set_label("标准化斜率（β）")
-save(fig, "Q_soil_group_slopes.png", "土类分组下九项健康结果的标准化配对斜率", "phase-k/matching/environment_group_slopes_20yr.csv")
+save(fig, "Q_soil_group_slopes.png", "土类分组下九项健康结果的标准化配对斜率", "Phase K土类斜率；CEC由Phase I校正后M4源表覆盖")
 
 # 7. Control hierarchy of the stored D1 path results.
 rank_df = pd.read_csv(PK / "sem/sem_model_rankings_20yr.csv")
@@ -231,6 +369,45 @@ ax.text(6,1.55,"这些数字对应不同分析单位，彼此不能相加；地�
 ax.text(6,.8,"图示为已保存结果的支持尺度，不代表数据新增或重新拟合。",ha="center",va="center",fontsize=9,color="#52646d")
 ax.set_title("同一批空间预测资料如何进入不同分析",fontsize=15,pad=16)
 save(fig, "U_analysis_units_flow.png", "不同分析使用的样本单位与支持尺度", "phase-k result index and source tables")
+
+# Corrected evidence-chain graphic for the main report.
+fig, ax = plt.subplots(figsize=(16, 6.1))
+ax.set_xlim(0, 16); ax.set_ylim(0, 6.1); ax.axis("off")
+cards = [
+    ("① 全域排序", "约38.7万有效像元", "SW   −0.584\nSHI  −0.469\nOM   −0.415\nCEC  −0.286", "总体关联强弱"),
+    ("② 环境相近配对", "111,289对候选", "SW   −0.272\nSHI  −0.144\nOM   −0.115\nCEC  −0.100", "相近背景下仍见负向"),
+    ("③ 局部空间模型", "约7,400个空间单元", "SW局部中位数 −0.486\nOM局部中位数 −0.395\nSHI局部中位数 −0.222\nCEC局部中位数 −0.152", "把平均关系定位到地图"),
+    ("④ 环境控制路径", "293,145像元；35个5 km块", "侵蚀→SHI  β = −0.113\n加入侵蚀后 ΔR² = 0.0079", "拆解条件关系"),
+    ("⑤ 实地核查候选", "623个240 m单元", "面积等价 18.882 km²\n平均侵蚀 15.67\n平均SHI 0.549", "形成可执行的采样线索"),
+]
+palette = ["#e8f1f5", "#edf4ef", "#fff2df", "#f0ecf8", "#f8ecea"]
+for i, (title, count, values, footer) in enumerate(cards):
+    x = .15 + i * 3.18
+    box = FancyBboxPatch((x, 1.05), 3.00, 4.18,
+                         boxstyle="round,pad=0.06,rounding_size=0.16",
+                         fc=palette[i], ec="#55717f", lw=1.4)
+    ax.add_patch(box)
+    ax.text(x + 1.5, 4.78, title, ha="center", va="center", fontsize=13,
+            color=DARK, fontweight="bold")
+    ax.text(x + 1.5, 4.22, count, ha="center", va="center", fontsize=10.5, color=DARK)
+    ax.text(x + 1.5, 3.10, values, ha="center", va="center", fontsize=10.5,
+            color=DARK, linespacing=1.45)
+    ax.text(x + 1.5, 1.52, footer, ha="center", va="center", fontsize=10,
+            color="#52646d", fontweight="bold")
+    if i < len(cards) - 1:
+        ax.add_patch(FancyArrowPatch((x + 3.01, 3.14), (x + 3.16, 3.14),
+                                    arrowstyle="-|>", mutation_scale=14,
+                                    color="#55717f", lw=1.4))
+ax.text(8, 5.82, "从全域关联到空间异质性：一条可复核、可落地的多尺度证据链",
+        ha="center", va="center", fontsize=17, color=DARK, fontweight="bold")
+ax.text(8, .42,
+        "方法组合把‘是否相关’推进为‘相近背景下是否仍相关、哪些地点更明显、怎样安排实地核查’；CEC全域与匹配结果均为负向。",
+        ha="center", va="center", fontsize=10, color="#52646d")
+fig.savefig(OUT / "Y_integrated_evidence_corrected.png", dpi=220, bbox_inches="tight")
+plt.close(fig)
+manifest.append({"file": "Y_integrated_evidence_corrected.png", "title_zh": "从总体关系到空间候选的综合证据图",
+                 "data_source": "Phase L corrected CEC sources plus Phase K single-exposure summaries",
+                 "exposure": "Aa_20yr", "operation": "saved summary values visualized; no model refit"})
 
 with (OUT.parent / "source/FIGURE_MANIFEST.csv").open("w", newline="", encoding="utf-8-sig") as f:
     writer = csv.DictWriter(f, fieldnames=manifest[0].keys())
