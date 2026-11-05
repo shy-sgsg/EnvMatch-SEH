@@ -16,3 +16,9 @@
 ## 解释边界
 
 项目本轮结果属于授权的结果导向探索；结果用于形成后续假设。像元、匹配对、240米局部单元、770个空间均衡点和5公里空间块是不同单位。低侵蚀折点、环境组及候选区仅作敏感性或调查线索；PCNM未重跑，正式独立验证仍待后续工作。
+
+## 正式交付文件
+
+- 合并报告：`FINAL_ACADEMIC_RESEARCH_REPORT_30000PLUS.md`、`.docx`、`.pdf`。
+- 两章拆分稿：`CHAPTER_1_RESEARCH_DESIGN_METHODS_EXPLORATION.md`、`CHAPTER_2_RESULTS_SPATIAL_SEM_SYNTHESIS.md`。
+- 图表和证据：`FINAL_REPORT_FIGURE_ATLAS.html`、`FINAL_REPORT_TABLE_INDEX.md`、`FINAL_REPORT_EVIDENCE_CROSSWALK.csv`、`FINAL_REPORT_DETAILED_OUTLINE.md`。

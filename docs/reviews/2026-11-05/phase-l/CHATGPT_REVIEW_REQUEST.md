@@ -5,11 +5,11 @@
 ## 1. 项目与版本
 
 - 仓库：`https://github.com/shy-sgsg/EnvMatch-SEH`
-- **审查目标提交 SHA：2331ff137560c79481286ae56ca8a6a254045b58**
-- 研究总纲：`docs/RESEARCH_CHARTER.md`，请在上述提交`2331ff137560c79481286ae56ca8a6a254045b58`中读取。
+- **审查目标提交 SHA：待更新：报告交付提交SHA**
+- 研究总纲：`docs/RESEARCH_CHARTER.md`，请在上述提交中读取。
 - 阶段：G5相关成果的报告整理；**不申请G5通过，也不改变正式阶段门状态**。
 - 主审查入口：`docs/reviews/2026-11-05/phase-l/README.md`
-- 完整报告：`docs/PROJECT_FULL_REPORT.md`，另有同源LaTeX、PDF和DOCX。
+- 完整报告：`docs/PROJECT_FULL_REPORT.md`，根目录另有便捷副本；Phase L归档内提供按指定文件名保存的合并稿、两章拆分稿、离线图集、图表目录和证据索引。
 
 ## 2. 总体研究定位与科学问题
 
@@ -41,11 +41,11 @@
 
 | 核查项 | 可定位证据 | 审查重点 |
 |---|---|---|
-| 报告与图表对应 | `PROJECT_FULL_REPORT.md`、`FIGURE_TABLE_INDEX.md`、`FIGURE_ATLAS.html` | 20幅图和15张表是否无重复；图号、图注、来源与正文解释是否一致。 |
+| 报告与图表对应 | `PROJECT_FULL_REPORT.md`、`FINAL_REPORT_TABLE_INDEX.md`、`FINAL_REPORT_FIGURE_ATLAS.html` | 20幅图和15张表是否无重复；图号、图注、来源与正文解释是否一致。 |
 | 单期暴露和CEC标注 | Phase K `20yr_only_provenance.json`、Phase L正文 | 是否仅使用20年平均实际侵蚀作为报告主情景；全篇是否统一将指标写作CEC；是否仍有时期或数据版本混淆。 |
-| 数据单位与独立性 | 报告表6；`EVIDENCE_CROSSWALK.csv`；全域、匹配、SEM与空间源表 | 像元、匹配对、240米单元、770点及空间块是否分别解释；预测结果是否与实测值区分。 |
+| 数据单位与独立性 | 报告表6；`FINAL_REPORT_EVIDENCE_CROSSWALK.csv`；全域、匹配、SEM与空间源表 | 像元、匹配对、240米单元、770点及空间块是否分别解释；预测结果是否与实测值区分。 |
 | 结果导向选择 | Phase K `analysis_config.json`、运行清单、Phase F–J交叉索引 | 候选数、筛选目标、未筛选基线、表观结果、空间诊断与样本保留是否披露充分；筛选是否会使表观结果偏乐观。 |
-| 结果解释 | `EVIDENCE_CROSSWALK.csv`及其逐项源表 | Spearman、标准化β、匹配差值、局部系数、路径、R²和ΔR²是否被正确区分；是否存在因果过度表述。 |
+| 结果解释 | `FINAL_REPORT_EVIDENCE_CROSSWALK.csv`及其逐项源表 | Spearman、标准化β、匹配差值、局部系数、路径、R²和ΔR²是否被正确区分；是否存在因果过度表述。 |
 | 空间结果与候选区 | Phase K `spatial/`、`sem/`结果；图5–18 | 局部系数符号是否被误写成显著性；GWR/MGWR地点排序差异、候选区分类和面积是否得到适当限制。 |
 | 格式与复核能力 | `DOCUMENT_QA.md`、`WORD_COUNT_VERIFICATION.md` | PDF已检查42页；DOCX已核对OOXML结构、A4、页边距、20张图和15张表。当前环境缺少`pdf2image`与LibreOffice，DOCX页面级目视渲染仍需在Word/LibreOffice中确认。 |
 | 数据完整性和长期对照 | `docs/RESEARCH_CHARTER.md`、报告第2章 | 侵蚀时间/单位来源、健康预测独立实测、共同环境输入和PCNM可比样本是否仍明确列为限制。 |
@@ -73,3 +73,10 @@
 `NO CHANGE`。本阶段只整理与解释已保存结果，不申请修改研究总纲。任何总纲修改建议请另列证据、原条款和建议文本，并标注`CHANGE PROPOSAL — USER APPROVAL REQUIRED`；未经用户批准不得实施。
 
 本请求固定仓库内审查范围；未代表用户向外部发送材料。
+
+
+## Phase L归档交付
+
+- 合并报告：`FINAL_ACADEMIC_RESEARCH_REPORT_30000PLUS.md`、`.docx`、`.pdf`。
+- 分章稿：`CHAPTER_1_RESEARCH_DESIGN_METHODS_EXPLORATION.md`、`CHAPTER_2_RESULTS_SPATIAL_SEM_SYNTHESIS.md`。
+- 图表与证据：`FINAL_REPORT_FIGURE_ATLAS.html`、`FINAL_REPORT_TABLE_INDEX.md`、`FINAL_REPORT_EVIDENCE_CROSSWALK.csv`、`PHASE_L_TECHNICAL_SUMMARY.md`、`FINAL_REPORT_DETAILED_OUTLINE.md`。
