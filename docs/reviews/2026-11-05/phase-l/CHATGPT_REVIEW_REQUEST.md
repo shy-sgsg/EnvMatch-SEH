@@ -5,8 +5,8 @@
 ## 1. 项目与版本
 
 - 仓库：`https://github.com/shy-sgsg/EnvMatch-SEH`
-- **审查目标提交 SHA：待报告成果提交后填写的完整SHA。**
-- 研究总纲：`docs/RESEARCH_CHARTER.md`，请在上述提交中读取。
+- **审查目标提交 SHA：2331ff137560c79481286ae56ca8a6a254045b58**
+- 研究总纲：`docs/RESEARCH_CHARTER.md`，请在上述提交`2331ff137560c79481286ae56ca8a6a254045b58`中读取。
 - 阶段：G5相关成果的报告整理；**不申请G5通过，也不改变正式阶段门状态**。
 - 主审查入口：`docs/reviews/2026-11-05/phase-l/README.md`
 - 完整报告：`docs/PROJECT_FULL_REPORT.md`，另有同源LaTeX、PDF和DOCX。
