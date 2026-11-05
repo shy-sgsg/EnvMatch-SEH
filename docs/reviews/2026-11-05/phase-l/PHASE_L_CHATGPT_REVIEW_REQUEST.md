@@ -7,7 +7,7 @@
 - 报告题名：**《土壤侵蚀对土壤健康的响应特征、环境异质性及作用路径研究——以河南省温县为例》**
 
 - 仓库：`https://github.com/shy-sgsg/EnvMatch-SEH`
-- **审查目标提交 SHA：d1d51b67a65d0f0aa56a070f23a42f5253e72116**
+- **审查目标提交 SHA：14abee99f3057233eff6fa1e805f774d30b2308d**
 - 研究总纲：`docs/RESEARCH_CHARTER.md`，请在上述提交中读取。
 - 阶段：G5相关成果的报告整理；**不申请G5通过，也不改变正式阶段门状态**。
 - 主审查入口：`docs/reviews/2026-11-05/phase-l/README.md`
