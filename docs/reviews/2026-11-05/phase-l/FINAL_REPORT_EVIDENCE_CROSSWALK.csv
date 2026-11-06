@@ -5,7 +5,7 @@
 低值和零值分布,第一章1.6、第二章2.4.1,docs/reviews/2026-11-05/phase-k/source_slices_20yr/2026-10-29/phase-h/artifacts/low_erosion_regime/diagnostics/empirical_cdf_breakpoints_Aa20_only.csv,"有效294,243；零值98,560（33.5%）；经验折点约5.0502，低于或等于折点约46.6%",折点是当前分布诊断结果，用于解释数据形状
 非线性曲线,第二章2.4,docs/reviews/2026-11-05/phase-k/tables/full_sample_gam_curves_20yr.csv,SHI、SW、OM曲线总体随log(1+侵蚀)增加而下降,曲线展示拟合响应形状及区间
 土类分组斜率,第二章2.5与图5,docs/reviews/2026-11-05/phase-l/source/environment_group_slopes_20yr_corrected_CEC.csv；权威重分析：docs/reviews/2026-10-31/phase-i/cec-correction/tables/environment_group_slopes_m4_Aa20.csv,"CEC标准化斜率：土类26 −0.049、27 −0.309、42 −0.325；其他指标同时展示",组内斜率描述当前分组和匹配支持下的条件差异
-局部回归系数,第二章2.6与图7–9,docs/reviews/2026-11-05/phase-l/source/local_betas_20yr_corrected_CEC.csv；权威重分析：docs/reviews/2026-10-31/phase-i/cec-correction/tables/gwr_spatial_summary.csv,"240米单元：SHI中位β −0.222、OM −0.395、SW −0.486；CEC中位β −0.152，96.7%局部估计为负",局部系数描述模型估计的空间差异
+局部回归系数,第二章2.6与图7–9,docs/reviews/2026-11-05/phase-l/source/local_betas_20yr_corrected_CEC.csv；权威重分析：docs/reviews/2026-10-31/phase-i/cec-correction/tables/gwr_spatial_summary.csv,"240米单元：SHI中位β −0.222、OM −0.395、SW −0.486；CEC中位β −0.152，96.6%局部估计为负",局部系数描述模型估计的空间差异
 GWR与MGWR比较,第二章2.6,docs/reviews/2026-11-05/phase-k/spatial/gwr_model_summary_20yr.csv,共同770点；GWR/MGWR R²和带宽对照,均衡抽样点上的模型比较，结合空间支持解释
 环境控制路径,第二章2.7,docs/reviews/2026-11-05/phase-k/sem/sem_model_rankings_20yr.csv,"核心控制SHI路径β −0.113；R² 0.601；条件ΔR² 0.0079；n=293,145、35块",R²为整组变量拟合；ΔR²为样本内增量
 健康维度路径,第二章2.7,docs/reviews/2026-11-05/phase-k/sem/sem_path_coefficients_20yr.csv,侵蚀到物理−0.389、化学−0.251、生物活动−0.066、SHI−0.113,维度路径描述模型结构中的条件关联
