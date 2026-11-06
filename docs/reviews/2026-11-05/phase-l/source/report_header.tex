@@ -2,6 +2,8 @@
 \usepackage{etoolbox}
 \usepackage{newunicodechar}
 \usepackage{needspace}
+\usepackage{float}
+\floatplacement{figure}{H}
 \newunicodechar{β}{\ensuremath{\beta}}
 \newunicodechar{ρ}{\ensuremath{\rho}}
 \setlength{\headheight}{15pt}
@@ -14,3 +16,5 @@
 \let\origmaketitle\maketitle
 \renewcommand{\maketitle}{\origmaketitle\thispagestyle{empty}\clearpage}
 \apptocmd{\tableofcontents}{\clearpage}{}{}
+
+\AtBeginEnvironment{longtable}{\small}

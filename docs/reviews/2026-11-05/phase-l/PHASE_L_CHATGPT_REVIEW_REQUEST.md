@@ -4,10 +4,11 @@
 
 ## 1. 项目与版本
 
-- 报告题名：**《土壤侵蚀对土壤健康的响应特征、环境异质性及作用路径研究——以河南省温县为例》**
+- 报告题名：**《温县耕地土壤侵蚀与土壤健康关系研究》**
+- 副题：**环境异质性、局部响应与结构路径的多尺度分析**
 
 - 仓库：`https://github.com/shy-sgsg/EnvMatch-SEH`
-- **审查目标提交 SHA：3b8f8d45f3bfe3d0af5c285ae5a4bd998976f28c**
+- **审查目标提交 SHA：待报告提交完成后更新**
 - 研究总纲：`docs/RESEARCH_CHARTER.md`，请在上述提交中读取。
 - 阶段：G5相关成果的报告整理；**不申请G5通过，也不改变正式阶段门状态**。
 - 主审查入口：`docs/reviews/2026-11-05/phase-l/README.md`
@@ -19,7 +20,7 @@
 
 ## 3. 本阶段工作
 
-- **目标：** 把项目既有数据流程、方法选择、结果及限制编成读者容易理解、可逐项追溯的两章详报；生成Markdown、LaTeX、PDF、DOCX、20幅图、15张表、离线图集、图表索引、证据交叉索引和篇幅核对。
+- **目标：** 把项目既有数据流程、方法选择、结果及限制编成读者容易理解、可逐项追溯的两章详报；生成Markdown、LaTeX、PDF、DOCX、139幅图（正文19幅、附录120幅）、16张表、离线图集、图表索引、证据交叉索引和篇幅核对。
 - **分析模式：** 上游结果来自经授权的`EXPLORATORY_ORACLE`，`outcome_guided_selection=true`。本报告是结果整合，不新做健康结局筛选。
 - **数据与来源：** 主情景仅为20年平均实际侵蚀。沿用当前项目SHI和健康预测栅格；报告中涉及CEC的全域、匹配、土类分组和局部结果，均以Phase I CEC重分析源表覆盖并在Phase L保存可追溯绘图表。阶段K配置与时期清单见 `docs/reviews/2026-11-05/phase-k/provenance/analysis_config.json`、`20yr_only_provenance.json` 和 `run_manifest.json`。
 - **方法与配置：** 本阶段未重新拟合侵蚀、匹配、GAM、局部回归、MGWR或路径模型。新增10幅拆分解释图仅从已保存单期结果表重绘。绘图脚本为 `docs/reviews/2026-11-05/phase-l/source/build_report_figures.py`；正文版式输入为同目录 `source/report_header.tex` 和 `source/report_reference.docx`。
@@ -43,13 +44,13 @@
 
 | 核查项 | 可定位证据 | 审查重点 |
 |---|---|---|
-| 报告与图表对应 | `PROJECT_FULL_REPORT.md`、`FINAL_REPORT_TABLE_INDEX.md`、`FINAL_REPORT_FIGURE_ATLAS.html` | 20幅图和15张表是否无重复；图号、图注、来源与正文解释是否一致。 |
+| 报告与图表对应 | `PROJECT_FULL_REPORT.md`、`FINAL_REPORT_TABLE_INDEX.md`、`FINAL_REPORT_FIGURE_ATLAS.html` | 139幅图（正文19幅、附录120幅）和16张表是否无重复；图号、图注、来源与正文解释是否一致。 |
 | 单期暴露和CEC标注 | Phase K `20yr_only_provenance.json`、Phase L正文 | 是否仅使用20年平均实际侵蚀作为报告主情景；全篇是否统一将指标写作CEC；是否仍有时期或数据版本混淆。 |
 | 数据单位与独立性 | 报告表6；`FINAL_REPORT_EVIDENCE_CROSSWALK.csv`；全域、匹配、SEM与空间源表 | 像元、匹配对、240米单元、770点及空间块是否分别解释；预测结果是否与实测值区分。 |
 | 结果导向选择 | Phase K `analysis_config.json`、运行清单、Phase F–J交叉索引 | 候选数、筛选目标、未筛选基线、表观结果、空间诊断与样本保留是否披露充分；筛选是否会使表观结果偏乐观。 |
 | 结果解释 | `FINAL_REPORT_EVIDENCE_CROSSWALK.csv`及其逐项源表 | Spearman、标准化β、匹配差值、局部系数、路径、R²和ΔR²是否被正确区分；是否存在因果过度表述。 |
 | 空间结果与候选区 | Phase K `spatial/`、`sem/`结果；图5–18 | 局部系数符号是否被误写成显著性；GWR/MGWR地点排序差异、候选区分类和面积是否得到适当限制。 |
-| 格式与复核能力 | `DOCUMENT_QA.md`、`WORD_COUNT_VERIFICATION.md` | PDF已检查42页；DOCX已核对OOXML结构、A4、页边距、20张图和15张表。当前环境缺少`pdf2image`与LibreOffice，DOCX页面级目视渲染仍需在Word/LibreOffice中确认。 |
+| 格式与复核能力 | `DOCUMENT_QA.md`、`WORD_COUNT_VERIFICATION.md` | PDF共166页；已抽样目视核对封面、目录、CEC定义、长表、长图和末页。DOCX已核对OOXML结构、A4、页边距、139幅图和16张表。当前环境缺少`pdf2image`与LibreOffice，因此没有进行DOCX逐页目视渲染。 |
 | 数据完整性和长期对照 | `docs/RESEARCH_CHARTER.md`、报告第2章 | 侵蚀时间/单位来源、健康预测独立实测、共同环境输入和PCNM可比样本是否仍明确列为限制。 |
 
 正式G2/G3/G4/G5状态沿用仓库已有记录；本审查请求不申请改变这些状态。
@@ -79,6 +80,6 @@
 
 ## Phase L归档交付
 
-- 合并报告：`FINAL_ACADEMIC_RESEARCH_REPORT_30000PLUS.md`、`.docx`、`.pdf`。
+- 合并报告：`FINAL_ACADEMIC_RESEARCH_REPORT_50000PLUS.md`、`.docx`、`.pdf`；LaTeX源码链接见Phase L `README.md`。
 - 分章稿：`CHAPTER_1_RESEARCH_DESIGN_METHODS_EXPLORATION.md`、`CHAPTER_2_RESULTS_SPATIAL_SEM_SYNTHESIS.md`。
 - 图表与证据：`FINAL_REPORT_FIGURE_ATLAS.html`、`FINAL_REPORT_TABLE_INDEX.md`、`FINAL_REPORT_EVIDENCE_CROSSWALK.csv`、`PHASE_L_TECHNICAL_SUMMARY.md`、`FINAL_REPORT_DETAILED_OUTLINE.md`。

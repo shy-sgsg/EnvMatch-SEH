@@ -1,20 +1,23 @@
 # Phase L：全项目学术报告与审查材料
 
-本阶段把已有研究按科学问题整理为两章正式报告；主暴露为20年平均实际侵蚀，SHI与八项健康指标沿用项目当前图层。未重跑侵蚀、匹配、GWR/MGWR或SEM搜索。
+本阶段将温县耕地土壤侵蚀与土壤健康的既有分析，整理为从全域关系、环境匹配、非线性响应、局部空间差异到结构路径的两章报告，并逐图说明项目各阶段的结果。
 
 ## 正式报告
 
-- 合并报告：[`Markdown`](FINAL_ACADEMIC_RESEARCH_REPORT_30000PLUS.md)、[`Word`](FINAL_ACADEMIC_RESEARCH_REPORT_30000PLUS.docx)、[`PDF`](FINAL_ACADEMIC_RESEARCH_REPORT_30000PLUS.pdf)
+- 合并报告：[`Markdown`](FINAL_ACADEMIC_RESEARCH_REPORT_50000PLUS.md)、[`PDF`](FINAL_ACADEMIC_RESEARCH_REPORT_50000PLUS.pdf)、[`Word`](FINAL_ACADEMIC_RESEARCH_REPORT_50000PLUS.docx)。正式LaTeX源码见[根目录报告](../../../PROJECT_FULL_REPORT.tex)。
 - 第一章：[`研究基础、方法与探索过程`](CHAPTER_1_RESEARCH_DESIGN_METHODS_EXPLORATION.md)
 - 第二章：[`结果、空间异质性与作用路径`](CHAPTER_2_RESULTS_SPATIAL_SEM_SYNTHESIS.md)
-- 根目录便捷副本：[`PROJECT_FULL_REPORT.md`](../../../PROJECT_FULL_REPORT.md)、[`LaTeX`](../../../PROJECT_FULL_REPORT.tex)、[`PDF`](../../../PROJECT_FULL_REPORT.pdf)、[`Word`](../../../PROJECT_FULL_REPORT.docx)
+- 篇幅核对：[`正文与附录计数`](WORD_COUNT_VERIFICATION.md)
+- 根目录正式文件：[`PROJECT_FULL_REPORT.md`](../../../PROJECT_FULL_REPORT.md)、[`LaTeX`](../../../PROJECT_FULL_REPORT.tex)、[`PDF`](../../../PROJECT_FULL_REPORT.pdf)、[`Word`](../../../PROJECT_FULL_REPORT.docx)
 
-## 图表与证据
+报告正文与附录逐图说明共58,250个汉字：第一章7,229字、第二章20,158字、附录30,863字。CEC定义及其统计范围集中说明于第一章1.2；图件标题和图面统一写作“CEC”。
 
-- [`完整离线图集`](FINAL_REPORT_FIGURE_ATLAS.html)（20幅图）
-- [`图表目录`](FINAL_REPORT_TABLE_INDEX.md)（20幅图、15张表）
+## 图件
+
+- [`完整可搜索图集`](FINAL_REPORT_FIGURE_ATLAS.html)：正文19幅核心图、附录120幅图，共139幅不重复图件。
+- [`图表目录`](FINAL_REPORT_TABLE_INDEX.md)：19幅正文图及16张核心表。
+- [`139幅图件注释索引`](FIGURE_ANNOTATION_INDEX.csv)：逐幅列出标题、研究问题、统计单位及图面说明。
 - [`证据交叉索引`](FINAL_REPORT_EVIDENCE_CROSSWALK.csv)
-- [`详细提纲`](FINAL_REPORT_DETAILED_OUTLINE.md)、[`技术摘要`](PHASE_L_TECHNICAL_SUMMARY.md)、[`排版核对`](DOCUMENT_QA.md)、[`篇幅核对`](WORD_COUNT_VERIFICATION.md)
-- [`ChatGPT审查请求`](PHASE_L_CHATGPT_REVIEW_REQUEST.md)，固定到报告提交SHA。
-
-上游证据来自同日期Phase K的单期整理包；所有报告中涉及CEC的图表均采用Phase I CEC重分析结果，并在Phase L保存绘图源表。报告将全域相关、匹配差值、局部系数和路径估计分别解释，探索性结果不等同于独立因果验证。
+- [`参考文献核验表`](REFERENCES.md)
+- [`详细提纲`](FINAL_REPORT_DETAILED_OUTLINE.md)、[`技术摘要`](PHASE_L_TECHNICAL_SUMMARY.md)、[`排版核对`](DOCUMENT_QA.md)
+- [`ChatGPT审查请求`](PHASE_L_CHATGPT_REVIEW_REQUEST.md)：仓库内的审查入口，不自动向外部发送。

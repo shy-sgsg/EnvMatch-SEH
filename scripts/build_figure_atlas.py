@@ -463,6 +463,7 @@ TERM_DEFINITIONS = (
 )
 
 LEGACY_CEC_FIGURE_STEMS = {
+    # Phase F–H composites were made before the current CEC source was applied.
     "02_environment_vector_r2",
     "03_cluster_count_r2",
     "05_retention_upper_envelope",
@@ -479,11 +480,22 @@ LEGACY_CEC_FIGURE_STEMS = {
     "c04_global_best_model_r2",
     "c07_soil_type_matched_response_curves",
     "c08_twi_group_matched_response_curves",
+    # Phase K A/B/I include the earlier CEC surface; retain the non-CEC K figures.
+    "a_20yr_global_match_nonlinear",
+    "b_20yr_nine_outcome_local_maps",
+    "i_20yr_integrated_findings",
 }
 
 # The source table for this proposed panel contains only CEC, not the full
 # outcome set implied by the chart title. Omit it from active reports and atlas.
-EXCLUDED_FIGURE_STEMS = {"c12_environment_group_apparent_r2", "c16_eight_indicator_gwr_composite"}
+EXCLUDED_FIGURE_STEMS = {
+    "c12_environment_group_apparent_r2",
+    "c16_eight_indicator_gwr_composite",
+    # The Phase L X map is the current nine-outcome source; these repeat it.
+    "u_nine_outcome_local_beta_maps",
+    # The Phase L L/M/N panels already show these components separately.
+    "v_global_match_gam_corrected",
+}
 
 # This earlier corrected I04 render remains in its immutable analysis run, but
 # the current review render has a clearer corrected-CEC label and formula note.
@@ -966,12 +978,9 @@ def corrected_cec_path(path_text: str) -> bool:
     except ValueError:
         relative = path.as_posix().lower()
     verified_doc_roots = (
-        "docs/reviews/2026-10-26/phase-f/",
-        "docs/reviews/2026-10-27/phase-g/",
-        "docs/reviews/2026-10-29/phase-h/",
         "docs/reviews/2026-10-31/phase-i/",
         "docs/reviews/2026-11-02/phase-j/",
-        "docs/reviews/2026-11-05/phase-k/",
+        "docs/reviews/2026-11-05/phase-l/",
     )
     if relative.startswith(verified_doc_roots):
         return True
