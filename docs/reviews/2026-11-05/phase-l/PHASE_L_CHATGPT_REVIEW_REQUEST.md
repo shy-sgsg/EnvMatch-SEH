@@ -8,7 +8,7 @@
 - 副题：**环境异质性、局部响应与结构路径的多尺度分析**
 
 - 仓库：`https://github.com/shy-sgsg/EnvMatch-SEH`
-- **审查目标提交 SHA：待报告提交完成后更新**
+- **审查目标提交 SHA：`29fad7bac8b560b6fa900dd3e7bb9df167d35388`**
 - 研究总纲：`docs/RESEARCH_CHARTER.md`，请在上述提交中读取。
 - 阶段：G5相关成果的报告整理；**不申请G5通过，也不改变正式阶段门状态**。
 - 主审查入口：`docs/reviews/2026-11-05/phase-l/README.md`
